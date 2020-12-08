@@ -1,0 +1,135 @@
+//////////////////////////////
+//         HELPERS         //
+//////////////////////////////
+
+/* Basic configs */
+
+$pixel: 8px
+
+=border-box
+  box-sizing: border-box
+
+=upper-case
+  text-transform: uppercase
+
+=lower-case
+  text-transform: lowercase
+
+=dont-select
+  user-select: none
+
+=cursor-pointer
+  cursor: pointer
+
+=cursor-default
+  cursor: default
+
+=display-block
+  display: block
+
+=display-none
+  display: none
+
+=transparent
+  border-color: transparent !important
+  background-color: transparent !important
+
+=fixedSize($size, $dimension)
+  @if $dimension == 'height' or $dimension == 'width'
+    min-#{$dimension}: $size
+    max-#{$dimension}: $size
+    #{$dimension}: $size
+
+/* Transitions and Animations */
+
+=transition($timeTransition, $typeTransition)
+  @if $typeTransition != ''
+    transition-timing-function: $typeTransition !important
+  @else
+    transition-timing-function: ease-in-out !important
+
+  transition-duration: $timeTransition !important
+  transition-property: all !important
+
+=transition-delay($timeTransition)
+    transition-delay: $timeTransition !important
+
+=animation($nameAnimation, $durationAnimation, $functionAnimation, $delayAnimation, $repeatAnimation, $directionAnimation, $stateAnimation)
+  animation-name: $nameAnimation
+  animation-duration: $durationAnimation
+  animation-play-state: $stateAnimation
+  animation-delay: $delayAnimation
+  animation-iteration-count: $repeatAnimation
+  animation-direction: $directionAnimation
+  animation-timing-function: $functionAnimation
+
+=border-radius($modifier)
+  @if $modifier == 'sm'
+    border-radius: $pixel
+  @else if $modifier == 'md'
+    border-radius: $pixel * 2
+  @else if $modifier == 'lg'
+    border-radius: $pixel * 3
+  @else if $modifier == 'pill'
+    border-radius: 500px
+  @else if $modifier == 'circular'
+    border-radius: 50%
+  @else if $modifier == 'none'
+    border-radius: 0
+
+=border($modifier, $color, $type)
+  @if $modifier == 'sm'
+    border-width: 1px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'md'
+    border-width: 2px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'lg'
+    border-width: 4px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'none'
+    border-width: $pixel * 2
+    border-color: $color
+    border-style: $type
+
+=box-shadow($level, $color)
+  @if $modifier == '1'
+    border-width: 1px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'md'
+    border-width: 2px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'lg'
+    border-width: 4px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'none'
+    border-width: $pixel * 2
+    border-color: $color
+    border-style: $type
+
+=make-margin()
+  $positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
+  .m
+    @each $position, $element in $positions
+      &__#{$element}
+        @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
+          &--#{$modifier}
+            @if $modifier == 'xs'
+              margin-#{$position}: $pixel / 2 !important
+            @else if $modifier == 's'
+              margin-#{$position}: $pixel !important
+            @else if $modifier == 'm'
+              margin-#{$position}: $pixel * 2 !important
+            @else if $modifier == 'l'
+              margin-#{$position}: $pixel * 3 !important
+            @else if $modifier == 'xl'
+              margin-#{$position}: $pixel * 5 !important
+            @else if $modifier == 'none'
+              margin-#{$position}: 0 !important
+

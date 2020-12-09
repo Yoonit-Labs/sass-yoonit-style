@@ -1,0 +1,220 @@
+//////////////////////////////
+//         HELPERS         //
+//////////////////////////////
+
+/* Basic configs */
+
+=border-box
+  box-sizing: border-box
+
+=upper-case
+  text-transform: uppercase
+
+=lower-case
+  text-transform: lowercase
+
+=dont-select
+  user-select: none
+
+=cursor-pointer
+  cursor: pointer
+
+=cursor-default
+  cursor: default
+
+=display-block
+  display: block
+
+=display-none
+  display: none
+
+=transparent
+  border-color: transparent !important
+  background-color: transparent !important
+
+=fixedSize($size, $dimension)
+  @if $dimension == 'height' or $dimension == 'width'
+    min-#{$dimension}: $size
+    max-#{$dimension}: $size
+    #{$dimension}: $size
+
+//  Use example:
+//    +border-radius('md')
+//  Output:
+//    border-radius: 16px
+
+=border-radius($modifier)
+  @if $modifier == 'sm'
+    border-radius: $nano
+  @else if $modifier == 'md'
+    border-radius: $nano * 2
+  @else if $modifier == 'lg'
+    border-radius: $nano * 3
+  @else if $modifier == 'pill'
+    border-radius: 500px
+  @else if $modifier == 'circular'
+    border-radius: 50%
+  @else if $modifier == 'none'
+    border-radius: 0
+
+//  Use example:
+//    +border('md', '#ff0000', solid)
+//  Output:
+//    border-width: 2px
+//    border-color: #ff0000
+//    border-style: solid
+
+=border($modifier, $color, $type)
+  @if $modifier == 'sm'
+    border-width: 1px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'md'
+    border-width: 2px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'lg'
+    border-width: 4px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'none'
+    border-width: $nano * 2
+    border-color: $color
+    border-style: $type
+
+//  Use example:
+//    +border('low', '#CCCCCC')
+//  Output:
+//    box-shadow: 6px 0 3px #CCCCCC
+
+=box-shadow($level, $color)
+  @if $level == 'low'
+    box-shadow: 6px 0 3px $color
+  @else if $level == 'mid'
+    box-shadow: 24px 0 8px $color
+  @else if $level == 'high'
+    box-shadow: 32px 0 16px $color
+  @else if $level == 'veryHigh'
+    box-shadow: 48px 0 18px $color
+  @else if $level == 'none'
+    box-shadow: none
+
+//  Use example:
+//    +opacity('opaco')
+//  Output:
+//    opacity: 100%
+
+=opacity($modifier)
+  @if $modifier == 'opaco'
+    opacity: 100%
+  @else if $modifier == 'intense'
+    opacity: 90%
+  @else if $modifier == 'intermediate'
+    opacity: 80%
+  @else if $modifier == 'medium'
+    opacity: 65%
+  @else if $modifier == 'semi-transparent'
+    opacity: 10%
+  @else if $modifier == 'none'
+    opacity: 0
+
+//  Use example:
+//    +line-height('tight')
+//  Output:
+//    line-height: 100%
+
+=line-height($modifier)
+  @if $modifier == 'tight'
+    line-height: 100%
+  @else if $modifier == 'medium'
+    line-height: 125%
+  @else if $modifier == 'spaced'
+    line-height: 150%
+  @else if $modifier == 'distant'
+    line-height: 200%
+  @else if $modifier == 'none'
+    line-height: 0
+
+//  Use example:
+//    +letter-spacing('none')
+//  Output:
+//    letter-spacing: 0
+
+=letter-spacing($modifier)
+  @if $modifier == 'none'
+    letter-spacing: 0
+  @else if $modifier == 'distant'
+    letter-spacing: 40
+  @else if $modifier == 'super-distant'
+    letter-spacing: 80
+
+//  Use example:
+//    +font-weight('bold')
+//  Output:
+//    font-weight: 700
+
+=font-weight($modifier)
+  @if $modifier == 'bold'
+    font-weight: 700
+  @else if $modifier == 'semi-bold'
+    font-weight: 600
+  @else if $modifier == 'medium'
+    font-weight: 500
+  @else if $modifier == 'regular'
+    font-weight: 400
+
+//  Use example:
+//    +font-size('xs')
+//  Output:
+//    font-size: 14px
+
+=font-size($modifier)
+  @if $modifier == 'xxxs'
+    font-size: : 10px
+  @else if $modifier == 'xxs'
+    font-size: : 12px
+  @else if $modifier == 'xs'
+    font-size: : 14px
+  @else if $modifier == 'sm'
+    font-size: : 16px
+  @else if $modifier == 'md'
+    font-size: : 18px
+  @else if $modifier == 'lg'
+    font-size: : 20px
+  @else if $modifier == 'xl'
+    font-size: : 24px
+  @else if $modifier == 'xxl'
+    font-size: : 32px
+  @else if $modifier == 'xxxl'
+    font-size: : 48px
+  @else if $modifier == 'display'
+    font-size: : 64px
+
+/* Transitions and Animations */
+
+=transition($timeTransition, $typeTransition)
+  @if $typeTransition != ''
+    transition-timing-function: $typeTransition !important
+  @else
+    transition-timing-function: ease-in-out !important
+
+  transition-duration: $timeTransition !important
+  transition-property: all !important
+
+=transition-delay($timeTransition)
+    transition-delay: $timeTransition !important
+
+=animation($nameAnimation, $durationAnimation, $functionAnimation, $delayAnimation, $repeatAnimation, $directionAnimation, $stateAnimation)
+  animation-name: $nameAnimation
+  animation-duration: $durationAnimation
+  animation-play-state: $stateAnimation
+  animation-delay: $delayAnimation
+  animation-iteration-count: $repeatAnimation
+  animation-direction: $directionAnimation
+  animation-timing-function: $functionAnimation
+
+@function color($variation, $key)
+  @if map-has-key($variation, $key)
+    @return map-get($variation, $key)
+  @warn "Unknown `#{$key}` in `#{$variation}`."
+  @return null

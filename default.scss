@@ -1,0 +1,54 @@
+////////////////////////////////
+//       COLOR PALLET        //
+////////////////////////////////
+
+/*==== Brand Color ====*/
+$colors: (
+  $primary: (
+    'darkest': #008080,
+    'dark': #1DBABA,
+    'base': #DDDDDD,  
+    'light': #76D6D2
+  ),
+  
+  /*==== Danger Color ====*/
+  $danger: (
+    'darkest': #CB0A22,
+    'dark': #E83C4B,
+    'base': #F4596C,
+    'light': #FF7888
+  ),
+  
+  /*==== Neutral Color ====*/
+  $grey: (
+    'darkest': #212325,
+    'dark': #5A5F67,
+    'medium': #8F959F,
+    'light': #D6DBE2,
+    'lightest': #F5F6F7
+  ),
+);
+/*==== Basic Colors ====*/
+
+$black: #000000;
+$white: #FFFFFF;
+$transparent: rgba(255, 255, 255, 0);
+
+/*===== Variations sizes ====*/
+
+$quark  : 4px;
+$nano   : 8px;
+$xxxs   : 16px;
+$xxs    : 24px;
+$xs     : 32px;
+$sm     : 40px;
+$md     : 48px;
+$lg     : 56px;
+$xl     : 64px;
+
+
+// Basic Mixins
+@import './imports/_helpers';
+
+// Media Mixins
+@import './imports/_media'

@@ -3,31 +3,31 @@
 ////////////////////////////////
 
 /*==== Brand Color ====*/
-$colors: (
-  $primary: (
-    'darkest': #008080,
-    'dark': #1DBABA,
-    'base': #DDDDDD,  
-    'light': #76D6D2
-  ),
-  
-  /*==== Danger Color ====*/
-  $danger: (
-    'darkest': #CB0A22,
-    'dark': #E83C4B,
-    'base': #F4596C,
-    'light': #FF7888
-  ),
-  
-  /*==== Neutral Color ====*/
-  $grey: (
-    'darkest': #212325,
-    'dark': #5A5F67,
-    'medium': #8F959F,
-    'light': #D6DBE2,
-    'lightest': #F5F6F7
-  ),
+
+$primary: (
+  'darkest': #008080,
+  'dark': #1DBABA,
+  'base': #DDDDDD,  
+  'light': #76D6D2
 );
+
+/*==== Danger Color ====*/
+$danger: (
+  'darkest': #CB0A22,
+  'dark': #E83C4B,
+  'base': #F4596C,
+  'light': #FF7888
+);
+
+/*==== Neutral Color ====*/
+$grey: (
+  'darkest': #212325,
+  'dark': #5A5F67,
+  'medium': #8F959F,
+  'light': #D6DBE2,
+  'lightest': #F5F6F7
+);
+
 /*==== Basic Colors ====*/
 
 $black: #000000;
@@ -36,16 +36,32 @@ $transparent: rgba(255, 255, 255, 0);
 
 /*===== Variations sizes ====*/
 
-$quark  : 4px;
-$nano   : 8px;
-$xxxs   : 16px;
-$xxs    : 24px;
-$xs     : 32px;
-$sm     : 40px;
-$md     : 48px;
-$lg     : 56px;
-$xl     : 64px;
+// $quark  : 4px;
+// $nano   : 8px;
+// $xxxs   : 10px;
+// $xxs    : 12px;
+// $xs     : 14px;
+// $sm     : 16px;
+// $md     : 18px;
+// $lg     : 20px;
+// $xl     : 24px;
+// $xxl    : 32px;
+// $xxxl   : 48px;
+// $display: 64px;
 
+$small: 4px;
+$small-2: 8px;
+$small-3: 12px;
+$small-4: 16px;
+
+$medium: 20px;
+$medium-2: 24px;
+$medium-3: 28px;
+$medium-4: 32px;
+
+$large: 36px;
+$large-2: 48px;
+$large-3: 64px;
 
 // Basic Mixins
 @import './imports/_helpers';

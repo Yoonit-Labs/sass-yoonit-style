@@ -45,11 +45,11 @@
 
 =border-radius($modifier)
   @if $modifier == 'sm'
-    border-radius: $nano
+    border-radius: $small-2
   @else if $modifier == 'md'
-    border-radius: $nano * 2
+    border-radius: $small-4
   @else if $modifier == 'lg'
-    border-radius: $nano * 3
+    border-radius: $medium-2
   @else if $modifier == 'pill'
     border-radius: 500px
   @else if $modifier == 'circular'
@@ -74,11 +74,11 @@
     border-color: $color
     border-style: $type
   @else if $modifier == 'lg'
-    border-width: 4px
+    border-width: $small
     border-color: $color
     border-style: $type
   @else if $modifier == 'none'
-    border-width: $nano * 2
+    border-width: $small-4
     border-color: $color
     border-style: $type
 
@@ -169,26 +169,28 @@
 //    font-size: 14px
 
 =font-size($modifier)
-  @if $modifier == 'xxxs'
-    font-size: : 10px
-  @else if $modifier == 'xxs'
-    font-size: : 12px
-  @else if $modifier == 'xs'
-    font-size: : 14px
-  @else if $modifier == 'sm'
-    font-size: : 16px
-  @else if $modifier == 'md'
-    font-size: : 18px
-  @else if $modifier == 'lg'
-    font-size: : 20px
-  @else if $modifier == 'xl'
-    font-size: : 24px
-  @else if $modifier == 'xxl'
-    font-size: : 32px
-  @else if $modifier == 'xxxl'
-    font-size: : 48px
-  @else if $modifier == 'display'
-    font-size: : 64px
+  @if $modifier == 'small'
+    font-size: $small
+  @else if $modifier == 'small-2'
+    font-size: $small-2
+  @else if $modifier == 'small-3'
+    font-size: $small-3
+  @else if $modifier == 'small-4'
+    font-size: $small-4
+  @else if $modifier == 'medium'
+    font-size: $medium
+  @else if $modifier == 'medium-2'
+    font-size: $medium-2
+  @else if $modifier == 'medium-3'
+    font-size: $medium-3
+  @else if $modifier == 'medium-4'
+    font-size: $medium-4
+  @else if $modifier == 'large'
+    font-size: $large
+  @else if $modifier == 'large-2'
+    font-size: $large-2
+  @else if $modifier == 'large-3'
+    font-size: $large-3
 
 /* Transitions and Animations */
 

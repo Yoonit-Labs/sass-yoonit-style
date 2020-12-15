@@ -2,8 +2,8 @@
 //          MARGINS CLASSES         //
 //////////////////////////////////////
 
-// Tokens : Sizes
-@import '../tokens/spacing/default'
+// Tokens : Size
+@import '../tokens/spacing'
 
 =make-margin()
   $positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
@@ -13,14 +13,14 @@
         @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
           &--#{$modifier}
             @if $modifier == 'xs'
-              margin-#{$position}: $small !important
+              margin-#{$position}: $spacing-1 !important
             @else if $modifier == 's'
-              margin-#{$position}: $small-2 !important
+              margin-#{$position}: $spacing-2 !important
             @else if $modifier == 'm'
-              margin-#{$position}: $small-4 !important
+              margin-#{$position}: $spacing-3 !important
             @else if $modifier == 'l'
-              margin-#{$position}: $pixel * 3 !important
+              margin-#{$position}: $spacing-4 !important
             @else if $modifier == 'xl'
-              margin-#{$position}: $pixel * 5 !important
+              margin-#{$position}: $spacing-5 !important
             @else if $modifier == 'none'
               margin-#{$position}: 0 !important

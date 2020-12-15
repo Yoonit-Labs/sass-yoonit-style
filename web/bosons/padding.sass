@@ -2,6 +2,9 @@
 //          PADDING CLASSES         //
 //////////////////////////////////////
 
+// Tokens : Size
+@import '../tokens/spacing'
+
 =make-padding()
   $positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
   .p
@@ -10,14 +13,14 @@
         @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
           &--#{$modifier}
             @if $modifier == 'xs'
-              padding-#{$position}: $pixel / 2 !important
+              padding-#{$position}: $spacing-1 !important
             @else if $modifier == 's'
-              padding-#{$position}: $pixel !important
+              padding-#{$position}: $spacing-2 !important
             @else if $modifier == 'm'
-              padding-#{$position}: $pixel * 2 !important
+              padding-#{$position}: $spacing-3 !important
             @else if $modifier == 'l'
-              padding-#{$position}: $pixel * 3 !important
+              padding-#{$position}: $spacing-4 !important
             @else if $modifier == 'xl'
-              padding-#{$position}: $pixel * 5 !important
+              padding-#{$position}: $spacing-5 !important
             @else if $modifier == 'none'
               padding-#{$position}: 0 !important

@@ -2,34 +2,48 @@
 //        TYPOGRAPHY        //
 //////////////////////////////
 
-@mixin font($font-color, $font-size: 1em, $font-family)
-  font-size: +font-size($font-size)
-  font-family: $font-family
+// Tokens : Family
+@import '../tokens/typrografy'
+// Tokens : Size
+@import '../tokens/spacing'
+
+@mixin font($font-color, $font-size, $font-family)
+  @include font-size($font-size)
+  @include font-family($font-family)
   color: $font-color
 
 @mixin font-size($modifier)
-  @if $modifier == 'small'
-    font-size: $small
-  @else if $modifier == 'small-2'
-    font-size: $small-2
-  @else if $modifier == 'small-3'
-    font-size: $small-3
-  @else if $modifier == 'small-4'
-    font-size: $small-4
-  @else if $modifier == 'medium'
-    font-size: $medium
-  @else if $modifier == 'medium-2'
-    font-size: $medium-2
-  @else if $modifier == 'medium-3'
-    font-size: $medium-3
-  @else if $modifier == 'medium-4'
-    font-size: $medium-4
-  @else if $modifier == 'large'
-    font-size: $large
-  @else if $modifier == 'large-2'
-    font-size: $large-2
-  @else if $modifier == 'large-3'
-    font-size: $large-3
+  @if $modifier == '$spancing-1'
+    font-size: $spancing-1
+  @else if $modifier == '$spancing-2'
+    font-size: $spancing-2
+  @else if $modifier == '$spancing-3'
+    font-size: $spancing-3
+  @else if $modifier == '$spancing-4'
+    font-size: $spancing-4
+  @else if $modifier == '$spancing-5'
+    font-size: $spancing-5
+  @else if $modifier == '$spancing-6'
+    font-size: $spancing-6
+  @else if $modifier == '$spancing-7'
+    font-size: $spancing-7
+  @else if $modifier == '$spancing-8'
+    font-size: $spancing-8
+  @else if $modifier == '$spancing-9'
+    font-size: $spancing-9
+  @else if $modifier == '$spancing-10'
+    font-size: $spancing-10
+  @else if $modifier == '$spancing-11'
+    font-size: $spancing-11
+  @else if $modifier == '$spancing-12'
+    font-size: $spancing-12
+  @else if $modifier == '$spancing-13'
+    font-size: $spancing-13
 
 @mixin font-family($font-family)
-  font-family: $font-family
+  @if $font-family == '$font-primary'
+    font-family: $font-primary
+  @else if $font-family == '$font-second'
+    font-family: $font-second
+  @else
+    font-family: $font-second

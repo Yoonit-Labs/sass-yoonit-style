@@ -28,6 +28,7 @@
 =display-none
   display: none
 
+
 =transparent
   border-color: transparent !important
   background-color: transparent !important
@@ -222,22 +223,3 @@
   @return null
 
 /*==============================*/
-=make-margin()
-  $positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
-  .m
-    @each $position, $element in $positions
-      &__#{$element}
-        @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
-          &--#{$modifier}
-            @if $modifier == 'xs'
-              margin-#{$position}: $pixel / 2 !important
-            @else if $modifier == 's'
-              margin-#{$position}: $pixel !important
-            @else if $modifier == 'm'
-              margin-#{$position}: $pixel * 2 !important
-            @else if $modifier == 'l'
-              margin-#{$position}: $pixel * 3 !important
-            @else if $modifier == 'xl'
-              margin-#{$position}: $pixel * 5 !important
-            @else if $modifier == 'none'
-              margin-#{$position}: 0 !important

@@ -1,0 +1,38 @@
+//////////////////////////////
+//           BORDER         //
+//////////////////////////////
+
+// Tokens : Sizes
+@import '../tokens/spacing/default'
+
+@mixin border($modifier, $color, $type)
+  @if $modifier == 'sm'
+    border-width: 1px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'md'
+    border-width: 2px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'lg'
+    border-width: $small
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'none'
+    border-width: $small-4
+    border-color: $color
+    border-style: $type
+
+@mixin border-radius($modifier)
+  @if $modifier == 'sm'
+    border-radius: $small-2
+  @else if $modifier == 'md'
+    border-radius: $small-4
+  @else if $modifier == 'lg'
+    border-radius: $medium-2
+  @else if $modifier == 'pill'
+    border-radius: 500px
+  @else if $modifier == 'circular'
+    border-radius: 50%
+  @else if $modifier == 'none'
+    border-radius: 0

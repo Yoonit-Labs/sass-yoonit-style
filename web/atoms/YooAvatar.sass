@@ -1,0 +1,47 @@
+.yoo-avatar
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  background: color($primary, 'primaryBase')
+  font-family: Montserrat, sans-serif
+  font-size: 20px
+  font-weight: bold
+
+  &--small
+    width: $spacing-10
+    height: $spacing-10
+    font-size: $spacing-4
+
+  &--medium
+    width: $spacing-14
+    height: $spacing-14
+
+  &--large
+    width: $spacing-10 * 2
+    height: $spacing-10 * 2
+    font-size: $spacing-8
+
+  &--xlarge
+    width: $spacing-13 * 2
+    height: $spacing-13 * 2
+    font-size: $spacing-12
+
+  &--primary
+    background: color($primary, 'primaryBase')
+
+  &--danger
+    background: color($danger, 'dangerBase')
+
+  &--light
+    background: color($primary, 'primaryBase')
+
+  &--dark
+    background: color($grey, 'greyBase')
+
+  &__text
+    color: red
+    &--light
+      color: const(white)
+    &--dark
+      color: const(dark)

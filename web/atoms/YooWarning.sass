@@ -1,0 +1,31 @@
+.warning
+  width: 100%
+  @include font('#FFFFFF', '$spacing-4', '$font-primary', 'medium')
+  display: flex
+  align-items: center
+  padding-top: 17px
+  padding-bottom: 18px
+  margin-bottom: 20px
+  &__icon
+    margin-left: 16px
+    @include font-size('$spacing-5')
+
+  &__title
+    margin: 0 16px 2px 16px
+    @include font-weight('bold')
+
+  &__text
+    margin: 0 16px
+
+  &--default
+    background-color: color($danger, 'dangerBase')
+
+  &--clear
+    background-color: #f5f6f7
+    color: #5a5f67
+
+  &--danger
+    background-color: color($danger, 'dangerBase')
+
+  &--clear .warning__icon
+    background-color: color($danger, 'dangerBase')

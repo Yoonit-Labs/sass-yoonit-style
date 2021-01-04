@@ -1,0 +1,21 @@
+.separator
+  height: $spacing-10
+  width: 100%
+  display: flex
+  align-items: center
+  font-family: Montserrat
+  @include font-weight('semi-bold')
+  font-size: $spacing-3 + 2
+  &--fill-default
+    background-color: color($grey, 'greyLightest')
+
+  &--fill-primary
+    background-color: color($primary, 'primaryBase')
+    color: $white
+
+  &--fill-danger
+    background-color: color($danger, 'dangerBase')
+    color: $white
+
+  &__label
+    margin: 0 0 0 $spacing-4

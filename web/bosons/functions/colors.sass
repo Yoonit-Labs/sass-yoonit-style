@@ -1,0 +1,17 @@
+////////////////////////////////
+//       FUNCTION COLORS      //
+////////////////////////////////
+
+@function map-collect($maps...)
+  $collection: ()
+
+  @each $map in $maps 
+    $collection: map-merge($collection, $map)
+  
+  @return $collection
+
+@function color($variation, $key)
+  @if map-has-key($variation, $key)
+    @return map-get($variation, $key)
+  @warn "Unknown `#{$key}` in `#{$variation}`."
+  @return null

@@ -1,0 +1,22 @@
+.yoo-stepper
+  &__number
+    margin-top: 2px
+    color: color($grey, 'greyDark')
+    font-family: "Montserrat", "Montserrat-Regular"
+    @include font-weight('regular')
+    @include font-size('$spacing-4')
+    text-align: center
+    min-width: 80px
+    word-wrap: break-word
+  &__dot
+    background: color($grey, 'greyDark')
+    @include border-radius('circular')
+    margin-right: $spacing-4
+    width: $spacing-2
+    height: $spacing-2
+    &--active
+      background: color($grey, 'greyDark')
+      width: $spacing-2 + 2
+      height: $spacing-2 + 2
+    &--last
+      margin-right: 0

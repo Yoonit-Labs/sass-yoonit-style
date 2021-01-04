@@ -15,7 +15,7 @@
     border-color: $color
     border-style: $type
   @else if $modifier == 'lg'
-    border-width: $spancing-1
+    border-width: $spacing-1
     border-color: $color
     border-style: $type
   @else if $modifier == 'none'
@@ -25,11 +25,11 @@
 
 @mixin border-radius($modifier)
   @if $modifier == 'sm'
-    border-radius: $spancing-1
+    border-radius: $spacing-1
   @else if $modifier == 'md'
-    border-radius: $spancing-2
+    border-radius: $spacing-2
   @else if $modifier == 'lg'
-    border-radius: $spancing-3
+    border-radius: $spacing-3
   @else if $modifier == 'pill'
     border-radius: 500px
   @else if $modifier == 'circular'

@@ -6,12 +6,13 @@
 
 $primary: (
   'primaryDarkest': #008080,
-  'primarydark': #1DBABA,
-  'primarybase': #47C8C3,  
-  'primarylight': #76D6D2
+  'primaryDark': #1DBABA,
+  'primaryBase': #47C8C3,  
+  'primaryLight': #76D6D2
 );
 
 /*==== Danger Color ====*/
+
 $danger: (
   'dangerDarkest': #CB0A22,
   'dangerDark': #E83C4B,
@@ -20,6 +21,7 @@ $danger: (
 );
 
 /*==== Neutral Color ====*/
+
 $grey: (
   'greyDarkest': #212325,
   'greyDark': #5A5F67,
@@ -33,3 +35,15 @@ $grey: (
 $black: #000000;
 $white: #FFFFFF;
 $transparent: rgba(255, 255, 255, 0);
+
+/*==== Export Colors ====*/
+
+@import '../../bosons/functions/colors';
+
+$allColors: map-collect($primary, $danger, $grey);
+  
+:root {
+  @each $name, $color in $allColors {
+    --#{$name}: #{$color};
+  }
+}

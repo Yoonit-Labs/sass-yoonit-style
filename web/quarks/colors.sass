@@ -2,11 +2,13 @@
 //          COLORS         //
 //////////////////////////////
 
-@mixin text-color($color)
-  color: $color
 
-@mixin background-color($bgColor)
-  color: $bgColor
 
-@mixin border-color($borderColor)
-  color: $borderColor
+@mixin text-color($variation, $color)
+  color: color($variation, $color)
+
+@mixin background-color($variation, $color)
+  background-color: color($variation, $color)
+
+@mixin border-color($variation, $color)
+  border-color: color($variation, $color)

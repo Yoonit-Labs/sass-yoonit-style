@@ -1,0 +1,40 @@
+.yoo__icon
+  font-size: 14px
+
+  // SIZE
+  &--xxxs
+    font-size: 10px
+  &--xxs
+    font-size: 12px
+  &--xs
+    font-size: 14px
+  &--sm
+    font-size: 16px
+  &--md
+    font-size: 18px
+  &--lg
+    @include font-size('$spacing-5')
+  &--xl
+    @include font-size('$spacing-6')
+  &--xxl
+    @include font-size('$spacing-8')
+  &--xxxl
+    @include font-size('$spacing-12')
+  &--display
+    @include font-size('$spacing-15')
+
+  // FILL COLORS
+  &__fill-neutral
+    color: color($grey, 'greyBase')
+  &__fill-primary
+    color: color($primary, 'primaryBase')
+  &__fill-danger
+    color: color($danger, 'dangerBase')
+    &-mouseover
+      color: color($danger, 'dangerBase')
+    &-mousedown
+      color: color($danger, 'dangerBase')
+  &__fill-light
+    color: color($grey, 'greyDark')
+  &__fill-dark
+    color: color($grey, 'greyDark')

@@ -1,6 +1,6 @@
 .warning
   width: 100%
-  @include font('#FFFFFF', '$spacing-4', '$font-primary', 'medium')
+  @include font(#FFFFFF, '$spacing-4', '$font-primary', 'medium')
   display: flex
   align-items: center
   padding-top: 17px
@@ -21,11 +21,11 @@
     background-color: color($danger, 'dangerBase')
 
   &--clear
-    background-color: #f5f6f7
-    color: #5a5f67
+    background-color: color($grey, 'greyLightest')
+    color: color($grey, 'greyDark')
 
   &--danger
     background-color: color($danger, 'dangerBase')
 
   &--clear .warning__icon
-    background-color: color($danger, 'dangerBase')
+    color: color($danger, 'dangerBase')

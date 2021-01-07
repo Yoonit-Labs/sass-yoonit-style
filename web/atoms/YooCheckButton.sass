@@ -20,8 +20,11 @@
 
     + .yoo-check
       display: flex
+      align-items: center
 
   + .yoo-check
+    display: flex
+    align-items: center
     &:before
       content: ''
       @include border-radius('circular')
@@ -29,8 +32,6 @@
       vertical-align: middle
       background: $white
       border: 3px solid color($primary, 'primaryBase')
-      margin-right: 4px
-      margin-bottom: 4px
       cursor: pointer
 
     &--small:before

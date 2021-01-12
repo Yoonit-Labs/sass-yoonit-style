@@ -1,0 +1,65 @@
+.yoo-post-card
+  @include border-radius('md')
+  @include border('sm', color($grey, 'greyLight'), solid)
+  box-shadow: 0 3px 6px color($grey, 'greyLight')
+  padding: $spacing-4
+  width: 100%
+
+  &--fill-white
+    background-color: $white
+    $color: color($grey, 'greyDark')
+    color: $color
+
+    .yoo-post-card__subtitle
+      color: lighten($color, 10%)
+
+  &--fill-primary
+    background-color: color($primary, 'primaryBase')
+    $color: $white
+    color: $color
+
+    .yoo-post-card__subtitle
+      color: darken($color, 10%)
+
+  &--fill-danger
+    background-color: color($danger, 'dangerBase')
+    $color: color($grey, 'greyLight')
+    color: $color
+
+    .yoo-post-card__subtitle
+      color: darken($color, 10%)
+
+  &--fill-neutral
+    background-color: color($grey, 'greyBase')
+    $color: color($grey, 'greyDark')
+    color: $color
+
+    .yoo-post-card__subtitle
+      color: lighten($color, 10%)
+
+  &--fill-light
+    background-color: color($grey, 'greyLight')
+    $color: color($grey, 'greyDark')
+    color: $color
+
+    .yoo-post-card__subtitle
+      color: lighten($color, 10%)
+
+  &--fill-dark
+    background-color: color($grey, 'greyDark')
+    $color: $white
+    color: $color
+
+    .yoo-post-card__subtitle
+      color: darken($color, 10%)
+
+  &__icon
+    margin-bottom: 10px
+
+  &__title
+    margin: 0
+    @include font-size('$spacing-4')
+
+  &__subtitle
+    margin: 0
+    font-size: 14px

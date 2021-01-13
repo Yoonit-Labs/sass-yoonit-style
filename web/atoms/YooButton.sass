@@ -1,11 +1,13 @@
-
 $buttonColor: color($primary, 'primaryBase')
-
+.yoo__container--button
+  height: 56px
+  
 .yoo-btn
   $self: &
   font-family: "Montserrat", "Montserrat-SemiBold"
   font-weight: 600
-  height: 56px
+  width: 100%
+  height: 100%
   @include border-radius('pill')
   border-width: 2px
   border-style: solid
@@ -112,6 +114,7 @@ $buttonColor: color($primary, 'primaryBase')
     background-color: transparent
     z-index: 0
     padding: 0
+    width: 100%
 
     #{ $self }
       &__text, &__icon
@@ -151,13 +154,21 @@ $buttonColor: color($primary, 'primaryBase')
 
   // MOD: COLOR
 
+  &__fill--default
+  $buttonColor: #F5F6F7
+  border-color: $buttonColor
+  background-color: transparent
+  #{ $self }
+      &__text, &__icon
+        color: color($grey, 'greyDark')
+
   &__fill--light
-    $buttonColor: color($grey, 'greyLightest')
-    border-color: $buttonColor
-    background-color: $buttonColor
-    #{ $self }
-        &__text, &__icon
-          color: color($grey, 'greyDark')
+  $buttonColor: color($grey, 'greyLightest')
+  border-color: $buttonColor
+  background-color: $buttonColor
+  #{ $self }
+      &__text, &__icon
+        color: color($grey, 'greyDark')
 
   &__fill--danger
     $buttonColor: color($danger, 'dangerBase')

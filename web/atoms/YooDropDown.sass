@@ -1,0 +1,48 @@
+$option: color($grey, 'greyDark')
+$spacer: 2px
+
+.dropdown
+  cursor: pointer
+  font-family: Montserrat
+  font-weight: 400
+  text-transform: uppercase
+  box-shadow: 0px 3px 6px #00000029
+  border-radius: 1px
+  width: $spacer * 17
+
+  &__select
+    .select
+      height: $spacer * 6
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      &__text
+        color: $option
+        font: font(semi-bold, xs) Montserrat
+        margin: 0
+
+  &__options
+    .option
+      height: $spacer * 6
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      &__text
+        $option: color($grey, 'greyBase')
+        color: $option
+        font: font(semi-bold, xs) Montserrat
+        margin: 0
+
+      &:first-child
+        .option
+          &__text
+            color: $option
+
+  // MOD: VARIATION
+  &--small
+    width: $spacer * 10
+
+  &--large
+    width: $spacer * 24

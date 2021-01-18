@@ -6,7 +6,11 @@
 @import '../tokens/spacing'
 
 @mixin border($modifier, $color, $type)
-  @if $modifier == 'sm'
+  @if $modifier == 'xs'
+    border-width: 0.5px
+    border-color: $color
+    border-style: $type
+  @else if $modifier == 'sm'
     border-width: 1px
     border-color: $color
     border-style: $type

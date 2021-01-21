@@ -6,9 +6,9 @@
 @import '../tokens/spacing'
 
 $positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
-.m
-  @each $position, $element in $positions
-    &__#{$element}
+
+@each $position, $element in $positions
+  .m__#{$element}
       @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
         &--#{$modifier}
           @if $modifier == 'xs'

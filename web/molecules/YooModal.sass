@@ -1,0 +1,23 @@
+.backdrop
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: rgba(0, 0, 0, 0.3)
+
+  .yoo-modal
+    box-sizing: border-box
+    z-index: 999
+    min-width: 328px
+    min-height: 254px
+    padding: 24px 16px 8px 16px
+    background: $white
+    @include box-shadow('soft', #00000029) 
+    @include border('xs', #D9D9D9, solid)
+    @include border-radius('lg')
+    text-align: center
+    font-family: 'Montserrat', sans-serif

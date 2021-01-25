@@ -1,0 +1,67 @@
+.yoo-indicator__container
+  display: flex
+  justify-content: center
+  align-items: center
+
+.yoo-indicator
+  border-radius: 50%
+  animation-duration: 2s
+  animation-timing-function: cubic-bezier(.28,.68,.75,.78)
+  animation-fill-mode: forwards
+  animation-iteration-count: infinite
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &--pulse
+    animation-name: pulse
+
+  &--normal
+    width: 20px
+    height: 20px
+    font-size: 12px
+
+  &--small
+    width: 8px
+    height: 8px
+    font-size: 6px
+
+  &--medium
+    width: 16px
+    height: 16px
+    font-size: 10px
+
+  &--large
+    width: 30px
+    height: 30px
+    font-size: 14px
+
+  &--primary
+    background: color($primary, 'primaryBase')
+    color: $white
+
+  &--danger
+    background: color($danger, 'dangerBase')
+    color: $white
+
+  &--light
+    background: color($grey, 'greyLight')
+
+  &--dark
+    background: color($grey, 'greyDark')
+    color: $white
+
+  &--neutral
+    background: $white
+
+@keyframes pulse
+  0%
+    transform: scale(.95)
+  70%
+    transform: scale(1.3)
+  80%
+    transform: scale(1.1)
+  90%
+    transform: scale(1.3)
+  100%
+    transform: scale(.95)

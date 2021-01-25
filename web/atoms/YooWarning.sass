@@ -1,0 +1,23 @@
+.warning
+  width: 100%
+  @include font(#FFFFFF, '$spacing-4', '$font-primary', 'medium')
+  display: flex
+  align-items: center
+  &__icon
+    @include font-size('$spacing-5')
+
+  &__title
+    @include font-weight('bold')
+
+  &--default
+    background-color: color($danger, 'dangerBase')
+
+  &--clear
+    background-color: color($grey, 'greyLightest')
+    color: color($grey, 'greyDark')
+
+  &--danger
+    background-color: color($danger, 'dangerBase')
+
+  &--clear .warning__icon
+    color: color($danger, 'dangerBase')

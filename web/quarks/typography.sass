@@ -1,0 +1,62 @@
+//////////////////////////////
+//        TYPOGRAPHY        //
+//////////////////////////////
+
+// Tokens : Family
+@import '../tokens/typography'
+// Tokens : Size
+@import '../tokens/spacing'
+
+@mixin font($font-color, $font-size, $font-family, $font-weight)
+  @include font-size($font-size)
+  @include font-weight($font-weight)
+  @include font-family($font-family)
+  color: $font-color
+
+@mixin font-size($modifier)
+  @if $modifier == '$spacing-1'
+    font-size: $spacing-1
+  @else if $modifier == '$spacing-2'
+    font-size: $spacing-2
+  @else if $modifier == '$spacing-3'
+    font-size: $spacing-3
+  @else if $modifier == '$spacing-4'
+    font-size: $spacing-4
+  @else if $modifier == '$spacing-5'
+    font-size: $spacing-5
+  @else if $modifier == '$spacing-6'
+    font-size: $spacing-6
+  @else if $modifier == '$spacing-7'
+    font-size: $spacing-7
+  @else if $modifier == '$spacing-8'
+    font-size: $spacing-8
+  @else if $modifier == '$spacing-9'
+    font-size: $spacing-9
+  @else if $modifier == '$spacing-10'
+    font-size: $spacing-10
+  @else if $modifier == '$spacing-11'
+    font-size: $spacing-11
+  @else if $modifier == '$spacing-12'
+    font-size: $spacing-12
+  @else if $modifier == '$spacing-13'
+    font-size: $spacing-13
+
+@mixin font-family($font-family)
+  @if $font-family == '$font-primary'
+    font-family: $font-primary
+  @else if $font-family == '$font-second'
+    font-family: $font-second
+  @else
+    font-family: $font-second
+
+@mixin font-weight($font-weight)
+  @if $font-weight == 'bold'
+    font-weight: 700
+  @else if $font-weight == 'semi-bold'
+    font-weight: 600
+  @else if $font-weight == 'medium'
+    font-weight: 500
+  @else if $font-weight == 'regular'
+    font-weight: 400
+  @else
+    font-weight: 400

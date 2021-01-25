@@ -1,0 +1,15 @@
+{
+  "name": "@yoonit/style",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./default",
+  "scripts": {
+    "major": "npm version major && npm run tag",
+    "minor": "npm version minor && npm run tag",
+    "patch": "npm version patch && npm run tag",
+    "tag": "git push --tags && git push",
+    "tag:force": "PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n') && git tag v$PACKAGE_VERSION && git push --tags && git push"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

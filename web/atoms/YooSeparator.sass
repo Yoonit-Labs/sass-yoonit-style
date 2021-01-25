@@ -1,0 +1,18 @@
+.separator
+  height: $spacing-10
+  width: 100%
+  display: flex
+  align-items: center
+  @include font-family('$font-primary')
+  @include font-size('$spacing-4')
+  @include font-weight('semi-bold')
+  &--fill-default
+    background-color: color($grey, 'greyLightest')
+
+  &--fill-primary
+    background-color: color($primary, 'primaryBase')
+    color: $white
+
+  &--fill-danger
+    background-color: color($danger, 'dangerBase')
+    color: $white

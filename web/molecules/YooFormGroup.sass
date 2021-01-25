@@ -1,0 +1,116 @@
+$placeholder-font-size: 18px
+$placeholder-font-size-small: 14px
+$placeholder-transition: 300ms ease-in-out
+$input-font-size: $placeholder-font-size
+$input-top: 20px
+$input-height: 30px
+
+.yoo-input-group
+  margin: 40px 0 0
+  width: 100%
+
+  .yoo-input
+    position: relative
+    display: block
+    width: 100%
+    min-height: $input-height + $input-top
+    &::before
+      content: ""
+      height: 2px
+      width: 100%
+      background-color: color($primary, 'primaryBase')
+      position: absolute
+      z-index: 2
+      bottom: -2px
+      transform: scale(0)
+      transition: all $placeholder-transition
+
+    &:focus-within
+      &::before
+        transform: scale(1)
+
+    &__label
+      position: absolute
+      display: block
+      top: ($input-height / 2) + $spacing-2
+      z-index: 2
+      font-size: $placeholder-font-size
+      transition: all $placeholder-transition
+      width: 100%
+      cursor: text
+      color: color($grey, 'greyDark')
+
+      i
+        position: absolute
+        right: 0
+        bottom: -($input-height / 2) - $spacing-2
+
+    &__feedback
+      position: absolute
+      bottom: -$spacing-5
+      font-size: 0.7em
+      font-weight: 500
+
+    &__field
+      position: absolute
+      top: $input-top
+      z-index: 1
+      width: 100%
+      min-height: $input-height
+      font-size: $input-font-size
+      color: color($grey, 'greyDark')
+      border: 0
+      border-bottom: 1px solid color($grey, 'greyBase')
+      transition: border-color $placeholder-transition
+      outline: none
+      padding: 0
+      margin: 0
+
+      &::placeholder
+        color: color($grey, 'greyLight')
+        opacity: 0
+
+      &:focus,
+      &:valid,
+      &:disabled
+        background-color: transparent
+
+        & + .yoo-input__label
+          top: 0
+          cursor: inherit
+          font-size: $placeholder-font-size-small
+
+        &::placeholder
+          opacity: 1
+
+      &:focus
+        & + .yoo-input__label
+          color: color($grey, 'greyBase')
+
+      &:disabled
+        & + .yoo-input__label
+          color: color($grey, 'greyLight')
+
+    &--error
+      .yoo-input__label,
+      .yoo-input__feedback
+        color: color($danger, 'dangerBase')
+
+        i::before
+          content: "\f00d"
+
+      &::before
+        background-color: color($danger, 'dangerBase')
+        transform: scale(1)
+
+    &--success
+      .yoo-input__label,
+      .yoo-input__feedback
+        color: color($primary, 'primaryBase')
+
+        i::before
+          content: "\f00c"
+
+      &::before
+        background-color: color($primary, 'primaryBase')
+        transform: scale(1)

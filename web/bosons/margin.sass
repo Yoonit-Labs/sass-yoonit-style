@@ -5,22 +5,21 @@
 // Tokens : Size
 @import '../tokens/spacing'
 
-=make-margin()
-  $positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
-  .m
-    @each $position, $element in $positions
-      &__#{$element}
-        @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
-          &--#{$modifier}
-            @if $modifier == 'xs'
-              margin-#{$position}: $spacing-1 !important
-            @else if $modifier == 's'
-              margin-#{$position}: $spacing-2 !important
-            @else if $modifier == 'm'
-              margin-#{$position}: $spacing-3 !important
-            @else if $modifier == 'l'
-              margin-#{$position}: $spacing-4 !important
-            @else if $modifier == 'xl'
-              margin-#{$position}: $spacing-5 !important
-            @else if $modifier == 'none'
-              margin-#{$position}: 0 !important
+$positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
+.m
+  @each $position, $element in $positions
+    &__#{$element}
+      @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
+        &--#{$modifier}
+          @if $modifier == 'xs'
+            margin-#{$position}: $spacing-1 !important
+          @else if $modifier == 's'
+            margin-#{$position}: $spacing-2 !important
+          @else if $modifier == 'm'
+            margin-#{$position}: $spacing-3 !important
+          @else if $modifier == 'l'
+            margin-#{$position}: $spacing-4 !important
+          @else if $modifier == 'xl'
+            margin-#{$position}: $spacing-5 !important
+          @else if $modifier == 'none'
+            margin-#{$position}: 0 !important

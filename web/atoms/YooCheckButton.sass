@@ -49,6 +49,11 @@
       height: 32px
       font-size: 24px
 
+    &--text-left
+      flex-direction: row-reverse
+      > p
+        margin: 0 16px 0 0
+
   &:checked + .yoo-check
     &:before, &--checked:before
       content: '\f00c'
@@ -56,11 +61,7 @@
       display: inline-flex
       justify-content: center
       align-items: center
-
-      &--text-left
-        flex-direction: row-reverse
-        > p
-          margin: 0 16px 0 0
+      color: $white
 
       &:before
         content: ''

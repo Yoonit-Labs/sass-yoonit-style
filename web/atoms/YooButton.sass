@@ -28,8 +28,7 @@ $buttonColor: color($primary, 'primaryBase')
     padding: 0
     @include border-radius('pill')
     min-width: $spacing-6
-    font-size: $spacing-3 
-    box-shadow: 0 2px 4px $black
+    font-size: $spacing-3
 
   &--short
     width: 50px
@@ -155,7 +154,15 @@ $buttonColor: color($primary, 'primaryBase')
   // MOD: COLOR
 
   &__fill--default
-    $buttonColor: #F5F6F7
+    $buttonColor: color($grey, 'greyLightest')
+    border-color: $buttonColor
+    background-color: transparent
+    #{ $self }
+      &__text, &__icon
+        color: color($grey, 'greyBase')
+
+  &__fill--dark
+    $buttonColor: color($grey, 'greyLightest')
     border-color: $buttonColor
     background-color: transparent
     #{ $self }

@@ -1,6 +1,5 @@
 .yoo-table-attribute
   color: color($grey, 'greyDark')
-  @include font-size('$spacing-3')
 
   &--separated
     border-bottom: 1px solid color($grey, 'greyLight')
@@ -12,6 +11,7 @@
     @include font-weight('semi-bold')
     display: flex
     align-items: center
+    font-size: 14px
 
     &--wrap
       margin-bottom: 0
@@ -30,6 +30,7 @@
 
   &__detail
     @include font-weight('regular')
+    @include font-size('$spacing-3')
     text-align: right
     word-wrap: anywhere
     display: flex

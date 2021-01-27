@@ -34,7 +34,8 @@ $input-height: 30px
       display: block
       top: ($input-height / 2) + $spacing-2
       z-index: 2
-      font-size: $spacing-3
+      font-size: $size-175
+      @include font-weight('semi-bold')
       transition: all $placeholder-transition
       width: 100%
       cursor: text
@@ -68,6 +69,8 @@ $input-height: 30px
 
       &::placeholder
         color: color($grey, 'greyLight')
+        @include font-weight('medium')
+        font-size: $size-225
         opacity: 0
 
       &:focus,

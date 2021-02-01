@@ -1,4 +1,4 @@
-.warning
+.yoo-warning
   width: 100%
   +font($white, 'md', '$font-primary', 'medium')
   display: flex
@@ -8,13 +8,14 @@
 
   &__title
     +font-weight('bold')
-
-  &--clear
-    background-color: color($grey, 'greyLightest')
-    color: color($grey, 'greyDark')
-
-  &--danger
-    background-color: color($danger, 'dangerBase')
-
-  &--clear .warning__icon
-    color: color($danger, 'dangerBase')
+  &__variation
+    &--default
+      background-color: color($grey, 'greyDark')
+      color: $white  
+    &--danger
+      background-color: color($danger, 'dangerBase')
+    &--clear
+      background-color: color($grey, 'greyLightest')
+      color: color($grey, 'greyDark')
+      .yoo-warning__icon
+            color: color($danger, 'dangerBase')

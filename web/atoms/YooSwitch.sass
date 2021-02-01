@@ -9,85 +9,81 @@
     cursor: pointer
     outline: none
     user-select: none
-    padding: $spacing-tn
 
   &--small
     + label
-      width: 25px
-      height: 14px
-      background-color: #dddddd
-      border-radius: $spacing-lg
+      width: $spacing-lg
+      height: $spacing-md
+      border-radius: $spacing-xs * 5
 
   &--medium
     + label
-      width: 45px
-      height: 20px
-      background-color: #dddddd
+      width: $spacing-lg * 2
+      height: $spacing-xs * 5
       border-radius: $spacing-xl
 
   &--large
     + label
-      width: 70px
-      height: 32px
-      background-color: #dddddd
-      border-radius: $spacing-hg
+      width: $spacing-lg * 3
+      height: $spacing-xl
+      border-radius: $spacing-lg * 2
 
   + label:before,
   + label:after
     display: block
     position: absolute
-    top: 1px
-    left: 1px
-    bottom: 1px
     content: ""
 
   + label:before
-    right: 1px
-    background-color: #f1f1f1
+    background-color: rgba(color($grey, 'greyLight'), 0.4)
     border-radius: 60px
     transition: background 0.4s
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
 
   + label:after
-    background-color: $white
+    background-color: color($grey, 'greyLightest')
     border-radius: 100%
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.52)
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.32)
     transition: all 0.4s
+    top: 0px
+    bottom: 0px
+    left: -8px
 
   &--small
     + label:after
-      width: 20px
-      top: -5px
-      bottom: -5px
+      width: $spacing-xs * 5
+      top: -3px
+      bottom: -3px
 
   &--medium
     + label:after
       width: $spacing-xl
-      top: -5px
+      top: -6px
       bottom: -5px
 
   &--large
     + label:after
       width: $spacing-lg * 2
-      top: -$spacing-sm
-      bottom: -$spacing-sm
+      top: -9px
+      bottom: -8px
 
   &:checked + label:before
-    top: 0px
-    left: 0px
-    bottom: 0px
-    background-color: lighten(color($primary, 'primaryBase'), 35%)
+    background-color: rgba(color($primary, 'primaryBase'), 0.4)
 
   &:checked + label:after
     background-color: color($primary, 'primaryBase')
 
   &--small
     &:checked + label:after
-      transform: translateX(24px)
+      transform: translateX($spacing-xs * 5)
 
   &--medium
     &:checked + label:after
-      transform: translateX(36px)
+      transform: translateX($spacing-xl)
 
   &--large
     &:checked + label:after
-      transform: translateX(54px)
+      transform: translateX($spacing-lg * 1.7)

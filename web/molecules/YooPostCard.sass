@@ -2,56 +2,58 @@
   +border-radius('md')
   +border('sm', color($grey, 'greyLight'), solid)
   +box-shadow('soft', color($grey, 'greyLight'))
+  font-family: $font-primary
   padding: $spacing-md
   width: 100%
 
-  &--fill-white
-    background-color: $white
-    $color: color($grey, 'greyDark')
-    color: $color
+  &__fill
+    &--white
+      background-color: $white
+      $color: color($grey, 'greyDark')
+      color: $color
 
-    .yoo-post-card__subtitle
-      color: lighten($color, 10%)
+      .yoo-post-card__subtitle
+        color: lighten($color, 10%)
 
-  &--fill-primary
-    background-color: color($primary, 'primaryBase')
-    $color: $white
-    color: $color
+    &--primary
+      background-color: color($primary, 'primaryBase')
+      $color: $white
+      color: $color
 
-    .yoo-post-card__subtitle
-      color: darken($color, 10%)
+      .yoo-post-card__subtitle
+        color: darken($color, 10%)
 
-  &--fill-danger
-    background-color: color($danger, 'dangerBase')
-    $color: color($grey, 'greyLight')
-    color: $color
+    &--danger
+      background-color: color($danger, 'dangerBase')
+      $color: $white
+      color: $color
 
-    .yoo-post-card__subtitle
-      color: darken($color, 10%)
+      .yoo-post-card__subtitle
+        color: $color
 
-  &--fill-neutral
-    background-color: color($grey, 'greyBase')
-    $color: color($grey, 'greyDark')
-    color: $color
+    &--neutral
+      background-color: color($grey, 'greyBase')
+      $color: $white
+      color: $color
 
-    .yoo-post-card__subtitle
-      color: lighten($color, 10%)
+      .yoo-post-card__subtitle
+        color: $color
 
-  &--fill-light
-    background-color: color($grey, 'greyLight')
-    $color: color($grey, 'greyDark')
-    color: $color
+    &--light
+      background-color: color($grey, 'greyLight')
+      $color: color($grey, 'greyDark')
+      color: $color
 
-    .yoo-post-card__subtitle
-      color: lighten($color, 10%)
+      .yoo-post-card__subtitle
+        color: lighten($color, 10%)
 
-  &--fill-dark
-    background-color: color($grey, 'greyDark')
-    $color: $white
-    color: $color
+    &--dark
+      background-color: color($grey, 'greyDark')
+      $color: $white
+      color: $color
 
-    .yoo-post-card__subtitle
-      color: darken($color, 10%)
+      .yoo-post-card__subtitle
+        color: darken($color, 10%)
 
   &__icon
     margin-bottom: $spacing-sm + 2

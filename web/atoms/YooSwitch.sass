@@ -9,28 +9,28 @@
     cursor: pointer
     outline: none
     user-select: none
-    padding: 2px
+    padding: $spacing-tn
 
   &--small
     + label
       width: 40px
       height: 14px
       background-color: #dddddd
-      border-radius: 20px
+      border-radius: $spacing-lg
 
   &--medium
     + label
       width: 60px
       height: 21px
       background-color: #dddddd
-      border-radius: 30px
+      border-radius: $spacing-xl
 
   &--large
     + label
       width: 90px
-      height: 32px
+      height: $spacing-xl
       background-color: #dddddd
-      border-radius: 45px
+      border-radius: $spacing-hg
 
   + label:before,
   + label:after
@@ -48,28 +48,28 @@
     transition: background 0.4s
 
   + label:after
-    background-color: #fff
+    background-color: $white
     border-radius: 100%
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.52)
     transition: all 0.4s
 
   &--small
     + label:after
-      width: 21px
-      top: -3px
-      bottom: -3px
+      width: $spacing-lg
+      top: -5px
+      bottom: -5px
 
   &--medium
     + label:after
-      width: 32px
+      width: $spacing-xl
       top: -5px
       bottom: -5px
 
   &--large
     + label:after
-      width: 48px
-      top: -8px
-      bottom: -8px
+      width: $spacing-lg
+      top: -$spacing-sm
+      bottom: -$spacing-sm
 
   &:checked + label:before
     top: 0px

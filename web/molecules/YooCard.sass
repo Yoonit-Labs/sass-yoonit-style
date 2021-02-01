@@ -6,11 +6,11 @@
     border-top: 1px solid color($grey, 'greyLight')
 
 .yoo-card__item
-  @include font-size('$spacing-4')
+  @include font-size('lg')
 
   &--border-left
     border-left: 3px solid
-    padding-left: 16px
+    padding-left: $spacing-md
 
   &--border-fill-neutral
     border-left-color: color($grey, 'greyBase')
@@ -33,11 +33,11 @@
 .yoo-card__title
   width: 100%
   margin: 0
-  @include font-weight('medium')
+  +font-weight('medium')
   color: color($grey, 'greyDarkest')
 
 .yoo-card__subtitle
   width: 100%
   margin: 0
-  @include font-weight('medium')
-  @include font-size('$spacing-3')
+  +font-weight('medium')
+  font-size: 12px

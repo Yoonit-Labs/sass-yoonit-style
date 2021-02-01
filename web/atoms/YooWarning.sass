@@ -1,16 +1,13 @@
 .warning
   width: 100%
-  @include font(#FFFFFF, '$spacing-4', '$font-primary', 'medium')
+  +font($white, 'md', '$font-primary', 'medium')
   display: flex
   align-items: center
   &__icon
-    @include font-size('$spacing-5')
+    +font-size('xl')
 
   &__title
-    @include font-weight('bold')
-
-  &--default
-    background-color: color($danger, 'dangerBase')
+    +font-weight('bold')
 
   &--clear
     background-color: color($grey, 'greyLightest')

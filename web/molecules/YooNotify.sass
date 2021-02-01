@@ -6,37 +6,22 @@
 .yoo-notify
   min-height: 75px
   &__text
-    font-family: 'Montserrat'
-    @include font-size('$spacing-3')
-    &--xxxs
-      @include font-size('$spacing-1')
-
-    &--xxs
-      @include font-size('$spacing-2')
-
+    font-family: $font-primary
+    +font-size('sm')
+    &--tn
+    +font-size('tn')
     &--xs
-      @include font-size('$spacing-3')
-
+      +font-size('xs')
     &--sm
-      @include font-size('$spacing-4')
-
+      +font-size('sm')
     &--md
-      @include font-size('$spacing-5')
-
+      +font-size('md')
     &--lg
-      @include font-size('$spacing-6')
-
+      +font-size('lg')
     &--xl
-      @include font-size('$spacing-7')
-
-    &--xxl
-      @include font-size('$spacing-8')
-
-    &--xxxl
-      @include font-size('$spacing-12')
-
-    &--display
-      @include font-size('$spacing-13')
+      +font-size('xl')
+    &--hg
+      +font-size('hg')
 
     &--light
       color: $white
@@ -54,4 +39,4 @@
     background: color($grey, 'greyLight')
 
 .yoo-indicator
-  margin-left: 16px
+  margin-left: $spacing-md

@@ -1,13 +1,12 @@
 .yoo-segmented-bar
-  border-top: 1px solid color($grey, 'greyLight')
-  border-bottom: 1px solid color($grey, 'greyLight')
-  box-shadow: 0px 3px 6px color($grey, 'greyLight')
+  border-top: border('sm', color($grey, 'greyLight'), solid)
+  border-bottom: border('sm', color($grey, 'greyLight'), solid)
+  +box-shadow('soft', color($grey, 'greyLight'))
 
   &__item
     width: 100%
     margin: 5px 0
 
     &--border
-      border-right-width: 1px
-      border-right-style: solid
-      border-right-color: color($grey, 'greyLight')
+      border-right: border('sm', color($grey, 'greyLight'), solid)
+      

@@ -1,0 +1,71 @@
+.yoo-table-attribute
+  color: color($grey, 'greyDark')
+  @include font-size('$spacing-3')
+
+  &--separated
+    border-bottom: 1px solid color($grey, 'greyLight')
+
+  &--tall
+    height: 64
+
+  &__title
+    @include font-weight('semi-bold')
+    display: flex
+    align-items: center
+    margin-left: 4px
+
+    &--wrap
+      margin-bottom: 0
+
+    &--primary
+      color: color($primary, 'primaryDark')
+
+    &--danger
+      color: color($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__detail
+    @include font-weight('regular')
+    text-align: right
+    word-wrap: anywhere
+    display: flex
+    align-items: center
+    border: 1px solid #707070
+    border-radius: 26px
+    padding: 4px 8px
+
+    &--wrap
+      margin-top: 8px
+      text-align: left
+
+    .yoo-checkbox
+      margin-left: 8px
+
+    &--primary
+      color: color($primary, 'primaryDark')
+      border: 1px solid color($primary, 'primaryDark')
+
+    &--danger
+      color: color($danger, 'dangerBase')
+      border: 1px solid color($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__no-detail
+    @include font-weight('regular')
+    text-align: right
+    word-wrap: anywhere
+    display: flex
+    align-items: center
+
+  &__control
+    margin-left: 16px

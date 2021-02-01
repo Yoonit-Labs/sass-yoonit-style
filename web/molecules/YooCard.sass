@@ -1,43 +1,45 @@
 .yoo-card
   border-bottom: 1px solid color($grey, 'greyLight')
   color: color($grey, 'greyBase')
+  font-family: $font-primary
+  @include font-size('lg')
 
   &:first-of-type
     border-top: 1px solid color($grey, 'greyLight')
 
-.yoo-card__item
-  @include font-size('$spacing-4')
+  &__style
+    &--border-true
+      border-left: 3px solid
+      padding-left: $spacing-md
 
-  &--border-left
-    border-left: 3px solid
-    padding-left: 16px
 
-  &--border-fill-neutral
-    border-left-color: color($grey, 'greyBase')
+  &__fill
+    &--border-neutral
+      border-left-color: color($grey, 'greyBase')
 
-  &--border-fill-primary
-    border-left-color: color($primary, 'primaryBase')
+    &--border-primary
+      border-left-color: color($primary, 'primaryBase')
 
-  &--border-fill-danger
-    border-left-color: color($danger, 'dangerBase')
+    &--border-danger
+      border-left-color: color($danger, 'dangerBase')
 
-  &--border-fill-light
-    border-left-color: color($grey, 'greyLight')
+    &--border-light
+      border-left-color: color($grey, 'greyLight')
 
-  &--border-fill-dark
-    border-left-color: color($grey, 'greyDark')
+    &--border-dark
+      border-left-color: color($grey, 'greyDark')
 
-  &--border-fill-darkest
-    border-left-color: color($grey, 'greyDarkest')
+    &--border-darkest
+      border-left-color: color($grey, 'greyDarkest')
 
 .yoo-card__title
   width: 100%
   margin: 0
-  @include font-weight('medium')
+  +font-weight('medium')
   color: color($grey, 'greyDarkest')
 
 .yoo-card__subtitle
   width: 100%
   margin: 0
-  @include font-weight('medium')
-  @include font-size('$spacing-3')
+  +font-weight('medium')
+  +font-size('sm')

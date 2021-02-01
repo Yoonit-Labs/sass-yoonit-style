@@ -15,8 +15,8 @@
 
   + .yoo-check p
     font-family: Montserrat
-    font-weight: 500
-    margin: 0 0 0 16px
+    +font-weight('medium')
+    margin: 0 0 0 $spacing-md
 
     + .yoo-check
       display: flex
@@ -27,32 +27,35 @@
     align-items: center
     &:before
       content: ''
-      @include border-radius('circular')
+      +border-radius('circular')
       display: inline-block
       vertical-align: middle
       background: $white
       border: 3px solid color($primary, 'primaryBase')
       cursor: pointer
 
-    &--small:before
-      width: 18px
-      height: 18px
-      font-size: 12px
+    &--small
+      &::before
+        width: $spacing-md
+        height: $spacing-md
+      +font-size('sm')
 
-    &--medium:before
-      width: 24px
-      height: 24px
-      font-size: 18px
+    &--medium
+      &::before
+        width: $spacing-lg
+        height: $spacing-lg
+      +font-size('lg')
 
-    &--large:before
-      width: 32px
-      height: 32px
-      font-size: 24px
+    &--large
+      &::before
+        width: $spacing-xl
+        height: $spacing-xl
+      +font-size('xl')
 
     &--text-left
       flex-direction: row-reverse
       > p
-        margin: 0 16px 0 0
+        margin: 0 $spacing-md 0 0
 
   &:checked + .yoo-check
     &:before, &--checked:before
@@ -65,30 +68,33 @@
 
       &:before
         content: ''
-        @include border-radius('circular')
+        +border-radius('circular')
         display: inline-block
         vertical-align: middle
         background: $white
         border: 3px solid color($primary, 'primaryBase')
-        margin-right: 4px
-        margin-bottom: 4px
+        margin-right: $spacing-xs
+        margin-bottom: $spacing-xs
         flex-shrink: 0
         cursor: pointer
 
-      &--small:before
-        width: 18px
-        height: 18px
-        font-size: 12px
+    &--small
+      &::before
+        width: $spacing-md
+        height: $spacing-md
+      +font-size('sm')
 
-      &--medium:before
-        width: 24px
-        height: 24px
-        font-size: 18px
+    &--medium
+      &::before
+        width: $spacing-lg
+        height: $spacing-lg
+      +font-size('lg')
 
-      &--large:before
-        width: 32px
-        height: 32px
-        font-size: 24px
+    &--large
+      &::before
+        width: $spacing-xl
+        height: $spacing-xl
+      +font-size('xl')
 
     &:checked + .yoo-check
       &:before, &--checked:before
@@ -98,7 +104,7 @@
         justify-content: center
         align-items: center
         border: none
-        padding: 3px
+        padding: $spacing-xs
         color: $white
 
     &:checked + .yoo-check--switch-card

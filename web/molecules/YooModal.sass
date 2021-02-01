@@ -7,7 +7,7 @@
   display: flex
   align-items: center
   justify-content: center
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: $transparent
 
   .yoo-modal
     box-sizing: border-box
@@ -16,8 +16,8 @@
     min-height: 254px
     padding: 24px 16px 8px 16px
     background: $white
-    @include box-shadow('soft', #00000029) 
-    @include border('xs', #D9D9D9, solid)
-    @include border-radius('lg')
+    +box-shadow('soft', #00000029) 
+    +border('xs', #D9D9D9, solid)
+    +border-radius('lg')
     text-align: center
-    font-family: 'Montserrat', sans-serif
+    font-family: $font-primary

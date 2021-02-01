@@ -2,16 +2,16 @@
   color: color($grey, 'greyDark')
 
   &--separated
-    border-bottom: 1px solid color($grey, 'greyLight')
+    border-bottom: border('sm', color($grey, 'greyLight'), solid)
 
   &--tall
-    height: 64
+    height: $spacing-hg
 
   &__title
-    @include font-weight('semi-bold')
+    +font-weight('semi-bold')
     display: flex
     align-items: center
-    font-size: 14px
+    +font-size('md')
 
     &--wrap
       margin-bottom: 0
@@ -29,19 +29,19 @@
       color: $black
 
   &__detail
-    @include font-weight('regular')
-    @include font-size('$spacing-3')
+    +font-weight('regular')
+    +font-size('sm')
     text-align: right
     word-wrap: anywhere
     display: flex
     align-items: center
 
     &--wrap
-      margin-top: 8px
+      margin-top: $spacing-sm
       text-align: left
 
     .yoo-checkbox
-      margin-left: 8px
+      margin-left: $spacing-sm
 
     &--primary
       color: color($primary, 'primaryDark')
@@ -56,7 +56,7 @@
       color: $black
 
   &__control
-    margin-left: 16px
+    margin-left: $spacing-md
 
   &--primary
     background: color($primary, 'primaryDark')

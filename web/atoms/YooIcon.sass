@@ -1,34 +1,34 @@
-.yoo__icon
+.yoo-icon
   +font-size('md')
 
   // SIZE
-  &--tn
-    +font-size('tn')
-  &--xs
-    +font-size('xs')
-  &--sm
-    +font-size('sm')
-  &--md
-    +font-size('md')
-  &--lg
-    +font-size('lg')
-  &--xl
-    +font-size('xl')
-  &--hg
-    +font-size('hg')
+  &__size
+    &--tn
+      +font-size('tn')
+    &--xs
+      +font-size('xs')
+    &--sm
+      +font-size('sm')
+    &--md
+      +font-size('md')
+    &--lg
+      +font-size('lg')
+    &--xl
+      +font-size('xl')
+    &--hg
+      +font-size('hg')
 
   // FILL COLORS
-  &__fill-neutral
-    color: color($grey, 'greyBase')
-  &__fill-primary
-    color: color($primary, 'primaryBase')
-  &__fill-danger
-    color: color($danger, 'dangerBase')
-    &-mouseover
+  &__fill
+    &--neutral
+      color: color($grey, 'greyBase')
+    &--primary
+      color: color($primary, 'primaryBase')
+    &--danger
       color: color($danger, 'dangerBase')
-    &-mousedown
-      color: color($danger, 'dangerBase')
-  &__fill-light
-    color: color($grey, 'greyDark')
-  &__fill-dark
-    color: color($grey, 'greyDark')
+    &--dark
+      color: color($grey, 'greyDark')
+    &--black
+      color: $black
+    &--white
+      color: $white

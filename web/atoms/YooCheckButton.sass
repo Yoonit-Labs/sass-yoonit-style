@@ -34,20 +34,23 @@
       border: 3px solid color($primary, 'primaryBase')
       cursor: pointer
 
-    &--small:before
-      width: $spacing-lg
-      height: $spacing-lg
+    &--small
+      &::before
+        width: $spacing-md
+        height: $spacing-md
       +font-size('sm')
 
-    &--medium:before
-      width: $spacing-xl
-      height: $spacing-xl
-      +font-size('xl')
+    &--medium
+      &::before
+        width: $spacing-lg
+        height: $spacing-lg
+      +font-size('lg')
 
-    &--large:before
-      width: $spacing-hg
-      height: $spacing-hg
-      +font-size('hg')
+    &--large
+      &::before
+        width: $spacing-xl
+        height: $spacing-xl
+      +font-size('xl')
 
     &--text-left
       flex-direction: row-reverse
@@ -75,20 +78,23 @@
         flex-shrink: 0
         cursor: pointer
 
-      &--small:before
+    &--small
+      &::before
+        width: $spacing-md
+        height: $spacing-md
+      +font-size('sm')
+
+    &--medium
+      &::before
         width: $spacing-lg
         height: $spacing-lg
-        +font-size('sm')
+      +font-size('lg')
 
-      &--medium:before
+    &--large
+      &::before
         width: $spacing-xl
         height: $spacing-xl
-        @include font-size('xl')
-
-      &--large:before
-        width: $spacing-hg
-        height: $spacing-hg
-        @include font-size('hg')
+      +font-size('xl')
 
     &:checked + .yoo-check
       &:before, &--checked:before

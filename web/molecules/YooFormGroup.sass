@@ -1,6 +1,7 @@
 $placeholder-transition: 300ms ease-in-out
 
 .yoo-input-group
+  +font-family($font-primary)
   margin: 40px 0 0
   width: 100%
 
@@ -53,10 +54,10 @@ $placeholder-transition: 300ms ease-in-out
       z-index: 1
       width: 100%
       min-height: $spacing-xl - 2
-      +font-size('lg' + 2)
+      font-size: $font-size-lg + 2
       color: color($grey, 'greyDark')
       border: 0
-      border-bottom: border('sm', color($grey, 'greyBase'), solid)
+      border-bottom: 1px solid color($grey, 'greyBase')
       transition: border-color $placeholder-transition
       outline: none
       padding: 0
@@ -65,7 +66,7 @@ $placeholder-transition: 300ms ease-in-out
       &::placeholder
         color: color($grey, 'greyLight')
         +font-weight('medium')
-        +font-size('lg' + 2)
+        font-size: $font-size-lg + 2
         opacity: 0
 
       &:focus,

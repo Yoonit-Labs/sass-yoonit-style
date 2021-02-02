@@ -27,9 +27,10 @@ $buttonColor: color($primary, 'primaryBase')
     +border-radius('pill')
     min-width: $spacing-lg
     +font-size('sm')
+    overflow: hidden
 
   &--short
-    width: $spacing-lg * 2
+    width: 50%
 
   &__text
     color: $white
@@ -65,6 +66,7 @@ $buttonColor: color($primary, 'primaryBase')
     $buttonColor: color($grey, 'greyLight')
     background-color: $buttonColor
     +border('sm', $buttonColor, solid)
+    cursor: not-allowed
 
   // MOD: VARIATION
   &--outline
@@ -91,6 +93,7 @@ $buttonColor: color($primary, 'primaryBase')
       $buttonColor: color($grey, 'greyLight')
       background-color: transparent
       +border('sm', $buttonColor, solid)
+      cursor: not-allowed
       #{ $self }
         &__text, &__icon
           color: $buttonColor
@@ -101,7 +104,6 @@ $buttonColor: color($primary, 'primaryBase')
     background-color: transparent
     z-index: 0
     padding: 0
-    width: 100%
 
     #{ $self }
       &__text, &__icon
@@ -122,6 +124,7 @@ $buttonColor: color($primary, 'primaryBase')
       $buttonColor: color($grey, 'greyLight')
       background-color: transparent
       border-width: 0
+      cursor: not-allowed
       #{ $self }
         &__text, &__icon
           color: $buttonColor
@@ -141,29 +144,153 @@ $buttonColor: color($primary, 'primaryBase')
 
   // MOD: COLOR
 
-  &__fill--default
-    $buttonColor: color($grey, 'greyLightest')
-    border-color: $buttonColor
-    background-color: transparent
-    #{ $self }
-      &__text, &__icon
-        color: color($grey, 'greyBase')
-
-  &__fill--dark
-    $buttonColor: color($grey, 'greyLightest')
-    border-color: $buttonColor
-    background-color: transparent
-    #{ $self }
-      &__text, &__icon
-        color: color($grey, 'greyDark')
-
   &__fill--light
     $buttonColor: color($grey, 'greyLightest')
     border-color: $buttonColor
     background-color: $buttonColor
+
+    // VARIATIONS BUTTON LIGHT -- OUTLINE
+    &#{ $self }--outline
+      border-width: 1px
+      border-style: solid
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: color($grey, 'greyBase')
+      &#{ $self }--hover:hover
+        $buttonColor: color($grey, 'greyLightest')
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: color($grey, 'greyDark')
+      &#{ $self }--active:active
+        background-color: $buttonColor
+        border-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: color($grey, 'greyDark')
+    
+    // VARIATIONS BUTTON LIGHT -- CLEAR
+    &#{ $self }--clear
+      $buttonColor: color($grey, 'greyBase')
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+      &#{ $self }--hover:hover
+        $buttonColor: color($grey, 'greyDark')
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+      &#{ $self }--active:active
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+    // STYLES BUTTON LIGHT
     #{ $self }
       &__text, &__icon
         color: color($grey, 'greyDark')
+
+    &#{ $self }--hover:hover
+      $buttonColor: color($grey, 'greyBase')
+      border-width: 1px
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+    &#{ $self }--disabled
+      color: color($danger, 'dangerBase')
+
+  &__fill--dark
+    $buttonColor: color($grey, 'greyDark')
+    border-color: $buttonColor
+    background-color: $buttonColor
+
+    // VARIATIONS BUTTON DARK -- OUTLINE
+    &#{ $self }--outline
+      border-width: 1px
+      border-style: solid
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: color($grey, 'greyDark')
+      &#{ $self }--hover:hover
+        $buttonColor: color($grey, 'greyDark')
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: color($grey, 'greyLightest')
+      &#{ $self }--active:active
+        background-color: $buttonColor
+        border-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: color($grey, 'greyDark')
+    
+    // VARIATIONS BUTTON DARK -- CLEAR
+    &#{ $self }--clear
+      $buttonColor: color($grey, 'greyDark')
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+      &#{ $self }--hover:hover
+        $buttonColor: color($grey, 'greyBase')
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+      &#{ $self }--active:active
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+    // STYLES BUTTON DARK
+    #{ $self }
+      &__text, &__icon
+        color: color($grey, 'greyLightest')
+
+    &#{ $self }--hover:hover
+      $buttonColor: color($grey, 'greyDark')
+      border-width: 1px
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+    &#{ $self }--active:active
+      $buttonColor: color($grey, 'greyDarkest')
+      border-width: 1px
+      border-color: $buttonColor
+      background-color: $buttonColor
+
+    &#{ $self }--disabled
+      $buttonColor: color($grey, 'greyLight')
+      background-color: $buttonColor
+      border-width: 1px
+      border-style: solid
+      border-color: $buttonColor
 
   &__fill--danger
     $buttonColor: color($danger, 'dangerBase')

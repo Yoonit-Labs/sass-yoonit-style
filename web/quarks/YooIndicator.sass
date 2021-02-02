@@ -4,7 +4,7 @@
   align-items: center
 
 .yoo-indicator
-  border-radius: 50%
+  +border-radius('circular')
   animation-duration: 2s
   animation-timing-function: cubic-bezier(.28,.68,.75,.78)
   animation-fill-mode: forwards
@@ -17,24 +17,24 @@
     animation-name: pulse
 
   &--normal
-    width: 20px
-    height: 20px
-    font-size: 12px
+    width: $spacing-lg 
+    height: $spacing-lg
+    +font-size('md')
 
   &--small
-    width: 8px
-    height: 8px
-    font-size: 6px
+    width: $spacing-sm
+    height: $spacing-sm
+    +font-size('tn' - 2)
 
   &--medium
-    width: 16px
-    height: 16px
-    font-size: 10px
+    width: $spacing-md
+    height: $spacing-md
+    +font-size('xs')
 
   &--large
-    width: 30px
-    height: 30px
-    font-size: 14px
+    width: $spacing-xl
+    height: $spacing-xl
+    +font-size('lg')
 
   &--primary
     background: color($primary, 'primaryBase')

@@ -1,13 +1,13 @@
 .yoo-button-toggle
   position: relative
-  height: $spacing-13
-  box-shadow: 0px 3px 6px color($grey, 'greyLight')
-  @include border('md', color($grey, 'greyBase'), solid)
-  @include border-radius('pill')
+  height: $spacing-hg - 12
+  +box-shadow('soft', color($grey, 'greyLight'))
+  +border('md', color($grey, 'greyBase'), solid)
+  +border-radius('pill')
 
   &__container
     position: absolute
     width: calc(100% + 4px)
-    @include border-radius('pill')
-    top: -2px
-    left: -2px
+    +border-radius('pill')
+    top: -$spacing-tn
+    left: -$spacing-tn

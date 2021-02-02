@@ -2,16 +2,16 @@
 //         ANIMATION        //
 //////////////////////////////
 
-@mixin animation($name, $repeat, $direction, $timing, $duration, $state, $delay)
+=animation($name, $repeat, $direction, $timing, $duration, $state, $delay)
   animation-name: $name
   animation-iteration-count: $repeat
   animation-direction: $direction
   animation-timing-function: $timing
-  @include durationAnimation($duration)
-  @include stateAnimation($state)
-  @include delayAnimation($delay)
+  +durationAnimation($duration)
+  +stateAnimation($state)
+  +delayAnimation($delay)
 
-@mixin durationAnimation($duration)
+=durationAnimation($duration)
   @if $duration == 'slow'
     animation-duration: 4s
   @else if $duration == 'normal'
@@ -23,13 +23,13 @@
   @else
     animation-duration: 2s
 
-@mixin stateAnimation($state)
+=stateAnimation($state)
   @if $state == 'paused'
     animation-play-state: paused
   @else
     animation-play-state: played
 
-@mixin delayAnimation($delay)
+=delayAnimation($delay)
   @if $durationAnimation == 'slow'
     animation-delay: 4s
   @else if $modifier == 'normal'

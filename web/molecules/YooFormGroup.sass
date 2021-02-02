@@ -1,9 +1,4 @@
-$placeholder-font-size: 18px
-$placeholder-font-size-small: 14px
 $placeholder-transition: 300ms ease-in-out
-$input-font-size: $placeholder-font-size
-$input-top: 20px
-$input-height: 30px
 
 .yoo-input-group
   margin: 40px 0 0
@@ -13,15 +8,15 @@ $input-height: 30px
     position: relative
     display: block
     width: 100%
-    min-height: $input-height + $input-top
+    min-height: $spacing-hg - 14
     &::before
       content: ""
-      height: 2px
+      height: $spacing-tn
       width: 100%
       background-color: color($primary, 'primaryBase')
       position: absolute
       z-index: 2
-      bottom: -2px
+      bottom: -$spacing-tn
       transform: scale(0)
       transition: all $placeholder-transition
 
@@ -32,9 +27,10 @@ $input-height: 30px
     &__label
       position: absolute
       display: block
-      top: ($input-height / 2) + $spacing-2
+      top: $spacing-lg - 1
       z-index: 2
-      font-size: $spacing-3
+      +font-size('md')
+      +font-weight('semi-bold')
       transition: all $placeholder-transition
       width: 100%
       cursor: text
@@ -43,24 +39,24 @@ $input-height: 30px
       i
         position: absolute
         right: 0
-        bottom: -($input-height / 2) - $spacing-2
+        bottom: -($spacing-lg - 1)
 
     &__feedback
       position: absolute
-      bottom: -$spacing-5
-      font-size: 0.7em
+      bottom: -($spacing-lg - 4)
+      +font-size('sm') // Estava 0.7em (11.2px)
       font-weight: 500
 
     &__field
       position: absolute
-      top: $input-top
+      top: $spacing-lg - 4
       z-index: 1
       width: 100%
-      min-height: $input-height
-      font-size: $input-font-size
+      min-height: $spacing-xl - 2
+      +font-size('lg' + 2)
       color: color($grey, 'greyDark')
       border: 0
-      border-bottom: 1px solid color($grey, 'greyBase')
+      border-bottom: border('sm', color($grey, 'greyBase'), solid)
       transition: border-color $placeholder-transition
       outline: none
       padding: 0
@@ -68,6 +64,8 @@ $input-height: 30px
 
       &::placeholder
         color: color($grey, 'greyLight')
+        +font-weight('medium')
+        +font-size('lg' + 2)
         opacity: 0
 
       &:focus,
@@ -78,7 +76,7 @@ $input-height: 30px
         & + .yoo-input__label
           top: 0
           cursor: inherit
-          font-size: $placeholder-font-size-small
+          @include font-size('md')
 
         &::placeholder
           opacity: 1

@@ -1,34 +1,32 @@
 $buttonColor: color($primary, 'primaryBase')
 .yoo__container--button
-  height: 56px
+  height: $spacing-lg + $spacing-xl
   
 .yoo-btn
   $self: &
-  font-family: "Montserrat", "Montserrat-SemiBold"
-  font-weight: 600
+  font-family: $font-primary
+  +font-weight('semi-bold')
+  +font-size('md')
   width: 100%
   height: 100%
-  @include border-radius('pill')
-  border-width: 2px
-  border-style: solid
-  font-size: $spacing-3 + 2
-  border-color: $buttonColor
+  +border-radius('pill')
+  +border('md', $buttonColor, solid)
   background-color: $buttonColor
   display: flex
   justify-content: center
   align-items: center
-  padding: 0 20px
+  padding: 0 $spacing-lg
   margin: 0
   cursor: pointer
   outline: none
 
   &--xs
-    width: $spacing-6
-    height: $spacing-6
+    width: $spacing-lg
+    height: $spacing-lg
     padding: 0
-    @include border-radius('pill')
-    min-width: $spacing-6
-    font-size: $spacing-3
+    +border-radius('pill')
+    min-width: $spacing-lg
+    +font-size('sm')
     overflow: hidden
 
   &--short
@@ -40,21 +38,19 @@ $buttonColor: color($primary, 'primaryBase')
 
   &__icon
     color: $white
-    font-size: 18px
+    +font-size('lg')
     background-color: transparent
     &--small
-      font-size: $spacing-4
+      +font-size('lg')
     &--large
-      font-size: $spacing-6
+      +font-size('xl')
     &--right
-      margin-left: 8px
+      margin-left: $spacing-sm
     &--left
-      margin-right: 8px
+      margin-right: $spacing-sm
 
   &--hover:hover
-    border-width: 1px
-    border-style: solid
-    border-color: $buttonColor
+    +border('sm', $buttonColor, solid)
     background-color: transparent
     #{ $self }
       &__text, &__icon
@@ -69,25 +65,19 @@ $buttonColor: color($primary, 'primaryBase')
   &--disabled
     $buttonColor: color($grey, 'greyLight')
     background-color: $buttonColor
-    border-width: 1px
-    border-style: solid
-    border-color: $buttonColor
+    +border('sm', $buttonColor, solid)
     cursor: not-allowed
 
   // MOD: VARIATION
   &--outline
-    border-width: 2
-    border-style: solid
-    border-color: $buttonColor
+    +border('md', $buttonColor, solid)
     background-color: transparent
     z-index: 0
     #{ $self }
       &__text, &__icon
         color: $buttonColor
     &#{ $self}--hover:hover
-      border-width: 1px
-      border-style: solid
-      border-color: $buttonColor
+      +border('sm', $buttonColor, solid)
       background-color: $buttonColor
       #{ $self }
         &__text, &__icon
@@ -102,9 +92,7 @@ $buttonColor: color($primary, 'primaryBase')
     &#{ $self }--disabled
       $buttonColor: color($grey, 'greyLight')
       background-color: transparent
-      border-width: 1px
-      border-style: solid
-      border-color: $buttonColor
+      +border('sm', $buttonColor, solid)
       cursor: not-allowed
       #{ $self }
         &__text, &__icon
@@ -143,16 +131,16 @@ $buttonColor: color($primary, 'primaryBase')
 
   // MOD: FORMAT
   &--square
-    width: 56px
+    width: $spacing-lg + $spacing-xl
     padding: 0
 
   &--mini
-    width: 56px
-    height: 24px
+    width: $spacing-lg + $spacing-xl
+    height: $spacing-lg
     padding: 0
 
     #{ $self }__icon
-      font-size: 16px
+      +font-size('lg')
 
   // MOD: COLOR
 
@@ -310,18 +298,14 @@ $buttonColor: color($primary, 'primaryBase')
     background-color: $buttonColor
     // VARIATIONS BUTTON DANGER -- OUTLINE
     &#{ $self }--outline
-      border-width: 1px
-      border-style: solid
-      border-color: $buttonColor
+      +border('sm', $buttonColor, solid)
       background-color: transparent
       #{ $self }
         &__text, &__icon
           color: $buttonColor
       &#{ $self }--hover:hover
         $buttonColor: color($danger, 'dangerBase')
-        border-width: 1px
-        border-style: solid
-        border-color: $buttonColor
+        +border('sm', $buttonColor, solid)
         background-color: $buttonColor
         #{ $self }
           &__text, &__icon
@@ -353,9 +337,7 @@ $buttonColor: color($primary, 'primaryBase')
 
     // STYLES BUTTON DANGER
     &#{ $self }--hover:hover
-      border-width: 1px
-      border-style: solid
-      border-color: $buttonColor
+      +border('sm', $buttonColor, solid)
       background-color: transparent
       #{ $self }
         &__text, &__icon
@@ -370,13 +352,11 @@ $buttonColor: color($primary, 'primaryBase')
     &#{ $self }--disabled
       $buttonColor: color($grey, 'greyLight')
       background-color: $buttonColor
-      border-width: 1px
-      border-style: solid
-      border-color: $buttonColor
+      +border('sm', $buttonColor, solid)
 
   &--animation-pulse
     animation-name: pulse
-    animation-duration: 2s
+    +durationAnimation('normal')
     animation-timing-function: cubic-bezier(.28,.68,.75,.78)
     animation-fill-mode: forwards
     animation-iteration-count: infinite

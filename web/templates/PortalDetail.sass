@@ -4,19 +4,19 @@
   box-sizing: border-box
 
 .modal__header
-  margin-bottom: $spacing-6
+  margin-bottom: $spacing-lg
   .portal-info
-    font-size: 14px
-    color: #5A5F67
+  +font-size('md')
+    color: color($primary, 'primaryBase')
   .portal-name
-    font-size: $spacing-6
-    color: #47C8C3
+    font-size: $spacing-lg
+    color: color($grey, 'greyDark')
 
 .modal__details
-  margin-bottom: $spacing-6
+  margin-bottom: $spacing-lg
   .portal-details
-    color: #8F959F
-    font-size: 14px
+    color: color($grey, 'greyBase')
+    +font-size('md')
   .portal-data
-    color: #5A5F67
-    font-size: 14px
+    color: color($grey, 'greyDark')
+    +font-size('md')

@@ -1,8 +1,7 @@
 .yoo-quiz
   &__question
-    @include font-weight('medium')
-    font-family: 'Montserrat'
-
+    +font-weight('medium')
+    font-family: $font-primary
     span
       color: color($danger, dangerBase)
-      margin-left: 8px
+      margin-left: $spacing-sm

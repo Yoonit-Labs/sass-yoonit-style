@@ -36,7 +36,7 @@ $transparent: rgba(255, 255, 255, 0);
 
 /*==== Export Colors ====*/
 
-@import '../../bosons/functions/colors';
+@import '../../bosons/colors';
 
 $allColors: map-collect($primary, $danger, $grey);
   

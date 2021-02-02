@@ -1,4 +1,4 @@
-@mixin random-bgr()
+=random-bgr()
   background: rgb(random(255), random(255), random(255))
 
 .yoo-grid-layout
@@ -9,13 +9,13 @@
 
   .color
     border-radius: 5px
-    padding: 20px
-    color: #fff
+    padding: $spacing-lg
+    color: $white
     font-size: 150%
 
     @for $i from 0 to 100
       &:nth-child(#{$i})
-        @include random-bgr()
+        +random-bgr()
 
   &--h-start
     justify-content: start

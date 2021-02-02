@@ -1,44 +1,34 @@
 .yoo-icon
-  font-size: 14px
+  +font-size('md')
 
   // SIZE
-  &__size--xxxs
-    font-size: 10px
-  &__size--xxs
-    @include font-size('$spacing-3')
-  &__size--xs
-    font-size: 14px
-  &__size--sm
-    @include font-size('$spacing-4')
-  &__size--md
-    font-size: 18px
-  &__size--lg
-    @include font-size('$spacing-5')
-  &__size--xl
-    @include font-size('$spacing-6')
-  &__size--xxl
-    @include font-size('$spacing-8')
-  &__size--xxxl
-    @include font-size('$spacing-12')
-  &__size--display
-    @include font-size('$spacing-15')
+  &__size
+    &--tn
+      +font-size('tn')
+    &--xs
+      +font-size('xs')
+    &--sm
+      +font-size('sm')
+    &--md
+      +font-size('md')
+    &--lg
+      +font-size('lg')
+    &--xl
+      +font-size('xl')
+    &--hg
+      +font-size('hg')
 
   // FILL COLORS
-  &__fill--neutral
-    color: color($grey, 'greyBase')
-  &__fill--primary
-    color: color($primary, 'primaryBase')
-  &__fill--danger
-    color: color($danger, 'dangerBase')
-    &-mouseover
+  &__fill
+    &--neutral
+      color: color($grey, 'greyBase')
+    &--primary
+      color: color($primary, 'primaryBase')
+    &--danger
       color: color($danger, 'dangerBase')
-    &-mousedown
-      color: color($danger, 'dangerBase')
-  &__fill--light
-    color: color($grey, 'greyLight')
-  &__fill--dark
-    color: color($grey, 'greyDark')
-  &__fill--white
-    color: $white
-  &__fill--black
-    color: $black
+    &--dark
+      color: color($grey, 'greyDark')
+    &--black
+      color: $black
+    &--white
+      color: $white

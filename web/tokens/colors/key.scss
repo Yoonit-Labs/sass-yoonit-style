@@ -8,7 +8,7 @@ $primary: (
   'primaryDarkest': #008080,
   'primaryDark': #1DBABA,
   'primaryBase': #47C8C3,  
-  'primaryLight': #76D6D2
+  'primaryLight': #B0E7E5
 );
 
 /*==== Danger Color ====*/
@@ -38,7 +38,7 @@ $transparent: rgba(255, 255, 255, 0);
 
 /*==== Export Colors ====*/
 
-@import '../../bosons/functions/colors';
+@import '../../bosons/colors';
 
 $allColors: map-collect($primary, $danger, $grey);
   

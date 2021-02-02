@@ -1,113 +1,82 @@
+.yoo-checkbox input
+  display: none
+
 .yoo-checkbox
   -webkit-user-select: none
   -moz-user-select: none
   -ms-user-select: none
   user-select: none
+  &__card
+    transition: 0.2s ease
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2)
+    border-radius: 3px
+    color: color($grey, 'greyBase')
+    &--active
+      display: block
+      align-items: center
+      background: color($primary, 'primaryBase')
+      color: $white
 
-  &--switch-card
-    width: 100%
-
-    > .yoo-check:before
-      border-color: color($primary, 'primaryDark') !important
-
-.yoo-checkbox input
-  display: none
-
-  + .yoo-check p
+  &__text
     font-family: Montserrat
     +font-weight('medium')
     margin: 0 0 0 $spacing-md
 
-    + .yoo-check
-      display: flex
-      align-items: center
-
-  + .yoo-check
-    display: flex
-    align-items: center
-    &:before
-      content: ''
-      +border-radius('circular')
-      display: inline-block
-      vertical-align: middle
-      background: $white
-      border: 3px solid color($primary, 'primaryBase')
-      cursor: pointer
-
-    &--small
-      &::before
-        width: $spacing-md
-        height: $spacing-md
-        +font-size('sm')
-
-    &--medium
-      &::before
-        width: $spacing-lg
-        height: $spacing-lg
-        +font-size('lg')
-
-    &--large
-      &::before
-        width: $spacing-xl
-        height: $spacing-xl
-      +font-size('xl')
-
-    &--text-right
+    &--right
       flex-direction: row-reverse
       > p
         margin: 0 $spacing-md 0 0
 
-  &:checked + .yoo-check
-    &:before, &--checked:before
-      content: '\f00c'
-      background: color($primary, 'primaryBase')
+  &--small
+    font-size: $font-size-sm
+    &:before
+      width: $spacing-md
+      height: $spacing-md
+
+  &--medium
+    font-size: $font-size-lg
+    &:before
+      width: $spacing-lg
+      height: $spacing-lg
+
+  &--large
+    font-size: $font-size-xl
+    &:before
+      width: $spacing-xl
+      height: $spacing-xl
+
+  &__check
+    display: flex
+    align-items: center
+    &:before
+      content: ''
+      @include border-radius('circular')
+      vertical-align: middle
       display: inline-flex
       justify-content: center
       align-items: center
-      color: $white
+      background: $white
+      border: 3px solid color($grey, 'greyBase')
+      cursor: pointer
 
+    &--active
       &:before
-        content: ''
-        +border-radius('circular')
-        display: inline-block
-        vertical-align: middle
-        background: $white
-        border: 3px solid color($primary, 'primaryBase')
-        margin-right: $spacing-xs
-        margin-bottom: $spacing-xs
-        flex-shrink: 0
-        cursor: pointer
-
-    &--small
-      &::before
-        width: $spacing-md
-        height: $spacing-md
-      +font-size('sm')
-
-    &--medium
-      &::before
-        width: $spacing-lg
-        height: $spacing-lg
-        +font-size('lg')
-
-    &--large
-      &::before
-        width: $spacing-xl
-        height: $spacing-xl
-        +font-size('xl')
-
-    &:checked + .yoo-check
-      &:before, &--checked:before
         content: '\f00c'
         background: color($primary, 'primaryBase')
-        display: inline-flex
-        justify-content: center
-        align-items: center
-        border: none
-        padding: $spacing-xs
         color: $white
+        border: 3px solid color($primary, 'primaryBase')
 
-    &:checked + .yoo-check--switch-card
-      &:before, &--checked:before
-          color: color($primary, 'primaryBase')
-          background-color: $white
+    &--card-active
+      &:before
+        content: '\f00c'
+        background: $white
+        color: color($primary, 'primaryBase')
+        border: 3px solid $white
+
+    &--disabled
+      &:before
+        content: '\f00c'
+        background: color($grey, 'greyLight')
+        color: $white
+        border: 3px solid color($grey, 'greyLight')
+        cursor: default

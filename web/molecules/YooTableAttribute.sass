@@ -3,7 +3,7 @@
   font-family: $font-primary
 
   &--separated
-    border-bottom: border('sm', color($grey, 'greyLight'), solid)
+    border-bottom: 1px solid color($grey, 'greyLight')
 
   &--tall
     height: $spacing-hg
@@ -24,10 +24,10 @@
       color: color($danger, 'dangerBase')
 
     &--light
-      color: $white
+      color: color($grey, 'greyLight')
 
     &--dark
-      color: $black
+      color: color($grey, 'greyDark')
 
   &__detail
     +font-weight('regular')
@@ -51,25 +51,10 @@
       color: color($danger, 'dangerBase')
 
     &--light
-      color: $white
+      color: color($grey, 'greyLight')
 
     &--dark
-      color: $black
+      color: color($grey, 'greyDark')
 
   &__control
     margin-left: $spacing-md
-
-  &--primary
-    background: color($primary, 'primaryDark')
-
-  &--danger
-    background: color($danger, 'dangerBase')
-
-  &--light
-    background: $white
-
-  &--dark
-    background: $black
-
-  &--neutral
-    background: color($grey, 'greyLightest')

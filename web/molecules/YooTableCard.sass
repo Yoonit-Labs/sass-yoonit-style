@@ -1,8 +1,10 @@
-.yoo-table-attribute
+.yoo-table-card
   color: color($grey, 'greyDark')
-  @include font-size('$spacing-3')
+  @include font-family('$font-primary')
+  
 
   &--separated
+    padding-bottom: 15px
     border-bottom: 1px solid color($grey, 'greyLight')
 
   &--tall
@@ -10,6 +12,31 @@
 
   &__title
     @include font-weight('semi-bold')
+    @include font-size('$spacing-4')
+    display: flex
+    align-items: center
+    margin-left: 4px
+    color: $black
+
+    &--wrap
+      margin-bottom: 0
+
+    &--primary
+      color: color($primary, 'primaryDark')
+
+    &--danger
+      color: color($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__subtitle
+    @include font-weight('medium')
+    @include font-size('$spacing-3')
+    color: color($primary, 'primaryDark')
     display: flex
     align-items: center
     margin-left: 4px
@@ -31,6 +58,7 @@
 
   &__detail
     @include font-weight('regular')
+    @include font-size('$spacing-3')
     text-align: right
     word-wrap: anywhere
     display: flex
@@ -38,10 +66,11 @@
     border: 1px solid #707070
     border-radius: 26px
     padding: 4px 8px
+    margin: 4px
 
-    &--wrap
-      margin-top: 8px
-      text-align: left
+    &--on
+      border: 1px solid color($primary, 'primaryDark')
+      color: color($primary, 'primaryDark')
 
     .yoo-checkbox
       margin-left: 8px
@@ -62,7 +91,7 @@
 
   &__no-detail
     @include font-weight('regular')
-    text-align: right
+    @include font-size('$spacing-3')
     word-wrap: anywhere
     display: flex
     align-items: center

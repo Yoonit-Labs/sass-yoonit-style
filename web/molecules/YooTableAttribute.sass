@@ -1,7 +1,7 @@
 .yoo-table-attribute
   color: color($grey, 'greyDark')
   font-family: $font-primary
-
+  height: $spacing-hg - 8px
   &--separated
     border-bottom: 1px solid color($grey, 'greyLight')
 
@@ -9,25 +9,36 @@
     height: $spacing-hg
 
   &__title
-    +font-weight('semi-bold')
     display: flex
     align-items: center
-    +font-size('md')
-
-    &--wrap
-      margin-bottom: 0
-
     &--primary
       color: color($primary, 'primaryDark')
-
     &--danger
       color: color($danger, 'dangerBase')
-
     &--light
       color: color($grey, 'greyBase')
-
     &--dark
       color: color($grey, 'greyDark')
+    &--black
+      color: $black
+
+    &--bold
+      +font-weight('bold')
+    &--semi-bold
+      +font-weight('semi-bold')
+    &--medium
+      +font-weight('medium')
+    &--regular
+      +font-weight('regular')
+
+    &--sm
+      +font-size('sm')
+    &--md
+      +font-size('md')
+    &--lg
+      +font-size('lg')
+    &--xl
+      +font-size('xl')
 
   &__detail
     +font-weight('medium')
@@ -36,14 +47,6 @@
     word-wrap: anywhere
     display: flex
     align-items: center
-
-    &--wrap
-      margin-top: $spacing-sm
-      text-align: left
-
-    .yoo-checkbox
-      margin-left: $spacing-sm
-
     &--primary
       color: color($primary, 'primaryDark')
 
@@ -55,6 +58,3 @@
 
     &--dark
       color: color($grey, 'greyDark')
-
-  &__control
-    margin-left: $spacing-md

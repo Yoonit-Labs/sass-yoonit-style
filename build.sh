@@ -46,10 +46,11 @@ wait
 echo 'Building...'
 gulp
 wait
-echo 'Deploying...'
+echo 'Preparing "npm" folder to deploy...'
 mkdir npm
 cp -fR src/* npm
 cp -fR dist npm/css
 cp README.md npm/README.md
 cp package.json npm/package.json
+rm -rf dist
 pause

@@ -37,18 +37,18 @@ git remote add origin $GITURL
 git add .
 git commit -am 'npm publish'
 echo 'Pushing "npm" branch on Git...'
-git push development:npm --force
+git push origin master:npm --force
 wait
 echo 'Publishing on NPM...'
 # npm publish --access public --otp
 wait
 PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n')
-git tag v$PACKAGE_VERSION
+# git tag v$PACKAGE_VERSION
 echo 'Creating a new tag on Git...'
-git push --tags
+# git push --tags
 wait
 cd ..
-rm -rf npm
-rm -rf dist
+# rm -rf npm
+# rm -rf dist
 wait
 pause

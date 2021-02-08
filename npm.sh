@@ -31,13 +31,14 @@ function pause() {
 cd npm
 echo 'Getting Git URL...'
 GITURL='git config remote.origin.url'
+echo $GITURL
 echo 'Creating Git branch...'
 git init
 git remote add origin $GITURL
 git add .
 git commit -am 'npm publish'
-echo 'Refreshing "npm" branch on Git...'
-git push origin master:npm --force
+echo 'Pushing "npm" branch on Git...'
+git push npm --force
 wait
 echo 'Publishing on NPM...'
 # npm publish --access public --otp

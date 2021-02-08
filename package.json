@@ -8,7 +8,9 @@
     "minor": "npm version minor && npm run tag",
     "patch": "npm version patch && npm run tag",
     "tag": "git push --tags && git push",
-    "tag:force": "PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n') && git tag v$PACKAGE_VERSION && git push --tags && git push"
+    "tag:force": "PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n') && git tag v$PACKAGE_VERSION && git push --tags && git push",
+    "prepare": "prepare.sh",
+    "deploy": "npm.sh"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

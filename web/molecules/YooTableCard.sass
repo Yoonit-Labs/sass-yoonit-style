@@ -1,0 +1,100 @@
+.yoo-table-card
+  color: color($grey, 'greyDark')
+  @include font-family('$font-primary')
+  
+
+  &--separated
+    padding-bottom: 15px
+    border-bottom: 1px solid color($grey, 'greyLight')
+
+  &--tall
+    height: 64
+
+  &__title
+    @include font-weight('semi-bold')
+    @include font-size('$spacing-4')
+    display: flex
+    align-items: center
+    margin-left: 4px
+    color: $black
+
+    &--wrap
+      margin-bottom: 0
+
+    &--primary
+      color: color($primary, 'primaryDark')
+
+    &--danger
+      color: color($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__subtitle
+    @include font-weight('medium')
+    @include font-size('$spacing-3')
+    color: color($primary, 'primaryDark')
+    display: flex
+    align-items: center
+    margin-left: 4px
+
+    &--wrap
+      margin-bottom: 0
+
+    &--primary
+      color: color($primary, 'primaryDark')
+
+    &--danger
+      color: color($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__detail
+    @include font-weight('regular')
+    @include font-size('$spacing-3')
+    text-align: right
+    word-wrap: anywhere
+    display: flex
+    align-items: center
+    border: 1px solid #707070
+    border-radius: 26px
+    padding: 4px 8px
+    margin: 4px
+
+    &--on
+      border: 1px solid color($primary, 'primaryDark')
+      color: color($primary, 'primaryDark')
+
+    .yoo-checkbox
+      margin-left: 8px
+
+    &--primary
+      color: color($primary, 'primaryDark')
+      border: 1px solid color($primary, 'primaryDark')
+
+    &--danger
+      color: color($danger, 'dangerBase')
+      border: 1px solid color($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__no-detail
+    @include font-weight('regular')
+    @include font-size('$spacing-3')
+    word-wrap: anywhere
+    display: flex
+    align-items: center
+
+  &__control
+    margin-left: 16px

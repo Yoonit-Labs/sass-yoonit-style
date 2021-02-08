@@ -34,7 +34,7 @@ echo '-----------------'
 echo 'Getting Git URL...'
 GITURL='git config remote.origin.url'
 echo 'Updating repository...'
-# git checkout development
+git checkout development
 git pull
 wait
 echo 'Cleaning files...'
@@ -54,5 +54,4 @@ cp -fR src/* npm
 cp -fR dist npm/css
 cp README.md npm/README.md
 cp src/package.json npm/package.json
-wait
 pause

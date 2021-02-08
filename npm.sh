@@ -28,8 +28,6 @@ function pause() {
   echo ''
 }
 
-./prepare.sh
-wait
 cd npm
 git init
 git remote add origin $GITURL
@@ -39,7 +37,7 @@ echo 'Refreshing "npm" branch on Git...'
 git push origin master:npm --force
 wait
 echo 'Publishing on NPM...'
-npm publish --access public --otp
+# npm publish --access public --otp
 wait
 PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n')
 git tag v$PACKAGE_VERSION

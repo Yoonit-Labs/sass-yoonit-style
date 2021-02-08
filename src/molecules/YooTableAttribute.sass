@@ -1,7 +1,7 @@
 .yoo-table-attribute
   color: map-get($grey, 'greyDark')
   font-family: $font-primary
-  height: $spacing-hg - 8px
+  height: $spacing-sm * 7
   &--separated
     border-bottom: border('sm', map-get($grey, 'greyLight'), solid)
 
@@ -13,14 +13,12 @@
     align-items: center
     &--primary
       color: map-get($primary, 'primaryDark')
-
     &--danger
       color: map-get($danger, 'dangerBase')
-
     &--light
-      color: color($grey, 'greyBase')
+      color: map-get($grey, 'greyBase')
     &--dark
-      color: color($grey, 'greyDark')
+      color: map-get($grey, 'greyDark')
     &--black
       color: $black
 
@@ -51,30 +49,11 @@
     align-items: center
     &--primary
       color: map-get($primary, 'primaryDark')
-
     &--danger
       color: map-get($danger, 'dangerBase')
-
     &--light
-      color: color($grey, 'greyBase')
-
+      color: map-get($grey, 'greyBase')
     &--dark
-      color: $black
-
-  &__control
-    margin-left: $spacing-md
-
-  &--primary
-    background: map-get($primary, 'primaryDark')
-
-  &--danger
-    background: map-get($danger, 'dangerBase')
-
-  &--light
-    background: $white
-
-  &--dark
-    background: $black
-
-  &--neutral
-    background: map-get($grey, 'greyLightest')
+      color: map-get($grey, 'greyDark')
+    &--wrap
+      text-align: left

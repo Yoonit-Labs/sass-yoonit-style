@@ -1,0 +1,25 @@
+//////////////////////////////////////
+//          PADDING CLASSES         //
+//////////////////////////////////////
+
+// Tokens : Size
+@import '../quarks/spacing'
+
+$positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
+.p
+  @each $position, $element in $positions
+    &__#{$element}
+      @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'none')
+        &--#{$modifier}
+          @if $modifier == 'xs'
+            padding-#{$position}: $spacing-xs !important
+          @else if $modifier == 's'
+            padding-#{$position}: $spacing-sm !important
+          @else if $modifier == 'm'
+            padding-#{$position}: $spacing-md !important // 12px -> 16px
+          @else if $modifier == 'l'
+            padding-#{$position}: $spacing-lg !important // 16px -> 24px
+          @else if $modifier == 'xl'
+            padding-#{$position}: $spacing-xl !important // 20px -> 32px
+          @else if $modifier == 'none'
+            padding-#{$position}: 0 !important

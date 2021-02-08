@@ -1,0 +1,13 @@
+.yoo-button-toggle
+  position: relative
+  height: $spacing-hg - 12
+  +box-shadow('soft', map-get($grey, 'greyLight'))
+  +border('md', map-get($grey, 'greyBase'), solid)
+  +border-radius('pill')
+
+  &__container
+    position: absolute
+    width: calc(100% + 4px)
+    +border-radius('pill')
+    top: -$spacing-tn
+    left: -$spacing-tn

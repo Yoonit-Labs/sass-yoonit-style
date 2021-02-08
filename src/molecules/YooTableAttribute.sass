@@ -1,0 +1,75 @@
+.yoo-table-attribute
+  color: map-get($grey, 'greyDark')
+  font-family: $font-primary
+
+  &--separated
+    border-bottom: border('sm', map-get($grey, 'greyLight'), solid)
+
+  &--tall
+    height: $spacing-hg
+
+  &__title
+    +font-weight('semi-bold')
+    display: flex
+    align-items: center
+    +font-size('md')
+
+    &--wrap
+      margin-bottom: 0
+
+    &--primary
+      color: map-get($primary, 'primaryDark')
+
+    &--danger
+      color: map-get($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__detail
+    +font-weight('regular')
+    +font-size('sm')
+    text-align: right
+    word-wrap: anywhere
+    display: flex
+    align-items: center
+
+    &--wrap
+      margin-top: $spacing-sm
+      text-align: left
+
+    .yoo-checkbox
+      margin-left: $spacing-sm
+
+    &--primary
+      color: map-get($primary, 'primaryDark')
+
+    &--danger
+      color: map-get($danger, 'dangerBase')
+
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+  &__control
+    margin-left: $spacing-md
+
+  &--primary
+    background: map-get($primary, 'primaryDark')
+
+  &--danger
+    background: map-get($danger, 'dangerBase')
+
+  &--light
+    background: $white
+
+  &--dark
+    background: $black
+
+  &--neutral
+    background: map-get($grey, 'greyLightest')

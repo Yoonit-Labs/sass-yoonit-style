@@ -1,15 +1,23 @@
 {
   "name": "@yoonit/style",
   "version": "1.0.0",
-  "private": true,
-  "main": "./index.sass",
+  "private": false,
+  "main": "index",
   "scripts": {
     "major": "npm version major && npm run tag",
     "minor": "npm version minor && npm run tag",
     "patch": "npm version patch && npm run tag",
     "tag": "git push --tags && git push",
-    "tag:force": "PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n') && git tag v$PACKAGE_VERSION && git push --tags && git push"
+    "tag:force": "PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n') && git tag v$PACKAGE_VERSION && git push --tags && git push",
+    "prepare": "prepare.sh",
+    "deploy": "npm.sh"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-rimraf": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
   "dependencies": {}
 }

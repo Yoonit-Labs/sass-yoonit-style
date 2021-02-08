@@ -1,6 +1,7 @@
 $placeholder-transition: 300ms ease-in-out
 
 .yoo-input-group
+  +font-family($font-primary)
   margin: 40px 0 0
   width: 100%
 
@@ -27,7 +28,7 @@ $placeholder-transition: 300ms ease-in-out
     &__label
       position: absolute
       display: block
-      top: $spacing-lg - 1
+      top: $spacing-lg
       z-index: 2
       +font-size('md')
       +font-weight('semi-bold')
@@ -39,7 +40,7 @@ $placeholder-transition: 300ms ease-in-out
       i
         position: absolute
         right: 0
-        bottom: -($spacing-lg - 1)
+        bottom: -($spacing-lg)
 
     &__feedback
       position: absolute
@@ -65,7 +66,7 @@ $placeholder-transition: 300ms ease-in-out
       &::placeholder
         color: map-get($grey, 'greyLight')
         +font-weight('medium')
-        +font-size('lg' + 2)
+        +font-size('lg')
         opacity: 0
 
       &:focus,

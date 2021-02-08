@@ -5,6 +5,17 @@
 
 .yoo-notify
   min-height: 75px
+  &__icon
+    +font-size('xl')
+    &--light
+      color: $white
+
+    &--dark
+      color: $black
+
+    &--danger
+      color: color($danger, 'dangerDark')
+
   &__text
     font-family: $font-primary
     +font-size('sm')
@@ -28,6 +39,15 @@
 
     &--dark
       color: $black
+
+    &--left
+      text-align: left
+
+    &--center
+      text-align: center
+
+    &--right
+      text-align: right
 
   &--primary
     background: map-get($primary, 'primaryDark')

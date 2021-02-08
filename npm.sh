@@ -29,6 +29,9 @@ function pause() {
 }
 
 cd npm
+echo 'Getting Git URL...'
+GITURL='git config remote.origin.url'
+echo 'Creating Git branch...'
 git init
 git remote add origin $GITURL
 git add .

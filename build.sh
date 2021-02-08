@@ -31,8 +31,6 @@ function pause() {
 echo '-----------------'
 echo '| Yoonit Styles |'
 echo '-----------------'
-echo 'Getting Git URL...'
-GITURL='git config remote.origin.url'
 echo 'Updating repository...'
 git checkout development
 git pull

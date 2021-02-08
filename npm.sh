@@ -50,7 +50,7 @@ mkdir npm
 cp -fR src/* npm
 cp -fR dist npm/css
 cp README.md npm/README.md
-cp package.json npm/package.json
+cp src/package.json npm/package.json
 wait
 cd npm
 git init

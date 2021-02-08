@@ -46,8 +46,8 @@ git commit -am 'npm publish'
 git push origin master:npm --force
 npm publish --access public --otp
 PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n')
-git tag v$PACKAGE_VERSION
-git push --tags
+# git tag v$PACKAGE_VERSION
+# git push --tags
 cd ..
 rm -rf npm
 pause

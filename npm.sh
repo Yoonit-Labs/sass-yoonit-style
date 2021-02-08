@@ -30,7 +30,7 @@ function pause() {
 
 cd npm
 echo 'Getting Git URL...'
-GITURL='git config remote.origin.url'
+GITURL=`git config remote.origin.url`
 echo $GITURL
 echo 'Creating Git branch...'
 git init

@@ -25,29 +25,52 @@ function pause(){
  echo ''
 }
 
+echo '-----------------'
+echo '| Yoonit Styles |'
+echo '-----------------'
+echo 'Getting Git URL...'
 GITURL='git config remote.origin.url'
+echo 'Updating repository...'
 git checkout development
 git pull
+wait
+echo 'Cleaning files...'
 rm -rf node_modules
 rm -rf npm
 rm -rf dist
+wait
+echo 'Installing dependencies...'
 npm i
+wait
+echo 'Building...'
 gulp
+wait
+echo 'Deploying...'
 mkdir npm
-cp -fR dist/* npm/css
 cp -fR src/* npm
-cp src/.npmignore npm/.npmignore
+cp -fR dist npm/css
 cp README.md npm/README.md
+cp package.json npm/package.json
+wait
 cd npm
 git init
 git remote add origin $GITURL
 git add .
 git commit -am 'npm publish'
+echo 'Refreshing "npm" branch on Git...'
 git push origin master:npm --force
+wait
+echo 'Publishing on NPM...'
 npm publish --access public --otp
+wait
 PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n')
-# git tag v$PACKAGE_VERSION
-# git push --tags
+git tag v$PACKAGE_VERSION
+echo 'Creating a new tag on Git...'
+git push --tags
+wait
 cd ..
+echo 'Deployed!'
 rm -rf npm
+rm -rf dist
+wait
 pause

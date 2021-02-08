@@ -6,7 +6,7 @@ const {
 const rimraf = require('rimraf')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
-const entryPoint = './web/themes/default.scss'
+const entryPoint = './src/index.sass'
 
 sass.compiler = require('node-sass')
 

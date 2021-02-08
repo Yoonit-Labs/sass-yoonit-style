@@ -7,7 +7,7 @@
 $primary: (
   'primaryDarkest': #008080,
   'primaryDark': #1DBABA,
-  'primaryBase': #47C8C3,  
+  'primaryBase': #47C8C3,
   'primaryLight': #B0E7E5
 );
 
@@ -38,10 +38,10 @@ $transparent: rgba(255, 255, 255, 0);
 
 /*==== Export Colors ====*/
 
-@import '../../bosons/colors';
+@import '../bosons/colors';
 
 $allColors: map-collect($primary, $danger, $grey);
-  
+
 :root {
   @each $name, $color in $allColors {
     --#{$name}: #{$color};

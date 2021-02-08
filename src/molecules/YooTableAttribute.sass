@@ -1,0 +1,59 @@
+.yoo-table-attribute
+  color: map-get($grey, 'greyDark')
+  font-family: $font-primary
+  height: $spacing-sm * 7
+  &--separated
+    border-bottom: border('sm', map-get($grey, 'greyLight'), solid)
+
+  &--tall
+    height: $spacing-hg
+
+  &__title
+    display: flex
+    align-items: center
+    &--primary
+      color: map-get($primary, 'primaryDark')
+    &--danger
+      color: map-get($danger, 'dangerBase')
+    &--light
+      color: map-get($grey, 'greyBase')
+    &--dark
+      color: map-get($grey, 'greyDark')
+    &--black
+      color: $black
+
+    &--bold
+      +font-weight('bold')
+    &--semi-bold
+      +font-weight('semi-bold')
+    &--medium
+      +font-weight('medium')
+    &--regular
+      +font-weight('regular')
+
+    &--sm
+      +font-size('sm')
+    &--md
+      +font-size('md')
+    &--lg
+      +font-size('lg')
+    &--xl
+      +font-size('xl')
+
+  &__detail
+    +font-weight('medium')
+    +font-size('sm')
+    text-align: right
+    word-wrap: anywhere
+    display: flex
+    align-items: center
+    &--primary
+      color: map-get($primary, 'primaryDark')
+    &--danger
+      color: map-get($danger, 'dangerBase')
+    &--light
+      color: map-get($grey, 'greyBase')
+    &--dark
+      color: map-get($grey, 'greyDark')
+    &--wrap
+      text-align: left

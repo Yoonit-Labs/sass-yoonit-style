@@ -1,0 +1,21 @@
+.yoo-warning
+  width: 100%
+  +font($white, 'md', '$font-primary', 'medium')
+  display: flex
+  align-items: center
+  &__icon
+    +font-size('xl')
+
+  &__title
+    +font-weight('bold')
+  &__variation
+    &--default
+      background-color: map-get($grey, 'greyDark')
+      color: $white  
+    &--danger
+      background-color: map-get($danger, 'dangerBase')
+    &--clear
+      background-color: map-get($grey, 'greyLightest')
+      color: map-get($grey, 'greyDark')
+      .yoo-warning__icon
+            color: map-get($danger, 'dangerBase')

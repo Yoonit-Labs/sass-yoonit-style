@@ -1,0 +1,42 @@
+.dropdown
+  cursor: pointer
+  font-family: $font-primary
+  +font-weight('regular')
+  text-transform: uppercase
+  +box-shadow('soft', #00000029)
+  border-radius: 1px
+  width: $spacing-xl + $spacing-tn
+
+  &__select
+    .select
+      height: $spacing-md
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      &__text
+        +font(map-get($grey, 'greyDark'), 'xs', $font-primary, 'semi-bold')
+        margin: 0
+
+  &__options
+    .option
+      height: $spacing-md
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      &__text
+        +font(map-get($grey, 'greyBase'), 'xs', $font-primary, 'semi-bold')
+        margin: 0
+
+      &:first-child
+        .option
+          &__text
+            color: map-get($grey, 'greyDark')
+
+  // MOD: VARIATION
+  &--small
+    width: $spacing-lg
+
+  &--large
+    width: $spacing-lg * 2

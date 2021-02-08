@@ -1,7 +1,7 @@
 {
   "name": "@yoonit/style",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "main": "./css/yoonit.min.css",
   "scripts": {
     "major": "npm version major && npm run tag",

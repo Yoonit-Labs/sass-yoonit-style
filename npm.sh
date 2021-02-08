@@ -37,7 +37,7 @@ git remote add origin $GITURL
 git add .
 git commit -am 'npm publish'
 echo 'Pushing "npm" branch on Git...'
-git push npm --force
+git push development:npm --force
 wait
 echo 'Publishing on NPM...'
 # npm publish --access public --otp

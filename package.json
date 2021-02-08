@@ -1,5 +1,6 @@
 {
   "name": "@yoonit/style",
+  "description": "The CSS Atomic Design System that powers Web & Native Yoonit Components",
   "version": "1.0.0",
   "private": false,
   "main": "index",

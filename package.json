@@ -2,7 +2,7 @@
   "name": "@yoonit/style",
   "version": "1.0.0",
   "private": true,
-  "main": "./default",
+  "main": "./index.sass",
   "scripts": {
     "major": "npm version major && npm run tag",
     "minor": "npm version minor && npm run tag",

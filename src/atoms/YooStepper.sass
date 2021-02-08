@@ -1,0 +1,20 @@
+.yoo-stepper
+  &__number
+    color: map-get($grey, 'greyDark')
+    font-family: $font-primary
+    +font-weight('regular')
+    +font-size('md')
+    text-align: center
+    min-width: $spacing-hg + $spacing-md
+    word-wrap: break-word
+  &__dot
+    background: map-get($grey, 'greyDark')
+    +border-radius('circular')
+    width: $spacing-sm
+    height: $spacing-sm
+    &--active
+      background: map-get($grey, 'greyDark')
+      width: $spacing-sm + $spacing-tn
+      height: $spacing-sm + $spacing-tn
+    &--last
+      margin-right: 0

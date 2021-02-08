@@ -1,0 +1,45 @@
+.yoo-card
+  border-bottom: 1px solid map-get($grey, 'greyLight')
+  color: map-get($grey, 'greyBase')
+  font-family: $font-primary
+  @include font-size('lg')
+
+  &:first-of-type
+    border-top: 1px solid map-get($grey, 'greyLight')
+
+  &__style
+    &--border-true
+      border-left: 3px solid
+      padding-left: $spacing-md
+
+
+  &__fill
+    &--border-neutral
+      border-left-color: map-get($grey, 'greyBase')
+
+    &--border-primary
+      border-left-color: map-get($primary, 'primaryBase')
+
+    &--border-danger
+      border-left-color: map-get($danger, 'dangerBase')
+
+    &--border-light
+      border-left-color: map-get($grey, 'greyLight')
+
+    &--border-dark
+      border-left-color: map-get($grey, 'greyDark')
+
+    &--border-darkest
+      border-left-color: map-get($grey, 'greyDarkest')
+
+.yoo-card__title
+  width: 100%
+  margin: 0
+  +font-weight('medium')
+  color: map-get($grey, 'greyDarkest')
+
+.yoo-card__subtitle
+  width: 100%
+  margin: 0
+  +font-weight('medium')
+  +font-size('sm')

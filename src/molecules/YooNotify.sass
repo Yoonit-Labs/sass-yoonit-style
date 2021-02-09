@@ -14,13 +14,13 @@
       color: $black
 
     &--danger
-      color: color($danger, 'dangerDark')
+      color: map-get($danger, 'dangerDark')
 
   &__text
     font-family: $font-primary
     +font-size('sm')
     &--tn
-    +font-size('tn')
+      +font-size('tn')
     &--xs
       +font-size('xs')
     &--sm

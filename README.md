@@ -75,6 +75,26 @@ $primary: (
   'primaryLightest': #e5fde4
 );
 ```
+### Fonts
+
+The project has two fonts variables.
+
+```
+font-primary: Montserrat, sans-serif
+font-second: Arial, sans-serif
+```
+
+To change the fonts variables, in the same file that was imported the '/quarks/index' file, set the variable to the new value.
+
+```scss
+/*==== Import Quarks ====*/
+
+@import '../quarks/index';
+
+/*==== Fonts ====*/
+
+$font-primary: Fira Code, arial
+```
 
 ### Helpers
 

@@ -32,9 +32,9 @@
 =delayAnimation($delay)
   @if $delay == 'slow'
     animation-delay: 4s
-  @else if $modifier == 'normal'
+  @else if $delay == 'normal'
     animation-delay: 2s
-  @else if $modifier == 'fast'
+  @else if $delay == 'fast'
     animation-delay: 0.5s
   @else
     animation-delay: 2s

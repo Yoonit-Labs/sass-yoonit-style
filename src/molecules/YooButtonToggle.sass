@@ -1,13 +1,15 @@
 .yoo-button-toggle
   position: relative
-  height: $spacing-hg - 12
-  +box-shadow('soft', map-get($grey, 'greyLight'))
-  +border('md', map-get($grey, 'greyBase'), solid)
+  height: $spacing-lg + $spacing-xl
+  +border('sm', map-get($grey, 'greyDark'), solid)
   +border-radius('pill')
 
   &__container
     position: absolute
-    width: calc(100% + 4px)
+    width: calc(100% + 2px)
     +border-radius('pill')
-    top: -$spacing-tn
-    left: -$spacing-tn
+    top: -1px
+    left: -1px
+
+    .yoo-btn__fill--primary.yoo-btn--base
+      box-shadow: 0px 3px 6px rgba($black, 0.16)

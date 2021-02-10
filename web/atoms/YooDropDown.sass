@@ -5,7 +5,7 @@
   text-transform: uppercase
   +box-shadow('soft', #00000029)
   border-radius: 1px
-  +font(color($grey, 'greyBase'), 'md', $font-primary, 'semi-bold')
+  +font(color($grey, 'greyBase'), 'md', $font-primary, 'medium')
   width: max-content
   padding: $spacing-sm
 
@@ -17,6 +17,7 @@
       overflow: hidden
       &__text
         margin: 0
+        color: color($grey, 'greyDark')
 
   &__options
     .option
@@ -25,7 +26,7 @@
       justify-content: center
       overflow: hidden
       &__text
-        margin: 0
+        margin: 12px
 
       &:first-child
         .option
@@ -34,7 +35,7 @@
 
   // MOD: VARIATION
   &--small
-    +font-size('xs')
+    +font-size('sm')
   
   &--medium
     +font-size('md')

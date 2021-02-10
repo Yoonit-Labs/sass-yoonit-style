@@ -1,11 +1,3 @@
-$primary: (
-  'primaryDarkest': #007f00,
-  'primaryDark': #00bf00,
-  'primaryBase': #00ff00,
-  'primaryLight': #3fff3f,
-  'primaryLightest': #7fff7f
-);
-
 /*==== Import Bosons ====*/
 
 @import '../bosons/index';
@@ -41,3 +33,11 @@ $primary: (
 @import '../molecules/YooSelectButton.sass';
 @import '../molecules/YooSwitchCard.sass';
 @import '../molecules/YooTableAttribute.sass';
+
+$primary: (
+  'primaryDarkest': #007f00,
+  'primaryDark': #00bf00,
+  'primaryBase': #00ff00,
+  'primaryLight': #3fff3f,
+  'primaryLightest': #7fff7f
+);

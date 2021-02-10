@@ -8,7 +8,12 @@
 ![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
 A SASS lib to provide:
-- 
+- Diverse variables and mixins
+- Responsive grid and flex system
+- Diverse theme range
+- Components styles
+- Possibility of creating themes
+- Free fontawesome icons
 
 
 ## Installation

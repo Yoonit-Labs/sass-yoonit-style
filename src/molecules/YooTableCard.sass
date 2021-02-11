@@ -37,21 +37,22 @@
     .yoo-checkbox
       margin-left: $spacing-sm
 
-  &__fill--primary
-    color:  map-get($primary, 'primaryDark')
-    border-color:  map-get($primary, 'primaryDark')
+  &__fill
+    &--primary
+      color:  map-get($primary, 'primaryDark')
+      border-color:  map-get($primary, 'primaryDark')
 
-  &__fill--danger
-    color:  map-get($danger, 'dangerBase')
-    border-color: map-get($danger, 'dangerBase')
+    &--danger
+      color:  map-get($danger, 'dangerBase')
+      border-color: map-get($danger, 'dangerBase')
 
-  &__fill--light
-    color:  map-get($grey, 'greyLight')
-    border-color:  map-get($grey, 'greyLight')
+    &--light
+      color:  map-get($grey, 'greyLight')
+      border-color:  map-get($grey, 'greyLight')
 
-  &__fill--dark
-    color:  map-get($grey, 'greyDark')
-    border-color:  map-get($grey, 'greyDark')
+    &--dark
+      color:  map-get($grey, 'greyDark')
+      border-color:  map-get($grey, 'greyDark')
 
   &__no-detail
     +font-weight('regular')

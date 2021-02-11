@@ -8,8 +8,8 @@
     border-top: 1px solid map-get($grey, 'greyLight')
 
   &__style
-    &--border-true
-      border-left: 3px solid
+    &--border-left
+      border-left: $spacing-xs solid
       padding-left: $spacing-md
 
 
@@ -32,14 +32,14 @@
     &--border-darkest
       border-left-color: map-get($grey, 'greyDarkest')
 
-.yoo-card__title
-  width: 100%
-  margin: 0
-  +font-weight('medium')
-  color: map-get($grey, 'greyDarkest')
+  &__title
+    width: 100%
+    margin: 0
+    +font-weight('medium')
+    color: map-get($grey, 'greyDarkest')
 
-.yoo-card__subtitle
-  width: 100%
-  margin: 0
-  +font-weight('medium')
-  +font-size('sm')
+  &__subtitle
+    width: 100%
+    margin: 0
+    +font-weight('medium')
+    +font-size('sm')

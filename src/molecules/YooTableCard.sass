@@ -10,88 +10,54 @@
 
   &__title
     +font-weight('semi-bold')
-    +font-size('$spacing-4')
-    display: flex
-    align-items: center
+    +font-size('lg')
     color: $black
-
-    &--wrap
-      margin-bottom: 0
-
-    &--primary
-      color:  map-get($primary, 'primaryDark')
-
-    &--danger
-      color:  map-get($danger, 'dangerBase')
-
-    &--light
-      color: $white
-
-    &--dark
-      color: $black
 
   &__subtitle
     +font-weight('medium')
     +font-size('xs')
     color:  map-get($primary, 'primaryDark')
-    display: flex
-    align-items: center
-    margin-left: 4px
-
-    &--wrap
-      margin-bottom: 0
-
-    &--primary
-      color:  map-get($primary, 'primaryDark')
-
-    &--danger
-      color:  map-get($danger, 'dangerBase')
-
-    &--light
-      color: $white
-
-    &--dark
-      color: $black
+    margin-left: $spacing-xs
 
   &__detail
     +font-weight('regular')
     +font-size('xs')
     text-align: right
     word-wrap: anywhere
-    display: flex
-    align-items: center
-    border: 1px solid #707070
-    border-radius: 26px
-    padding: 4px 8px
-    margin: 2px
+    +border('sm', map-get($grey, 'greyBase'), solid)
+    +border-radius('lg')
+    padding: $spacing-xs $spacing-sm
+    margin: $spacing-tn
 
     &:first-child
       margin-left: 0px
 
     &--on
-      border: 1px solid  map-get($primary, 'primaryDark')
+      +border('sm', map-get($primary, 'primaryDark'), solid)
       color:  map-get($primary, 'primaryDark')
 
     .yoo-checkbox
-      margin-left: 8px
+      margin-left: $spacing-sm
 
-    &--primary
-      color:  map-get($primary, 'primaryDark')
-      border: 1px solid  map-get($primary, 'primaryDark')
+  &__fill--primary
+    color:  map-get($primary, 'primaryDark')
+    border-color:  map-get($primary, 'primaryDark')
 
-    &--danger
-      color:  map-get($danger, 'dangerBase')
-      border: 1px solid  map-get($danger, 'dangerBase')
+  &__fill--danger
+    color:  map-get($danger, 'dangerBase')
+    border-color: map-get($danger, 'dangerBase')
 
-    &--light
-      color: $white
+  &__fill--light
+    color:  map-get($grey, 'greyLight')
+    border-color:  map-get($grey, 'greyLight')
 
-    &--dark
-      color: $black
+  &__fill--dark
+    color:  map-get($grey, 'greyDark')
+    border-color:  map-get($grey, 'greyDark')
 
   &__no-detail
     +font-weight('regular')
-    +font-size('$spacing-3')
+    +font-size('md')
     word-wrap: anywhere
     color: map-get($grey, 'greyBase')
 

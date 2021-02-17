@@ -12,9 +12,7 @@ $buttonColor: map-get($primary, 'primaryBase')
   +border-radius('pill')
   +border('md', $buttonColor, solid)
   background-color: $buttonColor
-  display: flex
-  justify-content: center
-  align-items: center
+  +flex(row, wrap, center, center)
   padding: 0 $spacing-lg
   margin: 0
   cursor: pointer

@@ -10,9 +10,7 @@
   &__select
     .select
       height: $spacing-md
-      display: flex
-      align-items: center
-      justify-content: center
+      +flex(row, wrap, center, center)
       overflow: hidden
       &__text
         +font(map-get($grey, 'greyDark'), 'xs', $font-primary, 'semi-bold')
@@ -21,9 +19,7 @@
   &__options
     .option
       height: $spacing-md
-      display: flex
-      align-items: center
-      justify-content: center
+      +flex(row, wrap, center, center)
       overflow: hidden
       &__text
         +font(map-get($grey, 'greyBase'), 'xs', $font-primary, 'semi-bold')

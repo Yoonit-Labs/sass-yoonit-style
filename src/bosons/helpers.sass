@@ -1,18 +1,18 @@
 =flex($typeFlex, $wrapFlex, $justifyFlex, $alignFlex)
   display: flex
-  flex-direction: $typeFlex
+  flex-direction: $typeFlex !important
 
   @if $wrapFlex == wrap
-    flex-wrap: wrap
+    flex-wrap: wrap !important
   @else if $wrapFlex == w
-    flex-wrap: wrap
+    flex-wrap: wrap !important
   @else if $wrapFlex == nowrap
-    flex-wrap: nowrap
+    flex-wrap: nowrap !important
   @else if $wrapFlex == n
-    flex-wrap: nowrap
+    flex-wrap: nowrap !important
   @else if $wrapFlex == ''
-    flex-wrap: nowrap
+    flex-wrap: nowrap !important
 
-  justify-content: $justifyFlex
-  align-content: $alignFlex
-  align-items: $alignFlex
+  justify-content: $justifyFlex !important
+  align-content: $alignFlex !important
+  align-items: $alignFlex !important

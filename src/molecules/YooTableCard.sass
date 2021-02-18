@@ -22,8 +22,7 @@
     +font-size('xs')
     text-align: right
     word-wrap: anywhere
-    +border('sm', map-get($grey, 'greyBase'), solid)
-    +border-radius('lg')
+    +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
     padding: $spacing-xs $spacing-sm
     margin: $spacing-tn
 
@@ -31,7 +30,7 @@
       margin-left: 0px
 
     &--on
-      +border('sm', map-get($primary, 'primaryDark'), solid)
+      +border('sm', map-get($primary, 'primaryDark'), solid, 'pill')
       color:  map-get($primary, 'primaryDark')
 
     .yoo-checkbox

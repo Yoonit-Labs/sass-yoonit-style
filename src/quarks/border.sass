@@ -5,27 +5,32 @@
 // Tokens : Sizes
 @import '../quarks/spacing'
 
-=border($modifier, $color, $type)
+=border($modifier, $color, $type, $radius)
   @if $modifier == 'xs'
     border-width: 0.5px
     border-color: $color
     border-style: $type
+    +border-radius($radius)
   @else if $modifier == 'sm'
     border-width: 1px
     border-color: $color
     border-style: $type
+    +border-radius($radius)
   @else if $modifier == 'md'
     border-width: 2px
     border-color: $color
     border-style: $type
+    +border-radius($radius)
   @else if $modifier == 'lg'
-    border-width: $spacing-1
+    border-width: $spacing-xs
     border-color: $color
     border-style: $type
+    +border-radius($radius)
   @else if $modifier == 'none'
     border-width: 0px
     border-color: $color
     border-style: $type
+    +border-radius($radius)
 
 =border-radius($modifier)
   @if $modifier == 'sm'
@@ -39,4 +44,6 @@
   @else if $modifier == 'circular'
     border-radius: 50%
   @else if $modifier == 'none'
+    border-radius: 0
+  @else
     border-radius: 0

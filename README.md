@@ -13,8 +13,7 @@ A SASS lib to provide:
 - Diverse theme range
 - Components styles
 - Possibility of creating themes
-- Free fontawesome icons
-
+- Created using BEM methodology
 
 ## Installation
 
@@ -22,78 +21,147 @@ A SASS lib to provide:
 npm i -s @yoonit/style
 ```
 
-
 ## Usage
 
-To access all the features of yoonit/style, import the theme that you want in your file or globally.
+To access all the features of yoonit/style, import the theme that you want and the index.sass, in your file or globally.
 
 ```sass
-@import '@yoonit/style/src/themes/{themeName}'
+@import '@yoonit/style'
+@import '@yoonit/style/themes/{themeName}'
 ```
+
+If you want to import somenthing especific of the project, for example, the button css, you can import that directy.
+
+```sass
+@import '@yoonit/style'
+@import '@yoonit/style/atoms/YooButton'
+```
+
 
 ## Themes
 
 These are all the themes available for now.
 
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/default.PNG" width="470">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/blue.PNG" width="470">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/brown.png" width="470">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/green.png" width="470">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/orange.png" width="470">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/purple.png" width="470">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/default.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/blue.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/brown.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/green.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/orange.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/purple.png" width="250">](https://cyberlabs.ai/)
 
 ## Creating themes
 
-Create a scss file inside the themes folder that imports the '/quarks/index' file and all the other features that you want.
-To import the other features, such as the helpers, import then after the quarks.
+Create a scss file in your project, in this file, import the Yoonit Style and all the components styles you want.
 
-After that, create an object called $primary with the colors variables: 'primaryDarkest', 'primaryDark', 'primaryBase', 'primaryLight', 'primaryLightest' and set these variables to the colors that you wish.
+Yoonit Style has 3 color objects ($primary, $danger, $grey) with 5 variables each, to change the color, declare the object and the variables and change the values as you wish.
+
+The variables names are the name of the object + the shade range. The shade ranges are: Darkest, Dark, Base, Light, Lightest.
+
+Example: `primaryDarkest, dangerBase, greyLightest`.
+
+You can create other objects and other color variables, but the components will not react to them unless you change the components styles.
+
+The project has two fonts variables, `$font-primary` and `$font-second`, to change them, just set the variable to the new value.
+
+This is the default theme, take this as a base to construct your own:
 
 ```scss
+@import '@yoonit/style';
+
 /*==== Import Quarks ====*/
 
-@import '../quarks/index';
-
-/*==== Import Bosons ====*/
-
-@import '../bosons/index';
+@import '@yoonit/style/quarks/YooFlexLayout.sass';
+@import '@yoonit/style/quarks/YooGridLayout.sass';
+@import '@yoonit/style/quarks/YooIndicator.sass';
+@import '@yoonit/style/quarks/YooScrollView.sass';
 
 /*==== Import Atoms ====*/
 
-@import '../atoms/YooAnimation.sass';
-@import '../atoms/YooAvatar.sass';
-@import '../atoms/YooButton.sass';
-@import '../atoms/YooCheckButton.sass';
+@import '@yoonit/style/atoms/YooAnimation.sass';
+@import '@yoonit/style/atoms/YooAvatar.sass';
+@import '@yoonit/style/atoms/YooButton.sass';
+@import '@yoonit/style/atoms/YooCheckButton.sass';
+@import '@yoonit/style/atoms/YooDropDown.sass';
+@import '@yoonit/style/atoms/YooIcon.sass';
+@import '@yoonit/style/atoms/YooSeparator.sass';
+@import '@yoonit/style/atoms/YooStepper.sass';
+@import '@yoonit/style/atoms/YooSwitch.sass';
 
-/*==== Colors ====*/
+/*==== Import Molecules ====*/
+
+@import '@yoonit/style/molecules/YooButtonToggle.sass';
+@import '@yoonit/style/molecules/YooCard.sass';
+@import '@yoonit/style/molecules/YooFormGroup.sass';
+@import '@yoonit/style/molecules/YooHeader.sass';
+@import '@yoonit/style/molecules/YooModal.sass';
+@import '@yoonit/style/molecules/YooNotify.sass';
+@import '@yoonit/style/molecules/YooPagination.sass';
+@import '@yoonit/style/molecules/YooPostCard.sass';
+@import '@yoonit/style/molecules/YooQuizQuestion.sass';
+@import '@yoonit/style/molecules/YooSegmentedBar.sass';
+@import '@yoonit/style/molecules/YooSelectButton.sass';
+@import '@yoonit/style/molecules/YooSwitchCard.sass';
+@import '@yoonit/style/molecules/YooTableAttribute.sass';
+
+/*==== Brand Color ====*/
 
 $primary: (
-  'primaryDarkest': #1e5425,
-  'primaryDark': #4f7e54,
-  'primaryBase': #81a884,
-  'primaryLight': #b3d2b4,
-  'primaryLightest': #e5fde4
+  'primaryDarkest': #008080,
+  'primaryDark': #1DBABA,
+  'primaryBase': #47C8C3,
+  'primaryLight': #B0E7E5,
+  'primaryLightest': #C3ECEb
 );
-```
-### Fonts
 
-The project has two fonts variables.
+/*==== Danger Color ====*/
 
-```
-font-primary: Montserrat, sans-serif
-font-second: Arial, sans-serif
-```
+$danger: (
+  'dangerDarkest': #CB0A22,
+  'dangerDark': #E83C4B,
+  'dangerBase': #F4596C,
+  'dangerLight': #FF7888,
+  'dangerLightest': #FF99A5
+);
 
-To change the fonts variables, in the same file that was imported the '/quarks/index' file, set the variable to the new value.
+/*==== Neutral Color ====*/
 
-```scss
-/*==== Import Quarks ====*/
+$grey: (
+  'greyDarkest': #212325,
+  'greyDark': #5A5F67,
+  'greyBase': #8F959F,
+  'greyLight': #D6DBE2,
+  'greyLightest': #F5F6F7
+);
 
-@import '../quarks/index';
+/*==== Basic Colors ====*/
 
-/*==== Fonts ====*/
+$black: #000000;
+$white: #FFFFFF;
+$transparent: rgba(255, 255, 255, 0);
 
-$font-primary: Fira Code, arial
+/*==== Font ====*/
+
+$font-primary: Montserrat, sans-serif;
+$font-second: Arial, sans-serif;
+
+$font-size-tn: 8px;
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 20px;
+$font-size-hg: 32px;
+
+/*==== Spacing ====*/
+
+$spacing-tn: 2px;
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-hg: 64px;
+
 ```
 
 ### Helpers
@@ -119,10 +187,30 @@ $font-primary: Fira Code, arial
 
 ### Classes
 
-| Name               | Input/Format | Usage   (sass)                        | Description |
-| -                  | -            | -                                            | -           |                                 
-| margin             | 'l' or 't' or 'b' or 'r', 'xs' or 's' or 'm' or 'l' or 'xl' or 'none' | `.m__$$position--$$modifier` | Class that adds margin based on the position (left, top, bottom or right) and the size (small, medium, large, extra large) |
-| padding            | 'l' or 't' or 'b' or 'r', 'xs' or 's' or 'm' or 'l' or 'xl' or 'none' | `.p__$$position--$$modifier` | Class that adds padding based on the position (left, top, bottom or right) and the size (small, medium, large, extra large) |
+We have tons of classes in Yoonit Style, but let's talk about the two main ones, that can be used to set margin and padding.
+
+The margin class `.m` and the padding class `.p` have elements and modifiers.
+
+The elements are the position of the margin or padding (left, top, bottom or right) and the modifiers are the size of the margin or padding (extra small, small, medium, large, extra large or none).
+
+| Param              | Input/Format | Description                                   |
+| -                  | -            | -                                             |                            
+| element            | 'l' or 't' or 'b' or 'r' | Position of the margin or padding |
+| modifier           | 'xs' or 's' or 'm' or 'l' or 'xl' or 'none' | Size of the margin or padding |  
+
+To use them, in your html code, set the `.m` or `.p`, then do `__element`, then `--modifier`.
+
+Example:
+```sass
+.m__b--l //meaning: margin__bottom--large
+
+.m__l--s //meaning: margin__left--small
+
+.p__t--m //meaning: padding__top--medium
+
+.p__r--xl //meaning: padding__right--extra-large
+```
+
 
 ## To contribute and make it better
 
@@ -133,4 +221,3 @@ Contributions are always welcome!
 ---
 
 Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
-  

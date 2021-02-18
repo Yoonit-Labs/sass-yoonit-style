@@ -1,7 +1,5 @@
 .yoo-indicator__container
-  display: flex
-  justify-content: center
-  align-items: center
+  +flex(row, wrap, center, center)
 
 .yoo-indicator
   +border-radius('circular')
@@ -9,9 +7,7 @@
   animation-timing-function: cubic-bezier(.28,.68,.75,.78)
   animation-fill-mode: forwards
   animation-iteration-count: infinite
-  display: flex
-  justify-content: center
-  align-items: center
+  +flex(row, wrap, center, center)
 
   &--pulse
     animation-name: pulse

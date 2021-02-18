@@ -1,8 +1,6 @@
 .yoo-avatar
   +border-radius('circular')
-  display: flex
-  justify-content: center
-  align-items: center
+  +flex(row, wrap, center, center)
   background: map-get($primary, 'primaryBase')
   font-family: $font-primary
   +font-size('xl')

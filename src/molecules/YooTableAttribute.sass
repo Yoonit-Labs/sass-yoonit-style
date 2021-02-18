@@ -9,8 +9,7 @@
     height: $spacing-hg
 
   &__title
-    display: flex
-    align-items: center
+    +flex(row, wrap, flex-start, center)
     &--primary
       color: map-get($primary, 'primaryDark')
     &--danger
@@ -45,8 +44,7 @@
     +font-size('sm')
     text-align: right
     word-wrap: anywhere
-    display: flex
-    align-items: center
+    +flex(row, wrap, flex-start, center)
     &--primary
       color: map-get($primary, 'primaryDark')
     &--danger

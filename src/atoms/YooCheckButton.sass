@@ -46,8 +46,7 @@
       height: $spacing-xl
 
   &__check
-    display: flex
-    align-items: center
+    +flex(row, wrap, flex-start, center)
     &:before
       content: ''
       @include border-radius('circular')

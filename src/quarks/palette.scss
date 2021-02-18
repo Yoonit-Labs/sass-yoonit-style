@@ -1,0 +1,49 @@
+ ////////////////////////////////
+//       COLOR PALLET        //
+////////////////////////////////
+
+/*==== Brand Color ====*/
+
+$primary: (
+  'primaryDarkest': #008080,
+  'primaryDark': #1DBABA,
+  'primaryBase': #47C8C3,
+  'primaryLight': #B0E7E5
+);
+
+/*==== Danger Color ====*/
+
+$danger: (
+  'dangerDarkest': #CB0A22,
+  'dangerDark': #E83C4B,
+  'dangerBase': #F4596C,
+  'dangerLight': #FF7888
+);
+
+/*==== Neutral Color ====*/
+
+$grey: (
+  'greyDarkest': #212325,
+  'greyDark': #5A5F67,
+  'greyBase': #8F959F,
+  'greyLight': #D6DBE2,
+  'greyLightest': #F5F6F7
+);
+
+/*==== Basic Colors ====*/
+
+$black: #000000;
+$white: #FFFFFF;
+$transparent: rgba(255, 255, 255, 0);
+
+/*==== Export Colors ====*/
+
+@import '../bosons/colors';
+
+$allColors: map-collect($primary, $danger, $grey);
+
+:root {
+  @each $name, $color in $allColors {
+    --#{$name}: #{$color};
+  }
+}

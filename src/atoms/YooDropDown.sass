@@ -1,0 +1,44 @@
+.yoo-dropdown
+  cursor: pointer
+  font-family: $font-primary
+  +font-weight('regular')
+  text-transform: uppercase
+  +box-shadow('soft', #00000029)
+  border-radius: 1px
+  +font(color($grey, 'greyBase'), 'md', $font-primary, 'medium')
+  width: max-content
+  padding: $spacing-sm
+
+  &__select
+    .select
+      height: $spacing-md
+      +flex(row, wrap, center, center)
+      overflow: hidden
+      &__text
+        +font(map-get($grey, 'greyDark'), 'xs', $font-primary, 'semi-bold')
+        margin: 0
+        color: color($grey, 'greyDark')
+
+  &__options
+    .option
+      height: $spacing-md
+      +flex(row, wrap, center, center)
+      overflow: hidden
+      &__text
+        +font(map-get($grey, 'greyBase'), 'xs', $font-primary, 'semi-bold')
+        margin: 0
+
+      &:first-child
+        .option
+          &__text
+            color: map-get($grey, 'greyDark')
+
+  // MOD: VARIATION
+  &--small
+    +font-size('sm')
+  
+  &--medium
+    +font-size('md')
+
+  &--large
+    +font-size('lg')

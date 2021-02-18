@@ -41,12 +41,12 @@ If you want to import somenthing especific of the project, for example, the butt
 
 These are all the themes available for now.
 
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/default.png" width="200">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/blue.png" width="200">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/brown.png" width="200">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/green.png" width="200">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/orange.png" width="200">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/purple.png" width="200">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/default.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/blue.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/brown.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/green.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/orange.png" width="250">](https://cyberlabs.ai/)
+[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/feature/themes/public/readme-img/purple.png" width="250">](https://cyberlabs.ai/)
 
 ## Creating themes
 

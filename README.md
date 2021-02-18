@@ -13,6 +13,7 @@ A SASS lib to provide:
 - Diverse theme range
 - Components styles
 - Possibility of creating themes
+- Created using BEM methodology
 
 ## Installation
 
@@ -186,18 +187,18 @@ $spacing-hg: 64px;
 
 ### Classes
 
-We have two css classes that can be used to set margin and padding.
+We have tons of classes in Yoonit Style, but let's talk about the two main ones, that can be used to set margin and padding.
 
-The margin class `.m` and the padding class `.p` have two 'paramethers'.
+The margin class `.m` and the padding class `.p` have elements and modifiers.
 
-The first one, the position of the margin or padding (left, top, bottom or right) and the second one, the size of the margin or padding (extra small, small, medium, large, extra large or none).
+The elements are the position of the margin or padding (left, top, bottom or right) and the modifiers are the size of the margin or padding (extra small, small, medium, large, extra large or none).
 
 | Param              | Input/Format | Description                                   |
 | -                  | -            | -                                             |                            
-| position           | 'l' or 't' or 'b' or 'r' | Position of the margin or padding |
+| element            | 'l' or 't' or 'b' or 'r' | Position of the margin or padding |
 | modifier           | 'xs' or 's' or 'm' or 'l' or 'xl' or 'none' | Size of the margin or padding |  
 
-To use them, in your html code, set the `.m` or `.p`, then do `__firstParam`, then `--secondParam`.
+To use them, in your html code, set the `.m` or `.p`, then do `__element`, then `--modifier`.
 
 Example:
 ```sass

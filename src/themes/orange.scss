@@ -1,9 +1,12 @@
 /*==== Import Quarks ====*/
 
-@import '../quarks/YooFlexLayout.sass';
-@import '../quarks/YooGridLayout.sass';
 @import '../quarks/YooIndicator.sass';
-@import '../quarks/YooScrollView.sass';
+
+/*==== Import Bosons ====*/
+
+@import '../bosons/YooFlexLayout.sass';
+@import '../bosons/YooGridLayout.sass';
+@import '../bosons/YooScrollView.sass';
 
 /*==== Import Atoms ====*/
 

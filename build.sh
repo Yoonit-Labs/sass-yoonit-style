@@ -32,7 +32,7 @@ echo '-----------------'
 echo '| Yoonit Styles |'
 echo '-----------------'
 echo 'Updating repository...'
-git checkout feature/themes
+git checkout development
 git pull
 wait
 echo 'Cleaning files...'

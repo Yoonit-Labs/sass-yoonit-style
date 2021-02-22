@@ -7,20 +7,6 @@
   &__item
     position: relative
 
-  .example
-    padding: $spacing-sm
-    +font($black, 'md', $font-primary, 'medium')
-    background-color: map-get($grey, 'greyLightest')
-    
-  .color
-    +border-radius('sm')
-    padding: $spacing-sm
-    +font($white, 'md', $font-primary, 'medium')
-
-    @for $i from 0 to 100
-      &:nth-child(#{$i})
-        +random-bgr()
-
   &--h-start
     justify-content: start
 

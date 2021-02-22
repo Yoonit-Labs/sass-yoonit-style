@@ -5,28 +5,30 @@
   text-transform: uppercase
   +box-shadow('soft', #00000029)
   border-radius: 1px
-  +font(color($grey, 'greyBase'), 'md', $font-primary, 'medium')
+  font-family: $font-primary
+  +font-weight('medium')
+  color: map-get($grey, 'greyBase')
   width: max-content
-  padding: $spacing-sm
 
   &__select
     .select
-      height: $spacing-md
       +flex(row, wrap, center, center)
       overflow: hidden
       &__text
-        +font(map-get($grey, 'greyDark'), 'xs', $font-primary, 'semi-bold')
-        margin: 0
-        color: color($grey, 'greyDark')
+        font-family: $font-primary
+        +font-weight('semi-bold')
+        color: map-get($grey, 'greyDark')
+        margin: 15px 20px
 
   &__options
     .option
-      height: $spacing-md
       +flex(row, wrap, center, center)
       overflow: hidden
       &__text
-        +font(map-get($grey, 'greyBase'), 'xs', $font-primary, 'semi-bold')
-        margin: 0
+        font-family: $font-primary
+        +font-weight('semi-bold')
+        color: map-get($grey, 'greyBase')
+        margin: 15px 20px
 
       &:first-child
         .option
@@ -42,3 +44,4 @@
 
   &--large
     +font-size('lg')
+

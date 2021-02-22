@@ -20,13 +20,13 @@
 # THE SOFTWARE.
 ###############################################################################
 
-# function pause() {
-#   echo ''
-#   echo 'Package ready!'
-#   echo ''
-#   read -s -n 1 -p 'Press any key to continue...'
-#   echo ''
-# }
+function pause() {
+  echo ''
+  echo 'Package ready!'
+  echo ''
+  read -s -n 1 -p 'Press any key to continue...'
+  echo ''
+}
 
 echo '-----------------'
 echo '| Yoonit Styles |'
@@ -53,4 +53,4 @@ cp -fR dist npm/css
 cp README.md npm/README.md
 cp package.json npm/package.json
 rm -rf dist
-# pause
+pause

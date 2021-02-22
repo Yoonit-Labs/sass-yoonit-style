@@ -14,8 +14,8 @@
     "patch": "npm version patch && npm run tag",
     "tag": "git push --tags && git push",
     "tag:force": "PACKAGE_VERSION=$(sed -n '/\"version\"/s/[^0-9.]//gp' package.json | tr -d '\n') && git tag v$PACKAGE_VERSION && git push --tags && git push",
-    "build": "build.sh",
-    "deploy": "build.sh && npm.sh"
+    "build": "bash build.sh",
+    "deploy": "bash build.sh && bash npm.sh"
   },
   "keywords": [
     "SASS",

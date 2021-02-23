@@ -70,10 +70,13 @@ This is the default theme, take this as a base to construct your own:
 
 /*==== Import Quarks ====*/
 
-@import '@yoonit/style/quarks/YooFlexLayout.sass';
-@import '@yoonit/style/quarks/YooGridLayout.sass';
-@import '@yoonit/style/quarks/YooIndicator.sass';
-@import '@yoonit/style/quarks/YooScrollView.sass';
+@import '../quarks/YooIndicator.sass';
+
+/*==== Import Bosons ====*/
+
+@import '../bosons/YooFlexLayout.sass';
+@import '../bosons/YooGridLayout.sass';
+@import '../bosons/YooScrollView.sass';
 
 /*==== Import Atoms ====*/
 

@@ -44,12 +44,7 @@ If you want to import somenthing especific of this project, for example, the but
 
 These are all the themes available for now.
 
-<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/default.png" width="250">
-<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/blue.png" width="250">
-<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/brown.png" width="250">
-<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/green.png" width="250">
-<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/orange.png" width="250">
-<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/purple.png" width="250">
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/default.png" width="250"><img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/blue.png" width="250"><img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/brown.png" width="250"><img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/green.png" width="250"><img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/orange.png" width="250"><img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/purple.png" width="250">
 
 ## Creating themes
 

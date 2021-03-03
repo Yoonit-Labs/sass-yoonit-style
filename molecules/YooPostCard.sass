@@ -1,0 +1,65 @@
+.yoo-post-card
+  +border('sm', map-get($grey, 'greyLight'), solid, 'md')
+  +box-shadow('soft', map-get($grey, 'greyLight'))
+  font-family: $font-primary
+  padding: $spacing-md
+
+  &__fill
+    &--white
+      background-color: $white
+      $color: map-get($grey, 'greyDark')
+      color: $color
+
+      .yoo-post-card__subtitle
+        color: lighten($color, 10%)
+
+    &--primary
+      background-color: map-get($primary, 'primaryBase')
+      $color: $white
+      color: $color
+
+      .yoo-post-card__subtitle
+        color: darken($color, 10%)
+
+    &--danger
+      background-color: map-get($danger, 'dangerBase')
+      $color: $white
+      color: $color
+
+      .yoo-post-card__subtitle
+        color: $color
+
+    &--neutral
+      background-color: map-get($grey, 'greyBase')
+      $color: $white
+      color: $color
+
+      .yoo-post-card__subtitle
+        color: $color
+
+    &--light
+      background-color: map-get($grey, 'greyLight')
+      $color: map-get($grey, 'greyDark')
+      color: $color
+
+      .yoo-post-card__subtitle
+        color: lighten($color, 10%)
+
+    &--dark
+      background-color: map-get($grey, 'greyDark')
+      $color: $white
+      color: $color
+
+      .yoo-post-card__subtitle
+        color: darken($color, 10%)
+
+  &__icon
+    margin-bottom: $spacing-sm + 2
+
+  &__title
+    margin: 0
+    +font-size('lg')
+
+  &__subtitle
+    margin: 0
+    +font-size('md')

@@ -1,0 +1,63 @@
+.yoo-table-card
+  color:  map-get($grey, 'greyDark')
+  +font-family('$font-primary')
+
+  &--separated
+    padding-bottom: $spacing-md
+    border-bottom: 1px solid map-get($grey, 'greyLight')
+
+  &__title
+    +font-weight('semi-bold')
+    +font-size('lg')
+    color: $black
+
+  &__subtitle
+    +font-weight('medium')
+    +font-size('xs')
+    color:  map-get($primary, 'primaryDark')
+    margin-left: $spacing-xs
+
+  &__detail
+    +font-weight('regular')
+    +font-size('xs')
+    text-align: right
+    word-wrap: anywhere
+    +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
+    padding: $spacing-xs $spacing-sm
+    margin: $spacing-tn
+
+    &:first-child
+      margin-left: 0px
+
+    &--on
+      +border('sm', map-get($primary, 'primaryDark'), solid, 'pill')
+      color:  map-get($primary, 'primaryDark')
+
+    .yoo-checkbox
+      margin-left: $spacing-sm
+
+  &__fill
+    &--primary
+      color:  map-get($primary, 'primaryDark')
+      border-color:  map-get($primary, 'primaryDark')
+
+    &--danger
+      color:  map-get($danger, 'dangerBase')
+      border-color: map-get($danger, 'dangerBase')
+
+    &--light
+      color:  map-get($grey, 'greyLight')
+      border-color:  map-get($grey, 'greyLight')
+
+    &--dark
+      color:  map-get($grey, 'greyDark')
+      border-color:  map-get($grey, 'greyDark')
+
+  &__no-detail
+    +font-weight('regular')
+    +font-size('md')
+    word-wrap: anywhere
+    color: map-get($grey, 'greyBase')
+
+  .yoo__container--button
+    margin-right: 0px

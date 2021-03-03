@@ -1,0 +1,371 @@
+$buttonColor: map-get($primary, 'primaryBase')
+.yoo__container--button
+  height: $spacing-lg + $spacing-xl
+
+.yoo-btn
+  $self: &
+  font-family: $font-primary
+  +font-weight('semi-bold')
+  +font-size('md')
+  width: 100%
+  height: 100%
+  +border('md', $buttonColor, solid, 'pill')
+  background-color: $buttonColor
+  +flex(row, '', center, center)
+  padding: 0 $spacing-lg
+  margin: 0
+  cursor: pointer
+  outline: none
+
+  &--xs
+    width: $spacing-lg
+    height: $spacing-lg
+    padding: 0
+    +border-radius('pill')
+    min-width: $spacing-lg
+    +font-size('sm')
+    overflow: hidden
+
+  &--short
+    width: 50%
+
+  &__text
+    color: $white
+    background-color: transparent
+
+  &__icon
+    color: $white
+    +font-size('lg')
+    background-color: transparent
+    &--small
+      +font-size('sm')
+    &--large
+      +font-size('xl')
+    &--right
+      margin-left: $spacing-sm
+    &--left
+      margin-right: $spacing-sm
+
+  &--hover:hover
+    +border('md', $buttonColor, solid, 'pill')
+    background-color: transparent
+    #{ $self }
+      &__text, &__icon
+        color: $buttonColor
+  &--active:active
+    $buttonColor: map-get($primary, 'primaryDark')
+    background-color: $buttonColor
+    border-color: $buttonColor
+    #{ $self }
+      &__text, &__icon
+        color: $white
+  &--disabled
+    $buttonColor: map-get($grey, 'greyLight')
+    background-color: $buttonColor
+    +border('md', $buttonColor, solid, 'pill')
+    cursor: not-allowed
+
+  // MOD: VARIATION
+  &--outline
+    +border('md', $buttonColor, solid, 'pill')
+    background-color: transparent
+    z-index: 0
+    #{ $self }
+      &__text, &__icon
+        color: $buttonColor
+    &#{ $self}--hover:hover
+      +border('md', $buttonColor, solid, 'pill')
+      background-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: $white
+    &#{ $self }--active:active
+      $buttonColor: map-get($primary, 'primaryDark')
+      background-color: transparent
+      border-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+    &#{ $self }--disabled
+      $buttonColor: map-get($grey, 'greyLight')
+      background-color: transparent
+      +border('md', $buttonColor, solid, 'pill')
+      cursor: not-allowed
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+  &--clear
+    border-width: 0
+    border-color: transparent
+    background-color: transparent
+    z-index: 0
+    padding: 0
+
+    #{ $self }
+      &__text, &__icon
+        color: $buttonColor
+
+    &#{ $self}--hover:hover
+      border-width: 0
+      background-color: transparent
+
+    &#{ $self }--active:active
+      $buttonColor: map-get($primary, 'primaryDark')
+      background-color: transparent
+      border-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+    &#{ $self }--disabled
+      $buttonColor: map-get($grey, 'greyLight')
+      background-color: transparent
+      border-width: 0
+      cursor: not-allowed
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+  // MOD: FORMAT
+  &--square
+    width: $spacing-lg + $spacing-xl
+    padding: 0
+
+  &--mini
+    width: $spacing-lg + $spacing-xl
+    height: $spacing-lg
+    padding: 0
+
+    #{ $self }__icon
+      +font-size('lg')
+
+  // MOD: COLOR
+
+  &__fill--light
+    $buttonColor: map-get($grey, 'greyLightest')
+    border-color: $buttonColor
+    background-color: $buttonColor
+
+    // VARIATIONS BUTTON LIGHT -- OUTLINE
+    &#{ $self }--outline
+      border-width: 1px
+      border-style: solid
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: map-get($grey, 'greyBase')
+      &#{ $self }--hover:hover
+        $buttonColor: map-get($grey, 'greyLightest')
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: map-get($grey, 'greyDark')
+      &#{ $self }--active:active
+        background-color: $buttonColor
+        border-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: map-get($grey, 'greyDark')
+
+    // VARIATIONS BUTTON LIGHT -- CLEAR
+    &#{ $self }--clear
+      $buttonColor: map-get($grey, 'greyBase')
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+      &#{ $self }--hover:hover
+        $buttonColor: map-get($grey, 'greyDark')
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+      &#{ $self }--active:active
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+    // STYLES BUTTON LIGHT
+    #{ $self }
+      &__text, &__icon
+        color: map-get($grey, 'greyDark')
+
+    &#{ $self }--hover:hover
+      $buttonColor: map-get($grey, 'greyBase')
+      border-width: 1px
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+    &#{ $self }--disabled
+      color: map-get($danger, 'dangerBase')
+
+  &__fill--dark
+    $buttonColor: map-get($grey, 'greyDark')
+    border-color: $buttonColor
+    background-color: $buttonColor
+
+    // VARIATIONS BUTTON DARK -- OUTLINE
+    &#{ $self }--outline
+      border-width: 1px
+      border-style: solid
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: map-get($grey, 'greyDark')
+      &#{ $self }--hover:hover
+        $buttonColor: map-get($grey, 'greyDark')
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: map-get($grey, 'greyLightest')
+      &#{ $self }--active:active
+        background-color: $buttonColor
+        border-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: map-get($grey, 'greyDark')
+
+    // VARIATIONS BUTTON DARK -- CLEAR
+    &#{ $self }--clear
+      $buttonColor: map-get($grey, 'greyDark')
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+      &#{ $self }--hover:hover
+        $buttonColor: map-get($grey, 'greyBase')
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+      &#{ $self }--active:active
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+    // STYLES BUTTON DARK
+    #{ $self }
+      &__text, &__icon
+        color: map-get($grey, 'greyLightest')
+
+    &#{ $self }--hover:hover
+      $buttonColor: map-get($grey, 'greyDark')
+      border-width: 1px
+      border-color: $buttonColor
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+    &#{ $self }--active:active
+      $buttonColor: map-get($grey, 'greyDarkest')
+      border-width: 1px
+      border-color: $buttonColor
+      background-color: $buttonColor
+
+    &#{ $self }--disabled
+      $buttonColor: map-get($grey, 'greyLight')
+      background-color: $buttonColor
+      border-width: 1px
+      border-style: solid
+      border-color: $buttonColor
+
+  &__fill--danger
+    $buttonColor: map-get($danger, 'dangerBase')
+    border-color: $buttonColor
+    background-color: $buttonColor
+    // VARIATIONS BUTTON DANGER -- OUTLINE
+    &#{ $self }--outline
+      +border('md', $buttonColor, solid, 'pill')
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+      &#{ $self }--hover:hover
+        $buttonColor: map-get($danger, 'dangerBase')
+        +border('md', $buttonColor, solid, 'pill')
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: $white
+      &#{ $self }--active:active
+        $buttonColor: #CB0A22
+        background-color: $buttonColor
+        border-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: $white
+    // VARIATIONS BUTTON DANGER -- CLEAR
+    &#{ $self }--clear
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+      &#{ $self }--hover:hover
+        border-width: 0
+        background-color: transparent
+      &#{ $self }--active:active
+        $buttonColor: #CB0A22
+        border-width: 0
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+    // STYLES BUTTON DANGER
+    &#{ $self }--hover:hover
+      +border('md', $buttonColor, solid, 'pill')
+      background-color: transparent
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+    &#{ $self }--active:active
+      $buttonColor: #CB0A22
+      background-color: $buttonColor
+      border-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: $white
+    &#{ $self }--disabled
+      $buttonColor: map-get($grey, 'greyLight')
+      background-color: $buttonColor
+      +border('md', $buttonColor, solid, 'pill')
+
+  &--animation-pulse
+    animation-name: pulse
+    +durationAnimation('normal')
+    animation-timing-function: cubic-bezier(.28,.68,.75,.78)
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+
+@keyframes pulse
+  0%
+    transform: scale(.95)
+  25%
+    transform: scale(1)
+  50%
+    transform: scale(.95)
+  70%
+    transform: scale(1)
+  100%
+    transform: scale(.95)

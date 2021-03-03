@@ -1,0 +1,20 @@
+.yoo-scroll-view
+  display: block
+  scrollbar-color: map-get($primary, 'primaryBase') map-get($grey, 'greyLightest')
+  scrollbar-width: thin
+
+  &::-webkit-scrollbar
+    width: $spacing-sm
+    height: $spacing-sm
+    background-color: map-get($grey, 'greyLightest')
+
+  &::-webkit-scrollbar-thumb
+    background: map-get($primary, 'primaryBase')
+
+  &--vertical
+    overflow-x: hidden
+    overflow-y: scroll
+
+  &--horizontal
+    overflow-x: scroll
+    overflow-y: hidden

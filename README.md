@@ -8,12 +8,14 @@
 ![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
 A SASS lib to provide:
-- Diverse variables and mixins
+- Atomic Design System
+- Created using BEM methodology
+- Diverse variables and mixins to help you build your awesome layout
 - Responsive grid and flex system
 - Diverse theme range
 - Components styles
 - Possibility of creating themes
-- Created using BEM methodology
+
 
 ## Installation
 
@@ -23,14 +25,14 @@ npm i -s @yoonit/style
 
 ## Usage
 
-To access all the features of yoonit/style, import the theme that you want and the index.sass, in your file or globally.
+To access all the features of yoonit/style, import the SASS theme that you want in your project globally.
 
 ```sass
 @import '@yoonit/style'
 @import '@yoonit/style/themes/{themeName}'
 ```
 
-If you want to import somenthing especific of the project, for example, the button css, you can import that directy.
+If you want to import somenthing especific of this project, for example, the button style, you can import that directy.
 
 ```sass
 @import '@yoonit/style'
@@ -170,7 +172,7 @@ $spacing-hg: 64px;
 ### Helpers
 
 | Name               | Input/Format | Usage   (sass)                        | Description |
-| -                  | -            | -                                            | -           |                                 
+| -                  | -            | -                                            | -           |
 | flex               | flex-direction, flex-wrap, justify-content, align-content/align-items | `+flex($flex-direction, $flex-wrap, $justify-content, $align-content/align-items` | Helps in the spacial organization on the interface |
 | durationAnimation  | 'slow' or 'normal' or 'fast' or 'very-fast' | `+durationAnimation($modifier)` | Sets the duration of the animation  |
 | stateAnimation     | 'paused' or 'played' | `+stateAnimation($state)` | Sets the state of the animation |
@@ -197,9 +199,9 @@ The margin class `.m` and the padding class `.p` have elements and modifiers.
 The elements are the position of the margin or padding (left, top, bottom or right) and the modifiers are the size of the margin or padding (extra small, small, medium, large, extra large or none).
 
 | Param              | Input/Format | Description                                   |
-| -                  | -            | -                                             |                            
+| -                  | -            | -                                             |
 | element            | 'l' or 't' or 'b' or 'r' | Position of the margin or padding |
-| modifier           | 'xs' or 's' or 'm' or 'l' or 'xl' or 'none' | Size of the margin or padding |  
+| modifier           | 'xs' or 's' or 'm' or 'l' or 'xl' or 'none' | Size of the margin or padding |
 
 To use them, in your html code, set the `.m` or `.p`, then do `__element`, then `--modifier`.
 

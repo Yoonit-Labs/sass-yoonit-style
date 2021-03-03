@@ -54,13 +54,15 @@ Yoonit Style has 3 color objects ($primary, $danger, $grey) with 5 variables eac
 
 The variables names are the name of the object + the shade range. The shade ranges are: Darkest, Dark, Base, Light, Lightest.
 
-Example: `primaryDarkest, dangerBase, greyLightest`.
+Example: `primaryDarkest`, `dangerBase`, `greyLightest`.
 
 You can create other objects and other color variables, but the components will not react to them unless you change the components styles.
 
 The project has two fonts variables, `$font-primary` and `$font-second`, to change them, just set the variable to the new value.
 
 This is the default theme, take this as a base to construct your own:
+
+`MyTheme.scss`
 
 ```scss
 @import '@yoonit/style';

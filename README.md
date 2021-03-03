@@ -2,10 +2,10 @@
 
 # Sass Yoonit Style
 
-![Version](https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm)
-![Downloads](https://img.shields.io/npm/dm/@yoonit/nativescript-camera?color=lightgrey&logo=npm&style=for-the-badge)
+![Version](https://img.shields.io/npm/v/@yoonit/style?color=lightgrey&style=for-the-badge&logo=npm)
+![Downloads](https://img.shields.io/npm/dm/@yoonit/style?color=lightgrey&logo=npm&style=for-the-badge)
 ![SASS](https://img.shields.io/badge/SASS%20-hotpink.svg?color=lightgrey&logo=SASS&style=for-the-badge)
-![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
+![MIT license](https://img.shields.io/npm/l/@yoonit/style?color=lightgrey&style=for-the-badge)
 
 A SASS lib to provide:
 - Atomic Design System
@@ -44,12 +44,12 @@ If you want to import somenthing especific of this project, for example, the but
 
 These are all the themes available for now.
 
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/default.png" width="250">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/blue.png" width="250">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/brown.png" width="250">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/green.png" width="250">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/orange.png" width="250">](https://cyberlabs.ai/)
-[<img src="https://github.com/Yoonit-Labs/sass-yoonit-style/blob/development/public/readme-img/purple.png" width="250">](https://cyberlabs.ai/)
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/default.png" width="250">
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/blue.png" width="250">
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/brown.png" width="250">
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/green.png" width="250">
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/orange.png" width="250">
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/public/readme-img/purple.png" width="250">
 
 ## Creating themes
 

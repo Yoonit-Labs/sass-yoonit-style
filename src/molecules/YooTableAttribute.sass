@@ -1,12 +1,23 @@
 .yoo-table-attribute
   color: map-get($grey, 'greyDark')
   font-family: $font-primary
-  height: $spacing-sm * 7
+  min-height: $spacing-sm * 5
   &--separated
     border-bottom: 1px solid map-get($grey, 'greyLight')
 
   &--tall
     height: $spacing-hg
+  &--wrap
+    height: $spacing-sm * 7
+  &__fill
+    &--default
+      background-color: map-get($grey, 'greyLightest')
+    &--primary
+      background-color: map-get($primary, 'primaryBase')
+      color: $white
+    &--danger
+      background-color: map-get($danger, 'dangerBase')
+      color: $white
 
   &__title
     +flex(row, wrap, flex-start, center)
@@ -14,12 +25,14 @@
       color: map-get($primary, 'primaryDark')
     &--danger
       color: map-get($danger, 'dangerBase')
-    &--light
+    &--neutral
       color: map-get($grey, 'greyBase')
     &--dark
       color: map-get($grey, 'greyDark')
     &--black
       color: $black
+    &--white
+      color: $white
 
     &--bold
       +font-weight('bold')
@@ -44,6 +57,7 @@
     +font-size('sm')
     text-align: right
     word-wrap: anywhere
+    max-height: $spacing-sm * 5
     +flex(row, wrap, flex-start, center)
     &--primary
       color: map-get($primary, 'primaryDark')
@@ -53,5 +67,12 @@
       color: map-get($grey, 'greyBase')
     &--dark
       color: map-get($grey, 'greyDark')
+    &--white
+      color: $white
+    &--black
+      color: $black
     &--wrap
       text-align: left
+
+  &__actionable
+    max-height: $spacing-sm * 5

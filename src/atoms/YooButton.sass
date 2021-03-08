@@ -351,6 +351,52 @@ $buttonColor: map-get($primary, 'primaryBase')
       background-color: $buttonColor
       +border('md', $buttonColor, solid, 'pill')
 
+  &__fill--black
+      $buttonColor: $black
+      border-color: $buttonColor
+      background-color: transparent
+
+      // VARIATIONS BUTTON black -- OUTLINE
+      &#{ $self }--outline
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $black
+
+      // VARIATIONS BUTTON black -- CLEAR
+      &#{ $self }--clear
+        $buttonColor: $black
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+  &__fill--white
+      $buttonColor: $white
+      border-color: $buttonColor
+      background-color: transparent
+
+      // VARIATIONS BUTTON white -- OUTLINE
+      &#{ $self }--outline
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $white
+
+      // VARIATIONS BUTTON white -- CLEAR
+      &#{ $self }--clear
+        $buttonColor: $white
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
   &--animation-pulse
     animation-name: pulse
     +durationAnimation('normal')

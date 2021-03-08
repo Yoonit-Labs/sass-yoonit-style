@@ -85,7 +85,6 @@ This is the default theme, take this as a base to construct your own:
 @import '@yoonit/style/atoms/YooCheckButton.sass';
 @import '@yoonit/style/atoms/YooDropDown.sass';
 @import '@yoonit/style/atoms/YooIcon.sass';
-@import '@yoonit/style/atoms/YooSeparator.sass';
 @import '@yoonit/style/atoms/YooStepper.sass';
 @import '@yoonit/style/atoms/YooSwitch.sass';
 

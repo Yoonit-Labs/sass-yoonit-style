@@ -1,45 +1,65 @@
 .yoo-card
-  border-bottom: 1px solid map-get($grey, 'greyLight')
-  color: map-get($grey, 'greyBase')
+  +border('sm', map-get($grey, 'greyLight'), solid, 'md')
+  +box-shadow('soft', map-get($grey, 'greyLight'))
   font-family: $font-primary
-  @include font-size('lg')
-
-  &:first-of-type
-    border-top: 1px solid map-get($grey, 'greyLight')
-
-  &__style
-    &--border-left
-      border-left: $spacing-xs solid
-      padding-left: $spacing-md
-
+  padding: $spacing-md
 
   &__fill
-    &--border-neutral
-      border-left-color: map-get($grey, 'greyBase')
+    &--white
+      background-color: $white
+      $color: map-get($grey, 'greyDark')
+      color: $color
 
-    &--border-primary
-      border-left-color: map-get($primary, 'primaryBase')
+      .yoo-card__subtitle
+        color: lighten($color, 10%)
 
-    &--border-danger
-      border-left-color: map-get($danger, 'dangerBase')
+    &--primary
+      background-color: map-get($primary, 'primaryBase')
+      $color: $white
+      color: $color
 
-    &--border-light
-      border-left-color: map-get($grey, 'greyLight')
+      .yoo-card__subtitle
+        color: darken($color, 10%)
 
-    &--border-dark
-      border-left-color: map-get($grey, 'greyDark')
+    &--danger
+      background-color: map-get($danger, 'dangerBase')
+      $color: $white
+      color: $color
 
-    &--border-darkest
-      border-left-color: map-get($grey, 'greyDarkest')
+      .yoo-card__subtitle
+        color: $color
+
+    &--neutral
+      background-color: map-get($grey, 'greyBase')
+      $color: $white
+      color: $color
+
+      .yoo-card__subtitle
+        color: $color
+
+    &--light
+      background-color: map-get($grey, 'greyLight')
+      $color: map-get($grey, 'greyDark')
+      color: $color
+
+      .yoo-card__subtitle
+        color: lighten($color, 10%)
+
+    &--dark
+      background-color: map-get($grey, 'greyDark')
+      $color: $white
+      color: $color
+
+      .yoo-card__subtitle
+        color: darken($color, 10%)
+
+  &__icon
+    margin-bottom: $spacing-sm + 2
 
   &__title
-    width: 100%
     margin: 0
-    +font-weight('medium')
-    color: map-get($grey, 'greyDarkest')
+    +font-size('lg')
 
   &__subtitle
-    width: 100%
     margin: 0
-    +font-weight('medium')
-    +font-size('sm')
+    +font-size('md')

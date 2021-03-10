@@ -17,7 +17,7 @@ $buttonColor: map-get($primary, 'primaryBase')
   cursor: pointer
   outline: none
 
-  &--xs
+  &--short
     width: $spacing-lg
     height: $spacing-lg
     padding: 0
@@ -26,12 +26,23 @@ $buttonColor: map-get($primary, 'primaryBase')
     +font-size('sm')
     overflow: hidden
 
-  &--short
-    width: 50%
-
   &__text
     color: $white
     background-color: transparent
+    &--xs
+      +font-size('xs')
+
+    &--sm
+      +font-size('sm')
+    
+    &--md
+      +font-size('md')
+    
+    &--lg
+      +font-size('lg')
+    
+    &--xl
+      +font-size('xl')
 
   &__icon
     color: $white

@@ -17,6 +17,9 @@
 
     &--danger
       color: map-get($danger, 'dangerDark')
+    
+    &--primary
+      color: map-get($primary, 'primaryBase')
 
   &__text
     font-family: $font-primary
@@ -63,6 +66,12 @@
 
   &--light
     background: map-get($grey, 'greyLight')
+
+  &--lightest
+    background: map-get($grey, 'greyLightest')
+
+  &--dark
+    background: map-get($grey, 'greyDark')
 
 .yoo-indicator
   margin-left: $spacing-sm

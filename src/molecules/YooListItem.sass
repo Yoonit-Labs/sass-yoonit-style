@@ -1,17 +1,18 @@
 .yoo-list-item
-  border-bottom: 1px solid map-get($grey, 'greyLight')
   color: map-get($grey, 'greyBase')
   font-family: $font-primary
   @include font-size('lg')
 
-  &:first-of-type
-    border-top: 1px solid map-get($grey, 'greyLight')
-
   &__style
-    &--border-left
-      border-left: $spacing-xs solid
-      padding-left: $spacing-md
+    &--wrap
+      flex-wrap: wrap !important
 
+  &--border-left
+    border-left: $spacing-xs solid
+    padding-left: $spacing-md
+
+  &--separated
+    border-bottom: 1px solid map-get($grey, 'greyLight')
 
   &__fill
     &--border-neutral
@@ -39,7 +40,7 @@
     color: map-get($grey, 'greyDarkest')
 
   &__subtitle
-    width: 100%
-    margin: 0
     +font-weight('medium')
-    +font-size('sm')
+    +font-size('xs')
+    color:  map-get($primary, 'primaryDark')
+    margin-left: $spacing-xs

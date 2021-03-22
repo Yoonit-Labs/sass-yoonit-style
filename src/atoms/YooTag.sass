@@ -6,26 +6,6 @@
     +font-size('md')
     word-wrap: anywhere
     color: map-get($grey, 'greyBase')
-
-  &__fill
-    &--primary
-      color: map-get($primary, 'primaryDark')
-      +border('sm', map-get($primary, 'primaryDark'), solid, 'lg')
-    &--danger
-      color: map-get($danger, 'dangerBase')
-      +border('sm', map-get($danger, 'dangerBase'), solid, 'lg')
-    &--neutral
-      color: map-get($grey, 'greyBase')
-      +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
-    &--dark
-      color: map-get($grey, 'greyDark')
-      +border('sm', map-get($grey, 'greyDark'), solid, 'lg')
-    &--black
-      color: $black
-      +border('sm', $black, solid, 'lg')
-    &--white
-      color: $white
-      +border('sm', $white, solid, 'lg')
       
   &__item
     $self: &
@@ -35,10 +15,28 @@
     word-wrap: anywhere
     padding: $spacing-xs $spacing-sm
     margin: $spacing-tn
+    color: map-get($grey, 'greyBase')
+    +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
 
     &:first-child
       margin-left: 0px
 
-    &--on
-      +border('sm', map-get($primary, 'primaryDark'), solid, 'pill')
-      color:  map-get($primary, 'primaryDark')
+  &__fill
+    &--primary.yoo-tag__item--on
+      color: map-get($primary, 'primaryDark')
+      +border('sm', map-get($primary, 'primaryDark'), solid, 'lg')
+    &--danger.yoo-tag__item--on
+      color: map-get($danger, 'dangerBase')
+      +border('sm', map-get($danger, 'dangerBase'), solid, 'lg')
+    &--neutral.yoo-tag__item--on
+      color: map-get($grey, 'greyBase')
+      +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
+    &--dark.yoo-tag__item--on
+      color: map-get($grey, 'greyDark')
+      +border('sm', map-get($grey, 'greyDark'), solid, 'lg')
+    &--black.yoo-tag__item--on
+      color: $black
+      +border('sm', $black, solid, 'lg')
+    &--white.yoo-tag__item--on
+      color: $white
+      +border('sm', $white, solid, 'lg')

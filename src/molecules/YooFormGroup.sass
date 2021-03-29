@@ -57,7 +57,7 @@ $placeholder-transition: 300ms ease-in-out
       +font-size('lg' + 2)
       color: map-get($grey, 'greyDark')
       border: 0
-      border-bottom: border('sm', map-get($grey, 'greyBase'), solid, 'none')
+      border-bottom: 1px map-get($grey, 'greyDark') solid
       transition: border-color $placeholder-transition
       outline: none
       padding: 0
@@ -87,6 +87,7 @@ $placeholder-transition: 300ms ease-in-out
           color: map-get($grey, 'greyBase')
 
       &:disabled
+        border-bottom: 1px map-get($grey, 'greyLight') solid
         & + .yoo-input__label
           color: map-get($grey, 'greyLight')
 

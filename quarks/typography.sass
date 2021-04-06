@@ -1,0 +1,60 @@
+//////////////////////////////
+//        TYPOGRAPHY        //
+//////////////////////////////
+
+/*===== Variations fonts ====*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap')
+
+$font-primary: Montserrat, sans-serif
+$font-second: Arial, sans-serif
+
+$font-size-tn: 8px
+$font-size-xs: 10px
+$font-size-sm: 12px
+$font-size-md: 14px
+$font-size-lg: 16px
+$font-size-xl: 20px
+$font-size-hg: 32px
+
+=font($font-color, $font-size, $font-family, $font-weight)
+  +font-size($font-size)
+  +font-weight($font-weight)
+  +font-family($font-family)
+  color: $font-color
+
+=font-size($modifier)
+  @if $modifier == 'tn'
+    font-size: $font-size-tn
+  @else if $modifier == 'xs'
+    font-size: $font-size-xs
+  @else if $modifier == 'sm'
+    font-size: $font-size-sm
+  @else if $modifier == 'md'
+    font-size: $font-size-md
+  @else if $modifier == 'lg'
+    font-size: $font-size-lg
+  @else if $modifier == 'xl'
+    font-size: $font-size-xl
+  @else if $modifier == 'hg'
+    font-size: $font-size-hg
+
+=font-family($font-family)
+  @if $font-family == '$font-primary'
+    font-family: $font-primary
+  @else if $font-family == '$font-second'
+    font-family: $font-second
+  @else
+    font-family: $font-family
+
+=font-weight($font-weight)
+  @if $font-weight == 'bold'
+    font-weight: 700
+  @else if $font-weight == 'semi-bold'
+    font-weight: 600
+  @else if $font-weight == 'medium'
+    font-weight: 500
+  @else if $font-weight == 'regular'
+    font-weight: 400
+  @else
+    font-weight: 400

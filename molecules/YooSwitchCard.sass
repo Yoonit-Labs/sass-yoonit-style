@@ -1,0 +1,12 @@
+.yoo-switch-card
+  transition: 0.2s ease
+  +box-shadow('soft', rgba(0, 0, 0, 0.2))
+  +border('sm', map-get($grey, 'greyLight'), solid, 'md')
+  color: map-get($grey, 'greyBase')
+
+  &--fill-primary
+    background-color: map-get($primary, 'primaryDark')
+
+  &--active
+    background-color: map-get($primary, 'primaryDark')
+    color: $white

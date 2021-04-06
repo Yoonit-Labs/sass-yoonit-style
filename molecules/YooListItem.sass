@@ -1,0 +1,45 @@
+.yoo-list-item
+  color: map-get($grey, 'greyBase')
+  font-family: $font-primary
+  @include font-size('lg')
+
+  &__style
+    &--wrap
+      flex-wrap: wrap !important
+
+  &--border-left
+    border-left: $spacing-xs solid
+    padding-left: $spacing-md
+
+  &--separated
+    border-bottom: 1px solid map-get($grey, 'greyLight')
+
+  &__fill
+    &--border-neutral
+      border-left-color: map-get($grey, 'greyBase')
+
+    &--border-primary
+      border-left-color: map-get($primary, 'primaryBase')
+
+    &--border-danger
+      border-left-color: map-get($danger, 'dangerBase')
+
+    &--border-light
+      border-left-color: map-get($grey, 'greyLight')
+
+    &--border-dark
+      border-left-color: map-get($grey, 'greyDark')
+
+    &--border-darkest
+      border-left-color: map-get($grey, 'greyDarkest')
+
+  &__title
+    margin: 0
+    +font-weight('medium')
+    color: map-get($grey, 'greyDarkest')
+
+  &__subtitle
+    +font-weight('medium')
+    +font-size('xs')
+    color:  map-get($primary, 'primaryDark')
+    margin-left: $spacing-xs

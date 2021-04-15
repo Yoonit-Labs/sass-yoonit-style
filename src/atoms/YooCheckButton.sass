@@ -61,7 +61,7 @@
       justify-content: center
       align-items: center
       background: $white
-      border: 3px solid map-get($grey, 'greyBase')
+      border: 2px solid map-get($grey, 'greyBase')
       cursor: pointer
 
     &--active
@@ -69,19 +69,19 @@
         content: '\f00c'
         background: map-get($primary, 'primaryBase')
         color: $white
-        border: 3px solid map-get($primary, 'primaryBase')
+        border: 2px solid map-get($primary, 'primaryBase')
 
     &--card-active
       &:before
         content: '\f00c'
         background: $white
         color: map-get($primary, 'primaryBase')
-        border: 3px solid $white
+        border: 2px solid $white
 
     &--disabled
       &:before
         content: '\f00c'
         background: map-get($grey, 'greyLight')
         color: $white
-        border: 3px solid map-get($grey, 'greyLight')
+        border: 2px solid map-get($grey, 'greyLight')
         cursor: default

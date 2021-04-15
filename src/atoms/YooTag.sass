@@ -2,24 +2,21 @@
   +font-family('$font-primary')
 
   &__notag
-    +font-weight('regular')
+    +font-weight('medium')
     +font-size('md')
     word-wrap: anywhere
     color: map-get($grey, 'greyBase')
       
   &__item
     $self: &
-    +font-weight('regular')
+    +font-weight('medium')
     +font-size('xs')
     text-align: right
     word-wrap: anywhere
     padding: $spacing-xs $spacing-sm
-    margin: $spacing-tn
+    margin: 0
     color: map-get($grey, 'greyBase')
     +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
-
-    &:first-child
-      margin-left: 0px
 
   &__fill
     &--primary.yoo-tag__item--on

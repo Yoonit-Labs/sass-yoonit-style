@@ -10,6 +10,7 @@ $placeholder-transition: 300ms ease-in-out
     display: block
     width: 100%
     min-height: $spacing-hg - 14
+    +font-family($font-primary)
     &::before
       content: ""
       height: $spacing-tn
@@ -32,6 +33,7 @@ $placeholder-transition: 300ms ease-in-out
       z-index: 2
       +font-size('md')
       +font-weight('semi-bold')
+      +font-family($font-primary)
       transition: all $placeholder-transition
       width: 100%
       cursor: text
@@ -46,6 +48,7 @@ $placeholder-transition: 300ms ease-in-out
       position: absolute
       bottom: -($spacing-lg - 4)
       +font-size('sm')
+      +font-family($font-primary)
       font-weight: 500
 
     &__field
@@ -55,6 +58,7 @@ $placeholder-transition: 300ms ease-in-out
       width: 100%
       min-height: $spacing-xl - 2
       +font-size('lg' + 2)
+      +font-family($font-primary)
       color: map-get($grey, 'greyDark')
       border: 0
       border-bottom: 1px map-get($grey, 'greyDark') solid
@@ -77,11 +81,13 @@ $placeholder-transition: 300ms ease-in-out
       &:valid,
       &:disabled
         background-color: transparent
+        +font-family($font-primary)
 
         & + .yoo-input__label
           top: 0
           cursor: inherit
           @include font-size('md')
+          +font-family($font-primary)
 
         &::placeholder
           opacity: 1
@@ -89,16 +95,19 @@ $placeholder-transition: 300ms ease-in-out
       &:focus
         & + .yoo-input__label
           color: map-get($grey, 'greyBase')
+          +font-family($font-primary)
 
       &:disabled
         border-bottom: 1px map-get($grey, 'greyLight') solid
         & + .yoo-input__label
           color: map-get($grey, 'greyLight')
+          +font-family($font-primary)
 
     &--error
       .yoo-input__label,
       .yoo-input__feedback
         color: map-get($danger, 'dangerBase')
+        +font-family($font-primary)
 
         i::before
           content: "\f00d"
@@ -111,10 +120,12 @@ $placeholder-transition: 300ms ease-in-out
       .yoo-input__label,
       .yoo-input__feedback
         color: map-get($primary, 'primaryBase')
+        +font-family($font-primary)
 
         i::before
           content: "\f00c"
 
       &::before
         background-color: map-get($primary, 'primaryBase')
+        +font-family($font-primary)
         transform: scale(1)

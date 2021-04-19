@@ -1,0 +1,87 @@
+.yoo-checkbox input
+  display: none
+
+.yoo-checkbox
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  &__card
+    transition: 0.2s ease
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2)
+    border-radius: 3px
+    color: map-get($grey, 'greyBase')
+    &--active
+      display: block
+      align-items: center
+      background: map-get($primary, 'primaryBase')
+      color: $white
+
+  &__text
+    font-family: Montserrat
+    +font-weight('medium')
+    margin: 0 0 0 $spacing-md
+
+    &--right
+      flex-direction: row-reverse
+      > p
+        margin: 0 $spacing-md 0 0
+
+  &--small
+    font-size: $font-size-sm
+    &:before
+      width: $spacing-md
+      height: $spacing-md
+      min-width: $spacing-md
+      min-height: $spacing-md
+
+  &--medium
+    font-size: $font-size-lg
+    &:before
+      width: $spacing-lg
+      height: $spacing-lg
+      min-width: $spacing-lg
+      min-height: $spacing-lg
+
+  &--large
+    font-size: $font-size-xl
+    &:before
+      width: $spacing-xl
+      height: $spacing-xl
+      min-width: $spacing-xl
+      min-height: $spacing-xl
+
+  &__check
+    +flex(row, wrap, flex-start, center)
+    &:before
+      content: ''
+      @include border-radius('circular')
+      vertical-align: middle
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      background: $white
+      border: 2px solid map-get($grey, 'greyBase')
+      cursor: pointer
+
+    &--active
+      &:before
+        content: '\f00c'
+        background: map-get($primary, 'primaryBase')
+        color: $white
+        border: 2px solid map-get($primary, 'primaryBase')
+
+    &--card-active
+      &:before
+        content: '\f00c'
+        background: $white
+        color: map-get($primary, 'primaryBase')
+        border: 2px solid $white
+
+    &--disabled
+      &:before
+        content: '\f00c'
+        background: map-get($grey, 'greyLight')
+        color: $white
+        border: 2px solid map-get($grey, 'greyLight')
+        cursor: default

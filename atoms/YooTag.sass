@@ -1,0 +1,39 @@
+.yoo-tag
+  +font-family('$font-primary')
+
+  &__notag
+    +font-weight('medium')
+    +font-size('md')
+    word-wrap: anywhere
+    color: map-get($grey, 'greyBase')
+      
+  &__item
+    $self: &
+    +font-weight('medium')
+    +font-size('xs')
+    text-align: right
+    word-wrap: anywhere
+    padding: $spacing-xs $spacing-sm
+    margin: 0
+    color: map-get($grey, 'greyBase')
+    +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
+
+  &__fill
+    &--primary.yoo-tag__item--on
+      color: map-get($primary, 'primaryDark')
+      +border('sm', map-get($primary, 'primaryDark'), solid, 'lg')
+    &--danger.yoo-tag__item--on
+      color: map-get($danger, 'dangerBase')
+      +border('sm', map-get($danger, 'dangerBase'), solid, 'lg')
+    &--neutral.yoo-tag__item--on
+      color: map-get($grey, 'greyBase')
+      +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
+    &--dark.yoo-tag__item--on
+      color: map-get($grey, 'greyDark')
+      +border('sm', map-get($grey, 'greyDark'), solid, 'lg')
+    &--black.yoo-tag__item--on
+      color: $black
+      +border('sm', $black, solid, 'lg')
+    &--white.yoo-tag__item--on
+      color: $white
+      +border('sm', $white, solid, 'lg')

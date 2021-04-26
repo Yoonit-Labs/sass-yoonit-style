@@ -1,0 +1,34 @@
+.yoo-icon
+  +font-size('md')
+
+  // SIZE
+  &__size
+    &--tn
+      +font-size('tn')
+    &--xs
+      +font-size('xs')
+    &--sm
+      +font-size('sm')
+    &--md
+      +font-size('md')
+    &--lg
+      +font-size('lg')
+    &--xl
+      +font-size('xl')
+    &--hg
+      +font-size('hg')
+
+  // FILL COLORS
+  &__fill
+    &--neutral
+      color: map-get($grey, 'greyBase')
+    &--primary
+      color: map-get($primary, 'primaryBase')
+    &--danger
+      color: map-get($danger, 'dangerBase')
+    &--dark
+      color: map-get($grey, 'greyDark')
+    &--black
+      color: $black
+    &--white
+      color: $white

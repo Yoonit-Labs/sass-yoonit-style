@@ -1,0 +1,45 @@
+.yoo-avatar
+  +border-radius('circular')
+  +flex(row, wrap, center, center)
+  background: map-get($primary, 'primaryBase')
+  font-family: $font-primary
+  +font-size('xl')
+  +font-weight('bold')
+
+  &--small
+    width: $spacing-lg * 2 // 40px
+    height: $spacing-lg * 2 // 40px
+    +font-size('lg')
+
+  &--medium
+    width: $spacing-xl * 2 // 56px
+    height: $spacing-xl * 2 // 56px
+
+  &--large
+    width: $spacing-xl * 3 // 80px
+    height: $spacing-xl * 3 // 80px
+    +font-size('hg')
+
+  &--xlarge
+    width: $spacing-hg * 2 // 104px
+    height: $spacing-hg * 2 //104px
+    font-size: $font-size-lg * 2
+
+  &--primary
+    background: map-get($primary, 'primaryBase')
+
+  &--danger
+    background: map-get($danger, 'dangerBase')
+
+  &--light
+    background: map-get($primary, 'primaryBase')
+
+  &--dark
+    background: map-get($grey, 'greyBase')
+
+  &__text
+    color: $white
+    &--light
+      color: $white
+    &--dark
+      color: map-get($grey, 'greyDark')

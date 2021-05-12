@@ -10,14 +10,19 @@ $buttonColor: map-get($primary, 'primaryBase')
   +font-size('md')
   width: 100%
   height: 100%
-  +border('md', $buttonColor, solid, 'pill')
   background-color: $buttonColor
   +flex(row, '', center, center)
   padding: 0 $spacing-lg
   margin: 0
   cursor: pointer
   outline: none
-
+  &__border
+    &--rounded
+      +border('md', $buttonColor, solid, 'pill')
+    &--medium
+      +border('md', $buttonColor, solid, 'md')
+    &--normal
+      +border('md', $buttonColor, solid, 'none')
   &--short
     width: $spacing-lg
     height: $spacing-lg

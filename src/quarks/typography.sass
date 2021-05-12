@@ -48,6 +48,8 @@ $font-size-hg: 32px
     font-family: $font-family
 
 =font-weight($font-weight)
+  @if $font-weight == 'extra-bold'
+    font-weight: 800
   @if $font-weight == 'bold'
     font-weight: 700
   @else if $font-weight == 'semi-bold'

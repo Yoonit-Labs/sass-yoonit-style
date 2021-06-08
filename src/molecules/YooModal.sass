@@ -14,8 +14,18 @@
     min-width: 328px
     min-height: 254px
     padding: 24px 16px 8px 16px
-    background: $white
     +box-shadow('soft', #00000029)
-    +border('xs', #D9D9D9, solid, 'lg')
     text-align: center
     font-family: $font-primary
+    &__fill
+      &--light
+        background-color: $white
+        color: $black
+      &--dark
+        background-color: $black
+        color: $white
+    &__border
+      &--square
+        border-radius: 0
+      &--radius
+        border-radius: 8px

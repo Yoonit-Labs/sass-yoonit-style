@@ -53,9 +53,9 @@
 
   &__check
     +flex(row, wrap, flex-start, center)
-    &:before
+
+    &::before
       content: ''
-      @include border-radius('circular')
       vertical-align: middle
       display: inline-flex
       justify-content: center
@@ -63,6 +63,14 @@
       background: $white
       border: 2px solid map-get($grey, 'greyBase')
       cursor: pointer
+
+    &--square
+      &::before
+        @include border-radius('none')
+
+    &--rounded
+      &::before
+        @include border-radius('circular')
 
     &--active
       &:before

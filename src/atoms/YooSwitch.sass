@@ -1,3 +1,5 @@
+@import "../quarks/global.scss"
+
 .yoo-switch
   visibility: hidden
   position: absolute
@@ -12,21 +14,21 @@
 
   &--small
     + label
-      width: $spacing-lg
-      height: $spacing-md
-      border-radius: $spacing-xs * 5
+      width: var(--spacing-lg)
+      height: var(--spacing-md)
+      border-radius: 20px
 
   &--medium
     + label
-      width: $spacing-lg * 2
-      height: $spacing-xs * 5
-      border-radius: $spacing-xl
+      width: 48px
+      height: 20px
+      border-radius: var(--spacing-xl)
 
   &--large
     + label
-      width: $spacing-lg * 3
-      height: $spacing-xl
-      border-radius: $spacing-lg * 2
+      width: 72px
+      height: var(--spacing-xl)
+      border-radius: 48px
 
   + label:before,
   + label:after
@@ -35,7 +37,7 @@
     content: ""
 
   + label:before
-    background-color: rgba(map-get($grey, 'greyLight'), 0.4)
+    background-color: rgba(var(--greyLight), 0.4)
     border-radius: 60px
     transition: background 0.4s
     top: 0px
@@ -44,7 +46,7 @@
     right: 0px
 
   + label:after
-    background-color: map-get($grey, 'greyLightest')
+    background-color: var(--greyLightest)
     border-radius: 100%
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.32)
     transition: all 0.4s
@@ -54,36 +56,36 @@
 
   &--small
     + label:after
-      width: $spacing-xs * 5
+      width: 20px
       top: -3px
       bottom: -3px
 
   &--medium
     + label:after
-      width: $spacing-xl
+      width: var(--spacing-xl)
       top: -6px
       bottom: -5px
 
   &--large
     + label:after
-      width: $spacing-lg * 2
+      width: 48px
       top: -9px
       bottom: -8px
 
   &:checked + label:before
-    background-color: rgba(map-get($primary, 'primaryBase'), 0.4)
+    background-color: rgba(var(--primaryBase), 0.4)
 
   &:checked + label:after
-    background-color: map-get($primary, 'primaryBase')
+    background-color: var(--primaryBase)
 
   &--small
     &:checked + label:after
-      transform: translateX($spacing-xs * 5)
+      transform: translateX(20px)
 
   &--medium
     &:checked + label:after
-      transform: translateX($spacing-xl)
+      transform: translateX(var(--spacing-xl))
 
   &--large
     &:checked + label:after
-      transform: translateX($spacing-lg * 1.7)
+      transform: translateX(24px * 1.7)

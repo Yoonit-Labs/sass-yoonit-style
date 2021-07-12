@@ -1,6 +1,8 @@
+@import "../quarks/global.scss"
+
 .yoo-list-item
-  color: map-get($grey, 'greyBase')
-  font-family: $font-primary
+  color: var(--greyBase)
+  font-family: var(--fontFamily-primary)
   @include font-size('lg')
 
   &__style
@@ -8,39 +10,39 @@
       flex-wrap: wrap !important
 
   &--border-left
-    border-left: $spacing-xs solid
-    padding-left: $spacing-md
+    border-left: var(--spacing-xs) solid
+    padding-left: var(--spacing-md)
 
   &--separated
-    border-bottom: 1px solid map-get($grey, 'greyLight')
+    border-bottom: 1px solid var(--greyLight)
 
   &__fill
     &--border-neutral
-      border-left-color: map-get($grey, 'greyBase')
+      border-left-color: var(--greyBase)
 
     &--border-primary
-      border-left-color: map-get($primary, 'primaryBase')
+      border-left-color: var(--primaryBase)
 
     &--border-danger
-      border-left-color: map-get($danger, 'dangerBase')
+      border-left-color: var(--dangerBase)
 
     &--border-light
-      border-left-color: map-get($grey, 'greyLight')
+      border-left-color: var(--greyLight)
 
     &--border-dark
-      border-left-color: map-get($grey, 'greyDark')
+      border-left-color: var(--greyDark)
 
     &--border-darkest
-      border-left-color: map-get($grey, 'greyDarkest')
+      border-left-color: var(--greyDarkest)
 
   &__title
     margin: 0
     +font-weight('medium')
-    color: $black
+    color: var(--color-black)
     +font-size('lg')
 
   &__subtitle
     +font-weight('medium')
     +font-size('xs')
-    color:  map-get($primary, 'primaryDark')
-    margin-left: $spacing-xs
+    color:  var(--primaryDark)
+    margin-left: var(--spacing-xs)

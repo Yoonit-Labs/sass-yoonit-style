@@ -1,6 +1,8 @@
+@import "../quarks/global.scss"
+
 .yoo-warning
   width: 100%
-  +font($white, 'md', '$font-primary', 'medium')
+  +font(var(--color-white), 'md', '$font-primary', 'medium')
   +flex(row, wrap, flex-start, center)
   &__icon
     +font-size('xl')
@@ -9,12 +11,12 @@
     +font-weight('bold')
   &__variation
     &--default
-      background-color: map-get($grey, 'greyDark')
-      color: $white  
+      background-color: var(--greyDark)
+      color: var(--color-white)  
     &--danger
-      background-color: map-get($danger, 'dangerBase')
+      background-color: var(--dangerBase)
     &--clear
-      background-color: map-get($grey, 'greyLightest')
-      color: map-get($grey, 'greyDark')
+      background-color: var(--greyLightest)
+      color: var(--greyDark)
       .yoo-warning__icon
-            color: map-get($danger, 'dangerBase')
+            color: var(--dangerBase)

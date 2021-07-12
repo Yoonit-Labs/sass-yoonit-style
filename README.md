@@ -136,7 +136,7 @@ $grey: (
 
 /*==== Basic Colors ====*/
 
-$black: #000000;
+var(--color-black): #000000;
 $white: #FFFFFF;
 $transparent: rgba(255, 255, 255, 0);
 
@@ -155,13 +155,13 @@ $font-size-hg: 32px;
 
 /*==== Spacing ====*/
 
-$spacing-tn: 2px;
-$spacing-xs: 4px;
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 24px;
-$spacing-xl: 32px;
-$spacing-hg: 64px;
+var(--spacing-tn): 2px;
+var(--spacing-xs): 4px;
+var(--spacing-sm): 8px;
+var(--spacing-md): 16px;
+var(--spacing-lg): 24px;
+var(--spacing-xl): 32px;
+var(--spacing-hg): 64px;
 
 ```
 

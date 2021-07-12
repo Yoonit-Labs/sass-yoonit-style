@@ -1,22 +1,23 @@
+@import "../quarks/global.scss"
 .yoo-selectdate
 
   &__separator
-    +font(map-get($grey, 'greyDarkest'), 'xl', $font-primary, 'medium')
+    +font(var(--greyDarkest), 'xl', '$font-primary', 'medium')
 
   &__container
     position: relative
     overflow: hidden
-    height: $spacing-md * 9
+    height: 144px
   
   &__item
-    +font(map-get($grey, 'greyLight'), 'xl', $font-primary, 'medium')
-    padding: $spacing-md 0
-    min-width: $spacing-lg * 3
+    +font(var(--greyLight), 'xl', '$font-primary', 'medium')
+    padding: var(--spacing-md) 0
+    min-width: 72px
     text-align: center
     cursor: pointer
 
     &--active
-      color: map-get($grey, 'greyDarkest')
-      border-top: $spacing-tn solid map-get($grey, 'greyBase')
-      border-bottom: $spacing-tn solid map-get($grey, 'greyBase')
+      color: var(--greyDarkest)
+      border-top: var(--spacing-tn) solid var(--greyBase)
+      border-bottom: var(--spacing-tn) solid var(--greyBase)
       cursor: default

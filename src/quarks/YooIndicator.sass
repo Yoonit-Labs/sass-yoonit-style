@@ -1,6 +1,8 @@
+@import "../quarks/global.scss"
+
 .yoo-indicator__container
   +flex(row, wrap, center, center)
-  font-family: $font-primary
+  font-family: var(--fontFamily-primary)
 
 .yoo-indicator
   +border-radius('circular')
@@ -14,42 +16,42 @@
     animation-name: pulse
 
   &--normal
-    width: $spacing-lg 
-    height: $spacing-lg
+    width: var(--spacing-lg) 
+    height: var(--spacing-lg)
     +font-size('md')
 
   &--small
-    width: $spacing-sm
-    height: $spacing-sm
+    width: var(--spacing-sm)
+    height: var(--spacing-sm)
     +font-size('tn' - 2)
 
   &--medium
-    width: $spacing-md
-    height: $spacing-md
+    width: var(--spacing-md)
+    height: var(--spacing-md)
     +font-size('xs')
 
   &--large
-    width: $spacing-xl
-    height: $spacing-xl
+    width: var(--spacing-xl)
+    height: var(--spacing-xl)
     +font-size('lg')
 
   &--primary
-    background: map-get($primary, 'primaryBase')
-    color: $white
+    background: var(--primaryBase)
+    color: var(--color-white)
 
   &--danger
-    background: map-get($danger, 'dangerBase')
-    color: $white
+    background: var(--dangerBase)
+    color: var(--color-white)
 
   &--light
-    background: map-get($grey, 'greyLight')
+    background: var(--greyLight)
 
   &--dark
-    background: map-get($grey, 'greyDark')
-    color: $white
+    background: var(--greyDark)
+    color: var(--color-white)
 
   &--neutral
-    background: $white
+    background: var(--color-white)
 
 @keyframes pulse
   0%

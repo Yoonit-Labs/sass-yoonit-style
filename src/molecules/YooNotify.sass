@@ -1,28 +1,30 @@
+@import "../quarks/global.scss"
+
 *
   margin: 0
   padding: 0
   box-sizing: border-box
 
 .yoo-notify
-  min-height: $spacing-hg
+  min-height: var(--spacing-hg)
   &__icon
     +font-size('xl')
-    margin-left: $spacing-sm
-    margin-right: $spacing-sm
+    margin-left: var(--spacing-sm)
+    margin-right: var(--spacing-sm)
     &--light
-      color: $white
+      color: var(--color-white)
 
     &--dark
-      color: map-get($grey, 'greyDark')
+      color: var(--greyDark)
 
     &--danger
-      color: map-get($danger, 'dangerDark')
+      color: var(--dangerDark)
     
     &--primary
-      color: map-get($primary, 'primaryBase')
+      color: var(--primaryBase)
 
   &__text
-    font-family: $font-primary
+    font-family: var(--fontFamily-primary)
     +font-weight('medium')
     +font-size('sm')
     &--tn
@@ -41,13 +43,13 @@
       +font-size('hg')
 
     &--light
-      color: $white
+      color: var(--color-white)
 
     &--dark
-      color: map-get($grey, 'greyDark')
+      color: var(--greyDark)
 
     &--danger
-      color: map-get($danger, 'dangerDark')
+      color: var(--dangerDark)
 
     &--left
       text-align: left
@@ -59,23 +61,23 @@
       text-align: right
 
   &--primary
-    background: map-get($primary, 'primaryDark')
+    background: var(--primaryDark)
 
   &--danger
-    background: map-get($danger, 'dangerDark')
+    background: var(--dangerDark)
 
   &--light
-    background: map-get($grey, 'greyLight')
+    background: var(--greyLight)
 
   &--lightest
-    background: map-get($grey, 'greyLightest')
+    background: var(--greyLightest)
 
   &--dark
-    background: map-get($grey, 'greyDark')
+    background: var(--greyDark)
 
 .yoo-indicator
-  margin-left: $spacing-sm
-  margin-right: $spacing-sm
+  margin-left: var(--spacing-sm)
+  margin-right: var(--spacing-sm)
 
 .yoo-notify .yoo__container--button
-  margin-right: $spacing-sm
+  margin-right: var(--spacing-sm)

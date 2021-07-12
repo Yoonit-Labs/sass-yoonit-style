@@ -1,18 +1,20 @@
-$buttonColor: map-get($primary, 'primaryBase')
+@import "../quarks/global.scss"
+
+$buttonColor: var(--primaryBase)
 .yoo__container--button
-  height: $spacing-lg + $spacing-xl
+  height: var(--spacing-lg) + var(--spacing-xl)
   +flex(row, '', center, center)
 
 .yoo-btn
   $self: &
-  font-family: $font-primary
+  font-family: var(--fontFamily-primary)
   +font-weight('semi-bold')
   +font-size('md')
   width: 100%
   height: 100%
   background-color: $buttonColor
   +flex(row, '', center, center)
-  padding: 0 $spacing-lg
+  padding: 0 var(--spacing-lg)
   margin: 0
   cursor: pointer
   outline: none
@@ -24,16 +26,16 @@ $buttonColor: map-get($primary, 'primaryBase')
     &--normal
       +border('md', $buttonColor, solid, 'none')
   &--short
-    width: $spacing-lg
-    height: $spacing-lg
+    width: var(--spacing-lg)
+    height: var(--spacing-lg)
     padding: 0
     +border-radius('pill')
-    min-width: $spacing-lg
+    min-width: var(--spacing-lg)
     +font-size('sm')
     overflow: hidden
 
   &__text
-    color: $white
+    color: var(--color-white)
     background-color: transparent
     margin: auto
     &--xs
@@ -55,7 +57,7 @@ $buttonColor: map-get($primary, 'primaryBase')
       +font-weight('medium')
 
   &__icon
-    color: $white
+    color: var(--color-white)
     +font-size('lg')
     background-color: transparent
     &--small
@@ -63,9 +65,9 @@ $buttonColor: map-get($primary, 'primaryBase')
     &--large
       +font-size('xl')
     &--right
-      margin-left: $spacing-sm
+      margin-left: var(--spacing-sm)
     &--left
-      margin-right: $spacing-sm
+      margin-right: var(--spacing-sm)
 
   &--hover:hover
     +border('md', $buttonColor, solid, 'pill')
@@ -74,14 +76,14 @@ $buttonColor: map-get($primary, 'primaryBase')
       &__text, &__icon
         color: $buttonColor
   &--active:active
-    $buttonColor: map-get($primary, 'primaryDark')
+    $buttonColor: var(--primaryDark)
     background-color: $buttonColor
     border-color: $buttonColor
     #{ $self }
       &__text, &__icon
-        color: $white
+        color: var(--color-white)
   &--disabled
-    $buttonColor: map-get($grey, 'greyLight')
+    $buttonColor: var(--greyLight)
     background-color: $buttonColor
     +border('md', $buttonColor, solid, 'pill')
     cursor: not-allowed
@@ -99,16 +101,16 @@ $buttonColor: map-get($primary, 'primaryBase')
       background-color: $buttonColor
       #{ $self }
         &__text, &__icon
-          color: $white
+          color: var(--color-white)
     &#{ $self }--active:active
-      $buttonColor: map-get($primary, 'primaryDark')
+      $buttonColor: var(--primaryDark)
       background-color: transparent
       border-color: $buttonColor
       #{ $self }
         &__text, &__icon
           color: $buttonColor
     &#{ $self }--disabled
-      $buttonColor: map-get($grey, 'greyLight')
+      $buttonColor: var(--greyLight)
       background-color: transparent
       +border('md', $buttonColor, solid, 'pill')
       cursor: not-allowed
@@ -132,14 +134,14 @@ $buttonColor: map-get($primary, 'primaryBase')
       background-color: transparent
 
     &#{ $self }--active:active
-      $buttonColor: map-get($primary, 'primaryDark')
+      $buttonColor: var(--primaryDark)
       background-color: transparent
       border-color: $buttonColor
       #{ $self }
         &__text, &__icon
           color: $buttonColor
     &#{ $self }--disabled
-      $buttonColor: map-get($grey, 'greyLight')
+      $buttonColor: var(--greyLight)
       background-color: transparent
       border-width: 0
       cursor: not-allowed
@@ -149,12 +151,12 @@ $buttonColor: map-get($primary, 'primaryBase')
 
   // MOD: FORMAT
   &--square
-    width: $spacing-lg + $spacing-xl
+    width: var(--spacing-lg) + var(--spacing-xl)
     padding: 0
 
   &--mini
-    width: $spacing-lg + $spacing-xl
-    height: $spacing-lg
+    width: var(--spacing-lg) + var(--spacing-xl)
+    height: var(--spacing-lg)
     padding: 0
 
     #{ $self }__icon
@@ -164,7 +166,7 @@ $buttonColor: map-get($primary, 'primaryBase')
 
   &__fill
     &--light
-      $buttonColor: map-get($grey, 'greyLightest')
+      $buttonColor: var(--greyLightest)
       border-color: $buttonColor
       background-color: $buttonColor
 
@@ -176,33 +178,33 @@ $buttonColor: map-get($primary, 'primaryBase')
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: map-get($grey, 'greyBase')
+            color: var(--greyBase)
         &#{ $self }--hover:hover
-          $buttonColor: map-get($grey, 'greyLightest')
+          $buttonColor: var(--greyLightest)
           border-width: 1px
           border-style: solid
           border-color: $buttonColor
           background-color: $buttonColor
           #{ $self }
             &__text, &__icon
-              color: map-get($grey, 'greyDark')
+              color: var(--greyDark)
         &#{ $self }--active:active
           background-color: $buttonColor
           border-color: $buttonColor
           #{ $self }
             &__text, &__icon
-              color: map-get($grey, 'greyDark')
+              color: var(--greyDark)
 
       // VARIATIONS BUTTON LIGHT -- CLEAR
       &#{ $self }--clear
-        $buttonColor: map-get($grey, 'greyBase')
+        $buttonColor: var(--greyBase)
         background-color: transparent
         #{ $self }
           &__text, &__icon
             color: $buttonColor
 
         &#{ $self }--hover:hover
-          $buttonColor: map-get($grey, 'greyDark')
+          $buttonColor: var(--greyDark)
           border-width: 0
           background-color: transparent
           #{ $self }
@@ -218,10 +220,10 @@ $buttonColor: map-get($primary, 'primaryBase')
       // STYLES BUTTON LIGHT
       #{ $self }
         &__text, &__icon
-          color: map-get($grey, 'greyDark')
+          color: var(--greyDark)
 
       &#{ $self }--hover:hover
-        $buttonColor: map-get($grey, 'greyBase')
+        $buttonColor: var(--greyBase)
         border-width: 1px
         border-color: $buttonColor
         background-color: transparent
@@ -230,10 +232,10 @@ $buttonColor: map-get($primary, 'primaryBase')
             color: $buttonColor
 
       &#{ $self }--disabled
-        color: map-get($danger, 'dangerBase')
+        color: var(--dangerBase)
 
     &--dark
-      $buttonColor: map-get($grey, 'greyDark')
+      $buttonColor: var(--greyDark)
       border-color: $buttonColor
       background-color: $buttonColor
 
@@ -245,33 +247,33 @@ $buttonColor: map-get($primary, 'primaryBase')
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: map-get($grey, 'greyDark')
+            color: var(--greyDark)
         &#{ $self }--hover:hover
-          $buttonColor: map-get($grey, 'greyDark')
+          $buttonColor: var(--greyDark)
           border-width: 1px
           border-style: solid
           border-color: $buttonColor
           background-color: $buttonColor
           #{ $self }
             &__text, &__icon
-              color: map-get($grey, 'greyLightest')
+              color: var(--greyLightest)
         &#{ $self }--active:active
           background-color: $buttonColor
           border-color: $buttonColor
           #{ $self }
             &__text, &__icon
-              color: map-get($grey, 'greyDark')
+              color: var(--greyDark)
 
       // VARIATIONS BUTTON DARK -- CLEAR
       &#{ $self }--clear
-        $buttonColor: map-get($grey, 'greyDark')
+        $buttonColor: var(--greyDark)
         background-color: transparent
         #{ $self }
           &__text, &__icon
             color: $buttonColor
 
         &#{ $self }--hover:hover
-          $buttonColor: map-get($grey, 'greyBase')
+          $buttonColor: var(--greyBase)
           border-width: 0
           background-color: transparent
           #{ $self }
@@ -287,10 +289,10 @@ $buttonColor: map-get($primary, 'primaryBase')
       // STYLES BUTTON DARK
       #{ $self }
         &__text, &__icon
-          color: map-get($grey, 'greyLightest')
+          color: var(--greyLightest)
 
       &#{ $self }--hover:hover
-        $buttonColor: map-get($grey, 'greyDark')
+        $buttonColor: var(--greyDark)
         border-width: 1px
         border-color: $buttonColor
         background-color: transparent
@@ -299,20 +301,20 @@ $buttonColor: map-get($primary, 'primaryBase')
             color: $buttonColor
 
       &#{ $self }--active:active
-        $buttonColor: map-get($grey, 'greyDarkest')
+        $buttonColor: var(--greyDarkest)
         border-width: 1px
         border-color: $buttonColor
         background-color: $buttonColor
 
       &#{ $self }--disabled
-        $buttonColor: map-get($grey, 'greyLight')
+        $buttonColor: var(--greyLight)
         background-color: $buttonColor
         border-width: 1px
         border-style: solid
         border-color: $buttonColor
 
     &--danger
-      $buttonColor: map-get($danger, 'dangerBase')
+      $buttonColor: var(--dangerBase)
       border-color: $buttonColor
       background-color: $buttonColor
       // VARIATIONS BUTTON DANGER -- OUTLINE
@@ -323,19 +325,19 @@ $buttonColor: map-get($primary, 'primaryBase')
           &__text, &__icon
             color: $buttonColor
         &#{ $self }--hover:hover
-          $buttonColor: map-get($danger, 'dangerBase')
+          $buttonColor: var(--dangerBase)
           +border('md', $buttonColor, solid, 'pill')
           background-color: $buttonColor
           #{ $self }
             &__text, &__icon
-              color: $white
+              color: var(--color-white)
         &#{ $self }--active:active
           $buttonColor: #CB0A22
           background-color: $buttonColor
           border-color: $buttonColor
           #{ $self }
             &__text, &__icon
-              color: $white
+              color: var(--color-white)
       // VARIATIONS BUTTON DANGER -- CLEAR
       &#{ $self }--clear
         background-color: transparent
@@ -367,14 +369,14 @@ $buttonColor: map-get($primary, 'primaryBase')
         border-color: $buttonColor
         #{ $self }
           &__text, &__icon
-            color: $white
+            color: var(--color-white)
       &#{ $self }--disabled
-        $buttonColor: map-get($grey, 'greyLight')
+        $buttonColor: var(--greyLight)
         background-color: $buttonColor
         +border('md', $buttonColor, solid, 'pill')
 
     &--black
-        $buttonColor: $black
+        $buttonColor: var(--color-black)
         border-color: $buttonColor
         background-color: transparent
 
@@ -386,18 +388,18 @@ $buttonColor: map-get($primary, 'primaryBase')
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $black
+              color: var(--color-black)
 
         // VARIATIONS BUTTON black -- CLEAR
         &#{ $self }--clear
-          $buttonColor: $black
+          $buttonColor: var(--color-black)
           background-color: transparent
           #{ $self }
             &__text, &__icon
               color: $buttonColor
 
     &--white
-        $buttonColor: $white
+        $buttonColor: var(--color-white)
         border-color: $buttonColor
         background-color: transparent
 
@@ -409,11 +411,11 @@ $buttonColor: map-get($primary, 'primaryBase')
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $white
+              color: var(--color-white)
 
         // VARIATIONS BUTTON white -- CLEAR
         &#{ $self }--clear
-          $buttonColor: $white
+          $buttonColor: var(--color-white)
           background-color: transparent
           #{ $self }
             &__text, &__icon

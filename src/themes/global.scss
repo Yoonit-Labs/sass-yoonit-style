@@ -1,25 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+// @import '../fonts/Montserrat.css';
 
 ////////////////////////////////
 //       GLOBAL CONFIG        //
 ////////////////////////////////
 
-@mixin --global-fontFamily {
+:root {
   --fontFamily-primary: 'Montserrat, sans-serif';
   --fontFamily-second: 'Arial, sans-serif';
-}
 
-@mixin --global-font-weight {
   --fontWeight-regular: 400;
   --fontWeight-medium: 500;
   --fontWeight-semibold: 600;
   --fontWeight-bold: 700;
   --fontWeight-black: 800;
-}
-
-:root {
-  @include --global-fontFamily;
-  @include --global-font-weight;
 
   --primaryDarkest: #008080;
   --primaryDark: #1DBABA;

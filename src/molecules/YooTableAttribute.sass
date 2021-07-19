@@ -1,39 +1,42 @@
+@import '../quarks/typography'
+@import '../quarks/flex'
+
 .yoo-table-attribute
-  color: map-get($grey, 'greyDark')
-  font-family: $font-primary
-  min-height: $spacing-sm * 5
+  color: var(--greyDark)
+  font-family: var(--fontFamily-primary)
+  min-height: 40px
   &--separated
-    border-bottom: 1px solid map-get($grey, 'greyLight')
+    border-bottom: 1px solid var(--greyLight)
 
   &--tall
-    height: $spacing-hg
+    height: var(--spacing-hg)
   &--wrap
-    height: $spacing-sm * 7
+    height: 56px
   &__fill
     &--default
-      background-color: map-get($grey, 'greyLightest')
+      background-color: var(--greyLightest)
     &--primary
-      background-color: map-get($primary, 'primaryBase')
-      color: $white
+      background-color: var(--primaryBase)
+      color: var(--color-white)
     &--danger
-      background-color: map-get($danger, 'dangerBase')
-      color: $white
+      background-color: var(--dangerBase)
+      color: var(--color-white)
 
   &__title
     +flex(row, wrap, flex-start, center)
     word-break: break-word
     &--primary
-      color: map-get($primary, 'primaryDark')
+      color: var(--primaryDark)
     &--danger
-      color: map-get($danger, 'dangerBase')
+      color: var(--dangerBase)
     &--neutral
-      color: map-get($grey, 'greyBase')
+      color: var(--greyBase)
     &--dark
-      color: map-get($grey, 'greyDark')
+      color: var(--greyDark)
     &--black
-      color: $black
+      color: var(--color-black)
     &--white
-      color: $white
+      color: var(--color-white)
 
     &--bold
       +font-weight('bold')
@@ -58,22 +61,22 @@
     +font-size('md')
     text-align: right
     word-wrap: anywhere
-    max-height: $spacing-sm * 5
+    max-height: 40px
     +flex(row, wrap, flex-start, center)
     &--primary
-      color: map-get($primary, 'primaryDark')
+      color: var(--primaryDark)
     &--danger
-      color: map-get($danger, 'dangerBase')
+      color: var(--dangerBase)
     &--light
-      color: map-get($grey, 'greyBase')
+      color: var(--greyBase)
     &--dark
-      color: map-get($grey, 'greyDark')
+      color: var(--greyDark)
     &--white
-      color: $white
+      color: var(--color-white)
     &--black
-      color: $black
+      color: var(--color-black)
     &--wrap
       text-align: left
 
   &__actionable
-    max-height: $spacing-sm * 5
+    max-height: 40px

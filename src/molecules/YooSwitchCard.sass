@@ -1,12 +1,16 @@
+
+@import '../quarks/border'
+@import '../quarks/shadows'
+
 .yoo-switch-card
   transition: 0.2s ease
   +box-shadow('soft', rgba(0, 0, 0, 0.2))
-  +border('sm', map-get($grey, 'greyLight'), solid, 'md')
-  color: map-get($grey, 'greyBase')
+  +border('sm', var(--greyLight), solid, 'md')
+  color: var(--greyBase)
 
   &--fill-primary
-    background-color: map-get($primary, 'primaryDark')
+    background-color: var(--primaryDark)
 
   &--active
-    background-color: map-get($primary, 'primaryDark')
-    color: $white
+    background-color: var(--primaryDark)
+    color: var(--color-white)

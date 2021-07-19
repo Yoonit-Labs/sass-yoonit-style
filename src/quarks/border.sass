@@ -3,7 +3,6 @@
 //////////////////////////////
 
 // Tokens : Sizes
-@import '../quarks/spacing'
 
 =border($modifier, $color, $type, $radius)
   @if $modifier == 'xs'
@@ -22,7 +21,7 @@
     border-style: $type
     +border-radius($radius)
   @else if $modifier == 'lg'
-    border-width: $spacing-xs
+    border-width: var(--spacing-xs)
     border-color: $color
     border-style: $type
     +border-radius($radius)
@@ -34,11 +33,11 @@
 
 =border-radius($modifier)
   @if $modifier == 'sm'
-    border-radius: $spacing-xs
+    border-radius: var(--spacing-xs)
   @else if $modifier == 'md'
-    border-radius: $spacing-sm
+    border-radius: var(--spacing-sm)
   @else if $modifier == 'lg'
-    border-radius: $spacing-md - 4
+    border-radius: var(--spacing-md) - 4
   @else if $modifier == 'pill'
     border-radius: 500px
   @else if $modifier == 'circular'

@@ -1,60 +1,65 @@
+
+@import '../quarks/border'
+@import '../quarks/typography'
+
+
 .yoo-card
-  +border('sm', map-get($grey, 'greyLight'), solid, 'md')
-  +box-shadow('soft', map-get($grey, 'greyLight'))
-  font-family: $font-primary
-  padding: $spacing-md
+  +border('sm', var(--greyLight), solid, 'md')
+  +box-shadow('soft', var(--greyLight))
+  font-family: var(--fontFamily-primary)
+  padding: var(--spacing-md)
 
   &__fill
     &--white
-      background-color: $white
-      $color: map-get($grey, 'greyDark')
+      background-color: var(--color-white)
+      $color: var(--greyDark)
       color: $color
 
       .yoo-card__subtitle
-        color: lighten($color, 10%)
+        color: lighten(#5A5F67, 10%)
 
     &--primary
-      background-color: map-get($primary, 'primaryBase')
-      $color: $white
+      background-color: var(--primaryBase)
+      $color: var(--color-white)
       color: $color
 
       .yoo-card__subtitle
-        color: darken($color, 10%)
+        color: darken(#FFF, 10%)
 
     &--danger
-      background-color: map-get($danger, 'dangerBase')
-      $color: $white
+      background-color: var(--dangerBase)
+      $color: var(--color-white)
       color: $color
 
       .yoo-card__subtitle
         color: $color
 
     &--neutral
-      background-color: map-get($grey, 'greyBase')
-      $color: $white
+      background-color: var(--greyBase)
+      $color: var(--color-white)
       color: $color
 
       .yoo-card__subtitle
         color: $color
 
     &--light
-      background-color: map-get($grey, 'greyLight')
-      $color: map-get($grey, 'greyDark')
+      background-color: var(--greyLight)
+      $color: var(--greyDark)
       color: $color
 
       .yoo-card__subtitle
-        color: lighten($color, 10%)
+        color: lighten(#5A5F67, 10%)
 
     &--dark
-      background-color: map-get($grey, 'greyDark')
-      $color: $white
+      background-color: var(--greyDark)
+      $color: var(--color-white)
       color: $color
 
       .yoo-card__subtitle
-        color: darken($color, 10%)
+        color: darken(#FFF, 10%)
 
   &__icon
-    margin-bottom: $spacing-sm + 2
+    margin-bottom: 10px
 
   &__title
     margin: 0

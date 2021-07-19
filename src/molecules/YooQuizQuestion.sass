@@ -1,7 +1,9 @@
+@import '../quarks/typography'
+
 .yoo-quiz
   &__question
     +font-weight('medium')
-    font-family: $font-primary
+    font-family: var(--fontFamily-primary)
     span
-      color: map-get($danger, dangerBase)
-      margin-left: $spacing-sm
+      color: var(--dangerBase)
+      margin-left: var(--spacing-sm)

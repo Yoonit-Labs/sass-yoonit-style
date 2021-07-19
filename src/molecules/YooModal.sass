@@ -1,3 +1,6 @@
+
+@import '../quarks/shadows'
+
 .backdrop
   z-index: 9
   position: fixed
@@ -6,7 +9,7 @@
   left: 0
   right: 0
   +flex(row, wrap, center, center)
-  background-color: rgba(map-get($grey, 'greyBase'), 0.5)
+  background-color: rgba(var(--greyBase), 0.5)
 
   .yoo-modal
     box-sizing: border-box
@@ -16,14 +19,14 @@
     padding: 24px 16px 8px 16px
     +box-shadow('soft', #00000029)
     text-align: center
-    font-family: $font-primary
+    font-family: var(--fontFamily-primary)
     &__fill
       &--light
-        background-color: $white
-        color: $black
+        background-color: var(--color-white)
+        color: var(--color-black)
       &--dark
-        background-color: $black
-        color: $white
+        background-color: var(--color-black)
+        color: var(--color-white)
     &__border
       &--square
         border-radius: 0

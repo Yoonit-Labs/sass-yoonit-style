@@ -1,3 +1,19 @@
+
+
+@import '../bosons/margin'
+@import '../bosons/padding'
+@import '../bosons/YooGridLayout'
+@import '../bosons/YooFlexLayout'
+@import '../bosons/YooScrollView'
+
+
+
+@import '../quarks/animation'
+@import '../quarks/border'
+@import '../quarks/shadows'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
 .yoo-tag
   +font-family('$font-primary')
 
@@ -5,7 +21,7 @@
     +font-weight('medium')
     +font-size('md')
     word-wrap: anywhere
-    color: map-get($grey, 'greyBase')
+    color: var(--greyBase)
       
   &__item
     $self: &
@@ -13,27 +29,27 @@
     +font-size('xs')
     text-align: right
     word-wrap: anywhere
-    padding: $spacing-xs $spacing-sm
-    margin: 0 $spacing-xs $spacing-xs 0
-    color: map-get($grey, 'greyBase')
-    +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
+    padding: var(--spacing-xs) var(--spacing-sm)
+    margin: 0 var(--spacing-xs) var(--spacing-xs) 0
+    color: var(--greyBase)
+    +border('sm', var(--greyBase), solid, 'lg')
 
   &__fill
     &--primary.yoo-tag__item--on
-      color: map-get($primary, 'primaryDark')
-      +border('sm', map-get($primary, 'primaryDark'), solid, 'lg')
+      color: var(--primaryDark)
+      +border('sm', var(--primaryDark), solid, 'lg')
     &--danger.yoo-tag__item--on
-      color: map-get($danger, 'dangerBase')
-      +border('sm', map-get($danger, 'dangerBase'), solid, 'lg')
+      color: var(--dangerBase)
+      +border('sm', var(--dangerBase), solid, 'lg')
     &--neutral.yoo-tag__item--on
-      color: map-get($grey, 'greyBase')
-      +border('sm', map-get($grey, 'greyBase'), solid, 'lg')
+      color: var(--greyBase)
+      +border('sm', var(--greyBase), solid, 'lg')
     &--dark.yoo-tag__item--on
-      color: map-get($grey, 'greyDark')
-      +border('sm', map-get($grey, 'greyDark'), solid, 'lg')
+      color: var(--greyDark)
+      +border('sm', var(--greyDark), solid, 'lg')
     &--black.yoo-tag__item--on
-      color: $black
-      +border('sm', $black, solid, 'lg')
+      color: var(--color-black)
+      +border('sm', var(--color-black), solid, 'lg')
     &--white.yoo-tag__item--on
-      color: $white
-      +border('sm', $white, solid, 'lg')
+      color: var(--color-white)
+      +border('sm', var(--color-white), solid, 'lg')

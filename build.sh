@@ -32,16 +32,16 @@ echo '-----------------'
 echo '| Yoonit Styles |'
 echo '-----------------'
 echo 'Updating repository...'
-# git checkout development
-# git pull
+git checkout development
+git pull
 wait
 echo 'Cleaning files...'
-# rm -rf node_modules
+rm -rf node_modules
 rm -rf npm
 rm -rf dist
 wait
 echo 'Installing dependencies...'
-# npm i
+npm i
 wait
 echo 'Building...'
 gulp

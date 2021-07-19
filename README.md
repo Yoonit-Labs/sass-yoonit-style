@@ -48,6 +48,60 @@ These are all the themes available for now.
 
 Yoonit Style has global root variables, with a default theme. In addition to the default theme, we have 5 more themes available, as shown above in the images.
 
+The default theme has the following variables:
+
+```sass
+  --fontFamily-primary: 'Montserrat', 'sans-serif'
+  --fontFamily-second: 'Arial', 'sans-serif'
+
+  --fontWeight-regular: 400
+  --fontWeight-medium: 500
+  --fontWeight-semibold: 600
+  --fontWeight-bold: 700
+  --fontWeight-black: 800
+
+  --primaryDarkest: #008080
+  --primaryDark: #1DBABA
+  --primaryBase: #47C8C3
+  --primaryLight: #B0E7E5
+  --primaryLightest: #C3ECEb
+  --dangerDarkest: #CB0A22
+  --dangerDark: #E83C4B
+  --dangerBase: #F4596C
+  --dangerLight: #FF7888
+  --dangerLightest: #FF99A5
+  --greyDarkest: #212325
+  --greyDark: #5A5F67
+  --greyBase: #8F959F
+  --greyLight: #D6DBE2
+  --greyLightest: #F5F6F7
+  --color-white: #FFFFFF
+  --color-black: #111111
+  --color-transparent: rgba(255, 255, 255, 0)
+
+  --font-tn: 8px
+  --font-xs: 10px
+  --font-sm: 12px
+  --font-md: 14px
+  --font-lg: 16px
+  --font-xl: 20px
+  --font-hg: 32px
+
+  --spacing-tn: 2px
+  --spacing-xs: 4px
+  --spacing-sm: 8px
+  --spacing-md: 16px
+  --spacing-lg: 24px
+  --spacing-xl: 32px
+  --spacing-hg: 64px
+  
+```
+To use the variable in your sass file, just use var(VariableName), for example:
+
+```sass
+.myClass
+  color: var(--greyBase)
+```
 To create a custom theme, in your project create a sass file and overwrite the root variables, involved in a "data-composition", let's see an example:
 
 `MyTheme.sass`
@@ -63,9 +117,6 @@ To create a custom theme, in your project create a sass file and overwrite the r
   --primaryBase: #7c5739
   --primaryLight: #caad8c
   --primaryLightest: #f6eddd
-  --color-white: #FFFFFF
-  --color-black: #111111
-  --color-transparent: rgba(255, 255, 255, 0)
 
   --font-tn: 8px
   --font-xs: 10px

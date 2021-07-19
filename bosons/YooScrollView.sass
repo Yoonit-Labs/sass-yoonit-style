@@ -1,0 +1,20 @@
+.yoo-scroll-view
+  display: block
+  scrollbar-color: var(--primaryBase) var(--greyLightest)
+  scrollbar-width: thin
+
+  &::-webkit-scrollbar
+    width: var(--spacing-sm)
+    height: var(--spacing-sm)
+    background-color: var(--greyLightest)
+
+  &::-webkit-scrollbar-thumb
+    background: var(--primaryBase)
+
+  &--vertical
+    overflow-x: hidden
+    overflow-y: scroll
+
+  &--horizontal
+    overflow-x: scroll
+    overflow-y: hidden

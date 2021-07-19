@@ -1,0 +1,63 @@
+
+
+@import '../bosons/margin'
+@import '../bosons/padding'
+@import '../bosons/YooGridLayout'
+@import '../bosons/YooFlexLayout'
+@import '../bosons/YooScrollView'
+
+
+
+@import '../quarks/animation'
+@import '../quarks/border'
+@import '../quarks/shadows'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
+
+.yoo-dropdown
+  cursor: pointer
+  font-family: var(--fontFamily-primary)
+  +font-weight('regular')
+  text-transform: uppercase
+  +box-shadow('soft', #00000029)
+  border-radius: 1px
+  font-family: var(--fontFamily-primary)
+  +font-weight('medium')
+  color: var(--greyBase)
+  width: max-content
+
+  &__select
+    .select
+      +flex(row, wrap, center, center)
+      overflow: hidden
+      &__text
+        font-family: var(--fontFamily-primary)
+        +font-weight('semi-bold')
+        color: var(--greyDark)
+        margin: 15px 20px
+
+  &__options
+    .option
+      +flex(row, wrap, center, center)
+      overflow: hidden
+      &__text
+        font-family: var(--fontFamily-primary)
+        +font-weight('semi-bold')
+        color: var(--greyBase)
+        margin: 15px 20px
+
+      &:first-child
+        .option
+          &__text
+            color: var(--greyDark)
+
+  // MOD: VARIATION
+  &--small
+    +font-size('sm')
+
+  &--medium
+    +font-size('md')
+
+  &--large
+    +font-size('lg')

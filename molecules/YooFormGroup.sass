@@ -1,0 +1,126 @@
+
+@import '../quarks/typography'
+
+
+$placeholder-transition: 300ms ease-in-out
+
+.yoo-input-group
+  +font-family('$font-primary')
+  margin: 40px 0 0
+  width: 100%
+
+  .yoo-input
+    position: relative
+    display: block
+    width: 100%
+    min-height: var(--spacing-hg) - 14
+    &::before
+      content: ""
+      height: var(--spacing-tn)
+      width: 100%
+      background-color: var(--primaryBase)
+      position: absolute
+      z-index: 2
+      bottom: -var(--spacing-tn)
+      transform: scale(0)
+      transition: all $placeholder-transition
+
+    &:focus-within
+      &::before
+        transform: scale(1)
+
+    &__label
+      position: absolute
+      display: block
+      top: var(--spacing-lg)
+      z-index: 2
+      +font-size('md')
+      +font-weight('semi-bold')
+      +font-family('$font-primary')
+      transition: all $placeholder-transition
+      width: 100%
+      cursor: text
+      color: var(--greyDark)
+
+      i
+        position: absolute
+        right: 0
+        bottom: -(var(--spacing-lg))
+
+    &__feedback
+      position: absolute
+      bottom: -(var(--spacing-lg) - 4)
+      +font-size('sm')
+      +font-family('$font-primary')
+      font-weight: 500
+
+    &__field
+      position: absolute
+      top: var(--spacing-lg) - 4
+      z-index: 1
+      width: 100%
+      min-height: var(--spacing-xl) - 2
+      +font-size('lg' + 2)
+      color: var(--greyDark)
+      border: 0
+      border-bottom: 1px var(--greyDark) solid
+      transition: border-color $placeholder-transition
+      outline: none
+      padding: 0
+      margin: 0
+
+      &:nth-child(1)
+        +font-family('$font-primary')
+
+      &::placeholder
+        color: var(--greyLight)
+        +font-weight('medium')
+        +font-size('lg')
+        +font-family('$font-primary')
+        opacity: 0
+
+      &:focus,
+      &:valid,
+      &:disabled
+        background-color: transparent
+
+        & + .yoo-input__label
+          top: 0
+          cursor: inherit
+          @include font-size('md')
+
+        &::placeholder
+          opacity: 1
+
+      &:focus
+        & + .yoo-input__label
+          color: var(--greyBase)
+
+      &:disabled
+        border-bottom: 1px var(--greyLight) solid
+        & + .yoo-input__label
+          color: var(--greyLight)
+
+    &--error
+      .yoo-input__label,
+      .yoo-input__feedback
+        color: var(--dangerBase)
+
+        i::before
+          content: "\f00d"
+
+      &::before
+        background-color: var(--dangerBase)
+        transform: scale(1)
+
+    &--success
+      .yoo-input__label,
+      .yoo-input__feedback
+        color: var(--primaryBase)
+
+        i::before
+          content: "\f00c"
+
+      &::before
+        background-color: var(--primaryBase)
+        transform: scale(1)

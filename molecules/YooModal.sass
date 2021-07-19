@@ -1,0 +1,34 @@
+
+@import '../quarks/shadows'
+
+.backdrop
+  z-index: 9
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  +flex(row, wrap, center, center)
+  background-color: rgba(var(--greyBase), 0.5)
+
+  .yoo-modal
+    box-sizing: border-box
+    z-index: 10
+    min-width: 328px
+    min-height: 254px
+    padding: 24px 16px 8px 16px
+    +box-shadow('soft', #00000029)
+    text-align: center
+    font-family: var(--fontFamily-primary)
+    &__fill
+      &--light
+        background-color: var(--color-white)
+        color: var(--color-black)
+      &--dark
+        background-color: var(--color-black)
+        color: var(--color-white)
+    &__border
+      &--square
+        border-radius: 0
+      &--rounded
+        border-radius: 6px

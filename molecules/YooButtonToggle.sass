@@ -1,0 +1,17 @@
+
+@import '../quarks/border'
+
+.yoo-button-toggle
+  position: relative
+  height: 54px
+  +border('sm', var(--greyDark), solid, 'pill')
+
+  &__container
+    position: absolute
+    width: calc(100% + 2px)
+    +border-radius('pill')
+    top: -1px
+    left: -1px
+
+    .yoo-btn__fill--primary.yoo-btn--base
+      box-shadow: 0px 3px 6px rgba(var(--color-black), 0.16)

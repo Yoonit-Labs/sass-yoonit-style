@@ -1,0 +1,445 @@
+@import '../quarks/animation'
+@import '../quarks/border'
+@import '../quarks/shadows'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
+
+$buttonColor: var(--primaryBase)
+.yoo__container--button
+  height: 56px
+  +flex(row, '', center, center)
+
+.yoo-btn
+  $self: &
+  font-family: var(--fontFamily-primary)
+  +font-weight('semi-bold')
+  +font-size('md')
+  width: 100%
+  height: 100%
+  background-color: $buttonColor
+  +flex(row, '', center, center)
+  padding: 0 var(--spacing-lg)
+  margin: 0
+  cursor: pointer
+  outline: none
+  &__border
+    &--rounded
+      +border('md', $buttonColor, solid, 'pill')
+    &--medium
+      +border('md', $buttonColor, solid, 'md')
+    &--normal
+      +border('md', $buttonColor, solid, 'none')
+  &--short
+    width: var(--spacing-lg)
+    height: var(--spacing-lg)
+    padding: 0
+    +border-radius('pill')
+    min-width: var(--spacing-lg)
+    +font-size('sm')
+    overflow: hidden
+
+  &__text
+    color: var(--color-white)
+    background-color: transparent
+    &--xs
+      +font-size('xs')
+
+    &--sm
+      +font-size('sm')
+    
+    &--md
+      +font-size('md')
+    
+    &--lg
+      +font-size('lg')
+    
+    &--xl
+      +font-size('xl')
+
+    &--weight-medium
+      +font-weight('medium')
+
+  &__icon
+    color: var(--color-white)
+    +font-size('lg')
+    background-color: transparent
+    &--small
+      +font-size('sm')
+    &--large
+      +font-size('xl')
+    &--right
+      margin-left: var(--spacing-sm)
+    &--left
+      margin-right: var(--spacing-sm)
+
+  &--hover:hover
+    +border('md', $buttonColor, solid, 'pill')
+    background-color: transparent
+    #{ $self }
+      &__text, &__icon
+        color: $buttonColor
+  &--active:active
+    $buttonColor: var(--primaryDark)
+    background-color: $buttonColor
+    border-color: $buttonColor
+    #{ $self }
+      &__text, &__icon
+        color: var(--color-white)
+  &--disabled
+    $buttonColor: var(--greyLight)
+    background-color: $buttonColor
+    +border('md', $buttonColor, solid, 'pill')
+    cursor: not-allowed
+
+  // MOD: VARIATION
+  &--outline
+    +border('md', $buttonColor, solid, 'pill')
+    background-color: transparent
+    z-index: 0
+    #{ $self }
+      &__text, &__icon
+        color: $buttonColor
+    &#{ $self}--hover:hover
+      +border('md', $buttonColor, solid, 'pill')
+      background-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: var(--color-white)
+    &#{ $self }--active:active
+      $buttonColor: var(--primaryDark)
+      background-color: transparent
+      border-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+    &#{ $self }--disabled
+      $buttonColor: var(--greyLight)
+      background-color: transparent
+      +border('md', $buttonColor, solid, 'pill')
+      cursor: not-allowed
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+  &--clear
+    border-width: 0
+    border-color: transparent
+    background-color: transparent
+    z-index: 0
+    padding: 0
+
+    #{ $self }
+      &__text, &__icon
+        color: $buttonColor
+
+    &#{ $self}--hover:hover
+      border-width: 0
+      background-color: transparent
+
+    &#{ $self }--active:active
+      $buttonColor: var(--primaryDark)
+      background-color: transparent
+      border-color: $buttonColor
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+    &#{ $self }--disabled
+      $buttonColor: var(--greyLight)
+      background-color: transparent
+      border-width: 0
+      cursor: not-allowed
+      #{ $self }
+        &__text, &__icon
+          color: $buttonColor
+
+  // MOD: FORMAT
+  &--square
+    width: var(--spacing-lg) + var(--spacing-xl)
+    padding: 0
+
+  &--mini
+    width: var(--spacing-lg) + var(--spacing-xl)
+    height: var(--spacing-lg)
+    padding: 0
+
+    #{ $self }__icon
+      +font-size('lg')
+
+  // MOD: COLOR
+
+  &__fill
+    &--light
+      $buttonColor: var(--greyLightest)
+      border-color: $buttonColor
+      background-color: $buttonColor
+
+      // VARIATIONS BUTTON LIGHT -- OUTLINE
+      &#{ $self }--outline
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: var(--greyBase)
+        &#{ $self }--hover:hover
+          $buttonColor: var(--greyLightest)
+          border-width: 1px
+          border-style: solid
+          border-color: $buttonColor
+          background-color: $buttonColor
+          #{ $self }
+            &__text, &__icon
+              color: var(--greyDark)
+        &#{ $self }--active:active
+          background-color: $buttonColor
+          border-color: $buttonColor
+          #{ $self }
+            &__text, &__icon
+              color: var(--greyDark)
+
+      // VARIATIONS BUTTON LIGHT -- CLEAR
+      &#{ $self }--clear
+        $buttonColor: var(--greyBase)
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+        &#{ $self }--hover:hover
+          $buttonColor: var(--greyDark)
+          border-width: 0
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+        &#{ $self }--active:active
+          border-width: 0
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+
+      // STYLES BUTTON LIGHT
+      #{ $self }
+        &__text, &__icon
+          color: var(--greyDark)
+
+      &#{ $self }--hover:hover
+        $buttonColor: var(--greyBase)
+        border-width: 1px
+        border-color: $buttonColor
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+      &#{ $self }--disabled
+        color: var(--dangerBase)
+
+    &--dark
+      $buttonColor: var(--greyDark)
+      border-color: $buttonColor
+      background-color: $buttonColor
+
+      // VARIATIONS BUTTON DARK -- OUTLINE
+      &#{ $self }--outline
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: var(--greyDark)
+        &#{ $self }--hover:hover
+          $buttonColor: var(--greyDark)
+          border-width: 1px
+          border-style: solid
+          border-color: $buttonColor
+          background-color: $buttonColor
+          #{ $self }
+            &__text, &__icon
+              color: var(--greyLightest)
+        &#{ $self }--active:active
+          background-color: $buttonColor
+          border-color: $buttonColor
+          #{ $self }
+            &__text, &__icon
+              color: var(--greyDark)
+
+      // VARIATIONS BUTTON DARK -- CLEAR
+      &#{ $self }--clear
+        $buttonColor: var(--greyDark)
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+        &#{ $self }--hover:hover
+          $buttonColor: var(--greyBase)
+          border-width: 0
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+        &#{ $self }--active:active
+          border-width: 0
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+
+      // STYLES BUTTON DARK
+      #{ $self }
+        &__text, &__icon
+          color: var(--greyLightest)
+
+      &#{ $self }--hover:hover
+        $buttonColor: var(--greyDark)
+        border-width: 1px
+        border-color: $buttonColor
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+      &#{ $self }--active:active
+        $buttonColor: var(--greyDarkest)
+        border-width: 1px
+        border-color: $buttonColor
+        background-color: $buttonColor
+
+      &#{ $self }--disabled
+        $buttonColor: var(--greyLight)
+        background-color: $buttonColor
+        border-width: 1px
+        border-style: solid
+        border-color: $buttonColor
+
+    &--danger
+      $buttonColor: var(--dangerBase)
+      border-color: $buttonColor
+      background-color: $buttonColor
+      // VARIATIONS BUTTON DANGER -- OUTLINE
+      &#{ $self }--outline
+        +border('md', $buttonColor, solid, 'pill')
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+        &#{ $self }--hover:hover
+          $buttonColor: var(--dangerBase)
+          +border('md', $buttonColor, solid, 'pill')
+          background-color: $buttonColor
+          #{ $self }
+            &__text, &__icon
+              color: var(--color-white)
+        &#{ $self }--active:active
+          $buttonColor: #CB0A22
+          background-color: $buttonColor
+          border-color: $buttonColor
+          #{ $self }
+            &__text, &__icon
+              color: var(--color-white)
+      // VARIATIONS BUTTON DANGER -- CLEAR
+      &#{ $self }--clear
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+
+        &#{ $self }--hover:hover
+          border-width: 0
+          background-color: transparent
+        &#{ $self }--active:active
+          $buttonColor: #CB0A22
+          border-width: 0
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+
+      // STYLES BUTTON DANGER
+      &#{ $self }--hover:hover
+        +border('md', $buttonColor, solid, 'pill')
+        background-color: transparent
+        #{ $self }
+          &__text, &__icon
+            color: $buttonColor
+      &#{ $self }--active:active
+        $buttonColor: #CB0A22
+        background-color: $buttonColor
+        border-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: var(--color-white)
+      &#{ $self }--disabled
+        $buttonColor: var(--greyLight)
+        background-color: $buttonColor
+        +border('md', $buttonColor, solid, 'pill')
+
+    &--black
+        $buttonColor: var(--color-black)
+        border-color: $buttonColor
+        background-color: transparent
+
+        // VARIATIONS BUTTON black -- OUTLINE
+        &#{ $self }--outline
+          border-width: 1px
+          border-style: solid
+          border-color: $buttonColor
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: var(--color-black)
+
+        // VARIATIONS BUTTON black -- CLEAR
+        &#{ $self }--clear
+          $buttonColor: var(--color-black)
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+
+    &--white
+        $buttonColor: var(--color-white)
+        border-color: $buttonColor
+        background-color: transparent
+
+        // VARIATIONS BUTTON white -- OUTLINE
+        &#{ $self }--outline
+          border-width: 1px
+          border-style: solid
+          border-color: $buttonColor
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: var(--color-white)
+
+        // VARIATIONS BUTTON white -- CLEAR
+        &#{ $self }--clear
+          $buttonColor: var(--color-white)
+          background-color: transparent
+          #{ $self }
+            &__text, &__icon
+              color: $buttonColor
+
+  &--animation-pulse
+    animation-name: pulse
+    +durationAnimation('normal')
+    animation-timing-function: cubic-bezier(.28,.68,.75,.78)
+    animation-fill-mode: forwards
+    animation-iteration-count: infinite
+
+@keyframes pulse
+  0%
+    transform: scale(.95)
+  25%
+    transform: scale(1)
+  50%
+    transform: scale(.95)
+  70%
+    transform: scale(1)
+  100%
+    transform: scale(.95)

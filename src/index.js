@@ -1,1 +1,1 @@
-import './themes/default.sass'
+import './index.sass'

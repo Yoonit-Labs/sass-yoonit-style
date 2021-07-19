@@ -29,13 +29,11 @@ To access all the features of yoonit/style, import the SASS theme that you want 
 
 ```sass
 @import '@yoonit/style'
-@import '@yoonit/style/themes/{themeName}'
 ```
 
 If you want to import somenthing especific of this project, for example, the button style, you can import that directy.
 
 ```sass
-@import '@yoonit/style'
 @import '@yoonit/style/atoms/YooButton'
 ```
 
@@ -48,122 +46,52 @@ These are all the themes available for now.
 
 ## Creating themes
 
-Create a scss file in your project, in this file, import the Yoonit Style and all the components styles you want.
+Yoonit Style has global root variables, with a default theme. In addition to the default theme, we have 5 more themes available, as shown above in the images.
 
-Yoonit Style has 3 color objects ($primary, $danger, $grey) with 5 variables each, to change the color, declare the object and the variables and change the values as you wish.
+To create a custom theme, in your project create a sass file and overwrite the root variables, involved in a "data-composition", let's see an example:
 
-The variables names are the name of the object + the shade range. The shade ranges are: Darkest, Dark, Base, Light, Lightest.
+`MyTheme.sass`
 
-Example: `primaryDarkest`, `dangerBase`, `greyLightest`.
-
-You can create other objects and other color variables, but the components will not react to them unless you change the components styles.
-
-The project has two fonts variables, `$font-primary` and `$font-second`, to change them, just set the variable to the new value.
-
-This is the default theme, take this as a base to construct your own:
-
-`MyTheme.scss`
-
-```scss
-@import '@yoonit/style';
+```sass
+@import '@yoonit/style'
 
 /*==== Import Quarks ====*/
 
-@import '@yoonit/style/quarks/YooIndicator.sass';
+[data-composition="myTheme"] 
+  --primaryDarkest: #49260a
+  --primaryDark: #623b1c
+  --primaryBase: #7c5739
+  --primaryLight: #caad8c
+  --primaryLightest: #f6eddd
+  --color-white: #FFFFFF
+  --color-black: #111111
+  --color-transparent: rgba(255, 255, 255, 0)
 
-/*==== Import Bosons ====*/
+  --font-tn: 8px
+  --font-xs: 10px
+  --font-sm: 12px
+  --font-md: 14px
+  --font-lg: 16px
+  --font-xl: 20px
+  --font-hg: 32px
 
-@import '@yoonit/style/bosons/YooFlexLayout.sass';
-@import '@yoonit/style/bosons/YooGridLayout.sass';
-@import '@yoonit/style/bosons/YooScrollView.sass';
-
-/*==== Import Atoms ====*/
-
-@import '@yoonit/style/atoms/YooAnimation.sass';
-@import '@yoonit/style/atoms/YooAvatar.sass';
-@import '@yoonit/style/atoms/YooButton.sass';
-@import '@yoonit/style/atoms/YooCheckButton.sass';
-@import '@yoonit/style/atoms/YooDropDown.sass';
-@import '@yoonit/style/atoms/YooIcon.sass';
-@import '@yoonit/style/atoms/YooStepper.sass';
-@import '@yoonit/style/atoms/YooSwitch.sass';
-
-/*==== Import Molecules ====*/
-
-@import '@yoonit/style/molecules/YooButtonToggle.sass';
-@import '@yoonit/style/molecules/YooCard.sass';
-@import '@yoonit/style/molecules/YooFormGroup.sass';
-@import '@yoonit/style/molecules/YooHeader.sass';
-@import '@yoonit/style/molecules/YooModal.sass';
-@import '@yoonit/style/molecules/YooNotify.sass';
-@import '@yoonit/style/molecules/YooPagination.sass';
-@import '@yoonit/style/molecules/YooPostCard.sass';
-@import '@yoonit/style/molecules/YooQuizQuestion.sass';
-@import '@yoonit/style/molecules/YooSegmentedBar.sass';
-@import '@yoonit/style/molecules/YooSelectButton.sass';
-@import '@yoonit/style/molecules/YooSwitchCard.sass';
-@import '@yoonit/style/molecules/YooTableAttribute.sass';
-
-/*==== Brand Color ====*/
-
-$primary: (
-  'primaryDarkest': #008080,
-  'primaryDark': #1DBABA,
-  'primaryBase': #47C8C3,
-  'primaryLight': #B0E7E5,
-  'primaryLightest': #C3ECEb
-);
-
-/*==== Danger Color ====*/
-
-$danger: (
-  'dangerDarkest': #CB0A22,
-  'dangerDark': #E83C4B,
-  'dangerBase': #F4596C,
-  'dangerLight': #FF7888,
-  'dangerLightest': #FF99A5
-);
-
-/*==== Neutral Color ====*/
-
-$grey: (
-  'greyDarkest': #212325,
-  'greyDark': #5A5F67,
-  'greyBase': #8F959F,
-  'greyLight': #D6DBE2,
-  'greyLightest': #F5F6F7
-);
-
-/*==== Basic Colors ====*/
-
-var(--color-black): #000000;
-$white: #FFFFFF;
-$transparent: rgba(255, 255, 255, 0);
-
-/*==== Font ====*/
-
-$font-primary: Montserrat, sans-serif;
-$font-second: Arial, sans-serif;
-
-$font-size-tn: 8px;
-$font-size-xs: 10px;
-$font-size-sm: 12px;
-$font-size-md: 14px;
-$font-size-lg: 16px;
-$font-size-xl: 20px;
-$font-size-hg: 32px;
-
-/*==== Spacing ====*/
-
-var(--spacing-tn): 2px;
-var(--spacing-xs): 4px;
-var(--spacing-sm): 8px;
-var(--spacing-md): 16px;
-var(--spacing-lg): 24px;
-var(--spacing-xl): 32px;
-var(--spacing-hg): 64px;
+  --spacing-tn: 2px
+  --spacing-xs: 4px
+  --spacing-sm: 8px
+  --spacing-md: 16px
+  --spacing-lg: 24px
+  --spacing-xl: 32px
+  --spacing-hg: 64px
 
 ```
+Now, in your template, add a div wrapped in the elements you want to change the theme to, and add in this div the data-composition="myTheme" attribute
+
+`Template.vue`
+
+```vue
+ <div data-composition="myTheme">MyContainer</div>
+```
+So the root variables will be overridden with the theme you made for this added condition.
 
 ### Helpers
 

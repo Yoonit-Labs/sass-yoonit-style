@@ -1,0 +1,112 @@
+
+
+@import '../bosons/margin'
+@import '../bosons/padding'
+@import '../bosons/YooGridLayout'
+@import '../bosons/YooFlexLayout'
+@import '../bosons/YooScrollView'
+
+
+
+@import '../quarks/animation'
+@import '../quarks/border'
+@import '../quarks/shadows'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
+
+.yoo-checkbox input
+  display: none
+
+.yoo-checkbox
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  &__card
+    transition: 0.2s ease
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2)
+    border-radius: 3px
+    color: var(--greyBase)
+    &--active
+      display: block
+      align-items: center
+      background: var(--primaryBase)
+      color: var(--color-white)
+
+  &__text
+    font-family: Montserrat
+    +font-weight('medium')
+    margin: 0 0 0 var(--spacing-md)
+
+    &--right
+      flex-direction: row-reverse
+      > p
+        margin: 0 var(--spacing-md) 0 0
+
+  &--small
+    font-size: var(--font-sm)
+    &:before
+      width: var(--spacing-md)
+      height: var(--spacing-md)
+      min-width: var(--spacing-md)
+      min-height: var(--spacing-md)
+
+  &--medium
+    font-size: var(--font-lg)
+    &:before
+      width: var(--spacing-lg)
+      height: var(--spacing-lg)
+      min-width: var(--spacing-lg)
+      min-height: var(--spacing-lg)
+
+  &--large
+    font-size: var(--font-xl)
+    &:before
+      width: var(--spacing-xl)
+      height: var(--spacing-xl)
+      min-width: var(--spacing-xl)
+      min-height: var(--spacing-xl)
+
+  &__check
+    +flex(row, wrap, flex-start, center)
+
+    &::before
+      content: ''
+      vertical-align: middle
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      background: var(--color-white)
+      border: 2px solid var(--greyBase)
+      cursor: pointer
+
+    &--square
+      &::before
+        @include border-radius('none')
+
+    &--rounded
+      &::before
+        @include border-radius('circular')
+
+    &--active
+      &:before
+        content: '\f00c'
+        background: var(--primaryBase)
+        color: var(--color-white)
+        border: 2px solid var(--primaryBase)
+
+    &--card-active
+      &:before
+        content: '\f00c'
+        background: var(--color-white)
+        color: var(--primaryBase)
+        border: 2px solid var(--color-white)
+
+    &--disabled
+      &:before
+        content: '\f00c'
+        background: var(--greyLight)
+        color: var(--color-white)
+        border: 2px solid var(--greyLight)
+        cursor: default

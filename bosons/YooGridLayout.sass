@@ -1,0 +1,52 @@
+=random-bgr()
+  background: rgb(random(255), random(255), random(255))
+
+.yoo-grid-layout
+  display: grid
+  
+  &__item
+    position: relative
+
+  &--h-start
+    justify-content: start
+
+  &--h-end
+    justify-content: end
+
+  &--h-center
+    justify-content: center
+
+  &--h-stretch
+    grid-template-columns: auto
+    justify-content: stretch
+
+  &--h-space-around
+    justify-content: space-around
+
+  &--h-space-between
+    justify-content: space-between
+
+  &--h-space-evenly
+    justify-content: space-evenly
+
+  &--v-start
+    align-content: start
+
+  &--v-end
+    align-content: end
+
+  &--v-center
+    align-content: center
+
+  &--v-stretch
+    grid-template-columns: auto
+    align-content: stretch
+
+  &--v-space-around
+    align-content: space-around
+
+  &--v-space-between
+    align-content: space-between
+
+  &--v-space-evenly
+    align-content: space-evenly

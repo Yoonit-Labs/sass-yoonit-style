@@ -1,0 +1,105 @@
+
+
+@import '../bosons/margin'
+@import '../bosons/padding'
+@import '../bosons/YooGridLayout'
+@import '../bosons/YooFlexLayout'
+@import '../bosons/YooScrollView'
+
+
+
+@import '../quarks/animation'
+@import '../quarks/border'
+@import '../quarks/shadows'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
+.yoo-switch
+  visibility: hidden
+  position: absolute
+  margin-left: -9999px
+
+  + label
+    display: block
+    position: relative
+    cursor: pointer
+    outline: none
+    user-select: none
+
+  &--small
+    + label
+      width: var(--spacing-lg)
+      height: var(--spacing-md)
+      border-radius: 20px
+
+  &--medium
+    + label
+      width: 48px
+      height: 20px
+      border-radius: var(--spacing-xl)
+
+  &--large
+    + label
+      width: 72px
+      height: var(--spacing-xl)
+      border-radius: 48px
+
+  + label:before,
+  + label:after
+    display: block
+    position: absolute
+    content: ""
+
+  + label:before
+    background-color: rgba(var(--greyLight), 0.4)
+    border-radius: 60px
+    transition: background 0.4s
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+
+  + label:after
+    background-color: var(--greyLightest)
+    border-radius: 100%
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.32)
+    transition: all 0.4s
+    top: 0px
+    bottom: 0px
+    left: -8px
+
+  &--small
+    + label:after
+      width: 20px
+      top: -3px
+      bottom: -3px
+
+  &--medium
+    + label:after
+      width: var(--spacing-xl)
+      top: -6px
+      bottom: -5px
+
+  &--large
+    + label:after
+      width: 48px
+      top: -9px
+      bottom: -8px
+
+  &:checked + label:before
+    background-color: rgba(var(--primaryBase), 0.4)
+
+  &:checked + label:after
+    background-color: var(--primaryBase)
+
+  &--small
+    &:checked + label:after
+      transform: translateX(20px)
+
+  &--medium
+    &:checked + label:after
+      transform: translateX(var(--spacing-xl))
+
+  &--large
+    &:checked + label:after
+      transform: translateX(24px * 1.7)

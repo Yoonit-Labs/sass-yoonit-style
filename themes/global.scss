@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+@import './blue.sass';
+@import './brown.sass';
+@import './green.sass';
+@import './orange.sass';
+@import './purple.sass';
+////////////////////////////////
+//       GLOBAL CONFIG        //
+////////////////////////////////
+
+:root {
+  --fontFamily-primary: 'Montserrat', 'sans-serif';
+  --fontFamily-second: 'Arial', 'sans-serif';
+
+  --fontWeight-regular: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-black: 800;
+
+  --primaryDarkest: #008080;
+  --primaryDark: #1DBABA;
+  --primaryBase: #47C8C3;
+  --primaryLight: #B0E7E5;
+  --primaryLightest: #C3ECEb;
+  --dangerDarkest: #CB0A22;
+  --dangerDark: #E83C4B;
+  --dangerBase: #F4596C;
+  --dangerLight: #FF7888;
+  --dangerLightest: #FF99A5;
+  --greyDarkest: #212325;
+  --greyDark: #5A5F67;
+  --greyBase: #8F959F;
+  --greyLight: #D6DBE2;
+  --greyLightest: #F5F6F7;
+  --color-white: #FFFFFF;
+  --color-black: #111111;
+  --color-transparent: rgba(255, 255, 255, 0);
+
+  --font-tn: 8px;
+  --font-xs: 10px;
+  --font-sm: 12px;
+  --font-md: 14px;
+  --font-lg: 16px;
+  --font-xl: 20px;
+  --font-hg: 32px;
+
+  --spacing-tn: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-hg: 64px;
+}

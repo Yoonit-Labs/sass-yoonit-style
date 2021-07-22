@@ -13,7 +13,7 @@ $placeholder-transition: 300ms ease-in-out
     position: relative
     display: block
     width: 100%
-    min-height: var(--spacing-hg) - 14
+    min-height: 50px
     &::before
       content: ""
       height: var(--spacing-tn)
@@ -21,7 +21,7 @@ $placeholder-transition: 300ms ease-in-out
       background-color: var(--primaryBase)
       position: absolute
       z-index: 2
-      bottom: -var(--spacing-tn)
+      bottom: -2px
       transform: scale(0)
       transition: all $placeholder-transition
 
@@ -45,22 +45,22 @@ $placeholder-transition: 300ms ease-in-out
       i
         position: absolute
         right: 0
-        bottom: -(var(--spacing-lg))
+        bottom: -24px
 
     &__feedback
       position: absolute
-      bottom: -(var(--spacing-lg) - 4)
+      bottom: -20px
       +font-size('sm')
       +font-family('$font-primary')
       font-weight: 500
 
     &__field
       position: absolute
-      top: var(--spacing-lg) - 4
+      top: 20px
       z-index: 1
       width: 100%
-      min-height: var(--spacing-xl) - 2
-      +font-size('lg' + 2)
+      min-height: 30px
+      +font-size('lg')
       color: var(--greyDark)
       border: 0
       border-bottom: 1px var(--greyDark) solid

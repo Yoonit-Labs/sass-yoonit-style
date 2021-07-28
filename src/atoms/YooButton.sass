@@ -26,11 +26,11 @@ $buttonColor: var(--primaryBase)
   border: none
   &__border
     &--rounded
-      +border('md', $buttonColor, solid, 'pill')
+      +border-radius('pill')
     &--medium
-      +border('md', $buttonColor, solid, 'md')
-    &--normal
-      +border('md', $buttonColor, solid, 'none')
+      +border-radius('md')
+    &--none
+      +border-radius('none')
   &--short
     width: var(--spacing-lg)
     height: var(--spacing-lg)

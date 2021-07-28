@@ -1,0 +1,51 @@
+
+
+@import '../quarks/border'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
+.yoo-avatar
+  +border-radius('circular')
+  +flex(row, wrap, center, center)
+  background: var(--primaryBase)
+  font-family: var(--fontFamily-primary)
+  +font-size('xl')
+  +font-weight('bold')
+
+  &--small
+    width: 40px
+    height: 40px
+    +font-size('lg')
+
+  &--medium
+    width: 56px
+    height: 56px
+
+  &--large
+    width: 80px
+    height: 80px
+    +font-size('hg')
+
+  &--xlarge
+    width: 104px
+    height: 104px
+    font-size: var(--font-hg)
+
+  &--primary
+    background: var(--primaryBase)
+
+  &--danger
+    background: var(--dangerBase)
+
+  &--light
+    background: var(--primaryBase)
+
+  &--dark
+    background: var(--greyBase)
+
+  &__text
+    color: var(--color-white)
+    &--light
+      color: var(--color-white)
+    &--dark
+      color: var(--greyDark)

@@ -1,0 +1,36 @@
+
+
+@import '../bosons/margin'
+@import '../bosons/padding'
+@import '../bosons/YooGridLayout'
+@import '../bosons/YooFlexLayout'
+@import '../bosons/YooScrollView'
+
+
+
+@import '../quarks/animation'
+@import '../quarks/border'
+@import '../quarks/shadows'
+@import '../quarks/typography'
+@import '../quarks/flex'
+
+.yoo-stepper
+  &__number
+    color: var(--greyDark)
+    font-family: var(--fontFamily-primary)
+    +font-weight('regular')
+    +font-size('md')
+    text-align: center
+    min-width: var(--spacing-hg) + var(--spacing-md)
+    word-wrap: break-word
+  &__dot
+    background: var(--greyDark)
+    +border-radius('circular')
+    width: var(--spacing-sm)
+    height: var(--spacing-sm)
+    &--active
+      background: var(--greyDark)
+      width: var(--spacing-sm) + var(--spacing-tn)
+      height: var(--spacing-sm) + var(--spacing-tn)
+    &--last
+      margin-right: 0

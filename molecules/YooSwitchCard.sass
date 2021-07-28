@@ -1,0 +1,16 @@
+
+@import '../quarks/border'
+@import '../quarks/shadows'
+
+.yoo-switch-card
+  transition: 0.2s ease
+  +box-shadow('soft', rgba(0, 0, 0, 0.2))
+  +border('sm', var(--greyLight), solid, 'md')
+  color: var(--greyBase)
+
+  &--fill-primary
+    background-color: var(--primaryDark)
+
+  &--active
+    background-color: var(--primaryDark)
+    color: var(--color-white)

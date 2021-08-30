@@ -1,25 +1,21 @@
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
-
+@import '../quarks/variables'
 
 $buttonColor: var(--primaryBase)
+
 .yoo__container--button
   height: 56px
   +flex(row, '', center, center)
 
 .yoo-btn
-  $self: &
+  $self: &  
   font-family: var(--fontFamily-primary)
   +font-weight('semi-bold')
-  +font-size('md')
+  font-size: $font-size-md
   width: 100%
   height: 100%
   background-color: $buttonColor
   +flex(row, '', center, center)
-  padding: 0 var(--spacing-lg)
+  padding: 0 $spacing-lg
   margin: 0
   cursor: pointer
   outline: none
@@ -32,47 +28,47 @@ $buttonColor: var(--primaryBase)
     &--none
       +border-radius('none')
   &--short
-    width: var(--spacing-lg)
-    height: var(--spacing-lg)
+    width: $spacing-lg
+    height: $spacing-lg
     padding: 0
     +border-radius('pill')
-    min-width: var(--spacing-lg)
-    +font-size('sm')
+    min-width: $spacing-lg
+    font-size: $font-size-sm
     overflow: hidden
 
   &__text
     color: var(--color-white)
     background-color: transparent
     &--xs
-      +font-size('xs')
+      font-size: $font-size-xs
 
     &--sm
-      +font-size('sm')
+      font-size: $font-size-sm
     
     &--md
-      +font-size('md')
+      font-size: $font-size-md
     
     &--lg
-      +font-size('lg')
+      font-size: $font-size-lg
     
     &--xl
-      +font-size('xl')
+      font-size: $font-size-xl
 
     &--weight-medium
       +font-weight('medium')
 
   &__icon
     color: var(--color-white)
-    +font-size('lg')
+    font-size: $font-size-lg
     background-color: transparent
     &--small
-      +font-size('sm')
+      font-size: $font-size-sm
     &--large
-      +font-size('xl')
+      font-size: $font-size-xl
     &--right
-      margin-left: var(--spacing-sm)
+      margin-left: $spacing-sm
     &--left
-      margin-right: var(--spacing-sm)
+      margin-right: $spacing-sm
 
   &--hover:hover
     +border('md', $buttonColor, solid, 'pill')
@@ -156,16 +152,16 @@ $buttonColor: var(--primaryBase)
 
   // MOD: FORMAT
   &--square
-    width: var(--spacing-lg) + var(--spacing-xl)
+    width: $spacing-lg + $spacing-xl
     padding: 0
 
   &--mini
-    width: var(--spacing-lg) + var(--spacing-xl)
-    height: var(--spacing-lg)
+    width: $spacing-lg + $spacing-xl
+    height: $spacing-lg
     padding: 0
 
     #{ $self }__icon
-      +font-size('lg')
+      font-size: $font-size-lg
 
   // MOD: COLOR
 

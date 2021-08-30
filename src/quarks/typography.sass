@@ -1,16 +1,7 @@
+@import './variables'
 //////////////////////////////
 //        TYPOGRAPHY        //
 //////////////////////////////
-
-/*===== Variations fonts ====*/
-
-$font-size-tn: 8px
-$font-size-xs: 10px
-$font-size-sm: 12px
-$font-size-md: 14px
-$font-size-lg: 16px
-$font-size-xl: 20px
-$font-size-hg: 32px
 
 =font($font-color, $font-size, $font-family, $font-weight)
   +font-size($font-size)
@@ -20,19 +11,19 @@ $font-size-hg: 32px
 
 =font-size($modifier)
   @if $modifier == 'tn'
-    font-size: var(--font-tn)
+    font-size: $font-size-tn
   @else if $modifier == 'xs'
-    font-size: var(--font-xs)
+    font-size: $font-size-xs
   @else if $modifier == 'sm'
-    font-size: var(--font-sm)
+    font-size: $font-size-sm
   @else if $modifier == 'md'
-    font-size: var(--font-md)
+    font-size: $font-size-md
   @else if $modifier == 'lg'
-    font-size: var(--font-lg)
+    font-size: $font-size-lg
   @else if $modifier == 'xl'
-    font-size: var(--font-xl)
+    font-size: $font-size-xl
   @else if $modifier == 'hg'
-    font-size: var(--font-hg)
+    font-size: $font-size-hg
 
 =font-family($font-family)
   @if $font-family == '$font-primary'
@@ -44,14 +35,16 @@ $font-size-hg: 32px
 
 =font-weight($font-weight)
   @if $font-weight == 'extra-bold'
-    font-weight: 800
+    font-weight: $weight-extra-bold
   @if $font-weight == 'bold'
-    font-weight: 700
+    font-weight: $weight-bold
   @else if $font-weight == 'semi-bold'
-    font-weight: 600
+    font-weight: $weight-semi-bold
   @else if $font-weight == 'medium'
-    font-weight: 500
+    font-weight: $weight-medium
   @else if $font-weight == 'regular'
-    font-weight: 400
+    font-weight: $weight-regular
+  @else if $font-thin == 'thin'
+    font-weight: $weight-thin
   @else
-    font-weight: 400
+    font-weight: $weight-regular

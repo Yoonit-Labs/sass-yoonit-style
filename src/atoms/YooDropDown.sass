@@ -1,29 +1,11 @@
-
-
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
-
-
-
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
-
-
 .yoo-dropdown
   cursor: pointer
   font-family: var(--fontFamily-primary)
-  +font-weight('regular')
+  font-weight: $dropdown-font-weight
   text-transform: uppercase
   +box-shadow('soft', #00000029)
-  border-radius: 1px
+  border-radius: $dropdown-border-radius
   font-family: var(--fontFamily-primary)
-  +font-weight('medium')
   color: var(--greyBase)
   width: max-content
 
@@ -33,9 +15,9 @@
       overflow: hidden
       &__text
         font-family: var(--fontFamily-primary)
-        +font-weight('semi-bold')
+        font-weight: $dropdown-font-weight-select
         color: var(--greyDark)
-        margin: 15px 20px
+        margin: $dropdown-margin-y $dropdown-margin-x
 
   &__options
     .option
@@ -43,21 +25,21 @@
       overflow: hidden
       &__text
         font-family: var(--fontFamily-primary)
-        +font-weight('semi-bold')
+        font-weight: $dropdown-font-weight-option
         color: var(--greyBase)
-        margin: 15px 20px
+        margin: $dropdown-margin-y $dropdown-margin-x
 
       &:first-child
         .option
           &__text
             color: var(--greyDark)
 
-  // MOD: VARIATION
   &--small
-    +font-size('sm')
+    font-size: $dropdown-font-size-sm
 
   &--medium
-    +font-size('md')
+    font-size: $dropdown-font-size-md
 
   &--large
-    +font-size('lg')
+    font-size: $dropdown-font-size-lg
+

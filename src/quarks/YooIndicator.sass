@@ -3,7 +3,7 @@
   font-family: var(--fontFamily-primary)
 
 .yoo-indicator
-  +border-radius('circular')
+  border-radius: $border-radius-circular
   animation-duration: 2s
   animation-timing-function: cubic-bezier(.28,.68,.75,.78)
   animation-fill-mode: forwards
@@ -13,25 +13,25 @@
   &--pulse
     animation-name: pulse
 
-  &--normal
-    width: var(--spacing-lg) 
-    height: var(--spacing-lg)
-    +font-size('md')
-
   &--small
-    width: var(--spacing-sm)
-    height: var(--spacing-sm)
-    +font-size('tn' - 2)
+    width: $indicator-size-sm
+    height: $indicator-size-sm
+    font-size: $indicator-font-size-sm
 
   &--medium
-    width: var(--spacing-md)
-    height: var(--spacing-md)
-    +font-size('xs')
+    width: $indicator-size-md
+    height: $indicator-size-md
+    font-size: $indicator-font-size-md
 
   &--large
-    width: var(--spacing-xl)
-    height: var(--spacing-xl)
-    +font-size('lg')
+    width: $indicator-size-lg
+    height: $indicator-size-lg
+    font-size: $indicator-font-size-lg
+
+  &--extra-large
+    width: $indicator-size-xl
+    height: $indicator-size-xl
+    font-size: $indicator-font-size-xl
 
   &--primary
     background: var(--primaryBase)

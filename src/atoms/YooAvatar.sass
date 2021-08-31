@@ -1,35 +1,36 @@
-
-
-@import '../quarks/border'
-@import '../quarks/typography'
-@import '../quarks/flex'
+@import '../quarks/variables'
 
 .yoo-avatar
-  +border-radius('circular')
+  border-radius: $avatar-border-radius
   +flex(row, wrap, center, center)
   background: var(--primaryBase)
   font-family: var(--fontFamily-primary)
-  +font-size('xl')
-  +font-weight('bold')
+  font-weight: $avatar-font-weight
 
-  &--small
-    width: 40px
-    height: 40px
-    +font-size('lg')
+  &--sm
+    width: $avatar-size-sm
+    height: $avatar-size-sm
+    font-size: $avatar-font-size-sm
 
-  &--medium
-    width: 56px
-    height: 56px
+  &--md
+    width: $avatar-size-md
+    height: $avatar-size-md
+    font-size: $avatar-font-size-md
 
-  &--large
-    width: 80px
-    height: 80px
-    +font-size('hg')
+  &--lg
+    width: $avatar-size-lg
+    height: $avatar-size-lg
+    font-size: $avatar-font-size-lg
 
-  &--xlarge
-    width: 104px
-    height: 104px
-    font-size: var(--font-hg)
+  &--xl
+    width: $avatar-size-xl
+    height: $avatar-size-xl
+    font-size: $avatar-font-size-xl
+
+  &--hg
+    width: $avatar-size-hg
+    height: $avatar-size-hg
+    font-size: $avatar-font-size-hg
 
   &--primary
     background: var(--primaryBase)

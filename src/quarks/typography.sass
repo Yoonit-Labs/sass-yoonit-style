@@ -36,7 +36,7 @@
 =font-weight($font-weight)
   @if $font-weight == 'extra-bold'
     font-weight: $weight-extra-bold
-  @if $font-weight == 'bold'
+  @else if $font-weight == 'bold'
     font-weight: $weight-bold
   @else if $font-weight == 'semi-bold'
     font-weight: $weight-semi-bold
@@ -44,7 +44,7 @@
     font-weight: $weight-medium
   @else if $font-weight == 'regular'
     font-weight: $weight-regular
-  @else if $font-thin == 'thin'
+  @else if $font-weight == 'thin'
     font-weight: $weight-thin
   @else
     font-weight: $weight-regular

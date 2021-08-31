@@ -9,13 +9,13 @@ $buttonColor: var(--primaryBase)
 .yoo-btn
   $self: &  
   font-family: var(--fontFamily-primary)
-  +font-weight('semi-bold')
-  font-size: $font-size-md
+  +font-weight('regular')
+  font-size: $btn-font-size-md
   width: 100%
   height: 100%
   background-color: $buttonColor
   +flex(row, '', center, center)
-  padding: 0 $spacing-lg
+  padding: 0 $btn-spacing-lg
   margin: 0
   cursor: pointer
   outline: none
@@ -23,52 +23,65 @@ $buttonColor: var(--primaryBase)
   &__border
     &--rounded
       +border-radius('pill')
-    &--medium
-      +border-radius('md')
-    &--none
+    &--square
       +border-radius('none')
   &--short
-    width: $spacing-lg
-    height: $spacing-lg
+    width: $btn-spacing-lg
+    height: $btn-spacing-lg
     padding: 0
     +border-radius('pill')
-    min-width: $spacing-lg
-    font-size: $font-size-sm
+    min-width: $btn-spacing-lg
+    font-size: $btn-font-size-sm
     overflow: hidden
 
   &__text
     color: var(--color-white)
     background-color: transparent
     &--xs
-      font-size: $font-size-xs
+      font-size: $btn-font-size-xs
 
     &--sm
-      font-size: $font-size-sm
+      font-size: $btn-font-size-sm
     
     &--md
-      font-size: $font-size-md
+      font-size: $btn-font-size-md
     
     &--lg
-      font-size: $font-size-lg
+      font-size: $btn-font-size-lg
     
     &--xl
-      font-size: $font-size-xl
+      font-size: $btn-font-size-xl
+
+    &--weight-thin
+      +font-weight('thin')
+
+    &--weight-regular
+      +font-weight('regular')
 
     &--weight-medium
       +font-weight('medium')
 
+    &--weight-semi-bold
+      +font-weight('semi-bold')
+
+    &--weight-bold
+      +font-weight('bold')
+
+    &--weight-extra-bold
+      +font-weight('extra-bold')
+
   &__icon
     color: var(--color-white)
-    font-size: $font-size-lg
+    font-size: $btn-font-size-lg
     background-color: transparent
     &--small
-      font-size: $font-size-sm
+      font-size: $btn-font-size-sm
     &--large
-      font-size: $font-size-xl
+      font-size: $btn-font-size-xl
     &--right
-      margin-left: $spacing-sm
+      margin-left: $btn-spacing-sm
     &--left
-      margin-right: $spacing-sm
+      margin-right: $btn-spacing-sm
 
   &--hover:hover
     +border('md', $buttonColor, solid, 'pill')
@@ -149,19 +162,6 @@ $buttonColor: var(--primaryBase)
       #{ $self }
         &__text, &__icon
           color: $buttonColor
-
-  // MOD: FORMAT
-  &--square
-    width: $spacing-lg + $spacing-xl
-    padding: 0
-
-  &--mini
-    width: $spacing-lg + $spacing-xl
-    height: $spacing-lg
-    padding: 0
-
-    #{ $self }__icon
-      font-size: $font-size-lg
 
   // MOD: COLOR
 
@@ -379,7 +379,7 @@ $buttonColor: var(--primaryBase)
     &--black
         $buttonColor: var(--color-black)
         border-color: $buttonColor
-        background-color: transparent
+        background-color: $buttonColor
 
         // VARIATIONS BUTTON black -- OUTLINE
         &#{ $self }--outline
@@ -389,11 +389,11 @@ $buttonColor: var(--primaryBase)
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: var(--color-black)
+              color: var(--color-back)
 
         // VARIATIONS BUTTON black -- CLEAR
         &#{ $self }--clear
-          $buttonColor: var(--color-black)
+          $buttonColor: $buttonColor
           background-color: transparent
           #{ $self }
             &__text, &__icon
@@ -402,7 +402,10 @@ $buttonColor: var(--primaryBase)
     &--white
         $buttonColor: var(--color-white)
         border-color: $buttonColor
-        background-color: transparent
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: var(--color-black)
 
         // VARIATIONS BUTTON white -- OUTLINE
         &#{ $self }--outline
@@ -412,7 +415,7 @@ $buttonColor: var(--primaryBase)
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: var(--color-white)
+              color: $buttonColor
 
         // VARIATIONS BUTTON white -- CLEAR
         &#{ $self }--clear

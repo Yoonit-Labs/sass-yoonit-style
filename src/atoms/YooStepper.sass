@@ -1,36 +1,22 @@
-
-
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
-
-
-
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
+@import '../quarks/variables'
 
 .yoo-stepper
   &__number
     color: var(--greyDark)
     font-family: var(--fontFamily-primary)
-    +font-weight('regular')
-    +font-size('md')
+    font-weight: $stepper-font-weight
+    font-size: $stepper-font-size
     text-align: center
-    min-width: var(--spacing-hg) + var(--spacing-md)
+    min-width: $stepper-number-min-width
     word-wrap: break-word
   &__dot
     background: var(--greyDark)
-    +border-radius('circular')
-    width: var(--spacing-sm)
-    height: var(--spacing-sm)
+    border-radius: $stepper-dot-radius
+    width: $stepper-dot-width
+    height: $stepper-dot-height
     &--active
       background: var(--greyDark)
-      width: var(--spacing-sm) + var(--spacing-tn)
-      height: var(--spacing-sm) + var(--spacing-tn)
+      width: $stepper-dot-active-width
+      height: $stepper-dot-active-height
     &--last
       margin-right: 0

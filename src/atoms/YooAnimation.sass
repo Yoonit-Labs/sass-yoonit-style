@@ -1,7 +1,9 @@
-@import '../quarks/flex'
+$animation-width: 100% !default
+$animation-height: 100vh !default
+$animation-z-index: 999 !default
 
 .yoo-animation
-  width: 100%
-  height: 100vh
+  width: $animation-width
+  height: $animation-height
   +flex(row, wrap, center, center)
-  z-index: 999
+  z-index: $animation-z-index

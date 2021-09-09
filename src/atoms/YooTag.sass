@@ -1,55 +1,57 @@
+$tag-font-size: $font-size-md !default
+$no-tag-font-size: $font-size-xs!default
+$tag-font-weight: $weight-medium !default
+
+$tag-border-radius: $border-radius-none !default
+$tag-border-size: 1px !default
+$tag-border-type: solid !default
 
 
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
-
-
-
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
+$tag-padding-y: 4px !default
+$tag-padding-x: 8px !default
 
 .yoo-tag
-  +font-family('$font-primary')
-
+  font-family: var(--fontFamily-primary)
   &__notag
-    +font-weight('medium')
-    +font-size('md')
+    font-weight: $tag-font-weight
+    font-size: $tag-font-size
     word-wrap: anywhere
     color: var(--greyBase)
-      
+
   &__item
     $self: &
-    +font-weight('medium')
-    +font-size('xs')
+    font-weight: $tag-font-weight
+    font-size: $no-tag-font-size
     text-align: right
     word-wrap: anywhere
-    padding: var(--spacing-xs) var(--spacing-sm)
-    margin: 0 var(--spacing-xs) var(--spacing-xs) 0
+    padding: $tag-padding-y $tag-padding-x
+    margin: 0 4px 4px 0
     color: var(--greyBase)
-    +border('sm', var(--greyBase), solid, 'lg')
+    border: $tag-border-size $tag-border-type var(--greyBase)
+    border-radius: $tag-border-radius
 
   &__fill
     &--primary.yoo-tag__item--on
       color: var(--primaryDark)
-      +border('sm', var(--primaryDark), solid, 'lg')
+      border: $tag-border-size $tag-border-type var(--primaryDark)
+      border-radius: $tag-border-radius
     &--danger.yoo-tag__item--on
       color: var(--dangerBase)
-      +border('sm', var(--dangerBase), solid, 'lg')
+      border: $tag-border-size $tag-border-type var(--dangerBase)
+      border-radius: $tag-border-radius
     &--neutral.yoo-tag__item--on
       color: var(--greyBase)
-      +border('sm', var(--greyBase), solid, 'lg')
+      border: $tag-border-size $tag-border-type var(--greyBase)
+      border-radius: $tag-border-radius
     &--dark.yoo-tag__item--on
       color: var(--greyDark)
-      +border('sm', var(--greyDark), solid, 'lg')
+      border: $tag-border-size $tag-border-type var(--greyDark)
+      border-radius: $tag-border-radius
     &--black.yoo-tag__item--on
       color: var(--color-black)
-      +border('sm', var(--color-black), solid, 'lg')
+      border: $tag-border-size $tag-border-type var(--color-black)
+      border-radius: $tag-border-radius
     &--white.yoo-tag__item--on
       color: var(--color-white)
-      +border('sm', var(--color-white), solid, 'lg')
+      border: $tag-border-size $tag-border-type var(--color-white)
+      border-radius: $tag-border-radius

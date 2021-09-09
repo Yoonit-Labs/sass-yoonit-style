@@ -1,13 +1,19 @@
+$card-title-font-size: $font-size-lg !default
+$card-subtitle-font-size: $font-size-md !default
 
-@import '../quarks/border'
-@import '../quarks/typography'
+$card-border-size: 1px !default
+$card-border-color: var(--greyLight) !default
+$card-border-style: solid !default
+$card-border-radius: .5rem !default
 
+$card-padding: 1rem !default
 
 .yoo-card
-  +border('sm', var(--greyLight), solid, 'md')
+  border: $card-border-size $card-border-style $card-border-color
+  border-radius: $card-border-radius
   +box-shadow('soft', var(--greyLight))
   font-family: var(--fontFamily-primary)
-  padding: var(--spacing-md)
+  padding: $card-padding
 
   &__fill
     &--white
@@ -63,8 +69,8 @@
 
   &__title
     margin: 0
-    +font-size('lg')
+    font-size: $card-title-font-size
 
   &__subtitle
     margin: 0
-    +font-size('md')
+    font-size: $card-subtitle-font-size

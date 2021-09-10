@@ -1,9 +1,10 @@
-
-@import '../quarks/typography'
+$header-font-size: $font-size-sm !default
+$header-width: 100% !default
+$header-letter-spacing: 0.48px !default
 
 .yoo-header
-  width: 100%
-  +font-family('$font-primary')
-  +font-size('sm')
+  width: $header-width
+  font-family: var(--fontFamily-primary)
+  font-size: $header-font-size
   color: var(--greyBase)
-  letter-spacing: 0.48px
+  letter-spacing: $header-letter-spacing

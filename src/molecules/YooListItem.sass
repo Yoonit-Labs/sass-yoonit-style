@@ -1,21 +1,31 @@
-@import '../quarks/typography'
+$listItem-font-size-xs: $font-size-xs !default
+$listItem-font-size-lg: $font-size-lg !default
+
+$listItem-font-weight-medium: $weight-medium !default
+
+$listItem-border: .25rem solid !default
+$listItem-border-padding: 1rem !default
+
+$listItem-separated-border: 1px solid var(--greyLight) !default
+
+$listItem-subtitle-margin: .25rem !default
 
 
 .yoo-list-item
   color: var(--greyBase)
   font-family: var(--fontFamily-primary)
-  @include font-size('lg')
+  font-size: $listItem-font-size-lg
 
   &__style
     &--wrap
       flex-wrap: wrap !important
 
   &--border-left
-    border-left: var(--spacing-xs) solid
-    padding-left: var(--spacing-md)
+    border-left: $listItem-border
+    padding-left: $listItem-border-padding
 
   &--separated
-    border-bottom: 1px solid var(--greyLight)
+    border-bottom: $listItem-separated-border
 
   &__fill
     &--border-neutral
@@ -38,12 +48,12 @@
 
   &__title
     margin: 0
-    +font-weight('medium')
+    font-weight: $listItem-font-weight-medium
     color: var(--color-black)
-    +font-size('lg')
+    font-size: $listItem-font-size-lg
 
   &__subtitle
-    +font-weight('medium')
-    +font-size('xs')
+    font-weight: $listItem-font-weight-medium
+    font-size: $listItem-font-size-xs
     color:  var(--primaryDark)
-    margin-left: var(--spacing-xs)
+    margin-left: $listItem-subtitle-margin

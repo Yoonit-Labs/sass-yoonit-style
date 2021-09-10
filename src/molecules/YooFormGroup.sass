@@ -1,29 +1,32 @@
+$formGroup-placeholder-transition: 300ms ease-in-out !default
 
-@import '../quarks/typography'
+$formGroup-font-size-sm: $font-size-sm !default
+$formGroup-font-size-md: $font-size-md !default
+$formGroup-font-size-lg: $font-size-lg !default
 
-
-$placeholder-transition: 300ms ease-in-out
+$formGroup-font-weight-medium: $weight-medium !default
+$formGroup-font-weight-semi-bold: $weight-semi-bold !default 
 
 .yoo-input-group
-  +font-family('$font-primary')
-  margin: 40px 0 0
+  font-family: var(--fontFamily-primary)
+  margin: 2.5rem 0 0
   width: 100%
 
   .yoo-input
     position: relative
     display: block
     width: 100%
-    min-height: 50px
+    min-height: 3.125rem
     &::before
       content: ""
-      height: var(--spacing-tn)
+      height: $spacing-tn
       width: 100%
       background-color: var(--primaryBase)
       position: absolute
       z-index: 2
       bottom: -2px
       transform: scale(0)
-      transition: all $placeholder-transition
+      transition: all $formGroup-placeholder-transition
 
     &:focus-within
       &::before
@@ -32,12 +35,12 @@ $placeholder-transition: 300ms ease-in-out
     &__label
       position: absolute
       display: block
-      top: var(--spacing-lg)
+      top: $spacing-lg
       z-index: 2
-      +font-size('md')
-      +font-weight('semi-bold')
-      +font-family('$font-primary')
-      transition: all $placeholder-transition
+      font-size: $formGroup-font-size-md
+      font-weight: $formGroup-font-weight-semi-bold
+      font-family: var(--fontFamily-primary)
+      transition: all $formGroup-placeholder-transition
       width: 100%
       cursor: text
       color: var(--greyDark)
@@ -45,38 +48,38 @@ $placeholder-transition: 300ms ease-in-out
       i
         position: absolute
         right: 0
-        bottom: -24px
+        bottom: -1.5rem
 
     &__feedback
       position: absolute
-      bottom: -20px
+      bottom: -1.25rem
       +font-size('sm')
-      +font-family('$font-primary')
+      font-family: var(--fontFamily-primary)
       font-weight: 500
 
     &__field
       position: absolute
-      top: 20px
+      top: 1.25rem
       z-index: 1
       width: 100%
-      min-height: 30px
-      +font-size('lg')
+      min-height: 1.875rem
+      font-size: $formGroup-font-size-sm
       color: var(--greyDark)
       border: 0
       border-bottom: 1px var(--greyDark) solid
-      transition: border-color $placeholder-transition
+      transition: border-color $formGroup-placeholder-transition
       outline: none
       padding: 0
       margin: 0
 
       &:nth-child(1)
-        +font-family('$font-primary')
+        font-family: var(--fontFamily-primary)
 
       &::placeholder
         color: var(--greyLight)
-        +font-weight('medium')
-        +font-size('lg')
-        +font-family('$font-primary')
+        font-weight: $formGroup-font-weight-medium
+        font-size: $formGroup-font-size-lg
+        font-family: var(--fontFamily-primary)
         opacity: 0
 
       &:focus,
@@ -87,7 +90,7 @@ $placeholder-transition: 300ms ease-in-out
         & + .yoo-input__label
           top: 0
           cursor: inherit
-          @include font-size('md')
+          font-size: $formGroup-font-size-md
 
         &::placeholder
           opacity: 1

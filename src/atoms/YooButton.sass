@@ -16,8 +16,16 @@ $btn-font-size-lg: $font-size-lg !default
 $btn-font-size-xl: $font-size-xl !default
 $btn-font-size-hg: $font-size-hg !default
 
+/*===== Variations Button Border ====*/
+$btn-border-size: 8px !default
+$btn-border-style: solid !default
+$btn-border-radius: $border-radius-pill !default
+
 /*===== Variations Button Color ====*/
 $buttonColor: var(--primaryBase)
+
+/*===== Variations Button Animation Duration ====*/
+$btn-animation-duration: 2s !default
 
 .yoo__container--button
   height: 3.5rem
@@ -26,7 +34,7 @@ $buttonColor: var(--primaryBase)
 .yoo-btn
   $self: &  
   font-family: var(--fontFamily-primary)
-  +font-weight('regular')
+  font-weight: $weight-regular
   font-size: $btn-font-size-md
   width: 100%
   height: 100%
@@ -39,14 +47,14 @@ $buttonColor: var(--primaryBase)
   border: none
   &__border
     &--rounded
-      +border-radius('pill')
+      border-radius: $border-radius-pill
     &--square
-      +border-radius('none')
+      border-radius: $border-radius-none
   &--short
     width: $btn-spacing-lg
     height: $btn-spacing-lg
     padding: 0
-    +border-radius('pill')
+    border-radius: $border-radius-pill
     min-width: $btn-spacing-lg
     font-size: $btn-font-size-sm
     overflow: hidden
@@ -70,22 +78,22 @@ $buttonColor: var(--primaryBase)
       font-size: $btn-font-size-xl
 
     &--weight-thin
-      +font-weight('thin')
+      font-weight: $weight-thin
 
     &--weight-regular
-      +font-weight('regular')
+      font-weight: $weight-regular
 
     &--weight-medium
-      +font-weight('medium')
+      font-weight: $weight-medium
 
     &--weight-semi-bold
-      +font-weight('semi-bold')
+      font-weight: $weight-semi-bold
 
     &--weight-bold
-      +font-weight('bold')
+      font-weight: $weight-bold
 
     &--weight-extra-bold
-      +font-weight('extra-bold')
+      font-weight: $weight-extra-bold
 
   &__icon
     color: var(--color-white)
@@ -101,7 +109,8 @@ $buttonColor: var(--primaryBase)
       margin-right: $btn-spacing-sm
 
   &--hover:hover
-    +border('md', $buttonColor, solid, 'pill')
+    border: $btn-border-size $btn-border-style $buttonColor
+    border-radius: $btn-border-radius
     background-color: transparent
     #{ $self }
       &__text, &__icon
@@ -116,19 +125,22 @@ $buttonColor: var(--primaryBase)
   &--disabled
     $buttonColor: var(--greyLight)
     background-color: $buttonColor
-    +border('md', $buttonColor, solid, 'pill')
+    border: $btn-border-size $btn-border-style $buttonColor
+    border-radius: $btn-border-radius
     cursor: not-allowed
 
   // MOD: VARIATION
   &--outline
-    +border('md', $buttonColor, solid, 'pill')
+    border: $btn-border-size $btn-border-style $buttonColor
+    border-radius: $btn-border-radius
     background-color: transparent
     z-index: 0
     #{ $self }
       &__text, &__icon
         color: $buttonColor
     &#{ $self}--hover:hover
-      +border('md', $buttonColor, solid, 'pill')
+      border: $btn-border-size $btn-border-style $buttonColor
+      border-radius: $btn-border-radius
       background-color: $buttonColor
       #{ $self }
         &__text, &__icon
@@ -143,7 +155,8 @@ $buttonColor: var(--primaryBase)
     &#{ $self }--disabled
       $buttonColor: var(--greyLight)
       background-color: transparent
-      +border('md', $buttonColor, solid, 'pill')
+      border: $btn-border-size $btn-border-style $buttonColor
+      border-radius: $btn-border-radius
       cursor: not-allowed
       #{ $self }
         &__text, &__icon
@@ -337,14 +350,16 @@ $buttonColor: var(--primaryBase)
       background-color: $buttonColor
       // VARIATIONS BUTTON DANGER -- OUTLINE
       &#{ $self }--outline
-        +border('md', $buttonColor, solid, 'pill')
+        border: $btn-border-size $btn-border-style $buttonColor
+        border-radius: $btn-border-radius
         background-color: transparent
         #{ $self }
           &__text, &__icon
             color: $buttonColor
         &#{ $self }--hover:hover
           $buttonColor: var(--dangerBase)
-          +border('md', $buttonColor, solid, 'pill')
+          border: $btn-border-size $btn-border-style $buttonColor
+          border-radius: $btn-border-radius
           background-color: $buttonColor
           #{ $self }
             &__text, &__icon
@@ -376,7 +391,8 @@ $buttonColor: var(--primaryBase)
 
       // STYLES BUTTON DANGER
       &#{ $self }--hover:hover
-        +border('md', $buttonColor, solid, 'pill')
+        border: $btn-border-size $btn-border-style $buttonColor
+        border-radius: $btn-border-radius
         background-color: transparent
         #{ $self }
           &__text, &__icon
@@ -391,7 +407,8 @@ $buttonColor: var(--primaryBase)
       &#{ $self }--disabled
         $buttonColor: var(--greyLight)
         background-color: $buttonColor
-        +border('md', $buttonColor, solid, 'pill')
+        border: $btn-border-size $btn-border-style $buttonColor
+        border-radius: $btn-border-radius
 
     &--black
         $buttonColor: var(--color-black)
@@ -444,7 +461,7 @@ $buttonColor: var(--primaryBase)
 
   &--animation-pulse
     animation-name: pulse
-    +durationAnimation('normal')
+    animation-duration: $btn-animation-duration
     animation-timing-function: cubic-bezier(.28,.68,.75,.78)
     animation-fill-mode: forwards
     animation-iteration-count: infinite

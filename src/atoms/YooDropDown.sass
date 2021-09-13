@@ -8,6 +8,9 @@ $dropdown-font-weight: $weight-regular !default
 $dropdown-font-weight-select: $weight-semi-bold !default
 $dropdown-font-weight-option: $weight-semi-bold !default
 
+/*===== Dropdown Width ====*/
+$dropdown-width: max-content !default
+
 /*===== Dropdown Border Radius ====*/
 $dropdown-border-radius: .0625rem !default
 
@@ -15,16 +18,22 @@ $dropdown-border-radius: .0625rem !default
 $dropdown-margin-y: .9375rem !default
 $dropdown-margin-x: 1.25rem !default
 
+/*===== Dropdown Cursor ====*/
+$dropdown-cursor-type: pointer !default
+
+/*===== Dropdown Text Transform ====*/
+$dropdown-text-transform: uppercase !default
+
 .yoo-dropdown
-  cursor: pointer
+  cursor: $dropdown-cursor-type
   font-family: var(--fontFamily-primary)
   font-weight: $dropdown-font-weight
-  text-transform: uppercase
+  text-transform: $dropdown-text-transform
   +box-shadow('soft', #00000029)
   border-radius: $dropdown-border-radius
   font-family: var(--fontFamily-primary)
   color: var(--greyBase)
-  width: max-content
+  width: $dropdown-width
 
   &__select
     .select

@@ -16,6 +16,10 @@ $btn-font-size-lg: $font-size-lg !default
 $btn-font-size-xl: $font-size-xl !default
 $btn-font-size-hg: $font-size-hg !default
 
+/*===== Variations Button Width and Height ====*/
+$btn-width: 100% !default
+$btn-height: 100% !default
+
 /*===== Variations Button Border ====*/
 $btn-border-size: 1px !default
 $btn-border-style: solid !default
@@ -27,6 +31,9 @@ $buttonColor: var(--primaryBase)
 /*===== Variations Button Animation Duration ====*/
 $btn-animation-duration: 2s !default
 
+/*===== Button Cursor ====*/
+$btn-cursor-type: pointer !default
+
 .yoo__container--button
   height: 3.5rem
   +flex(row, '', center, center)
@@ -36,13 +43,13 @@ $btn-animation-duration: 2s !default
   font-family: var(--fontFamily-primary)
   font-weight: $weight-regular
   font-size: $btn-font-size-md
-  width: 100%
-  height: 100%
+  width: $btn-width
+  height: $btn-height
   background-color: $buttonColor
   +flex(row, '', center, center)
   padding: 0 $btn-spacing-lg
   margin: 0
-  cursor: pointer
+  cursor: $btn-cursor-type
   outline: none
   border: none
   &__border

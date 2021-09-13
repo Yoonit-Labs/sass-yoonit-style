@@ -1,14 +1,12 @@
-$segmentedBar-border-width: 1px !default
-$segmentedBar-border-style: solid !default
-$segmentedBar-border-color: var(--greyLight) !default
+$segmentedBar-border: 1px solid var(--greyLight) !default
 
 .yoo-segmented-bar
-  border-top: $segmentedBar-border-width $segmentedBar-border-style $segmentedBar-border-color
-  border-bottom: $segmentedBar-border-width $segmentedBar-border-style $segmentedBar-border-color
+  border-top: $segmentedBar-border
+  border-bottom: $segmentedBar-border
 
   &__item
     width: 100%
 
     &--border
-      border-right: $segmentedBar-border-width $segmentedBar-border-style $segmentedBar-border-color
+      border-right: $segmentedBar-border
       

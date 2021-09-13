@@ -11,6 +11,11 @@ $checkButton-font-size-lg: $font-size-lg !default
 /*===== CheckButton Font Weight ====*/
 $checkButton-font-weight: $weight-medium !default
 
+/*===== CheckButton Card ====*/
+$checkButton-card-transition: 0.2s ease !default
+$checkButton-card-border-radius: 3px !default
+$checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
+
 .yoo-checkbox input
   display: none
 
@@ -20,9 +25,9 @@ $checkButton-font-weight: $weight-medium !default
   -ms-user-select: none
   user-select: none
   &__card
-    transition: 0.2s ease
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2)
-    border-radius: 3px
+    transition: $checkButton-card-transition
+    box-shadow: $checkButton-card-box-shadow
+    border-radius: $checkButton-card-border-radius
     color: var(--greyBase)
     &--active
       display: block
@@ -33,12 +38,12 @@ $checkButton-font-weight: $weight-medium !default
   &__text
     font-family: var(--fontFamily-primary)
     font-weight: $checkButton-font-weight
-    margin: 0 0 0 16px
+    margin-left: 1rem
 
     &--right
       flex-direction: row-reverse
       > p
-        margin: 0 16px 0 0
+        margin-right: 1rem
 
   &--small
     font-size: $checkButton-font-size-sm

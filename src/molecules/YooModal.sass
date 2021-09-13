@@ -1,8 +1,18 @@
 
-@import '../quarks/shadows'
+$modal-backdrop-z-index: 9 !default
+$modal-z-index: 10 !default
+
+$modal-min-width: 20.5rem !default
+$modal-min-height: 15.875rem !default
+
+$modal-padding-top: 1.5rem !default
+$modal-padding-bottom: .5rem !default
+$modal-padding-x: 1rem !default
+
+$modal-text-align: center !default
 
 .backdrop
-  z-index: 9
+  z-index: $modal-backdrop-z-index
   position: fixed
   top: 0
   bottom: 0
@@ -13,12 +23,12 @@
 
   .yoo-modal
     box-sizing: border-box
-    z-index: 10
-    min-width: 328px
-    min-height: 254px
-    padding: 24px 16px 8px 16px
+    z-index: $modal-z-index
+    min-width: $modal-min-width
+    min-height: $modal-min-height
+    padding: $modal-padding-top $modal-padding-x $modal-padding-bottom
     +box-shadow('soft', #00000029)
-    text-align: center
+    text-align: $modal-text-align
     font-family: var(--fontFamily-primary)
     &__fill
       &--light

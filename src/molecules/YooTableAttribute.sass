@@ -1,17 +1,44 @@
-@import '../quarks/typography'
-@import '../quarks/flex'
+$tableAttribute-min-height: 2.5rem !default
+
+$tableAttribute-border-bottom: 1px solid var(--greyLight) !default
+
+$tableAttribute-title-font-weight-regular: $weight-regular !default
+$tableAttribute-title-font-weight-medium: $weight-medium !default
+$tableAttribute-title-font-weight-semi-bold: $weight-semi-bold !default
+$tableAttribute-title-font-weight-bold: $weight-bold !default
+
+$tableAttribute-title-font-size-sm: $font-size-sm !default
+$tableAttribute-title-font-size-md: $font-size-md !default
+$tableAttribute-title-font-size-lg: $font-size-lg !default
+$tableAttribute-title-font-size-xl: $font-size-xl !default
+
+$tableAttribute-title-word-break: break-word !default
+
+$tableAttribute-tall-height: $spacing-hg !default
+$tableAttribute-wrap-height: 3.5rem !default
+
+
+$tableAttribute-detail-font-size: $font-size-md !default
+$tableAttribute-detail-font-weight: $weight-medium !default
+$tableAttribute-detail-text-align: right !default
+$tableAttribute-detail-word-wrap: anywhere !default
+$tableAttribute-detail-max-height: 2.5rem !default
+$tableAttribute-detail-wrap-text-align: left !default
+
+$tableAttribute-actionable-max-height: 2.5rem !default
+
 
 .yoo-table-attribute
   color: var(--greyDark)
   font-family: var(--fontFamily-primary)
-  min-height: 40px
+  min-height: $tableAttribute-min-height
   &--separated
-    border-bottom: 1px solid var(--greyLight)
+    border-bottom: $tableAttribute-border-bottom
 
   &--tall
-    height: var(--spacing-hg)
+    height: $tableAttribute-tall-height
   &--wrap
-    height: 56px
+    height: $tableAttribute-wrap-height
   &__fill
     &--default
       background-color: var(--greyLightest)
@@ -24,7 +51,7 @@
 
   &__title
     +flex(row, wrap, flex-start, center)
-    word-break: break-word
+    word-break: $tableAttribute-title-word-break
     &--primary
       color: var(--primaryDark)
     &--danger
@@ -39,29 +66,29 @@
       color: var(--color-white)
 
     &--bold
-      +font-weight('bold')
+      font-weight: $tableAttribute-title-font-weight-bold
     &--semi-bold
-      +font-weight('semi-bold')
+      font-weight: $tableAttribute-title-font-weight-semi-bold
     &--medium
-      +font-weight('medium')
+      font-weight: $tableAttribute-title-font-weight-medium
     &--regular
-      +font-weight('regular')
+      font-weight: $tableAttribute-title-font-weight-regular
 
     &--sm
-      +font-size('sm')
+      font-size: $tableAttribute-title-font-size-sm
     &--md
-      +font-size('md')
+      font-size: $tableAttribute-title-font-size-md
     &--lg
-      +font-size('lg')
+      font-size: $tableAttribute-title-font-size-lg
     &--xl
-      +font-size('xl')
+      font-size: $tableAttribute-title-font-size-xl
 
   &__detail
-    +font-weight('medium')
-    +font-size('md')
-    text-align: right
-    word-wrap: anywhere
-    max-height: 40px
+    font-weight: $tableAttribute-detail-font-weight
+    font-size: $tableAttribute-detail-font-size
+    text-align: $tableAttribute-detail-text-align
+    word-wrap: $tableAttribute-detail-word-wrap
+    max-height: $tableAttribute-detail-max-height
     +flex(row, wrap, flex-start, center)
     &--primary
       color: var(--primaryDark)
@@ -76,7 +103,7 @@
     &--black
       color: var(--color-black)
     &--wrap
-      text-align: left
+      text-align: $tableAttribute-detail-wrap-text-align
 
   &__actionable
-    max-height: 40px
+    max-height: $tableAttribute-actionable-max-height

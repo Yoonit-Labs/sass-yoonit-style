@@ -1,20 +1,20 @@
-
-$modal-backdrop-z-index: 9 !default
-$modal-z-index: 10 !default
-
+/*===== Modal Min Size ====*/
 $modal-min-width: 20.5rem !default
 $modal-min-height: 15.875rem !default
 
+/*===== Modal Padding ====*/
 $modal-padding-top: 1.5rem !default
 $modal-padding-bottom: .5rem !default
 $modal-padding-x: 1rem !default
 
+/*===== Modal Text Align ====*/
 $modal-text-align: center !default
 
+/*===== Modal Border Radius ====*/
 $modal-border-radius: 6px !default
 
 .backdrop
-  z-index: $modal-backdrop-z-index
+  z-index: 9
   position: fixed
   top: 0
   bottom: 0
@@ -25,7 +25,7 @@ $modal-border-radius: 6px !default
 
   .yoo-modal
     box-sizing: border-box
-    z-index: $modal-z-index
+    z-index: 10
     min-width: $modal-min-width
     min-height: $modal-min-height
     padding: $modal-padding-top $modal-padding-x $modal-padding-bottom

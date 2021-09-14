@@ -1,14 +1,16 @@
+/*===== ButtonToogle Height ====*/
 $buttonToggleHeight: 3.375rem !default
 
-$buttonToggle-border-size: 1px !default
-$buttonToggle-border-color: var(--greyDark) !default
-$buttonToggle-border-style: solid !default
+/*===== ButtonToogle Border ====*/
+$buttonToggle-border: 1px solid var(--greyDark) !default
+
+/*===== ButtonToogle Border Radius ====*/
 $buttonToggle-border-radius: $border-radius-pill !default
 
 .yoo-button-toggle
   position: relative
   height: $buttonToggleHeight
-  border: $buttonToggle-border-size $buttonToggle-border-style $buttonToggle-border-color
+  border: $buttonToggle-border
   border-radius: $buttonToggle-border-radius
 
   &__container

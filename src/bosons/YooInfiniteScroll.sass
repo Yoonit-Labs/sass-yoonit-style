@@ -1,8 +1,10 @@
+/*===== InfiniteScroll Size ====*/
 $infiniteScroll-height: 100% !default
+
+/*===== InfiniteScroll Overflow ====*/
 $infiniteScroll-overflow: auto !default
 
-$infiniteScroll-actionable-position: relative !default
-
+/*===== InfiniteScroll Loader ====*/
 $infiniteScroll-loader-position: absolute !default
 $infiniteScroll-loader-position-top: 1.25rem !default
 $infiniteScroll-loader-position-left: 50% !default
@@ -21,7 +23,7 @@ $infiniteScroll-loader-large-height: 3.125rem !default
   height: $infiniteScroll-height
   overflow: $infiniteScroll-overflow
   &__actionable
-    position: $infiniteScroll-actionable-position
+    position: relative
   &__loader
     position: $infiniteScroll-loader-position
     top: $infiniteScroll-loader-position-top

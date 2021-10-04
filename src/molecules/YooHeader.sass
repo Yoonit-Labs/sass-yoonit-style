@@ -1,9 +1,15 @@
+/*===== Header Size ====*/
+$header-width: 100% !default
 
-@import '../quarks/typography'
+/*===== Header Font Sizing ====*/
+$header-font-size: $font-size-sm !default
+
+/*===== Header Letter Spacing ====*/
+$header-letter-spacing: 0.48px !default
 
 .yoo-header
-  width: 100%
-  +font-family('$font-primary')
-  +font-size('sm')
+  width: $header-width
+  font-family: var(--fontFamily-primary)
+  font-size: $header-font-size
   color: var(--greyBase)
-  letter-spacing: 0.48px
+  letter-spacing: $header-letter-spacing

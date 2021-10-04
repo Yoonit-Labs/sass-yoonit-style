@@ -1,81 +1,128 @@
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
+/*===== Button Spacing ====*/
+$btn-spacing-tn: $spacing-tn !default
+$btn-spacing-xs: $spacing-xs !default
+$btn-spacing-sm: $spacing-sm !default
+$btn-spacing-md: $spacing-base !default
+$btn-spacing-lg: $spacing-lg !default
+$btn-spacing-xl: $spacing-xl !default
+$btn-spacing-hg: $spacing-hg !default
 
+/*===== Button Font Sizing ====*/
+$btn-font-size-tn: $font-size-tn !default
+$btn-font-size-xs: $font-size-xs !default
+$btn-font-size-sm: $font-size-sm !default
+$btn-font-size-md: $font-size-base !default
+$btn-font-size-lg: $font-size-lg !default
+$btn-font-size-xl: $font-size-xl !default
+$btn-font-size-hg: $font-size-hg !default
 
-$buttonColor: var(--primaryBase)
+/*===== Button Size ====*/
+$btn-width: 100% !default
+$btn-height: 100% !default
+
+/*===== Button Border ====*/
+$btn-border-size: 1px !default
+$btn-border-style: solid !default
+
+/*===== Button Border Radius ====*/
+$btn-border-radius: $border-radius-pill !default
+
+/*===== Button Color ====*/
+$buttonColor: var(--primaryBase) !default
+
+/*===== Button Animation Duration ====*/
+$btn-animation-duration: 2s !default
+
+/*===== Button Cursor ====*/
+$btn-cursor-type: pointer !default
+
+/*===== Container Button Height ====*/
+$btn-container-button: 3.5rem !default
+
 .yoo__container--button
-  height: 56px
+  height: $btn-container-button
   +flex(row, '', center, center)
 
 .yoo-btn
-  $self: &
+  $self: &  
   font-family: var(--fontFamily-primary)
-  +font-weight('semi-bold')
-  +font-size('md')
-  width: 100%
-  height: 100%
+  font-weight: $weight-regular
+  font-size: $btn-font-size-md
+  width: $btn-width
+  height: $btn-height
   background-color: $buttonColor
   +flex(row, '', center, center)
-  padding: 0 var(--spacing-lg)
+  padding: 0 $btn-spacing-lg
   margin: 0
-  cursor: pointer
+  cursor: $btn-cursor-type
   outline: none
   border: none
   &__border
     &--rounded
-      +border-radius('pill')
-    &--medium
-      +border-radius('md')
-    &--none
-      +border-radius('none')
+      border-radius: $border-radius-pill
+    &--square
+      border-radius: $border-radius-none
   &--short
-    width: var(--spacing-lg)
-    height: var(--spacing-lg)
+    width: $btn-spacing-lg
+    height: $btn-spacing-lg
     padding: 0
-    +border-radius('pill')
-    min-width: var(--spacing-lg)
-    +font-size('sm')
+    border-radius: $border-radius-pill
+    min-width: $btn-spacing-lg
+    font-size: $btn-font-size-sm
     overflow: hidden
 
   &__text
     color: var(--color-white)
     background-color: transparent
     &--xs
-      +font-size('xs')
+      font-size: $btn-font-size-xs
 
     &--sm
-      +font-size('sm')
+      font-size: $btn-font-size-sm
     
     &--md
-      +font-size('md')
+      font-size: $btn-font-size-md
     
     &--lg
-      +font-size('lg')
+      font-size: $btn-font-size-lg
     
     &--xl
-      +font-size('xl')
+      font-size: $btn-font-size-xl
+
+    &--weight-thin
+      font-weight: $weight-thin
+
+    &--weight-regular
+      font-weight: $weight-regular
 
     &--weight-medium
-      +font-weight('medium')
+      font-weight: $weight-medium
+
+    &--weight-semi-bold
+      font-weight: $weight-semi-bold
+
+    &--weight-bold
+      font-weight: $weight-bold
+
+    &--weight-extra-bold
+      font-weight: $weight-extra-bold
 
   &__icon
     color: var(--color-white)
-    +font-size('lg')
+    font-size: $btn-font-size-lg
     background-color: transparent
     &--small
-      +font-size('sm')
+      font-size: $btn-font-size-sm
     &--large
-      +font-size('xl')
+      font-size: $btn-font-size-xl
     &--right
-      margin-left: var(--spacing-sm)
+      margin-left: $btn-spacing-sm
     &--left
-      margin-right: var(--spacing-sm)
+      margin-right: $btn-spacing-sm
 
   &--hover:hover
-    +border('md', $buttonColor, solid, 'pill')
+    border: $btn-border-size $btn-border-style $buttonColor
+    border-radius: $btn-border-radius
     background-color: transparent
     #{ $self }
       &__text, &__icon
@@ -90,19 +137,22 @@ $buttonColor: var(--primaryBase)
   &--disabled
     $buttonColor: var(--greyLight)
     background-color: $buttonColor
-    +border('md', $buttonColor, solid, 'pill')
+    border: $btn-border-size $btn-border-style $buttonColor
+    border-radius: $btn-border-radius
     cursor: not-allowed
 
   // MOD: VARIATION
   &--outline
-    +border('md', $buttonColor, solid, 'pill')
+    border: $btn-border-size $btn-border-style $buttonColor
+    border-radius: $btn-border-radius
     background-color: transparent
     z-index: 0
     #{ $self }
       &__text, &__icon
         color: $buttonColor
     &#{ $self}--hover:hover
-      +border('md', $buttonColor, solid, 'pill')
+      border: $btn-border-size $btn-border-style $buttonColor
+      border-radius: $btn-border-radius
       background-color: $buttonColor
       #{ $self }
         &__text, &__icon
@@ -117,7 +167,8 @@ $buttonColor: var(--primaryBase)
     &#{ $self }--disabled
       $buttonColor: var(--greyLight)
       background-color: transparent
-      +border('md', $buttonColor, solid, 'pill')
+      border: $btn-border-size $btn-border-style $buttonColor
+      border-radius: $btn-border-radius
       cursor: not-allowed
       #{ $self }
         &__text, &__icon
@@ -153,19 +204,6 @@ $buttonColor: var(--primaryBase)
       #{ $self }
         &__text, &__icon
           color: $buttonColor
-
-  // MOD: FORMAT
-  &--square
-    width: var(--spacing-lg) + var(--spacing-xl)
-    padding: 0
-
-  &--mini
-    width: var(--spacing-lg) + var(--spacing-xl)
-    height: var(--spacing-lg)
-    padding: 0
-
-    #{ $self }__icon
-      +font-size('lg')
 
   // MOD: COLOR
 
@@ -324,14 +362,16 @@ $buttonColor: var(--primaryBase)
       background-color: $buttonColor
       // VARIATIONS BUTTON DANGER -- OUTLINE
       &#{ $self }--outline
-        +border('md', $buttonColor, solid, 'pill')
+        border: $btn-border-size $btn-border-style $buttonColor
+        border-radius: $btn-border-radius
         background-color: transparent
         #{ $self }
           &__text, &__icon
             color: $buttonColor
         &#{ $self }--hover:hover
           $buttonColor: var(--dangerBase)
-          +border('md', $buttonColor, solid, 'pill')
+          border: $btn-border-size $btn-border-style $buttonColor
+          border-radius: $btn-border-radius
           background-color: $buttonColor
           #{ $self }
             &__text, &__icon
@@ -363,7 +403,8 @@ $buttonColor: var(--primaryBase)
 
       // STYLES BUTTON DANGER
       &#{ $self }--hover:hover
-        +border('md', $buttonColor, solid, 'pill')
+        border: $btn-border-size $btn-border-style $buttonColor
+        border-radius: $btn-border-radius
         background-color: transparent
         #{ $self }
           &__text, &__icon
@@ -378,12 +419,13 @@ $buttonColor: var(--primaryBase)
       &#{ $self }--disabled
         $buttonColor: var(--greyLight)
         background-color: $buttonColor
-        +border('md', $buttonColor, solid, 'pill')
+        border: $btn-border-size $btn-border-style $buttonColor
+        border-radius: $btn-border-radius
 
     &--black
         $buttonColor: var(--color-black)
         border-color: $buttonColor
-        background-color: transparent
+        background-color: $buttonColor
 
         // VARIATIONS BUTTON black -- OUTLINE
         &#{ $self }--outline
@@ -393,11 +435,11 @@ $buttonColor: var(--primaryBase)
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: var(--color-black)
+              color: var(--color-back)
 
         // VARIATIONS BUTTON black -- CLEAR
         &#{ $self }--clear
-          $buttonColor: var(--color-black)
+          $buttonColor: $buttonColor
           background-color: transparent
           #{ $self }
             &__text, &__icon
@@ -406,7 +448,10 @@ $buttonColor: var(--primaryBase)
     &--white
         $buttonColor: var(--color-white)
         border-color: $buttonColor
-        background-color: transparent
+        background-color: $buttonColor
+        #{ $self }
+          &__text, &__icon
+            color: var(--color-black)
 
         // VARIATIONS BUTTON white -- OUTLINE
         &#{ $self }--outline
@@ -416,7 +461,7 @@ $buttonColor: var(--primaryBase)
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: var(--color-white)
+              color: $buttonColor
 
         // VARIATIONS BUTTON white -- CLEAR
         &#{ $self }--clear
@@ -428,7 +473,7 @@ $buttonColor: var(--primaryBase)
 
   &--animation-pulse
     animation-name: pulse
-    +durationAnimation('normal')
+    animation-duration: $btn-animation-duration
     animation-timing-function: cubic-bezier(.28,.68,.75,.78)
     animation-fill-mode: forwards
     animation-iteration-count: infinite

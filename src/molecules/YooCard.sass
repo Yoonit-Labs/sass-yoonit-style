@@ -1,13 +1,27 @@
+/*===== Card Title Font Size ====*/
+$card-title-font-size: $font-size-lg !default
 
-@import '../quarks/border'
-@import '../quarks/typography'
+/*===== Card Subtitle Font Size ====*/
+$card-subtitle-font-size: $font-size-md !default
 
+/*===== Card Border ====*/
+$card-border: 1px solid var(--greyLight) !default
+
+/*===== Card Border Radius ====*/
+$card-border-radius: .5rem !default
+
+/*===== Card Padding ====*/
+$card-padding: 1rem !default
+
+/*===== Card Icon Margin Bottom ====*/
+$card-icon-margin-bottom: 10px !default
 
 .yoo-card
-  +border('sm', var(--greyLight), solid, 'md')
+  border: $card-border
+  border-radius: $card-border-radius
   +box-shadow('soft', var(--greyLight))
   font-family: var(--fontFamily-primary)
-  padding: var(--spacing-md)
+  padding: $card-padding
 
   &__fill
     &--white
@@ -59,12 +73,12 @@
         color: darken(#FFF, 10%)
 
   &__icon
-    margin-bottom: 10px
+    margin-bottom: $card-icon-margin-bottom
 
   &__title
     margin: 0
-    +font-size('lg')
+    font-size: $card-title-font-size
 
   &__subtitle
     margin: 0
-    +font-size('md')
+    font-size: $card-subtitle-font-size

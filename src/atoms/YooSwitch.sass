@@ -1,18 +1,10 @@
-
-
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
-
-
-
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
+/*===== Switch Sizes ====*/
+$switch-size-tn: 1rem !default
+$switch-size-sm: 1.25rem !default
+$switch-size-md: 1.5rem !default
+$switch-size-lg: 2rem !default
+$switch-size-xl: 3rem !default
+$switch-size-hg: 4.5rem !default
 
 .yoo-switch
   visibility: hidden
@@ -28,21 +20,21 @@
 
   &--small
     + label
-      width: var(--spacing-lg)
-      height: var(--spacing-md)
-      border-radius: 20px
+      width: $switch-size-md
+      height: $switch-size-tn
+      border-radius: $switch-size-sm
 
   &--medium
     + label
-      width: 48px
-      height: 20px
-      border-radius: var(--spacing-xl)
+      width: $switch-size-xl
+      height: $switch-size-sm
+      border-radius: $switch-size-lg
 
   &--large
     + label
-      width: 72px
-      height: var(--spacing-xl)
-      border-radius: 48px
+      width: $switch-size-hg
+      height: $switch-size-lg
+      border-radius: $switch-size-xl
 
   + label:before,
   + label:after
@@ -52,7 +44,7 @@
 
   + label:before
     background-color: rgba(var(--greyLight), 0.4)
-    border-radius: 60px
+    border-radius: 3.75rem
     transition: background 0.4s
     top: 0px
     bottom: 0px
@@ -70,19 +62,19 @@
 
   &--small
     + label:after
-      width: 20px
+      width: $switch-size-sm
       top: -3px
       bottom: -3px
 
   &--medium
     + label:after
-      width: var(--spacing-xl)
+      width: $switch-size-lg
       top: -6px
       bottom: -5px
 
   &--large
     + label:after
-      width: 48px
+      width: $switch-size-xl
       top: -9px
       bottom: -8px
 
@@ -94,12 +86,12 @@
 
   &--small
     &:checked + label:after
-      transform: translateX(20px)
+      transform: translateX(1.25rem)
 
   &--medium
     &:checked + label:after
-      transform: translateX(var(--spacing-xl))
+      transform: translateX(2rem)
 
   &--large
     &:checked + label:after
-      transform: translateX(24px * 1.7)
+      transform: translateX(1.5rem * 1.7)

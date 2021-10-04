@@ -1,31 +1,39 @@
+/*===== Dropdown Font Sizing ====*/
+$dropdown-font-size-sm: $font-size-sm !default
+$dropdown-font-size-md: $font-size-md !default
+$dropdown-font-size-lg: $font-size-lg !default
 
+/*===== Font Weight ====*/
+$dropdown-font-weight: $weight-regular !default
+$dropdown-font-weight-select: $weight-semi-bold !default
+$dropdown-font-weight-option: $weight-semi-bold !default
 
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
+/*===== Dropdown Size ====*/
+$dropdown-width: max-content !default
 
+/*===== Dropdown Border Radius ====*/
+$dropdown-border-radius: .0625rem !default
 
+/*===== Dropdown Padding ====*/
+$dropdown-margin-y: .9375rem !default
+$dropdown-margin-x: 1.25rem !default
 
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
+/*===== Dropdown Cursor ====*/
+$dropdown-cursor-type: pointer !default
 
+/*===== Dropdown Text Transform ====*/
+$dropdown-text-transform: uppercase !default
 
 .yoo-dropdown
-  cursor: pointer
+  cursor: $dropdown-cursor-type
   font-family: var(--fontFamily-primary)
-  +font-weight('regular')
-  text-transform: uppercase
+  font-weight: $dropdown-font-weight
+  text-transform: $dropdown-text-transform
   +box-shadow('soft', #00000029)
-  border-radius: 1px
+  border-radius: $dropdown-border-radius
   font-family: var(--fontFamily-primary)
-  +font-weight('medium')
   color: var(--greyBase)
-  width: max-content
+  width: $dropdown-width
 
   &__select
     .select
@@ -33,9 +41,9 @@
       overflow: hidden
       &__text
         font-family: var(--fontFamily-primary)
-        +font-weight('semi-bold')
+        font-weight: $dropdown-font-weight-select
         color: var(--greyDark)
-        margin: 15px 20px
+        margin: $dropdown-margin-y $dropdown-margin-x
 
   &__options
     .option
@@ -43,21 +51,21 @@
       overflow: hidden
       &__text
         font-family: var(--fontFamily-primary)
-        +font-weight('semi-bold')
+        font-weight: $dropdown-font-weight-option
         color: var(--greyBase)
-        margin: 15px 20px
+        margin: $dropdown-margin-y $dropdown-margin-x
 
       &:first-child
         .option
           &__text
             color: var(--greyDark)
 
-  // MOD: VARIATION
   &--small
-    +font-size('sm')
+    font-size: $dropdown-font-size-sm
 
   &--medium
-    +font-size('md')
+    font-size: $dropdown-font-size-md
 
   &--large
-    +font-size('lg')
+    font-size: $dropdown-font-size-lg
+

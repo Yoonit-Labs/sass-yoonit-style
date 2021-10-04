@@ -4,6 +4,7 @@
 
 /*===== Variations fonts ====*/
 
+$font-base: 16
 $font-size-tn: 8px
 $font-size-xs: 10px
 $font-size-sm: 12px
@@ -55,3 +56,6 @@ $font-size-hg: 32px
     font-weight: 400
   @else
     font-weight: 400
+
+@function pxToRem($target, $baseValue: $font-base)
+    @return ($target / $baseValue) * 1rem

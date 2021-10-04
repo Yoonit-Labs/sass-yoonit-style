@@ -1,25 +1,46 @@
+/*===== InfiniteScroll Size ====*/
+$infiniteScroll-height: 100% !default
+
+/*===== InfiniteScroll Overflow ====*/
+$infiniteScroll-overflow: auto !default
+
+/*===== InfiniteScroll Loader ====*/
+$infiniteScroll-loader-position: absolute !default
+$infiniteScroll-loader-position-top: 1.25rem !default
+$infiniteScroll-loader-position-left: 50% !default
+$infiniteScroll-loader-width: 2.1875rem !default
+$infiniteScroll-loader-height: 2.1875rem !default
+$infiniteScroll-loader-border-radius: 50% !default
+$infiniteScroll-loader-border: 5px solid rgba(255, 255, 255, .2) !default
+$infiniteScroll-loader-border-top: 5px solid !default
+$infiniteScroll-loader-animation: animate 1.5s infinite linear !default
+$infiniteScroll-loader-small-width: 1.5625rem !default
+$infiniteScroll-loader-small-height: 1.5625rem !default
+$infiniteScroll-loader-large-width: 3.125rem !default
+$infiniteScroll-loader-large-height: 3.125rem !default
+
 .yoo-infinite
-  height: 100%
-  overflow: auto
+  height: $infiniteScroll-height
+  overflow: $infiniteScroll-overflow
   &__actionable
     position: relative
   &__loader
-    position: absolute
-    top: 20px
-    left: 50%
+    position: $infiniteScroll-loader-position
+    top: $infiniteScroll-loader-position-top
+    left: $infiniteScroll-loader-position-left
     transform: translate(-50%, -50%)
-    width: 35px
-    height: 35px
-    border-radius: 50%
-    border: 5px solid rgba(255, 255, 255, .2)
-    border-top: 5px solid
-    animation: animate 1.5s infinite linear
+    width: $infiniteScroll-loader-width
+    height: $infiniteScroll-loader-height
+    border-radius: $infiniteScroll-loader-border-radius
+    border: $infiniteScroll-loader-border
+    border-top: $infiniteScroll-loader-border-top
+    animation: $infiniteScroll-loader-animation
     &--small
-      width: 25px
-      height: 25px 
+      width: $infiniteScroll-loader-small-width
+      height: $infiniteScroll-loader-small-height
     &--large
-      width: 50px
-      height: 50px
+      width: $infiniteScroll-loader-large-width
+      height: $infiniteScroll-loader-large-height
     &--primary
       border-top-color: var(--primaryDark)
     &--danger

@@ -1,19 +1,20 @@
+/*===== CheckButton Size ====*/
+$checkButton-size-sm: 1rem !default
+$checkButton-size-md: 1.5rem !default
+$checkButton-size-lg: 2rem !default
 
+/*===== CheckButton Font Sizing ====*/
+$checkButton-font-size-sm: $font-size-sm !default
+$checkButton-font-size-md: $font-size-md !default
+$checkButton-font-size-lg: $font-size-lg !default
 
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
+/*===== CheckButton Font Weight ====*/
+$checkButton-font-weight: $weight-medium !default
 
-
-
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
-
+/*===== CheckButton Card ====*/
+$checkButton-card-transition: 0.2s ease !default
+$checkButton-card-border-radius: 3px !default
+$checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
 
 .yoo-checkbox input
   display: none
@@ -24,9 +25,9 @@
   -ms-user-select: none
   user-select: none
   &__card
-    transition: 0.2s ease
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2)
-    border-radius: 3px
+    transition: $checkButton-card-transition
+    box-shadow: $checkButton-card-box-shadow
+    border-radius: $checkButton-card-border-radius
     color: var(--greyBase)
     &--active
       display: block
@@ -35,38 +36,38 @@
       color: var(--color-white)
 
   &__text
-    font-family: Montserrat
-    +font-weight('medium')
-    margin: 0 0 0 var(--spacing-md)
+    font-family: var(--fontFamily-primary)
+    font-weight: $checkButton-font-weight
+    margin-left: 1rem
 
     &--right
       flex-direction: row-reverse
       > p
-        margin: 0 var(--spacing-md) 0 0
+        margin-right: 1rem
 
   &--small
-    font-size: var(--font-sm)
+    font-size: $checkButton-font-size-sm
     &:before
-      width: var(--spacing-md)
-      height: var(--spacing-md)
-      min-width: var(--spacing-md)
-      min-height: var(--spacing-md)
+      width: $checkButton-size-sm
+      height: $checkButton-size-sm
+      min-width: $checkButton-size-sm
+      min-height: $checkButton-size-sm
 
   &--medium
-    font-size: var(--font-lg)
+    font-size: $checkButton-font-size-md
     &:before
-      width: var(--spacing-lg)
-      height: var(--spacing-lg)
-      min-width: var(--spacing-lg)
-      min-height: var(--spacing-lg)
+      width: $checkButton-size-md
+      height: $checkButton-size-md
+      min-width: $checkButton-size-md
+      min-height: $checkButton-size-md
 
   &--large
-    font-size: var(--font-xl)
+    font-size: $checkButton-font-size-lg
     &:before
-      width: var(--spacing-xl)
-      height: var(--spacing-xl)
-      min-width: var(--spacing-xl)
-      min-height: var(--spacing-xl)
+      width: $checkButton-size-lg
+      height: $checkButton-size-lg
+      min-width: $checkButton-size-lg
+      min-height: $checkButton-size-lg
 
   &__check
     +flex(row, wrap, flex-start, center)
@@ -83,11 +84,11 @@
 
     &--square
       &::before
-        @include border-radius('none')
+        border-radius: $border-radius-none
 
     &--rounded
       &::before
-        @include border-radius('circular')
+        border-radius: $border-radius-circular
 
     &--active
       &:before

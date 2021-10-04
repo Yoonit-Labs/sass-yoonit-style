@@ -1,6 +1,29 @@
+/*===== Notify Min Height ====*/
+$notify-min-height: $spacing-hg !default
 
+/*===== Notify Font Size ====*/
+$notify-font-size-tn: $font-size-tn !default
+$notify-font-size-xs: $font-size-xs !default
+$notify-font-size-sm: $font-size-sm !default
+$notify-font-size-md: $font-size-md !default
+$notify-font-size-lg: $font-size-lg !default
+$notify-font-size-xl: $font-size-xl !default
+$notify-font-size-hg: $font-size-hg !default
 
-@import '../quarks/typography'
+/*===== Notify Font Weight ====*/
+$notify-font-weight: $weight-medium !default
+
+/*===== Notify Icon Size ====*/
+$notify-icon-size: $font-size-xl !default
+
+/*===== Notify Icon Margin X Axis ====*/
+$notify-icon-margin-x: $spacing-sm !default
+
+/*===== Notify Indicator Margin X Axis ====*/
+$notify-indicator-margin-x: $spacing-sm !default
+
+/*===== Notify Button Container Margin X Axis ====*/
+$notify-container-button-margin-x: $spacing-sm !default
 
 *
   margin: 0
@@ -8,11 +31,10 @@
   box-sizing: border-box
 
 .yoo-notify
-  min-height: var(--spacing-hg)
+  min-height: $notify-min-height
   &__icon
-    +font-size('xl')
-    margin-left: var(--spacing-sm)
-    margin-right: var(--spacing-sm)
+    font-size: $notify-icon-size
+    margin: 0 $notify-icon-margin-x
     &--light
       color: var(--color-white)
 
@@ -27,22 +49,22 @@
 
   &__text
     font-family: var(--fontFamily-primary)
-    +font-weight('medium')
-    +font-size('sm')
+    font-weight: $notify-font-weight
+    font-size: $notify-font-size-sm
     &--tn
-      +font-size('tn')
+      font-size: $notify-font-size-tn
     &--xs
-      +font-size('xs')
+      font-size: $notify-font-size-xs
     &--sm
-      +font-size('sm')
+      font-size: $notify-font-size-sm
     &--md
-      +font-size('md')
+      font-size: $notify-font-size-md
     &--lg
-      +font-size('lg')
+      font-size: $notify-font-size-lg
     &--xl
-      +font-size('xl')
+      font-size: $notify-font-size-xl
     &--hg
-      +font-size('hg')
+      font-size: $notify-font-size-hg
 
     &--light
       color: var(--color-white)
@@ -78,8 +100,7 @@
     background: var(--greyDark)
 
 .yoo-indicator
-  margin-left: var(--spacing-sm)
-  margin-right: var(--spacing-sm)
+  margin: 0 $notify-indicator-margin-x
 
 .yoo-notify .yoo__container--button
-  margin-right: var(--spacing-sm)
+  margin-right: $notify-container-button-margin-x

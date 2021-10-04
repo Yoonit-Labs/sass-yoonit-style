@@ -1,38 +1,21 @@
-
-
-@import '../bosons/margin'
-@import '../bosons/padding'
-@import '../bosons/YooGridLayout'
-@import '../bosons/YooFlexLayout'
-@import '../bosons/YooScrollView'
-
-
-
-@import '../quarks/animation'
-@import '../quarks/border'
-@import '../quarks/shadows'
-@import '../quarks/typography'
-@import '../quarks/flex'
-
 .yoo-selectdate
-
   &__separator
     +font(var(--greyDarkest), 'xl', '$font-primary', 'medium')
 
   &__container
     position: relative
     overflow: hidden
-    height: 144px
+    height: 9rem
   
   &__item
     +font(var(--greyLight), 'xl', '$font-primary', 'medium')
-    padding: var(--spacing-md) 0
-    min-width: 72px
+    padding: $spacing-base 0
+    min-width: 4.5rem
     text-align: center
     cursor: pointer
 
     &--active
       color: var(--greyDarkest)
-      border-top: var(--spacing-tn) solid var(--greyBase)
-      border-bottom: var(--spacing-tn) solid var(--greyBase)
+      border-top: $spacing-tn solid var(--greyBase)
+      border-bottom: $spacing-tn solid var(--greyBase)
       cursor: default

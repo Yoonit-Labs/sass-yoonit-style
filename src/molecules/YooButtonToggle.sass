@@ -1,15 +1,22 @@
+/*===== ButtonToogle Height ====*/
+$buttonToggleHeight: 3.375rem !default
 
-@import '../quarks/border'
+/*===== ButtonToogle Border ====*/
+$buttonToggle-border: 1px solid var(--greyDark) !default
+
+/*===== ButtonToogle Border Radius ====*/
+$buttonToggle-border-radius: $border-radius-pill !default
 
 .yoo-button-toggle
   position: relative
-  height: 54px
-  +border('sm', var(--greyDark), solid, 'pill')
+  height: $buttonToggleHeight
+  border: $buttonToggle-border
+  border-radius: $buttonToggle-border-radius
 
   &__container
     position: absolute
     width: calc(100% + 2px)
-    +border-radius('pill')
+    border-radius: $buttonToggle-border-radius
     top: -1px
     left: -1px
 

@@ -1,9 +1,13 @@
-@import '../quarks/typography'
+/*===== Quiz Font Weight ====*/
+$quiz-font-weight: $weight-medium !default
+
+/*===== Quiz Margin Left ====*/
+$quiz-margin-left: $spacing-sm !default
 
 .yoo-quiz
   &__question
-    +font-weight('medium')
+    font-weight: $quiz-font-weight
     font-family: var(--fontFamily-primary)
     span
       color: var(--dangerBase)
-      margin-left: var(--spacing-sm)
+      margin-left: $quiz-margin-left

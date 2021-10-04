@@ -1,11 +1,21 @@
+/*===== ScrollView Display ====*/
+$scrollView-display: block !default
+
+/*===== ScrollView Scrollbar Width ====*/
+$scrollView-scrollBar-width: thin !default
+
+/*===== ScrollView Scrollbar Size ====*/
+$scrollView-scrollBar-size-width: $spacing-sm !default
+$scrollView-scrollBar-size-height: $spacing-sm !default
+
 .yoo-scroll-view
-  display: block
+  display: $scrollView-display
   scrollbar-color: var(--primaryBase) var(--greyLightest)
-  scrollbar-width: thin
+  scrollbar-width: $scrollView-scrollBar-width
 
   &::-webkit-scrollbar
-    width: var(--spacing-sm)
-    height: var(--spacing-sm)
+    width: $scrollView-scrollBar-size-width
+    height: $scrollView-scrollBar-size-height
     background-color: var(--greyLightest)
 
   &::-webkit-scrollbar-thumb

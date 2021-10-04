@@ -1,10 +1,12 @@
+/*===== SegmentedBar Border ====*/
+$segmentedBar-border: 1px solid var(--greyLight) !default
+
 .yoo-segmented-bar
-  border-top: 1px solid var(--greyLight)
-  border-bottom: 1px solid var(--greyLight)
+  border-top: $segmentedBar-border
+  border-bottom: $segmentedBar-border
 
   &__item
     width: 100%
 
     &--border
-      border-right: 1px solid var(--greyLight)
-      
+      border-right: $segmentedBar-border

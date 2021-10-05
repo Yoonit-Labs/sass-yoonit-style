@@ -1,0 +1,78 @@
+name: deploy
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    if: ${{ contains(github.ref, 'refs/tags/release-') }}
+    runs-on: ubuntu-latest
+    steps:
+      # GET TAG VERSION & RELEASE_VERSION IN $GITHUB_ENV
+      - name: Get TAG_VERSION & RELEASE_VERSION
+        run: |
+          echo "TAG_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/release-}" >> $GITHUB_ENV
+      # CHECKOUT REPOSITORY
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      # SETUP NODE ENV W/ NPM PUBLIC REGISTRY
+      - name: Setup Node Env
+        uses: actions/setup-node@v2
+        with:
+          registry-url: 'https://registry.npmjs.org'
+      # CONFIGURE GIT
+      - name: Configure Git
+        run: |
+          git config user.name github-ci
+          git config user.email gabriel.mule@cyberlabs.ai
+      # RUN SCRIPTS
+      - name: Update package version
+        run: node -e "let pkg=require('./package.json'); pkg.version='${{ env.RELEASE_VERSION }}'; require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2));"
+      - name: Build VueJS Package
+        run: |
+          npm install
+          npm run build
+      - name: Prepare "npm" folder to deploy
+        run: |
+          gulp
+          echo 'Preparing "npm" folder to deploy...'
+          mkdir npm
+          cp -fR src/* npm
+          cp -fR dist npm/css
+          cp README.md npm/README.md
+          cp package.json npm/package.json
+          rm -rf dist
+      - name: Prepare "package.json" Files
+        run: |
+          node -e "let pkg=require('./npm/vue/package.json'); pkg.main='/index.js'; require('fs').writeFileSync('./npm/package.json', JSON.stringify(pkg, null, 2));"
+      # ADD & COMMIT CHANGES
+      - name: Add & Commit Changes
+        run: |
+          git add .
+          git commit -am "[github-ci] Published Version"
+          git push origin main:npm --force
+      # TAG VERSION
+      - name: Tag Version
+        run: |
+          git tag -a ${{ env.TAG_VERSION }} -m ${{ env.TAG_VERSION }} --force
+          git push --tags --force
+      # PUBLISH VUE PACKAGE
+      - name: Publish Sass Yoonit Style
+        run: npm publish --access public --otp
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # SUCCESS MESSAGE TO  DISCORD
+      - name: Success Message to Discord
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.WEBHOOK_URL }}
+          title: "Published @yoonit/style v${{ env.RELEASE_VERSION }}"
+          description: |
+            A new release has been published:
+            [Click here to go to the release page](https://github.com/Yoonit-Labs/vue-yoonit-components/releases/tag/${{ env.TAG_VERSION }})
+          color: 0x00ff00
+          username: GitHub Actions

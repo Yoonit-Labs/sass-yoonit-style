@@ -1,21 +1,39 @@
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
+<h1 align="center">Sass Yoonit Style</h1>
 
-# Sass Yoonit Style
+<p align="center">
+	<img src="https://img.shields.io/npm/v/@yoonit/style?color=lightgrey&style=for-the-badge&logo=npm"/>
+	<img src="https://img.shields.io/npm/dm/@yoonit/style?color=lightgrey&logo=npm&style=for-the-badge"/>
+	<img src="https://img.shields.io/badge/SASS%20-hotpink.svg?color=lightgrey&logo=SASS&style=for-the-badge"/>
+	<img src="https://img.shields.io/npm/l/@yoonit/style?color=lightgrey&style=for-the-badge"/>
+</p>
 
-![Version](https://img.shields.io/npm/v/@yoonit/style?color=lightgrey&style=for-the-badge&logo=npm)
-![Downloads](https://img.shields.io/npm/dm/@yoonit/style?color=lightgrey&logo=npm&style=for-the-badge)
-![SASS](https://img.shields.io/badge/SASS%20-hotpink.svg?color=lightgrey&logo=SASS&style=for-the-badge)
-![MIT license](https://img.shields.io/npm/l/@yoonit/style?color=lightgrey&style=for-the-badge)
-
-A SASS lib to provide:
+A SASS lib to help you with:
 - Atomic Design System
 - Created using BEM methodology
-- Diverse variables and mixins to help you build your awesome layout
+- Diverse variables and mixins to improve your awesome layout
 - Responsive grid and flex system
 - Diverse theme range
 - Components styles
 - Possibility of creating themes
 
+<div align="center">
+	<h3>Sponsors</h3>
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					<b>Platinum</b>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" valign="middle">
+					<a href="https://cyberlabs.ai"><img src="https://raw.githubusercontent.com/Yoonit-Labs/sass-yoonit-style/development/sponsor_cyberlabs.png" width="300" /></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h5><a href="mailto:about@yoonit.dev">Become a sponsor!</a></h5>
+</div>
 
 ## Installation
 
@@ -195,13 +213,17 @@ Example:
 .p__r--xl //meaning: padding__right--extra-large
 ```
 
-
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
+For commit messages we use <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.
 
 Contributions are always welcome!
 
----
+<a href="https://github.com/Yoonit-Labs/sass-yoonit-style/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Yoonit-Labs/sass-yoonit-style" />
+</a>
+  
+---  
 
-Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
+Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team

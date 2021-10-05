@@ -44,7 +44,7 @@ $btn-border-style: solid !default
 $btn-border-radius: $border-radius-pill !default
 
 /*===== Button Color ====*/
-$buttonColor: var(--primaryBase) !default
+$buttonColor: var(--primary-base) !default
 
 /*===== Button Animation Duration ====*/
 $btn-animation-duration: 2s !default
@@ -144,7 +144,7 @@ $btn-container-button: 3.5rem !default
       &__text, &__icon
         color: $buttonColor
   &--active:active
-    $buttonColor: var(--primaryDark)
+    $buttonColor: var(--primary-dark)
     background-color: $buttonColor
     border-color: $buttonColor
     #{ $self }
@@ -174,7 +174,7 @@ $btn-container-button: 3.5rem !default
         &__text, &__icon
           color: var(--color-white)
     &#{ $self }--active:active
-      $buttonColor: var(--primaryDark)
+      $buttonColor: var(--primary-dark)
       background-color: transparent
       border-color: $buttonColor
       #{ $self }
@@ -206,7 +206,7 @@ $btn-container-button: 3.5rem !default
       background-color: transparent
 
     &#{ $self }--active:active
-      $buttonColor: var(--primaryDark)
+      $buttonColor: var(--primary-dark)
       background-color: transparent
       border-color: $buttonColor
       #{ $self }

@@ -78,11 +78,11 @@ The default theme has the following variables:
   --fontWeight-bold: 700
   --fontWeight-black: 800
 
-  --primaryDarkest: #008080
-  --primaryDark: #1DBABA
-  --primaryBase: #47C8C3
-  --primaryLight: #B0E7E5
-  --primaryLightest: #C3ECEb
+  --primary-darkest: #008080
+  --primary-dark: #1DBABA
+  --primary-base: #47C8C3
+  --primary-light: #B0E7E5
+  --primary-light-test: #C3ECEb
   --dangerDarkest: #CB0A22
   --dangerDark: #E83C4B
   --dangerBase: #F4596C
@@ -133,11 +133,11 @@ $font-base: 16;
 /*==== Import Quarks ====*/
 
 [data-composition="myTheme"]
-  --primaryDarkest: #49260a
-  --primaryDark: #623b1c
-  --primaryBase: #7c5739
-  --primaryLight: #caad8c
-  --primaryLightest: #f6eddd
+  --primary-darkest: #49260a
+  --primary-dark: #623b1c
+  --primary-base: #7c5739
+  --primary-light: #caad8c
+  --primary-light-test: #f6eddd
 
   --font-tn: 8px
   --font-xs: 10px

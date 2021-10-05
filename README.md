@@ -94,7 +94,7 @@ The default theme has the following variables:
   --spacing-lg: 24px
   --spacing-xl: 32px
   --spacing-hg: 64px
-  
+
 ```
 To use the variable in your sass file, just use var(VariableName), for example:
 
@@ -107,11 +107,14 @@ To create a custom theme, in your project create a sass file and overwrite the r
 `MyTheme.sass`
 
 ```sass
+
+$font-base: 16;
+
 @import '@yoonit/style'
 
 /*==== Import Quarks ====*/
 
-[data-composition="myTheme"] 
+[data-composition="myTheme"]
   --primaryDarkest: #49260a
   --primaryDark: #623b1c
   --primaryBase: #7c5739
@@ -164,6 +167,7 @@ So the root variables will be overridden with the theme you made for this added 
 | font-family        | 'font-primary' or 'font-second' or font-family | `+font-family($font-family)` | Set the family to font |
 | font-weight        | 'bold' or 'semi-bold' or 'medium' or 'regular' | `+font-weight($font-weight)` | Set a font weight |
 | font               | font-color, 'tn' or 'tn' or 'sm' or 'md' or 'lg' or 'xl' or 'hg', 'font-primary' or 'font-second' or font-family, 'bold' or 'semi-bold' or 'medium' or 'regular' | `+font($font-color, $font-size, $font-family, $font-weight)` | Mixin to assist in the construction of the font css with all the properties |
+| pxToRem               | $target, $baseValue | `+fpxToRem($target, $baseValue: $font-base)` | Function that helps convert from `px` to `rem`. `$target` is the value chosen to be converted. `$baseValue` is the base value to perform the conversion and has the default value that is defined in the variable `$font-base` |
 
 ### Classes
 

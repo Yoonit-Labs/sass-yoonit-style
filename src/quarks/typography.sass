@@ -2,6 +2,8 @@
 //        TYPOGRAPHY        //
 //////////////////////////////
 
+$font-base: 16
+
 =font($font-color, $font-size, $font-family, $font-weight)
   +font-size($font-size)
   +font-weight($font-weight)
@@ -47,3 +49,6 @@
     font-weight: $weight-thin
   @else
     font-weight: $weight-regular
+
+@function pxToRem($target, $baseValue: $font-base)
+  @return ($target / $baseValue) * 1rem

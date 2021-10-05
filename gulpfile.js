@@ -21,7 +21,7 @@ const {
 } = require('gulp')
 const rimraf = require('rimraf')
 const rename = require('gulp-rename')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'));
 const entryPoint = './src/index.sass'
 
 sass.compiler = require('node-sass')

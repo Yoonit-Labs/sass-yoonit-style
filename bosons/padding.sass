@@ -1,0 +1,42 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+//////////////////////////////////////
+//          PADDING CLASSES         //
+//////////////////////////////////////
+
+// Tokens : Size
+
+$positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
+.p
+  @each $position, $element in $positions
+    &__#{$element}
+      @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'hg', 'none')
+        &--#{$modifier}
+          @if $modifier == 'xs'
+            padding-#{$position}: $spacing-xs
+          @else if $modifier == 's'
+            padding-#{$position}: $spacing-sm
+          @else if $modifier == 'm'
+            padding-#{$position}: $spacing-md
+          @else if $modifier == 'l'
+            padding-#{$position}: $spacing-lg
+          @else if $modifier == 'xl'
+            padding-#{$position}: $spacing-xl
+          @else if $modifier == 'hg'
+            padding-#{$position}: $spacing-hg
+          @else if $modifier == 'none'
+            padding-#{$position}: 0

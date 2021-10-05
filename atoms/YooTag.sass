@@ -1,0 +1,81 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== Tag Font Sizing ====*/
+$tag-font-size: $font-size-md !default
+
+/*===== No Tag Font Sizing ====*/
+$no-tag-font-size: $font-size-xs!default
+
+/*===== Tag Font Weight ====*/
+$tag-font-weight: $weight-medium !default
+
+/*===== Tag Border ====*/
+$tag-border-size: 1px !default
+$tag-border-type: solid !default
+
+/*===== Tag Border Radius ====*/
+$tag-border-radius: $border-radius-none !default
+
+/*===== Tag Padding ====*/
+$tag-padding-y: 4px !default
+$tag-padding-x: 8px !default
+
+.yoo-tag
+  font-family: var(--fontFamily-primary)
+  &__notag
+    font-weight: $tag-font-weight
+    font-size: $tag-font-size
+    word-wrap: anywhere
+    color: var(--greyBase)
+
+  &__item
+    $self: &
+    font-weight: $tag-font-weight
+    font-size: $no-tag-font-size
+    text-align: right
+    word-wrap: anywhere
+    padding: $tag-padding-y $tag-padding-x
+    margin: 0 4px 4px 0
+    color: var(--greyBase)
+    border: $tag-border-size $tag-border-type var(--greyBase)
+    border-radius: $tag-border-radius
+
+  &__fill
+    &--primary.yoo-tag__item--on
+      color: var(--primaryDark)
+      border: $tag-border-size $tag-border-type var(--primaryDark)
+      border-radius: $tag-border-radius
+    &--danger.yoo-tag__item--on
+      color: var(--dangerBase)
+      border: $tag-border-size $tag-border-type var(--dangerBase)
+      border-radius: $tag-border-radius
+    &--neutral.yoo-tag__item--on
+      color: var(--greyBase)
+      border: $tag-border-size $tag-border-type var(--greyBase)
+      border-radius: $tag-border-radius
+    &--dark.yoo-tag__item--on
+      color: var(--greyDark)
+      border: $tag-border-size $tag-border-type var(--greyDark)
+      border-radius: $tag-border-radius
+    &--black.yoo-tag__item--on
+      color: var(--color-black)
+      border: $tag-border-size $tag-border-type var(--color-black)
+      border-radius: $tag-border-radius
+    &--white.yoo-tag__item--on
+      color: var(--color-white)
+      border: $tag-border-size $tag-border-type var(--color-white)
+      border-radius: $tag-border-radius

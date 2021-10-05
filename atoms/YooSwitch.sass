@@ -1,0 +1,113 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== Switch Sizes ====*/
+$switch-size-tn: 1rem !default
+$switch-size-sm: 1.25rem !default
+$switch-size-md: 1.5rem !default
+$switch-size-lg: 2rem !default
+$switch-size-xl: 3rem !default
+$switch-size-hg: 4.5rem !default
+
+.yoo-switch
+  visibility: hidden
+  position: absolute
+  margin-left: -9999px
+
+  + label
+    display: block
+    position: relative
+    cursor: pointer
+    outline: none
+    user-select: none
+
+  &--small
+    + label
+      width: $switch-size-md
+      height: $switch-size-tn
+      border-radius: $switch-size-sm
+
+  &--medium
+    + label
+      width: $switch-size-xl
+      height: $switch-size-sm
+      border-radius: $switch-size-lg
+
+  &--large
+    + label
+      width: $switch-size-hg
+      height: $switch-size-lg
+      border-radius: $switch-size-xl
+
+  + label:before,
+  + label:after
+    display: block
+    position: absolute
+    content: ""
+
+  + label:before
+    background-color: rgba(var(--greyLight), 0.4)
+    border-radius: 3.75rem
+    transition: background 0.4s
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+  + label:after
+    background-color: var(--greyLightest)
+    border-radius: 100%
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.32)
+    transition: all 0.4s
+    top: 0
+    bottom: 0
+    left: -8px
+
+  &--small
+    + label:after
+      width: $switch-size-sm
+      top: -3px
+      bottom: -3px
+
+  &--medium
+    + label:after
+      width: $switch-size-lg
+      top: -6px
+      bottom: -5px
+
+  &--large
+    + label:after
+      width: $switch-size-xl
+      top: -9px
+      bottom: -8px
+
+  &:checked + label:before
+    background-color: rgba(var(--primaryBase), 0.4)
+
+  &:checked + label:after
+    background-color: var(--primaryBase)
+
+  &--small
+    &:checked + label:after
+      transform: translateX(1.25rem)
+
+  &--medium
+    &:checked + label:after
+      transform: translateX(2rem)
+
+  &--large
+    &:checked + label:after
+      transform: translateX(1.5rem * 1.7)

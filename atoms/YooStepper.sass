@@ -1,0 +1,50 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*==== Stepper Font Size ====*/
+$stepper-font-weight: $weight-regular !default
+$stepper-font-size: $font-size-md !default
+
+/*==== Stepper Number ====*/
+$stepper-number-min-width: 5rem !default
+
+/*==== Stepper Dot ====*/
+$stepper-dot-width: $spacing-sm !default
+$stepper-dot-height: $spacing-sm !default
+$stepper-dot-radius: $border-radius-circular !default
+$stepper-dot-active-width: .625rem !default
+$stepper-dot-active-height: .625rem !default
+
+.yoo-stepper
+  &__number
+    color: var(--greyDark)
+    font-family: var(--fontFamily-primary)
+    font-weight: $stepper-font-weight
+    font-size: $stepper-font-size
+    text-align: center
+    min-width: $stepper-number-min-width
+    word-wrap: break-word
+  &__dot
+    background: var(--greyDark)
+    border-radius: $stepper-dot-radius
+    width: $stepper-dot-width
+    height: $stepper-dot-height
+    &--active
+      background: var(--greyDark)
+      width: $stepper-dot-active-width
+      height: $stepper-dot-active-height
+    &--last
+      margin-right: 0

@@ -1,0 +1,70 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+//////////////////////////////
+//        TYPOGRAPHY        //
+//////////////////////////////
+
+$font-base: 16
+
+=font($font-color, $font-size, $font-family, $font-weight)
+  +font-size($font-size)
+  +font-weight($font-weight)
+  +font-family($font-family)
+  color: $font-color
+
+=font-size($modifier)
+  @if $modifier == 'tn'
+    font-size: $font-size-tn
+  @else if $modifier == 'xs'
+    font-size: $font-size-xs
+  @else if $modifier == 'sm'
+    font-size: $font-size-sm
+  @else if $modifier == 'md'
+    font-size: $font-size-md
+  @else if $modifier == 'lg'
+    font-size: $font-size-lg
+  @else if $modifier == 'xl'
+    font-size: $font-size-xl
+  @else if $modifier == 'hg'
+    font-size: $font-size-hg
+
+=font-family($font-family)
+  @if $font-family == '$font-primary'
+    font-family: var(--fontFamily-primary)
+  @else if $font-family == '$font-second'
+    font-family: var(--fontFamily-second)
+  @else
+    font-family: $font-family
+
+=font-weight($font-weight)
+  @if $font-weight == 'extra-bold'
+    font-weight: $weight-extra-bold
+  @else if $font-weight == 'bold'
+    font-weight: $weight-bold
+  @else if $font-weight == 'semi-bold'
+    font-weight: $weight-semi-bold
+  @else if $font-weight == 'medium'
+    font-weight: $weight-medium
+  @else if $font-weight == 'regular'
+    font-weight: $weight-regular
+  @else if $font-weight == 'thin'
+    font-weight: $weight-thin
+  @else
+    font-weight: $weight-regular
+
+@function pxToRem($target, $baseValue: $font-base)
+  @return ($target / $baseValue) * 1rem

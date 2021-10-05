@@ -1,0 +1,46 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== ScrollView Display ====*/
+$scrollView-display: block !default
+
+/*===== ScrollView Scrollbar Width ====*/
+$scrollView-scrollBar-width: thin !default
+
+/*===== ScrollView Scrollbar Size ====*/
+$scrollView-scrollBar-size-width: $spacing-sm !default
+$scrollView-scrollBar-size-height: $spacing-sm !default
+
+.yoo-scroll-view
+  display: $scrollView-display
+  scrollbar-color: var(--primaryBase) var(--greyLightest)
+  scrollbar-width: $scrollView-scrollBar-width
+
+  &::-webkit-scrollbar
+    width: $scrollView-scrollBar-size-width
+    height: $scrollView-scrollBar-size-height
+    background-color: var(--greyLightest)
+
+  &::-webkit-scrollbar-thumb
+    background: var(--primaryBase)
+
+  &--vertical
+    overflow-x: hidden
+    overflow-y: scroll
+
+  &--horizontal
+    overflow-x: scroll
+    overflow-y: hidden

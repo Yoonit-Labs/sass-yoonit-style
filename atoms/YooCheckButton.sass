@@ -1,0 +1,129 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== CheckButton Size ====*/
+$checkButton-size-sm: 1rem !default
+$checkButton-size-md: 1.5rem !default
+$checkButton-size-lg: 2rem !default
+
+/*===== CheckButton Font Sizing ====*/
+$checkButton-font-size-sm: $font-size-sm !default
+$checkButton-font-size-md: $font-size-md !default
+$checkButton-font-size-lg: $font-size-lg !default
+
+/*===== CheckButton Font Weight ====*/
+$checkButton-font-weight: $weight-medium !default
+
+/*===== CheckButton Card ====*/
+$checkButton-card-transition: 0.2s ease !default
+$checkButton-card-border-radius: 3px !default
+$checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
+
+.yoo-checkbox input
+  display: none
+
+.yoo-checkbox
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  &__card
+    transition: $checkButton-card-transition
+    box-shadow: $checkButton-card-box-shadow
+    border-radius: $checkButton-card-border-radius
+    color: var(--greyBase)
+    &--active
+      display: block
+      align-items: center
+      background: var(--primaryBase)
+      color: var(--color-white)
+
+  &__text
+    font-family: var(--fontFamily-primary)
+    font-weight: $checkButton-font-weight
+    margin-left: 1rem
+
+    &--right
+      flex-direction: row-reverse
+      > p
+        margin-right: 1rem
+
+  &--small
+    font-size: $checkButton-font-size-sm
+    &:before
+      width: $checkButton-size-sm
+      height: $checkButton-size-sm
+      min-width: $checkButton-size-sm
+      min-height: $checkButton-size-sm
+
+  &--medium
+    font-size: $checkButton-font-size-md
+    &:before
+      width: $checkButton-size-md
+      height: $checkButton-size-md
+      min-width: $checkButton-size-md
+      min-height: $checkButton-size-md
+
+  &--large
+    font-size: $checkButton-font-size-lg
+    &:before
+      width: $checkButton-size-lg
+      height: $checkButton-size-lg
+      min-width: $checkButton-size-lg
+      min-height: $checkButton-size-lg
+
+  &__check
+    +flex(row, wrap, flex-start, center)
+
+    &::before
+      content: ''
+      vertical-align: middle
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      background: var(--color-white)
+      border: 2px solid var(--greyBase)
+      cursor: pointer
+
+    &--square
+      &::before
+        border-radius: $border-radius-none
+
+    &--rounded
+      &::before
+        border-radius: $border-radius-circular
+
+    &--active
+      &:before
+        content: '\f00c'
+        background: var(--primaryBase)
+        color: var(--color-white)
+        border: 2px solid var(--primaryBase)
+
+    &--card-active
+      &:before
+        content: '\f00c'
+        background: var(--color-white)
+        color: var(--primaryBase)
+        border: 2px solid var(--color-white)
+
+    &--disabled
+      &:before
+        content: '\f00c'
+        background: var(--greyLight)
+        color: var(--color-white)
+        border: 2px solid var(--greyLight)
+        cursor: default

@@ -1,0 +1,100 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== Card Title Font Size ====*/
+$card-title-font-size: $font-size-lg !default
+
+/*===== Card Subtitle Font Size ====*/
+$card-subtitle-font-size: $font-size-md !default
+
+/*===== Card Border ====*/
+$card-border: 1px solid var(--greyLight) !default
+
+/*===== Card Border Radius ====*/
+$card-border-radius: .5rem !default
+
+/*===== Card Padding ====*/
+$card-padding: 1rem !default
+
+/*===== Card Icon Margin Bottom ====*/
+$card-icon-margin-bottom: 10px !default
+
+.yoo-card
+  border: $card-border
+  border-radius: $card-border-radius
+  +box-shadow('soft', var(--greyLight))
+  font-family: var(--fontFamily-primary)
+  padding: $card-padding
+
+  &__fill
+    &--white
+      background-color: var(--color-white)
+      $color: var(--greyDark)
+      color: $color
+
+      .yoo-card__subtitle
+        color: lighten(#5A5F67, 10%)
+
+    &--primary
+      background-color: var(--primaryBase)
+      $color: var(--color-white)
+      color: $color
+
+      .yoo-card__subtitle
+        color: darken(#FFF, 10%)
+
+    &--danger
+      background-color: var(--dangerBase)
+      $color: var(--color-white)
+      color: $color
+
+      .yoo-card__subtitle
+        color: $color
+
+    &--neutral
+      background-color: var(--greyBase)
+      $color: var(--color-white)
+      color: $color
+
+      .yoo-card__subtitle
+        color: $color
+
+    &--light
+      background-color: var(--greyLight)
+      $color: var(--greyDark)
+      color: $color
+
+      .yoo-card__subtitle
+        color: lighten(#5A5F67, 10%)
+
+    &--dark
+      background-color: var(--greyDark)
+      $color: var(--color-white)
+      color: $color
+
+      .yoo-card__subtitle
+        color: darken(#FFF, 10%)
+
+  &__icon
+    margin-bottom: $card-icon-margin-bottom
+
+  &__title
+    margin: 0
+    font-size: $card-title-font-size
+
+  &__subtitle
+    margin: 0
+    font-size: $card-subtitle-font-size

@@ -1,0 +1,46 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+
+//////////////////////////////
+//          SHADOWS         //
+//////////////////////////////
+
+=box-shadow($level, $color)
+  @if $level == 'soft'
+    box-shadow: 0 3px 6px $color
+  @else if $level == 'low'
+    box-shadow: 6px 0 3px $color
+  @else if $level == 'mid'
+    box-shadow: 24px 0 8px $color
+  @else if $level == 'high'
+    box-shadow: 32px 0 16px $color
+  @else if $level == 'veryHigh'
+    box-shadow: 48px 0 18px $color
+  @else if $level == 'none'
+    box-shadow: none
+
+=text-shadow($level, $color)
+  @if $level == 'low'
+    text-shadow: 6px 0 3px $color
+  @else if $level == 'mid'
+    text-shadow: 24px 0 8px $color
+  @else if $level == 'high'
+    text-shadow: 32px 0 16px $color
+  @else if $level == 'veryHigh'
+    text-shadow: 48px 0 18px $color
+  @else if $level == 'none'
+    text-shadow: none

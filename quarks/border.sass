@@ -1,0 +1,64 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+//////////////////////////////
+//           BORDER         //
+//////////////////////////////
+
+// Tokens : Sizes
+
+=border($modifier, $color, $type, $radius)
+  @if $modifier == 'xs'
+    border-width: 0.5px
+    border-color: $color
+    border-style: $type
+    +border-radius($radius)
+  @else if $modifier == 'sm'
+    border-width: 1px
+    border-color: $color
+    border-style: $type
+    +border-radius($radius)
+  @else if $modifier == 'md'
+    border-width: 2px
+    border-color: $color
+    border-style: $type
+    +border-radius($radius)
+  @else if $modifier == 'lg'
+    border-width: var(--spacing-xs)
+    border-color: $color
+    border-style: $type
+    +border-radius($radius)
+  @else if $modifier == 'none'
+    border-width: 0
+    border-color: $color
+    border-style: $type
+    +border-radius($radius)
+
+=border-radius($modifier)
+  @if $modifier == 'sm'
+    border-radius: var(--spacing-xs)
+  @else if $modifier == 'md'
+    border-radius: var(--spacing-sm)
+  @else if $modifier == 'lg'
+    border-radius: var(--spacing-md) - 4
+  @else if $modifier == 'pill'
+    border-radius: 500px
+  @else if $modifier == 'circular'
+    border-radius: 50%
+  @else if $modifier == 'none'
+    border-radius: 0 !important
+  @else
+    border-radius: 0

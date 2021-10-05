@@ -1,0 +1,86 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== Dropdown Font Sizing ====*/
+$dropdown-font-size-sm: $font-size-sm !default
+$dropdown-font-size-md: $font-size-md !default
+$dropdown-font-size-lg: $font-size-lg !default
+
+/*===== Font Weight ====*/
+$dropdown-font-weight: $weight-regular !default
+$dropdown-font-weight-select: $weight-semi-bold !default
+$dropdown-font-weight-option: $weight-semi-bold !default
+
+/*===== Dropdown Size ====*/
+$dropdown-width: max-content !default
+
+/*===== Dropdown Border Radius ====*/
+$dropdown-border-radius: .0625rem !default
+
+/*===== Dropdown Padding ====*/
+$dropdown-margin-y: .9375rem !default
+$dropdown-margin-x: 1.25rem !default
+
+/*===== Dropdown Cursor ====*/
+$dropdown-cursor-type: pointer !default
+
+/*===== Dropdown Text Transform ====*/
+$dropdown-text-transform: uppercase !default
+
+.yoo-dropdown
+  cursor: $dropdown-cursor-type
+  font-family: var(--fontFamily-primary)
+  font-weight: $dropdown-font-weight
+  text-transform: $dropdown-text-transform
+  +box-shadow('soft', #00000029)
+  border-radius: $dropdown-border-radius
+  color: var(--greyBase)
+  width: $dropdown-width
+
+  &__select
+    .select
+      +flex(row, wrap, center, center)
+      overflow: hidden
+      &__text
+        font-family: var(--fontFamily-primary)
+        font-weight: $dropdown-font-weight-select
+        color: var(--greyDark)
+        margin: $dropdown-margin-y $dropdown-margin-x
+
+  &__options
+    .option
+      +flex(row, wrap, center, center)
+      overflow: hidden
+      &__text
+        font-family: var(--fontFamily-primary)
+        font-weight: $dropdown-font-weight-option
+        color: var(--greyBase)
+        margin: $dropdown-margin-y $dropdown-margin-x
+
+      &:first-child
+        .option
+          &__text
+            color: var(--greyDark)
+
+  &--small
+    font-size: $dropdown-font-size-sm
+
+  &--medium
+    font-size: $dropdown-font-size-md
+
+  &--large
+    font-size: $dropdown-font-size-lg
+

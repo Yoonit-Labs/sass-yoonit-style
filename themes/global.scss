@@ -1,0 +1,51 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+@import './blue.sass';
+@import './brown.sass';
+@import './green.sass';
+@import './orange.sass';
+@import './purple.sass';
+////////////////////////////////
+//       GLOBAL CONFIG        //
+////////////////////////////////
+
+:root {
+  --fontSize-base: #{$font-base}px;
+  --fontFamily-primary: 'Montserrat', 'sans-serif';
+  --fontFamily-second: 'Arial', 'sans-serif';
+
+  --primaryDarkest: #008080;
+  --primaryDark: #1DBABA;
+  --primaryBase: #47C8C3;
+  --primaryLight: #B0E7E5;
+  --primaryLightest: #C3ECEb;
+  --dangerDarkest: #CB0A22;
+  --dangerDark: #E83C4B;
+  --dangerBase: #F4596C;
+  --dangerLight: #FF7888;
+  --dangerLightest: #FF99A5;
+  --greyDarkest: #212325;
+  --greyDark: #5A5F67;
+  --greyBase: #8F959F;
+  --greyLight: #D6DBE2;
+  --greyLightest: #F5F6F7;
+  --color-white: #FFFFFF;
+  --color-black: #111111;
+  --color-transparent: rgba(255, 255, 255, 0);
+}

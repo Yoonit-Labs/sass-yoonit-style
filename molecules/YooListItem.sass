@@ -1,0 +1,81 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== ListItem Font Sizing ====*/
+$listItem-font-size-xs: $font-size-xs !default
+$listItem-font-size-lg: $font-size-lg !default
+
+/*===== ListItem Font Weight ====*/
+$listItem-font-weight-medium: $weight-medium !default
+
+/*===== ListItem Border ====*/
+$listItem-border: .25rem solid !default
+
+/*===== ListItem Border Padding ====*/
+$listItem-border-padding: 1rem !default
+
+/*===== ListItem Separeted Border ====*/
+$listItem-separated-border: 1px solid var(--greyLight) !default
+
+/*===== ListItem Subtitle Margin ====*/
+$listItem-subtitle-margin: .25rem !default
+
+.yoo-list-item
+  color: var(--greyBase)
+  font-family: var(--fontFamily-primary)
+  font-size: $listItem-font-size-lg
+
+  &__style
+    &--wrap
+      flex-wrap: wrap !important
+
+  &--border-left
+    border-left: $listItem-border
+    padding-left: $listItem-border-padding
+
+  &--separated
+    border-bottom: $listItem-separated-border
+
+  &__fill
+    &--border-neutral
+      border-left-color: var(--greyBase)
+
+    &--border-primary
+      border-left-color: var(--primaryBase)
+
+    &--border-danger
+      border-left-color: var(--dangerBase)
+
+    &--border-light
+      border-left-color: var(--greyLight)
+
+    &--border-dark
+      border-left-color: var(--greyDark)
+
+    &--border-darkest
+      border-left-color: var(--greyDarkest)
+
+  &__title
+    margin: 0
+    font-weight: $listItem-font-weight-medium
+    color: var(--color-black)
+    font-size: $listItem-font-size-lg
+
+  &__subtitle
+    font-weight: $listItem-font-weight-medium
+    font-size: $listItem-font-size-xs
+    color:  var(--primaryDark)
+    margin-left: $listItem-subtitle-margin

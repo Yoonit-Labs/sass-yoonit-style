@@ -1,0 +1,37 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+.yoo-selectdate
+  &__separator
+    +font(var(--greyDarkest), 'xl', '$font-primary', 'medium')
+
+  &__container
+    position: relative
+    overflow: hidden
+    height: 9rem
+
+  &__item
+    +font(var(--greyLight), 'xl', '$font-primary', 'medium')
+    padding: $spacing-base 0
+    min-width: 4.5rem
+    text-align: center
+    cursor: pointer
+
+    &--active
+      color: var(--greyDarkest)
+      border-top: $spacing-tn solid var(--greyBase)
+      border-bottom: $spacing-tn solid var(--greyBase)
+      cursor: default

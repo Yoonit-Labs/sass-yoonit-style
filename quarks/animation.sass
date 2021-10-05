@@ -1,0 +1,56 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+//////////////////////////////
+//         ANIMATION        //
+//////////////////////////////
+
+=animation($name, $repeat, $direction, $timing, $duration, $state, $delay)
+  animation-name: $name
+  animation-iteration-count: $repeat
+  animation-direction: $direction
+  animation-timing-function: $timing
+  +durationAnimation($duration)
+  +stateAnimation($state)
+  +delayAnimation($delay)
+
+=durationAnimation($duration)
+  @if $duration == 'slow'
+    animation-duration: 4s
+  @else if $duration == 'normal'
+    animation-duration: 2s
+  @else if $duration == 'fast'
+    animation-duration: 0.5s
+  @else if $duration == 'very-fast'
+    animation-duration: 0.2s
+  @else
+    animation-duration: 2s
+
+=stateAnimation($state)
+  @if $state == 'paused'
+    animation-play-state: paused
+  @else
+    animation-play-state: running
+
+=delayAnimation($delay)
+  @if $delay == 'slow'
+    animation-delay: 4s
+  @else if $delay == 'normal'
+    animation-delay: 2s
+  @else if $delay == 'fast'
+    animation-delay: 0.5s
+  @else
+    animation-delay: 2s

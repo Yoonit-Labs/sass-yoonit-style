@@ -1,0 +1,42 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+//////////////////////////////////////
+//          MARGINS CLASSES         //
+//////////////////////////////////////
+
+// Tokens : Size
+
+$positions: ('left': 'l', 'top': 't', 'bottom': 'b', 'right': 'r')
+.m
+  @each $position, $element in $positions
+    &__#{$element}
+      @each $modifier in ('xs', 's', 'm', 'l', 'xl', 'hg', 'none')
+        &--#{$modifier}
+          @if $modifier == 'xs'
+            margin-#{$position}: $spacing-xs
+          @else if $modifier == 's'
+            margin-#{$position}: $spacing-sm
+          @else if $modifier == 'm'
+            margin-#{$position}: $spacing-md
+          @else if $modifier == 'l'
+            margin-#{$position}: $spacing-lg
+          @else if $modifier == 'xl'
+            margin-#{$position}: $spacing-xl
+          @else if $modifier == 'hg'
+            margin-#{$position}: $spacing-hg
+          @else if $modifier == 'none'
+            margin-#{$position}: 0

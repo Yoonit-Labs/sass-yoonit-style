@@ -1,0 +1,78 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
+/*===== InfiniteScroll Size ====*/
+$infiniteScroll-height: 100% !default
+
+/*===== InfiniteScroll Overflow ====*/
+$infiniteScroll-overflow: auto !default
+
+/*===== InfiniteScroll Loader ====*/
+$infiniteScroll-loader-position: absolute !default
+$infiniteScroll-loader-position-top: 1.25rem !default
+$infiniteScroll-loader-position-left: 50% !default
+$infiniteScroll-loader-width: 2.1875rem !default
+$infiniteScroll-loader-height: 2.1875rem !default
+$infiniteScroll-loader-border-radius: 50% !default
+$infiniteScroll-loader-border: 5px solid rgba(255, 255, 255, .2) !default
+$infiniteScroll-loader-border-top: 5px solid !default
+$infiniteScroll-loader-animation: animate 1.5s infinite linear !default
+$infiniteScroll-loader-small-width: 1.5625rem !default
+$infiniteScroll-loader-small-height: 1.5625rem !default
+$infiniteScroll-loader-large-width: 3.125rem !default
+$infiniteScroll-loader-large-height: 3.125rem !default
+
+.yoo-infinite
+  height: $infiniteScroll-height
+  overflow: $infiniteScroll-overflow
+  &__actionable
+    position: relative
+  &__loader
+    position: $infiniteScroll-loader-position
+    top: $infiniteScroll-loader-position-top
+    left: $infiniteScroll-loader-position-left
+    transform: translate(-50%, -50%)
+    width: $infiniteScroll-loader-width
+    height: $infiniteScroll-loader-height
+    border-radius: $infiniteScroll-loader-border-radius
+    border: $infiniteScroll-loader-border
+    border-top: $infiniteScroll-loader-border-top
+    animation: $infiniteScroll-loader-animation
+    &--small
+      width: $infiniteScroll-loader-small-width
+      height: $infiniteScroll-loader-small-height
+    &--large
+      width: $infiniteScroll-loader-large-width
+      height: $infiniteScroll-loader-large-height
+    &--primary
+      border-top-color: var(--primaryDark)
+    &--danger
+      border-top-color: var(--dangerBase)
+    &--light
+      border-top-color: var(--greyBase)
+    &--dark
+      border-top-color: var(--greyDark)
+    &--white
+      border-top-color: var(--color-white)
+    &--black
+      border-top-color: var(--color-black)
+
+@keyframes animate
+  0%
+    transform: translate(-50%,-50%) rotate(0deg)
+
+  100%
+    transform: translate(-50%,-50%) rotate(360deg)

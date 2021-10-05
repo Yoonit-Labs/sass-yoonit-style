@@ -1,3 +1,19 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Sass Yoonit Style
+ * The SASS Atomic Design System that powers Web & Native Yoonit Components
+ *
+ * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
+ */
+
 /*===== Button Spacing ====*/
 $btn-spacing-tn: $spacing-tn !default
 $btn-spacing-xs: $spacing-xs !default
@@ -44,7 +60,7 @@ $btn-container-button: 3.5rem !default
   +flex(row, '', center, center)
 
 .yoo-btn
-  $self: &  
+  $self: &
   font-family: var(--fontFamily-primary)
   font-weight: $weight-regular
   font-size: $btn-font-size-md
@@ -79,13 +95,13 @@ $btn-container-button: 3.5rem !default
 
     &--sm
       font-size: $btn-font-size-sm
-    
+
     &--md
       font-size: $btn-font-size-md
-    
+
     &--lg
       font-size: $btn-font-size-lg
-    
+
     &--xl
       font-size: $btn-font-size-xl
 
@@ -150,7 +166,7 @@ $btn-container-button: 3.5rem !default
     #{ $self }
       &__text, &__icon
         color: $buttonColor
-    &#{ $self}--hover:hover
+    &#{ $self }--hover:hover
       border: $btn-border-size $btn-border-style $buttonColor
       border-radius: $btn-border-radius
       background-color: $buttonColor
@@ -185,7 +201,7 @@ $btn-container-button: 3.5rem !default
       &__text, &__icon
         color: $buttonColor
 
-    &#{ $self}--hover:hover
+    &#{ $self }--hover:hover
       border-width: 0
       background-color: transparent
 

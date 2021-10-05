@@ -69,8 +69,8 @@ Yoonit Style has global root variables, with a default theme. In addition to the
 The default theme has the following variables:
 
 ```sass
-  --fontFamily-primary: 'Montserrat', 'sans-serif'
-  --fontFamily-second: 'Arial', 'sans-serif'
+  --font-family-primary: 'Montserrat', 'sans-serif'
+  --font-family-second: 'Arial', 'sans-serif'
 
   --fontWeight-regular: 400
   --fontWeight-medium: 500
@@ -223,7 +223,7 @@ Contributions are always welcome!
 <a href="https://github.com/Yoonit-Labs/sass-yoonit-style/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Yoonit-Labs/sass-yoonit-style" />
 </a>
-  
----  
+
+---
 
 Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team

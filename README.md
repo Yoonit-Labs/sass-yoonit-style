@@ -84,7 +84,7 @@ The default theme has the following variables:
   --primary-light: #B0E7E5
   --primary-light-test: #C3ECEb
   --danger-darkest: #CB0A22
-  --dangerDark: #E83C4B
+  --danger-dark: #E83C4B
   --dangerBase: #F4596C
   --dangerLight: #FF7888
   --dangerLightest: #FF99A5

@@ -21,7 +21,7 @@ $card-title-font-size: $font-size-lg !default
 $card-subtitle-font-size: $font-size-md !default
 
 /*===== Card Border ====*/
-$card-border: 1px solid var(--greyLight) !default
+$card-border: 1px solid var(--grey-light) !default
 
 /*===== Card Border Radius ====*/
 $card-border-radius: .5rem !default
@@ -35,14 +35,14 @@ $card-icon-margin-bottom: 10px !default
 .yoo-card
   border: $card-border
   border-radius: $card-border-radius
-  +box-shadow('soft', var(--greyLight))
+  +box-shadow('soft', var(--grey-light))
   font-family: var(--font-family-primary)
   padding: $card-padding
 
   &__fill
     &--white
       background-color: var(--color-white)
-      $color: var(--greyDark)
+      $color: var(--grey-dark)
       color: $color
 
       .yoo-card__subtitle
@@ -65,7 +65,7 @@ $card-icon-margin-bottom: 10px !default
         color: $color
 
     &--neutral
-      background-color: var(--greyBase)
+      background-color: var(--grey-base)
       $color: var(--color-white)
       color: $color
 
@@ -73,15 +73,15 @@ $card-icon-margin-bottom: 10px !default
         color: $color
 
     &--light
-      background-color: var(--greyLight)
-      $color: var(--greyDark)
+      background-color: var(--grey-light)
+      $color: var(--grey-dark)
       color: $color
 
       .yoo-card__subtitle
         color: lighten(#5A5F67, 10%)
 
     &--dark
-      background-color: var(--greyDark)
+      background-color: var(--grey-dark)
       $color: var(--color-white)
       color: $color
 

@@ -88,11 +88,11 @@ The default theme has the following variables:
   --danger-base: #F4596C
   --danger-light: #FF7888
   --danger-light-test: #FF99A5
-  --greyDarkest: #212325
-  --greyDark: #5A5F67
-  --greyBase: #8F959F
-  --greyLight: #D6DBE2
-  --greyLightest: #F5F6F7
+  --grey-darkest: #212325
+  --grey-dark: #5A5F67
+  --grey-base: #8F959F
+  --grey-light: #D6DBE2
+  --grey-light-test: #F5F6F7
   --color-white: #FFFFFF
   --color-black: #111111
   --color-transparent: rgba(255, 255, 255, 0)
@@ -118,7 +118,7 @@ To use the variable in your sass file, just use var(VariableName), for example:
 
 ```sass
 .myClass
-  color: var(--greyBase)
+  color: var(--grey-base)
 ```
 To create a custom theme, in your project create a sass file and overwrite the root variables, involved in a "data-composition", let's see an example:
 

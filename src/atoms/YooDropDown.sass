@@ -47,7 +47,7 @@ $dropdown-text-transform: uppercase !default
   text-transform: $dropdown-text-transform
   +box-shadow('soft', #00000029)
   border-radius: $dropdown-border-radius
-  color: var(--greyBase)
+  color: var(--grey-base)
   width: $dropdown-width
 
   &__select
@@ -57,7 +57,7 @@ $dropdown-text-transform: uppercase !default
       &__text
         font-family: var(--font-family-primary)
         font-weight: $dropdown-font-weight-select
-        color: var(--greyDark)
+        color: var(--grey-dark)
         margin: $dropdown-margin-y $dropdown-margin-x
 
   &__options
@@ -67,13 +67,13 @@ $dropdown-text-transform: uppercase !default
       &__text
         font-family: var(--font-family-primary)
         font-weight: $dropdown-font-weight-option
-        color: var(--greyBase)
+        color: var(--grey-base)
         margin: $dropdown-margin-y $dropdown-margin-x
 
       &:first-child
         .option
           &__text
-            color: var(--greyDark)
+            color: var(--grey-dark)
 
   &--small
     font-size: $dropdown-font-size-sm

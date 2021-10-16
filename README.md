@@ -82,17 +82,17 @@ The default theme has the following variables:
   --primary-dark: #1DBABA
   --primary-base: #47C8C3
   --primary-light: #B0E7E5
-  --primary-light-test: #C3ECEb
+  --primary-lightest: #C3ECEb
   --danger-darkest: #CB0A22
   --danger-dark: #E83C4B
   --danger-base: #F4596C
   --danger-light: #FF7888
-  --danger-light-test: #FF99A5
+  --danger-lightest: #FF99A5
   --grey-darkest: #212325
   --grey-dark: #5A5F67
   --grey-base: #8F959F
   --grey-light: #D6DBE2
-  --grey-light-test: #F5F6F7
+  --grey-lightest: #F5F6F7
   --color-white: #FFFFFF
   --color-black: #111111
   --color-transparent: rgba(255, 255, 255, 0)
@@ -137,7 +137,7 @@ $font-base: 16;
   --primary-dark: #623b1c
   --primary-base: #7c5739
   --primary-light: #caad8c
-  --primary-light-test: #f6eddd
+  --primary-lightest: #f6eddd
 
   --font-tn: 8px
   --font-xs: 10px

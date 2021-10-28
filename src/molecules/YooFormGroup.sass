@@ -14,20 +14,20 @@
  * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
  */
 
-/*===== FormGroup Font Sizing ====*/
-$formGroup-font-size-sm: $font-size-sm !default
-$formGroup-font-size-md: $font-size-md !default
-$formGroup-font-size-lg: $font-size-lg !default
+/*===== Form Group Font Sizing ====*/
+$form-group-font-size-sm: $font-size-sm !default
+$form-group-font-size-md: $font-size-md !default
+$form-group-font-size-lg: $font-size-lg !default
 
-/*===== FormGroup Font Weight ====*/
-$formGroup-font-weight-medium: $weight-medium !default
-$formGroup-font-weight-semi-bold: $weight-semi-bold !default
+/*===== Form Group Font Weight ====*/
+$form-group-font-weight-medium: $weight-medium !default
+$form-group-font-weight-semi-bold: $weight-semi-bold !default
 
-/*===== FormGroup Placeholder Transition ====*/
-$formGroup-placeholder-transition: 300ms ease-in-out !default
+/*===== Form Group Placeholder Transition ====*/
+$form-group-placeholder-transition: 300ms ease-in-out !default
 
-/*===== FormGroup Feedback Font Sizing ====*/
-$formGroup-feedback-font-size: $font-size-sm !default
+/*===== Form Group Feedback Font Sizing ====*/
+$form-group-feedback-font-size: $font-size-sm !default
 
 .yoo-input-group
   font-family: var(--font-family-primary)
@@ -48,7 +48,7 @@ $formGroup-feedback-font-size: $font-size-sm !default
       z-index: 2
       bottom: -2px
       transform: scale(0)
-      transition: all $formGroup-placeholder-transition
+      transition: all $form-group-placeholder-transition
 
     &:focus-within
       &::before
@@ -59,10 +59,10 @@ $formGroup-feedback-font-size: $font-size-sm !default
       display: block
       top: $spacing-lg
       z-index: 2
-      font-size: $formGroup-font-size-md
-      font-weight: $formGroup-font-weight-semi-bold
+      font-size: $form-group-font-size-md
+      font-weight: $form-group-font-weight-semi-bold
       font-family: var(--font-family-primary)
-      transition: all $formGroup-placeholder-transition
+      transition: all $form-group-placeholder-transition
       width: 100%
       cursor: text
       color: var(--grey-dark)
@@ -75,7 +75,7 @@ $formGroup-feedback-font-size: $font-size-sm !default
     &__feedback
       position: absolute
       bottom: -1.25rem
-      font-size: $formGroup-feedback-font-size
+      font-size: $form-group-feedback-font-size
       font-family: var(--font-family-primary)
       font-weight: 500
 
@@ -85,11 +85,11 @@ $formGroup-feedback-font-size: $font-size-sm !default
       z-index: 1
       width: 100%
       min-height: 1.875rem
-      font-size: $formGroup-font-size-sm
+      font-size: $form-group-font-size-sm
       color: var(--grey-dark)
       border: 0
       border-bottom: 1px var(--grey-dark) solid
-      transition: border-color $formGroup-placeholder-transition
+      transition: border-color $form-group-placeholder-transition
       outline: none
       padding: 0
       margin: 0
@@ -99,8 +99,8 @@ $formGroup-feedback-font-size: $font-size-sm !default
 
       &::placeholder
         color: var(--grey-light)
-        font-weight: $formGroup-font-weight-medium
-        font-size: $formGroup-font-size-lg
+        font-weight: $form-group-font-weight-medium
+        font-size: $form-group-font-size-lg
         font-family: var(--font-family-primary)
         opacity: 0
 
@@ -112,7 +112,7 @@ $formGroup-feedback-font-size: $font-size-sm !default
         & + .yoo-input__label
           top: 0
           cursor: inherit
-          font-size: $formGroup-font-size-md
+          font-size: $form-group-font-size-md
 
         &::placeholder
           opacity: 1

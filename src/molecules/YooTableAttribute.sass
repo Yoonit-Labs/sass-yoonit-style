@@ -18,7 +18,7 @@
 $tableAttribute-min-height: 2.5rem !default
 
 /*===== TableAttribute Border Bottom ====*/
-$tableAttribute-border-bottom: 1px solid var(--greyLight) !default
+$tableAttribute-border-bottom: 1px solid var(--grey-light) !default
 
 /*===== TableAttribute Title Font Weight ====*/
 $tableAttribute-title-font-weight-regular: $weight-regular !default
@@ -53,8 +53,8 @@ $tableAttribute-detail-wrap-text-align: left !default
 $tableAttribute-actionable-max-height: 2.5rem !default
 
 .yoo-table-attribute
-  color: var(--greyDark)
-  font-family: var(--fontFamily-primary)
+  color: var(--grey-dark)
+  font-family: var(--font-family-primary)
   min-height: $tableAttribute-min-height
   &--separated
     border-bottom: $tableAttribute-border-bottom
@@ -65,25 +65,25 @@ $tableAttribute-actionable-max-height: 2.5rem !default
     height: $tableAttribute-wrap-height
   &__fill
     &--default
-      background-color: var(--greyLightest)
+      background-color: var(--grey-lightest)
     &--primary
-      background-color: var(--primaryBase)
+      background-color: var(--primary-base)
       color: var(--color-white)
     &--danger
-      background-color: var(--dangerBase)
+      background-color: var(--danger-base)
       color: var(--color-white)
 
   &__title
     +flex(row, wrap, flex-start, center)
     word-break: $tableAttribute-title-word-break
     &--primary
-      color: var(--primaryDark)
+      color: var(--primary-dark)
     &--danger
-      color: var(--dangerBase)
+      color: var(--danger-base)
     &--neutral
-      color: var(--greyBase)
+      color: var(--grey-base)
     &--dark
-      color: var(--greyDark)
+      color: var(--grey-dark)
     &--black
       color: var(--color-black)
     &--white
@@ -115,13 +115,13 @@ $tableAttribute-actionable-max-height: 2.5rem !default
     max-height: $tableAttribute-detail-max-height
     +flex(row, wrap, flex-start, center)
     &--primary
-      color: var(--primaryDark)
+      color: var(--primary-dark)
     &--danger
-      color: var(--dangerBase)
+      color: var(--danger-base)
     &--light
-      color: var(--greyBase)
+      color: var(--grey-base)
     &--dark
-      color: var(--greyDark)
+      color: var(--grey-dark)
     &--white
       color: var(--color-white)
     &--black

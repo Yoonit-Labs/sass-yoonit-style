@@ -14,20 +14,23 @@
  * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
  */
 
-/*===== FormGroup Font Sizing ====*/
-$formGroup-font-size-sm: $font-size-sm !default
-$formGroup-font-size-md: $font-size-md !default
-$formGroup-font-size-lg: $font-size-lg !default
+/*===== Form Group Font Sizing ====*/
+$form-group-font-size-sm: $font-size-sm !default
+$form-group-font-size-md: $font-size-md !default
+$form-group-font-size-lg: $font-size-lg !default
 
-/*===== FormGroup Font Weight ====*/
-$formGroup-font-weight-medium: $weight-medium !default
-$formGroup-font-weight-semi-bold: $weight-semi-bold !default
+/*===== Form Group Font Weight ====*/
+$form-group-font-weight-medium: $weight-medium !default
+$form-group-font-weight-semi-bold: $weight-semi-bold !default
 
-/*===== FormGroup Placeholder Transition ====*/
-$formGroup-placeholder-transition: 300ms ease-in-out !default
+/*===== Form Group Placeholder Transition ====*/
+$form-group-placeholder-transition: 300ms ease-in-out !default
+
+/*===== Form Group Feedback Font Sizing ====*/
+$form-group-feedback-font-size: $font-size-sm !default
 
 .yoo-input-group
-  font-family: var(--fontFamily-primary)
+  font-family: var(--font-family-primary)
   margin: 2.5rem 0 0
   width: 100%
 
@@ -40,12 +43,12 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       content: ""
       height: $spacing-tn
       width: 100%
-      background-color: var(--primaryBase)
+      background-color: var(--primary-base)
       position: absolute
       z-index: 2
       bottom: -2px
       transform: scale(0)
-      transition: all $formGroup-placeholder-transition
+      transition: all $form-group-placeholder-transition
 
     &:focus-within
       &::before
@@ -56,13 +59,13 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       display: block
       top: $spacing-lg
       z-index: 2
-      font-size: $formGroup-font-size-md
-      font-weight: $formGroup-font-weight-semi-bold
-      font-family: var(--fontFamily-primary)
-      transition: all $formGroup-placeholder-transition
+      font-size: $form-group-font-size-md
+      font-weight: $form-group-font-weight-semi-bold
+      font-family: var(--font-family-primary)
+      transition: all $form-group-placeholder-transition
       width: 100%
       cursor: text
-      color: var(--greyDark)
+      color: var(--grey-dark)
 
       i
         position: absolute
@@ -72,8 +75,8 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
     &__feedback
       position: absolute
       bottom: -1.25rem
-      +font-size('sm')
-      font-family: var(--fontFamily-primary)
+      font-size: $form-group-feedback-font-size
+      font-family: var(--font-family-primary)
       font-weight: 500
 
     &__field
@@ -82,23 +85,23 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       z-index: 1
       width: 100%
       min-height: 1.875rem
-      font-size: $formGroup-font-size-sm
-      color: var(--greyDark)
+      font-size: $form-group-font-size-sm
+      color: var(--grey-dark)
       border: 0
-      border-bottom: 1px var(--greyDark) solid
-      transition: border-color $formGroup-placeholder-transition
+      border-bottom: 1px var(--grey-dark) solid
+      transition: border-color $form-group-placeholder-transition
       outline: none
       padding: 0
       margin: 0
 
       &:nth-child(1)
-        font-family: var(--fontFamily-primary)
+        font-family: var(--font-family-primary)
 
       &::placeholder
-        color: var(--greyLight)
-        font-weight: $formGroup-font-weight-medium
-        font-size: $formGroup-font-size-lg
-        font-family: var(--fontFamily-primary)
+        color: var(--grey-light)
+        font-weight: $form-group-font-weight-medium
+        font-size: $form-group-font-size-lg
+        font-family: var(--font-family-primary)
         opacity: 0
 
       &:focus,
@@ -109,40 +112,40 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
         & + .yoo-input__label
           top: 0
           cursor: inherit
-          font-size: $formGroup-font-size-md
+          font-size: $form-group-font-size-md
 
         &::placeholder
           opacity: 1
 
       &:focus
         & + .yoo-input__label
-          color: var(--greyBase)
+          color: var(--grey-base)
 
       &:disabled
-        border-bottom: 1px var(--greyLight) solid
+        border-bottom: 1px var(--grey-light) solid
         & + .yoo-input__label
-          color: var(--greyLight)
+          color: var(--grey-light)
 
     &--error
       .yoo-input__label,
       .yoo-input__feedback
-        color: var(--dangerBase)
+        color: var(--danger-base)
 
         i::before
           content: "\f00d"
 
       &::before
-        background-color: var(--dangerBase)
+        background-color: var(--danger-base)
         transform: scale(1)
 
     &--success
       .yoo-input__label,
       .yoo-input__feedback
-        color: var(--primaryBase)
+        color: var(--primary-base)
 
         i::before
           content: "\f00c"
 
       &::before
-        background-color: var(--primaryBase)
+        background-color: var(--primary-base)
         transform: scale(1)

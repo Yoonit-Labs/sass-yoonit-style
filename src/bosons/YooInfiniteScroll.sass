@@ -14,49 +14,49 @@
  * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
  */
 
-/*===== InfiniteScroll Size ====*/
-$infiniteScroll-height: 100% !default
+/*===== infinite-scroll Size ====*/
+$infinite-scroll-height: 100% !default
 
-/*===== InfiniteScroll Overflow ====*/
-$infiniteScroll-overflow: auto !default
+/*===== infinite-scroll Overflow ====*/
+$infinite-scroll-overflow: auto !default
 
-/*===== InfiniteScroll Loader ====*/
-$infiniteScroll-loader-position: absolute !default
-$infiniteScroll-loader-position-top: 1.25rem !default
-$infiniteScroll-loader-position-left: 50% !default
-$infiniteScroll-loader-width: 2.1875rem !default
-$infiniteScroll-loader-height: 2.1875rem !default
-$infiniteScroll-loader-border-radius: 50% !default
-$infiniteScroll-loader-border: 5px solid rgba(255, 255, 255, .2) !default
-$infiniteScroll-loader-border-top: 5px solid !default
-$infiniteScroll-loader-animation: animate 1.5s infinite linear !default
-$infiniteScroll-loader-small-width: 1.5625rem !default
-$infiniteScroll-loader-small-height: 1.5625rem !default
-$infiniteScroll-loader-large-width: 3.125rem !default
-$infiniteScroll-loader-large-height: 3.125rem !default
+/*===== infinite-scroll Loader ====*/
+$infinite-scroll-loader-position: absolute !default
+$infinite-scroll-loader-position-top: 1.25rem !default
+$infinite-scroll-loader-position-left: 50% !default
+$infinite-scroll-loader-width: 2.1875rem !default
+$infinite-scroll-loader-height: 2.1875rem !default
+$infinite-scroll-loader-border-radius: 50% !default
+$infinite-scroll-loader-border: 5px solid rgba(255, 255, 255, .2) !default
+$infinite-scroll-loader-border-top: 5px solid !default
+$infinite-scroll-loader-animation: animate 1.5s infinite linear !default
+$infinite-scroll-loader-small-width: 1.5625rem !default
+$infinite-scroll-loader-small-height: 1.5625rem !default
+$infinite-scroll-loader-large-width: 3.125rem !default
+$infinite-scroll-loader-large-height: 3.125rem !default
 
 .yoo-infinite
-  height: $infiniteScroll-height
-  overflow: $infiniteScroll-overflow
+  height: $infinite-scroll-height
+  overflow: $infinite-scroll-overflow
   &__actionable
     position: relative
   &__loader
-    position: $infiniteScroll-loader-position
-    top: $infiniteScroll-loader-position-top
-    left: $infiniteScroll-loader-position-left
+    position: $infinite-scroll-loader-position
+    top: $infinite-scroll-loader-position-top
+    left: $infinite-scroll-loader-position-left
     transform: translate(-50%, -50%)
-    width: $infiniteScroll-loader-width
-    height: $infiniteScroll-loader-height
-    border-radius: $infiniteScroll-loader-border-radius
-    border: $infiniteScroll-loader-border
-    border-top: $infiniteScroll-loader-border-top
-    animation: $infiniteScroll-loader-animation
+    width: $infinite-scroll-loader-width
+    height: $infinite-scroll-loader-height
+    border-radius: $infinite-scroll-loader-border-radius
+    border: $infinite-scroll-loader-border
+    border-top: $infinite-scroll-loader-border-top
+    animation: $infinite-scroll-loader-animation
     &--small
-      width: $infiniteScroll-loader-small-width
-      height: $infiniteScroll-loader-small-height
+      width: $infinite-scroll-loader-small-width
+      height: $infinite-scroll-loader-small-height
     &--large
-      width: $infiniteScroll-loader-large-width
-      height: $infiniteScroll-loader-large-height
+      width: $infinite-scroll-loader-large-width
+      height: $infinite-scroll-loader-large-height
     &--primary
       border-top-color: var(--primary-dark)
     &--danger

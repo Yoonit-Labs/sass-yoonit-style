@@ -3,7 +3,7 @@
   "description": "The SASS Atomic Design System that powers Web & Native Yoonit Components",
   "version": "2.1.0",
   "private": false,
-  "main": "index",
+  "main": "./src/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/Yoonit-Labs/sass-yoonit-style"

@@ -26,6 +26,9 @@ $formGroup-font-weight-semi-bold: $weight-semi-bold !default
 /*===== FormGroup Placeholder Transition ====*/
 $formGroup-placeholder-transition: 300ms ease-in-out !default
 
+/*===== FormGroup Feedback Font Sizing ====*/
+$formGroup-feedback-font-size: $font-size-sm !default
+
 .yoo-input-group
   font-family: var(--font-family-primary)
   margin: 2.5rem 0 0
@@ -72,7 +75,7 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
     &__feedback
       position: absolute
       bottom: -1.25rem
-      +font-size('sm')
+      font-size: $formGroup-feedback-font-size
       font-family: var(--font-family-primary)
       font-weight: 500
 

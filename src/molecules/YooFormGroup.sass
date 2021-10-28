@@ -27,7 +27,7 @@ $formGroup-font-weight-semi-bold: $weight-semi-bold !default
 $formGroup-placeholder-transition: 300ms ease-in-out !default
 
 .yoo-input-group
-  font-family: var(--fontFamily-primary)
+  font-family: var(--font-family-primary)
   margin: 2.5rem 0 0
   width: 100%
 
@@ -40,7 +40,7 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       content: ""
       height: $spacing-tn
       width: 100%
-      background-color: var(--primaryBase)
+      background-color: var(--primary-base)
       position: absolute
       z-index: 2
       bottom: -2px
@@ -58,11 +58,11 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       z-index: 2
       font-size: $formGroup-font-size-md
       font-weight: $formGroup-font-weight-semi-bold
-      font-family: var(--fontFamily-primary)
+      font-family: var(--font-family-primary)
       transition: all $formGroup-placeholder-transition
       width: 100%
       cursor: text
-      color: var(--greyDark)
+      color: var(--grey-dark)
 
       i
         position: absolute
@@ -73,7 +73,7 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       position: absolute
       bottom: -1.25rem
       +font-size('sm')
-      font-family: var(--fontFamily-primary)
+      font-family: var(--font-family-primary)
       font-weight: 500
 
     &__field
@@ -83,22 +83,22 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
       width: 100%
       min-height: 1.875rem
       font-size: $formGroup-font-size-sm
-      color: var(--greyDark)
+      color: var(--grey-dark)
       border: 0
-      border-bottom: 1px var(--greyDark) solid
+      border-bottom: 1px var(--grey-dark) solid
       transition: border-color $formGroup-placeholder-transition
       outline: none
       padding: 0
       margin: 0
 
       &:nth-child(1)
-        font-family: var(--fontFamily-primary)
+        font-family: var(--font-family-primary)
 
       &::placeholder
-        color: var(--greyLight)
+        color: var(--grey-light)
         font-weight: $formGroup-font-weight-medium
         font-size: $formGroup-font-size-lg
-        font-family: var(--fontFamily-primary)
+        font-family: var(--font-family-primary)
         opacity: 0
 
       &:focus,
@@ -116,33 +116,33 @@ $formGroup-placeholder-transition: 300ms ease-in-out !default
 
       &:focus
         & + .yoo-input__label
-          color: var(--greyBase)
+          color: var(--grey-base)
 
       &:disabled
-        border-bottom: 1px var(--greyLight) solid
+        border-bottom: 1px var(--grey-light) solid
         & + .yoo-input__label
-          color: var(--greyLight)
+          color: var(--grey-light)
 
     &--error
       .yoo-input__label,
       .yoo-input__feedback
-        color: var(--dangerBase)
+        color: var(--danger-base)
 
         i::before
           content: "\f00d"
 
       &::before
-        background-color: var(--dangerBase)
+        background-color: var(--danger-base)
         transform: scale(1)
 
     &--success
       .yoo-input__label,
       .yoo-input__feedback
-        color: var(--primaryBase)
+        color: var(--primary-base)
 
         i::before
           content: "\f00c"
 
       &::before
-        background-color: var(--primaryBase)
+        background-color: var(--primary-base)
         transform: scale(1)

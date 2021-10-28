@@ -26,25 +26,25 @@
 ////////////////////////////////
 
 :root {
-  --fontSize-base: #{$font-base}px;
-  --fontFamily-primary: 'Montserrat', 'sans-serif';
-  --fontFamily-second: 'Arial', 'sans-serif';
+  --font-size-base: #{$font-base}px;
+  --font-family-primary: 'Montserrat', 'sans-serif';
+  --font-family-second: 'Arial', 'sans-serif';
 
-  --primaryDarkest: #008080;
-  --primaryDark: #1DBABA;
-  --primaryBase: #47C8C3;
-  --primaryLight: #B0E7E5;
-  --primaryLightest: #C3ECEb;
-  --dangerDarkest: #CB0A22;
-  --dangerDark: #E83C4B;
-  --dangerBase: #F4596C;
-  --dangerLight: #FF7888;
-  --dangerLightest: #FF99A5;
-  --greyDarkest: #212325;
-  --greyDark: #5A5F67;
-  --greyBase: #8F959F;
-  --greyLight: #D6DBE2;
-  --greyLightest: #F5F6F7;
+  --primary-darkest: #008080;
+  --primary-dark: #1DBABA;
+  --primary-base: #47C8C3;
+  --primary-light: #B0E7E5;
+  --primary-lightest: #C3ECEb;
+  --danger-darkest: #CB0A22;
+  --danger-dark: #E83C4B;
+  --danger-base: #F4596C;
+  --danger-light: #FF7888;
+  --danger-lightest: #FF99A5;
+  --grey-darkest: #212325;
+  --grey-dark: #5A5F67;
+  --grey-base: #8F959F;
+  --grey-light: #D6DBE2;
+  --grey-lightest: #F5F6F7;
   --color-white: #FFFFFF;
   --color-black: #111111;
   --color-transparent: rgba(255, 255, 255, 0);

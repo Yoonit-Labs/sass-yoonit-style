@@ -69,8 +69,8 @@ Yoonit Style has global root variables, with a default theme. In addition to the
 The default theme has the following variables:
 
 ```sass
-  --fontFamily-primary: 'Montserrat', 'sans-serif'
-  --fontFamily-second: 'Arial', 'sans-serif'
+  --font-family-primary: 'Montserrat', 'sans-serif'
+  --font-family-second: 'Arial', 'sans-serif'
 
   --fontWeight-regular: 400
   --fontWeight-medium: 500
@@ -78,21 +78,21 @@ The default theme has the following variables:
   --fontWeight-bold: 700
   --fontWeight-black: 800
 
-  --primaryDarkest: #008080
-  --primaryDark: #1DBABA
-  --primaryBase: #47C8C3
-  --primaryLight: #B0E7E5
-  --primaryLightest: #C3ECEb
-  --dangerDarkest: #CB0A22
-  --dangerDark: #E83C4B
-  --dangerBase: #F4596C
-  --dangerLight: #FF7888
-  --dangerLightest: #FF99A5
-  --greyDarkest: #212325
-  --greyDark: #5A5F67
-  --greyBase: #8F959F
-  --greyLight: #D6DBE2
-  --greyLightest: #F5F6F7
+  --primary-darkest: #008080
+  --primary-dark: #1DBABA
+  --primary-base: #47C8C3
+  --primary-light: #B0E7E5
+  --primary-lightest: #C3ECEb
+  --danger-darkest: #CB0A22
+  --danger-dark: #E83C4B
+  --danger-base: #F4596C
+  --danger-light: #FF7888
+  --danger-lightest: #FF99A5
+  --grey-darkest: #212325
+  --grey-dark: #5A5F67
+  --grey-base: #8F959F
+  --grey-light: #D6DBE2
+  --grey-lightest: #F5F6F7
   --color-white: #FFFFFF
   --color-black: #111111
   --color-transparent: rgba(255, 255, 255, 0)
@@ -118,7 +118,7 @@ To use the variable in your sass file, just use var(VariableName), for example:
 
 ```sass
 .myClass
-  color: var(--greyBase)
+  color: var(--grey-base)
 ```
 To create a custom theme, in your project create a sass file and overwrite the root variables, involved in a "data-composition", let's see an example:
 
@@ -133,11 +133,11 @@ $font-base: 16;
 /*==== Import Quarks ====*/
 
 [data-composition="myTheme"]
-  --primaryDarkest: #49260a
-  --primaryDark: #623b1c
-  --primaryBase: #7c5739
-  --primaryLight: #caad8c
-  --primaryLightest: #f6eddd
+  --primary-darkest: #49260a
+  --primary-dark: #623b1c
+  --primary-base: #7c5739
+  --primary-light: #caad8c
+  --primary-lightest: #f6eddd
 
   --font-tn: 8px
   --font-xs: 10px
@@ -223,7 +223,7 @@ Contributions are always welcome!
 <a href="https://github.com/Yoonit-Labs/sass-yoonit-style/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Yoonit-Labs/sass-yoonit-style" />
 </a>
-  
----  
+
+---
 
 Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team

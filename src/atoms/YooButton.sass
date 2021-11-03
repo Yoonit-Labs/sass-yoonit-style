@@ -44,7 +44,7 @@ $btn-border-style: solid !default
 $btn-border-radius: $border-radius-pill !default
 
 /*===== Button Color ====*/
-$buttonColor: var(--primary-base) !default
+$button-color: var(--primary-base) !default
 
 /*===== Button Animation Duration ====*/
 $btn-animation-duration: 2s !default
@@ -66,7 +66,7 @@ $btn-container-button: 3.5rem !default
   font-size: $btn-font-size-md
   width: $btn-width
   height: $btn-height
-  background-color: $buttonColor
+  background-color: $button-color
   +flex(row, '', center, center)
   padding: 0 $btn-spacing-lg
   margin: 0
@@ -137,58 +137,58 @@ $btn-container-button: 3.5rem !default
       margin-right: $btn-spacing-sm
 
   &--hover:hover
-    border: $btn-border-size $btn-border-style $buttonColor
+    border: $btn-border-size $btn-border-style $button-color
     border-radius: $btn-border-radius
     background-color: transparent
     #{ $self }
       &__text, &__icon
-        color: $buttonColor
+        color: $button-color
   &--active:active
-    $buttonColor: var(--primary-dark)
-    background-color: $buttonColor
-    border-color: $buttonColor
+    $button-color: var(--primary-dark)
+    background-color: $button-color
+    border-color: $button-color
     #{ $self }
       &__text, &__icon
         color: var(--color-white)
   &--disabled
-    $buttonColor: var(--grey-light)
-    background-color: $buttonColor
-    border: $btn-border-size $btn-border-style $buttonColor
+    $button-color: var(--grey-light)
+    background-color: $button-color
+    border: $btn-border-size $btn-border-style $button-color
     border-radius: $btn-border-radius
     cursor: not-allowed
 
   // MOD: VARIATION
   &--outline
-    border: $btn-border-size $btn-border-style $buttonColor
+    border: $btn-border-size $btn-border-style $button-color
     border-radius: $btn-border-radius
     background-color: transparent
     z-index: 0
     #{ $self }
       &__text, &__icon
-        color: $buttonColor
+        color: $button-color
     &#{ $self }--hover:hover
-      border: $btn-border-size $btn-border-style $buttonColor
+      border: $btn-border-size $btn-border-style $button-color
       border-radius: $btn-border-radius
-      background-color: $buttonColor
+      background-color: $button-color
       #{ $self }
         &__text, &__icon
           color: var(--color-white)
     &#{ $self }--active:active
-      $buttonColor: var(--primary-dark)
+      $button-color: var(--primary-dark)
       background-color: transparent
-      border-color: $buttonColor
+      border-color: $button-color
       #{ $self }
         &__text, &__icon
-          color: $buttonColor
+          color: $button-color
     &#{ $self }--disabled
-      $buttonColor: var(--grey-light)
+      $button-color: var(--grey-light)
       background-color: transparent
-      border: $btn-border-size $btn-border-style $buttonColor
+      border: $btn-border-size $btn-border-style $button-color
       border-radius: $btn-border-radius
       cursor: not-allowed
       #{ $self }
         &__text, &__icon
-          color: $buttonColor
+          color: $button-color
 
   &--clear
     border-width: 0
@@ -199,82 +199,82 @@ $btn-container-button: 3.5rem !default
 
     #{ $self }
       &__text, &__icon
-        color: $buttonColor
+        color: $button-color
 
     &#{ $self }--hover:hover
       border-width: 0
       background-color: transparent
 
     &#{ $self }--active:active
-      $buttonColor: var(--primary-dark)
+      $button-color: var(--primary-dark)
       background-color: transparent
-      border-color: $buttonColor
+      border-color: $button-color
       #{ $self }
         &__text, &__icon
-          color: $buttonColor
+          color: $button-color
     &#{ $self }--disabled
-      $buttonColor: var(--grey-light)
+      $button-color: var(--grey-light)
       background-color: transparent
       border-width: 0
       cursor: not-allowed
       #{ $self }
         &__text, &__icon
-          color: $buttonColor
+          color: $button-color
 
   // MOD: COLOR
 
   &__fill
     &--light
-      $buttonColor: var(--grey-lightest)
-      border-color: $buttonColor
-      background-color: $buttonColor
+      $button-color: var(--grey-lightest)
+      border-color: $button-color
+      background-color: $button-color
 
       // VARIATIONS BUTTON LIGHT -- OUTLINE
       &#{ $self }--outline
         border-width: 1px
         border-style: solid
-        border-color: $buttonColor
+        border-color: $button-color
         background-color: transparent
         #{ $self }
           &__text, &__icon
             color: var(--grey-base)
         &#{ $self }--hover:hover
-          $buttonColor: var(--grey-lightest)
+          $button-color: var(--grey-lightest)
           border-width: 1px
           border-style: solid
-          border-color: $buttonColor
-          background-color: $buttonColor
+          border-color: $button-color
+          background-color: $button-color
           #{ $self }
             &__text, &__icon
               color: var(--grey-dark)
         &#{ $self }--active:active
-          background-color: $buttonColor
-          border-color: $buttonColor
+          background-color: $button-color
+          border-color: $button-color
           #{ $self }
             &__text, &__icon
               color: var(--grey-dark)
 
       // VARIATIONS BUTTON LIGHT -- CLEAR
       &#{ $self }--clear
-        $buttonColor: var(--grey-base)
+        $button-color: var(--grey-base)
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
 
         &#{ $self }--hover:hover
-          $buttonColor: var(--grey-dark)
+          $button-color: var(--grey-dark)
           border-width: 0
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
         &#{ $self }--active:active
           border-width: 0
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
 
       // STYLES BUTTON LIGHT
       #{ $self }
@@ -282,68 +282,68 @@ $btn-container-button: 3.5rem !default
           color: var(--grey-dark)
 
       &#{ $self }--hover:hover
-        $buttonColor: var(--grey-base)
+        $button-color: var(--grey-base)
         border-width: 1px
-        border-color: $buttonColor
+        border-color: $button-color
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
 
       &#{ $self }--disabled
         color: var(--danger-base)
 
     &--dark
-      $buttonColor: var(--grey-dark)
-      border-color: $buttonColor
-      background-color: $buttonColor
+      $button-color: var(--grey-dark)
+      border-color: $button-color
+      background-color: $button-color
 
       // VARIATIONS BUTTON DARK -- OUTLINE
       &#{ $self }--outline
         border-width: 1px
         border-style: solid
-        border-color: $buttonColor
+        border-color: $button-color
         background-color: transparent
         #{ $self }
           &__text, &__icon
             color: var(--grey-dark)
         &#{ $self }--hover:hover
-          $buttonColor: var(--grey-dark)
+          $button-color: var(--grey-dark)
           border-width: 1px
           border-style: solid
-          border-color: $buttonColor
-          background-color: $buttonColor
+          border-color: $button-color
+          background-color: $button-color
           #{ $self }
             &__text, &__icon
               color: var(--grey-lightest)
         &#{ $self }--active:active
-          background-color: $buttonColor
-          border-color: $buttonColor
+          background-color: $button-color
+          border-color: $button-color
           #{ $self }
             &__text, &__icon
               color: var(--grey-dark)
 
       // VARIATIONS BUTTON DARK -- CLEAR
       &#{ $self }--clear
-        $buttonColor: var(--grey-dark)
+        $button-color: var(--grey-dark)
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
 
         &#{ $self }--hover:hover
-          $buttonColor: var(--grey-base)
+          $button-color: var(--grey-base)
           border-width: 0
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
         &#{ $self }--active:active
           border-width: 0
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
 
       // STYLES BUTTON DARK
       #{ $self }
@@ -351,51 +351,51 @@ $btn-container-button: 3.5rem !default
           color: var(--grey-lightest)
 
       &#{ $self }--hover:hover
-        $buttonColor: var(--grey-dark)
+        $button-color: var(--grey-dark)
         border-width: 1px
-        border-color: $buttonColor
+        border-color: $button-color
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
 
       &#{ $self }--active:active
-        $buttonColor: var(--grey-darkest)
+        $button-color: var(--grey-darkest)
         border-width: 1px
-        border-color: $buttonColor
-        background-color: $buttonColor
+        border-color: $button-color
+        background-color: $button-color
 
       &#{ $self }--disabled
-        $buttonColor: var(--grey-light)
-        background-color: $buttonColor
+        $button-color: var(--grey-light)
+        background-color: $button-color
         border-width: 1px
         border-style: solid
-        border-color: $buttonColor
+        border-color: $button-color
 
     &--danger
-      $buttonColor: var(--danger-base)
-      border-color: $buttonColor
-      background-color: $buttonColor
+      $button-color: var(--danger-base)
+      border-color: $button-color
+      background-color: $button-color
       // VARIATIONS BUTTON DANGER -- OUTLINE
       &#{ $self }--outline
-        border: $btn-border-size $btn-border-style $buttonColor
+        border: $btn-border-size $btn-border-style $button-color
         border-radius: $btn-border-radius
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
         &#{ $self }--hover:hover
-          $buttonColor: var(--danger-base)
-          border: $btn-border-size $btn-border-style $buttonColor
+          $button-color: var(--danger-base)
+          border: $btn-border-size $btn-border-style $button-color
           border-radius: $btn-border-radius
-          background-color: $buttonColor
+          background-color: $button-color
           #{ $self }
             &__text, &__icon
               color: var(--color-white)
         &#{ $self }--active:active
-          $buttonColor: #CB0A22
-          background-color: $buttonColor
-          border-color: $buttonColor
+          $button-color: #CB0A22
+          background-color: $button-color
+          border-color: $button-color
           #{ $self }
             &__text, &__icon
               color: var(--color-white)
@@ -404,50 +404,50 @@ $btn-container-button: 3.5rem !default
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
 
         &#{ $self }--hover:hover
           border-width: 0
           background-color: transparent
         &#{ $self }--active:active
-          $buttonColor: #CB0A22
+          $button-color: #CB0A22
           border-width: 0
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
 
       // STYLES BUTTON DANGER
       &#{ $self }--hover:hover
-        border: $btn-border-size $btn-border-style $buttonColor
+        border: $btn-border-size $btn-border-style $button-color
         border-radius: $btn-border-radius
         background-color: transparent
         #{ $self }
           &__text, &__icon
-            color: $buttonColor
+            color: $button-color
       &#{ $self }--active:active
-        $buttonColor: #CB0A22
-        background-color: $buttonColor
-        border-color: $buttonColor
+        $button-color: #CB0A22
+        background-color: $button-color
+        border-color: $button-color
         #{ $self }
           &__text, &__icon
             color: var(--color-white)
       &#{ $self }--disabled
-        $buttonColor: var(--grey-light)
-        background-color: $buttonColor
-        border: $btn-border-size $btn-border-style $buttonColor
+        $button-color: var(--grey-light)
+        background-color: $button-color
+        border: $btn-border-size $btn-border-style $button-color
         border-radius: $btn-border-radius
 
     &--black
-        $buttonColor: var(--color-black)
-        border-color: $buttonColor
-        background-color: $buttonColor
+        $button-color: var(--color-black)
+        border-color: $button-color
+        background-color: $button-color
 
         // VARIATIONS BUTTON black -- OUTLINE
         &#{ $self }--outline
           border-width: 1px
           border-style: solid
-          border-color: $buttonColor
+          border-color: $button-color
           background-color: transparent
           #{ $self }
             &__text, &__icon
@@ -455,16 +455,16 @@ $btn-container-button: 3.5rem !default
 
         // VARIATIONS BUTTON black -- CLEAR
         &#{ $self }--clear
-          $buttonColor: $buttonColor
+          $button-color: $button-color
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
 
     &--white
-        $buttonColor: var(--color-white)
-        border-color: $buttonColor
-        background-color: $buttonColor
+        $button-color: var(--color-white)
+        border-color: $button-color
+        background-color: $button-color
         #{ $self }
           &__text, &__icon
             color: var(--color-black)
@@ -473,19 +473,19 @@ $btn-container-button: 3.5rem !default
         &#{ $self }--outline
           border-width: 1px
           border-style: solid
-          border-color: $buttonColor
+          border-color: $button-color
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
 
         // VARIATIONS BUTTON white -- CLEAR
         &#{ $self }--clear
-          $buttonColor: var(--color-white)
+          $button-color: var(--color-white)
           background-color: transparent
           #{ $self }
             &__text, &__icon
-              color: $buttonColor
+              color: $button-color
 
   &--animation-pulse
     animation-name: pulse

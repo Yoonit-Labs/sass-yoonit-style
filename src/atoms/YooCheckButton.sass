@@ -14,23 +14,23 @@
  * Luigui Delyer, Vitória Costa, Sabrina Sampaio, Gabriel Moraes, Tiago Brito, Fernando Junior, Ronalson Filho, Gabriel Moraes, Gabriel Mule & Gabriel Rizzo @ 2020-2021
  */
 
-/*===== CheckButton Size ====*/
-$checkButton-size-sm: 1rem !default
-$checkButton-size-md: 1.5rem !default
-$checkButton-size-lg: 2rem !default
+/*===== check-button Size ====*/
+$check-button-size-sm: 1rem !default
+$check-button-size-md: 1.5rem !default
+$check-button-size-lg: 2rem !default
 
-/*===== CheckButton Font Sizing ====*/
-$checkButton-font-size-sm: $font-size-sm !default
-$checkButton-font-size-md: $font-size-md !default
-$checkButton-font-size-lg: $font-size-lg !default
+/*===== check-button Font Sizing ====*/
+$check-button-font-size-sm: $font-size-sm !default
+$check-button-font-size-md: $font-size-md !default
+$check-button-font-size-lg: $font-size-lg !default
 
-/*===== CheckButton Font Weight ====*/
-$checkButton-font-weight: $weight-medium !default
+/*===== check-button Font Weight ====*/
+$check-button-font-weight: $weight-medium !default
 
-/*===== CheckButton Card ====*/
-$checkButton-card-transition: 0.2s ease !default
-$checkButton-card-border-radius: 3px !default
-$checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
+/*===== check-button Card ====*/
+$check-button-card-transition: 0.2s ease !default
+$check-button-card-border-radius: 3px !default
+$check-button-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
 
 .yoo-checkbox input
   display: none
@@ -41,9 +41,9 @@ $checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
   -ms-user-select: none
   user-select: none
   &__card
-    transition: $checkButton-card-transition
-    box-shadow: $checkButton-card-box-shadow
-    border-radius: $checkButton-card-border-radius
+    transition: $check-button-card-transition
+    box-shadow: $check-button-card-box-shadow
+    border-radius: $check-button-card-border-radius
     color: var(--grey-base)
     &--active
       display: block
@@ -53,7 +53,7 @@ $checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
 
   &__text
     font-family: var(--font-family-primary)
-    font-weight: $checkButton-font-weight
+    font-weight: $check-button-font-weight
     margin-left: 1rem
 
     &--right
@@ -62,28 +62,28 @@ $checkButton-card-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2) !default
         margin-right: 1rem
 
   &--small
-    font-size: $checkButton-font-size-sm
+    font-size: $check-button-font-size-sm
     &:before
-      width: $checkButton-size-sm
-      height: $checkButton-size-sm
-      min-width: $checkButton-size-sm
-      min-height: $checkButton-size-sm
+      width: $check-button-size-sm
+      height: $check-button-size-sm
+      min-width: $check-button-size-sm
+      min-height: $check-button-size-sm
 
   &--medium
-    font-size: $checkButton-font-size-md
+    font-size: $check-button-font-size-md
     &:before
-      width: $checkButton-size-md
-      height: $checkButton-size-md
-      min-width: $checkButton-size-md
-      min-height: $checkButton-size-md
+      width: $check-button-size-md
+      height: $check-button-size-md
+      min-width: $check-button-size-md
+      min-height: $check-button-size-md
 
   &--large
-    font-size: $checkButton-font-size-lg
+    font-size: $check-button-font-size-lg
     &:before
-      width: $checkButton-size-lg
-      height: $checkButton-size-lg
-      min-width: $checkButton-size-lg
-      min-height: $checkButton-size-lg
+      width: $check-button-size-lg
+      height: $check-button-size-lg
+      min-width: $check-button-size-lg
+      min-height: $check-button-size-lg
 
   &__check
     +flex(row, wrap, flex-start, center)

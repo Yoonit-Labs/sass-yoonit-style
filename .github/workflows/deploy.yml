@@ -47,7 +47,7 @@ jobs:
           rm -rf dist
       - name: Prepare "package.json" Files
         run: |
-          node -e "let pkg=require('./npm/package.json'); pkg.main='/index.js'; require('fs').writeFileSync('./npm/package.json', JSON.stringify(pkg, null, 2));"
+          node -e "let pkg=require('./npm/package.json'); pkg.main='/index.sass'; require('fs').writeFileSync('./npm/package.json', JSON.stringify(pkg, null, 2));"
       # ADD & COMMIT CHANGES
       - name: Add & Commit Changes
         run: |
@@ -61,7 +61,7 @@ jobs:
           git push --tags --force
       # PUBLISH VUE PACKAGE
       - name: Publish Sass Yoonit Style
-        run: npm publish --access public --otp
+        run: npm publish npm/ --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # SUCCESS MESSAGE TO  DISCORD

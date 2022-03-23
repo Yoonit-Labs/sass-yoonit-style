@@ -1,7 +1,7 @@
 {
   "name": "@yoonit/style",
   "description": "The SASS Atomic Design System that powers Web & Native Yoonit Components",
-  "version": "2.1.0",
+  "version": "2.1.7",
   "private": false,
   "main": "./npm/index.sass",
   "repository": {

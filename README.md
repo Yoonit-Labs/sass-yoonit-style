@@ -72,12 +72,6 @@ The default theme has the following variables:
   --font-family-primary: 'Montserrat', 'sans-serif'
   --font-family-second: 'Arial', 'sans-serif'
 
-  --fontWeight-regular: 400
-  --fontWeight-medium: 500
-  --fontWeight-semibold: 600
-  --fontWeight-bold: 700
-  --fontWeight-black: 800
-
   --primary-darkest: #008080
   --primary-dark: #1DBABA
   --primary-base: #47C8C3
@@ -96,22 +90,6 @@ The default theme has the following variables:
   --color-white: #FFFFFF
   --color-black: #111111
   --color-transparent: rgba(255, 255, 255, 0)
-
-  --font-tn: 8px
-  --font-xs: 10px
-  --font-sm: 12px
-  --font-md: 14px
-  --font-lg: 16px
-  --font-xl: 20px
-  --font-hg: 32px
-
-  --spacing-tn: 2px
-  --spacing-xs: 4px
-  --spacing-sm: 8px
-  --spacing-md: 16px
-  --spacing-lg: 24px
-  --spacing-xl: 32px
-  --spacing-hg: 64px
 
 ```
 To use the variable in your sass file, just use var(VariableName), for example:
